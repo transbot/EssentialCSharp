@@ -11,13 +11,13 @@ public class Program
         #region INCLUDE
         Angle angle = new(90, 0, 0, null);
 
-         // The with operator is the equivalent of
+         // with操作符等价于：
         // Angle copy = new(degrees, minutes, seconds);
         Angle copy = angle with { };
         Trace.Assert(angle == copy);
 
-        // The with operator has object initializer type
-        // syntax for instantiating a modified copy.
+        // with操作符支持用对象初始化器形式的
+        // 语法来实例化一个修改后的拷贝。
         Angle modifiedCopy = angle with { Degrees = 180 };
         Trace.Assert(angle != modifiedCopy);
         #endregion INCLUDE

@@ -22,7 +22,7 @@ public class Coordinate : IEquatable<Coordinate>
     public override string ToString()
     {
         StringBuilder stringBuilder = new ();
-        stringBuilder.Append("Coordinate");
+        stringBuilder.Append("坐标");
         stringBuilder.Append(" { ");
         if (PrintMembers(stringBuilder))
         {
@@ -35,9 +35,9 @@ public class Coordinate : IEquatable<Coordinate>
     protected virtual bool PrintMembers(StringBuilder builder)
     {
         RuntimeHelpers.EnsureSufficientExecutionStack();
-        builder.Append("Longitude = ");
+        builder.Append("经度 = ");
         builder.Append(Longitude.ToString());
-        builder.Append(", Latitude = ");
+        builder.Append(", 纬度 = ");
         builder.Append(Latitude.ToString());
         return true;
     }
@@ -84,8 +84,8 @@ public class Coordinate : IEquatable<Coordinate>
 
     public Type ExternalEqualityContract => EqualityContract();
 
-    // Actual name in IL is "<Clone>$". However, 
-    // you can't add a Clone method to a record.
+    // IL中的实际名称是"<Clone>$"。但是，不能
+    // 自行在记录中添加一个名为Clone的方法。
     public Coordinate Clone() => new(this);
 
     protected Coordinate(Coordinate original)

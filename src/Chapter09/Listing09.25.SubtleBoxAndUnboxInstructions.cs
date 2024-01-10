@@ -6,23 +6,22 @@ public class DisplayFibonacci
 {
     public static void Main()
     {
-        // Intentionally using ArrayList to demonstrate boxing
+        // 故意使用ArrayList来演示装箱
         System.Collections.ArrayList list = new();
 
-        Console.Write("Enter an integer between 2 and 1000: ");
+        Console.Write("输入2～1000的整数，我将生成这么多个斐波那契数: ");
         string? inputText = Console.ReadLine();
         if (!int.TryParse(inputText, out int totalCount))
         {
-            Console.WriteLine($"'{inputText}' is not a valid integer.");
+            Console.WriteLine($"'{inputText}'不是一个有效的整数。");
             return;
         }
 
-        if (totalCount == 7)  // Magic number used for testing
+        if (totalCount == 7)  // 用一个魔法数字来执行测试
         {
-            // Triggers exception when retrieving  value as double.
-            list.Add(0);  // Cast to double or 'D' suffix required.
-                          // Whether cast or using 'D' suffix,
-                          // CIL is identical.
+            // 如果获取的值是double，那么会触发异常
+            list.Add(0);  // 要求转型为double，或者附加'D'后缀。
+                          // 无论转型还是使用'D'后缀，生成的CIL都是一样的。
 
         }
         else
@@ -39,11 +38,11 @@ public class DisplayFibonacci
                 (double)list[count - 2]!);
         }
 
-        // Using a foreach to clarify the box operation rather than
+        // 用foreach来澄清装箱操作，而不是使用：
         // Console.WriteLine(string.Join(", ", list.ToArray()));
         foreach (double? count in list)
         {
-            Console.Write("{0}, ", count);
+            Console.Write($"{count}, ");
         }
     }
 }

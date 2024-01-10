@@ -8,7 +8,7 @@ public class Program
         #region INCLUDE
         int connectionState;
         #region EXCLUDE
-        // initialize connectionState for example
+        // 初始化为connectionState来举例
         connectionState = 2;
         #endregion EXCLUDE
         switch (connectionState)
@@ -34,7 +34,7 @@ public class Program
         #endregion EXCLUDE
         ConnectionState connectionState;
         #region EXCLUDE
-        // initialize connectionState for example
+        // 初始化connectionState来举例
         connectionState = ConnectionState.Connecting;
         #endregion EXCLUDE
         switch (connectionState)

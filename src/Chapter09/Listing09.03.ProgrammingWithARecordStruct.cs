@@ -11,16 +11,14 @@ public class Program
     {
         (int degrees, int minutes, int seconds) = (90, 0, 0);
 
-        // The constructor is generated using positional parameters
+        // 构造函数根据位置参数来生成
         Angle angle = new(degrees, minutes, seconds);
 
-        // Records include a ToString() implementation
-        // that returns:
-        //   "Angle { Degrees = 90, Minutes = 0, Seconds = 0, Name =  }"
+        // 记录包含一个ToString()实现，它返回：
+        // "Angle { Degrees = 90, Minutes = 0, Seconds = 0, Name =  }"
         Console.WriteLine(angle.ToString());
-        
-        // Records have a deconstructor using the 
-        // positional parameters.
+
+        // 记录有一个使用了位置参数的解构函数
         if (angle is (int, int, int, string) angleData)
         {
             Trace.Assert(angle.Degrees == angleData.Degrees);
@@ -29,16 +27,16 @@ public class Program
         }
 
         Angle copy = new(degrees, minutes, seconds);       
-        // Records provide a custom equality operator.
+        // 记录提供了一个自定义的相等性操作符
         Trace.Assert(angle == copy);
 
-        // The with operator is the equivalent of
+        // with操作符等价于：
         // Angle copy = new(degrees, minutes, seconds);
         copy = angle with { };
         Trace.Assert(angle == copy);
 
-        // The with operator has object initializer type
-        // syntax for instantiating a modified copy.
+        // with操作符支持“对象初始化器”语法，
+        // 用于实例化一个修改过的拷贝。        
         Angle modifiedCopy = angle with { Degrees = 180 };
         Trace.Assert(angle != modifiedCopy);
     }

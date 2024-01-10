@@ -12,7 +12,7 @@ public class DisplayFibonacci
 
         number = 42;
         thing = number;
-        // ERROR: InvalidCastException
+        // ´íÎó: InvalidCastException
         // bigNumber = (double)thing;
         bigNumber = (double)(int)thing;
         // ...

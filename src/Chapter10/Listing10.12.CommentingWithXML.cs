@@ -6,22 +6,20 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_12;
 
 #region INCLUDE
 /// <summary>
-/// DataStorage is used to persist and retrieve
-/// employee data from the files.
+/// DataStorage类用于在文件中存储和检索员工数据
 /// </summary>
 class DataStorage
 {
     /// <summary>
-    /// Save an employee object to a file
-    /// named with the Employee name.
+    /// 将员工对象保存到以员工姓名命名的文件中    
     /// </summary>
     /// <remarks>
-    /// This method uses <seealso cref="System.IO.FileStream"/>
-    /// in addition to
+    /// 该方法使用<seealso cref="System.IO.FileStream"/>
+    /// 以及
     /// <seealso cref="System.IO.StreamWriter"/>
     /// </remarks>
     /// <param name="employee">
-    /// The employee to persist to a file</param>
+    /// 要存储到文件中的员工</param>
     /// <date>January 1, 2000</date>
     public static void Store(Employee employee)
     {
@@ -29,19 +27,19 @@ class DataStorage
     }
 
     /** <summary>
-     * Loads up an employee object.
+     * 加载员工对象。
      * </summary>
      * <remarks>
-     * This method uses <seealso cref="System.IO.FileStream"/>
-     * in addition to
+     * 该方法使用<seealso cref="System.IO.FileStream"/>
+     * 以及
      * <seealso cref="System.IO.StreamReader"/>
      * </remarks>
      * <param name="firstName">
-     * The first name of the employee</param>
+     * 员工的名字（first name）</param>
      * <param name="lastName">
-     * The last name of the employee</param>
+     * 员工的姓氏（last name）</param>
      * <returns>
-     * The employee object corresponding to the names
+     * 和姓名对应的员工对象
      * </returns>
      * <date>January 1, 2000</date> **/
     public static Employee Load(string firstName, string lastName)

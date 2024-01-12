@@ -15,19 +15,19 @@ public class Program
         {
             Clock.Start();
             #region HIGHLIGHT
-            // Register a callback to receive notifications
-            // of any unhandled exception
+            // 注册一个回调，以便接收任何
+            // 未处理程序的通知。            
 
             AppDomain.CurrentDomain.UnhandledException +=
               (s, e) =>
               {
-                  Message("Event handler starting");
+                  Message("正在启动事件处理程序.");
                   Delay(4000);
               };
 #endregion HIGHLIGHT
             Thread thread = new(() =>
             {
-                Message("Throwing exception.");
+                Message("抛出异常。");
                 throw new Exception();
             });
             thread.Start();
@@ -36,15 +36,15 @@ public class Program
         }
         finally
         {
-            Message("Finally block running.");
+            Message("正在运行finally块。");
         }
     }
 
     static void Delay(int i)
     {
-        Message($"Sleeping for {i} ms");
+        Message($"睡眠{i}毫秒");
         Thread.Sleep(i);
-        Message("Awake");
+        Message("唤醒");
     }
 
     static void Message(string text)

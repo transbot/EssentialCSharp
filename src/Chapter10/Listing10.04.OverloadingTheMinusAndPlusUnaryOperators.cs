@@ -35,8 +35,7 @@ public readonly struct Coordinate
           Coordinate rightHandSide)
     {
 
-        // There is no need to check of null in this 
-        // case because Coordinate is a value type.
+        // 不需要执行null检查，因为Coordinate是值类型
         return (leftHandSide.Equals(rightHandSide));
     }
 
@@ -149,7 +148,7 @@ public struct Latitude
     }
     private int _Minutes;
 
-    // UNARY
+    // 一元
     #endregion EXCLUDE
     #region HIGHLIGHT
     public static Latitude operator -(Latitude latitude)
@@ -206,7 +205,7 @@ public struct Longitude
     }
     private int _Minutes;
 
-    // UNARY
+    // 一元
     #endregion EXCLUDE
     #region HIGHLIGHT
     public static Longitude operator -(Longitude longitude)
@@ -264,8 +263,7 @@ public readonly struct Arc
     #endregion EXCLUDE
     public static Arc operator -(Arc arc)
     {
-        // Uses unary – operator defined on 
-        // Longitude and Latitude
+        // 使用为Longitude和Latitude定义的一元-操作符
         #region HIGHLIGHT
         return new Arc(-arc.LongitudeDifference,
             -arc.LatitudeDifference);

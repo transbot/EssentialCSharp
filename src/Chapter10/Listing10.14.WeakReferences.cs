@@ -38,9 +38,9 @@ public static class ByteArrayDataSource
 {
     private static byte[] LoadData()
     {
-        // Imagine a much lager number
+        // 想象一个大得多的数
         byte[] data = new byte[1000];
-        // Load data
+        // 加载数据
         // ...
         return data;
     }
@@ -61,10 +61,9 @@ public static class ByteArrayDataSource
             return target;
         }
         else
-        {
-            // Reload the data and assign it (creating a strong
-            // reference) before setting WeakReference's Target
-            // and returning it.
+        {            
+            // 先重新加载数据并赋值（以创建一个强引用），
+            // 然后才能设置WeakReference的Target并返回它。
             target = LoadData();
             Data.SetTarget(target);
             return target;
@@ -93,14 +92,14 @@ public class ObjectDataSource
         }
         else
         {
-            // Imagine a much lager number
+            // 想象一个大得多的数
             data = new byte[1000];
 
-            // Load data
+            // 加载数据
             // ...
 
-            // Create a weak reference
-            // to data for use later
+            // 创建对data的一个弱引用，
+            // 以后稍后使用。
             Data.Target = data;
         }
         return data;

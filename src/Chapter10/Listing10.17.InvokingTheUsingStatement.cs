@@ -10,20 +10,23 @@ public static class Program
 {
     public static void Search()
     {
+
+        #region HIGHLIGHT
+        // C# 8.0之前
+        using (TemporaryFileStream fileStream2 =
+            new(), fileStream3 = new())
+        #endregion HIGHLIGHT
+        {
+            // 使用临时文件流
+        }
+
+
         #region HIGHLIGHT
         // C# 8.0
         using TemporaryFileStream fileStream1 = new();
         #endregion HIGHLIGHT
 
-        #region HIGHLIGHT
-        // Prior to C# 8.0
-        using (TemporaryFileStream fileStream2 =
-            new(),
-            fileStream3 = new())
-        #endregion HIGHLIGHT
-        {
-            // Use temporary file stream;
-        }
+        
     }
 }
 #endregion INCLUDE

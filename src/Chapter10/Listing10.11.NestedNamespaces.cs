@@ -1,15 +1,15 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_10
 {
     #region INCLUDE
-    // Define the namespace AddisonWesley.Michaelis
+    // 定义命名空间：AddisonWesley.Michaelis
     namespace AddisonWesley.Michaelis
     {
         #region HIGHLIGHT
-            // Define the namespace
+            // 定义命名空间：
             // AddisonWesley.Michaelis.EssentialCSharp
             namespace EssentialCSharp
             {
-                // Declare the class
+                // 定义类：
                 // AddisonWesley.Michaelis.EssentialCSharp.Program
         #endregion HIGHLIGHT
                 class Program
@@ -20,6 +20,6 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_10
         }
         #endregion HIGHLIGHT
     }
-    // End of AddisonWesley namespace declaration
+    // 结束AddisonWesley命名空间声明
     #endregion INCLUDE
 }

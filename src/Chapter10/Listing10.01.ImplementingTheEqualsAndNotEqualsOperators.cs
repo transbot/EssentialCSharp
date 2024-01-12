@@ -20,8 +20,8 @@ public sealed class ProductSerialNumber
     public override int GetHashCode()
     {
         int hashCode = ProductSeries.GetHashCode();
-        hashCode ^= Model;  // Xor (eXclusive OR)
-        hashCode ^= Id.GetHashCode();  // Xor (eXclusive OR)
+        hashCode ^= Model;  // XOR (异或)
+        hashCode ^= Id.GetHashCode();  // XOR (异或)
         return hashCode;
     }
 
@@ -72,12 +72,12 @@ public sealed class ProductSerialNumber
         ProductSerialNumber rightHandSide)
     {
 
-        // Check if leftHandSide is null
-        // (operator == would be recursive)
+        // 检查leftHandSide是否为null，
+        // (否则operator == 会递归调用)
         if(leftHandSide is null)
         {
-            // Return true if rightHandSide is also null
-            // and false otherwise
+            // 如果rightHandSide也为null，就返回true；
+            // 否则返回false
             return rightHandSide is null;
         }
 

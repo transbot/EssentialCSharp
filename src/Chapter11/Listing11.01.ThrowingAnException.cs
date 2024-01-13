@@ -13,17 +13,17 @@ public sealed class TextNumberParser
 
         int result = Array.IndexOf(
             digitTexts,
-            // Leveraging C# 2.0’s null-coalescing operator
+            // 利用C# 2.0的null合并操作符
             (textDigit ??
-              // Leveraging C# 7.0’s throw expression
+              // 利用C# 7.0的throw表达式
               throw new ArgumentNullException(nameof(textDigit))
             ).ToLower());
 
         if (result < 0)
         {
-            // Leveraging C# 6.0's nameof operator
+            // 利用C# 6.0的nameof操作符
             throw new ArgumentException(
-                "The argument did not represent a digit", nameof(textDigit));
+                "传递的实参不是数位", nameof(textDigit));
         }
         return result;
     }

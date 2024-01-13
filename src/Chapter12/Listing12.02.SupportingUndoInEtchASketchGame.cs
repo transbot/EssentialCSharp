@@ -19,7 +19,7 @@ public class Program
         Cell currentPosition;
         ConsoleKeyInfo key;
         #region EXCLUDE
-        Console.WriteLine("Use arrow keys to draw. X to exit.");
+        Console.WriteLine("按箭头键画图，按X退出。");
         for(int i = 2; i < Console.WindowHeight; i++)
         {
             Console.WriteLine();
@@ -32,14 +32,13 @@ public class Program
 
         do
         {
-            // Etch in the direction indicated by the
-            // arrow keys that the user enters
+            // 根据用户所按箭头键的方向进行绘制
             key = Move();
 
             switch(key.Key)
             {
                 case ConsoleKey.Z:
-                    // Undo the previous Move
+                    // 撤消上一个移动
                     if(path.Count >= 1)
                     {
                         #region HIGHLIGHT
@@ -106,7 +105,7 @@ public class Program
                     break;
             }
         }
-        while(key.Key != ConsoleKey.X);  // Use X to quit.
+        while(key.Key != ConsoleKey.X);  // 按X退出
     }
     #region EXCLUDE
     private static ConsoleKeyInfo Move()

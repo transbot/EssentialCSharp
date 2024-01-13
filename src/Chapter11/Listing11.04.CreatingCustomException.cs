@@ -39,7 +39,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_04
             // ...
         }
         #region EXCLUDE
-        // Used for deserialization of exceptions
+        // 用于反序列化异常
         public DatabaseException(
             SerializationInfo serializationInfo,
             StreamingContext context)
@@ -51,8 +51,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_04
     }
     #endregion INCLUDE
 
-    // Create mock versions of the database exception classes rather
-    // than referencing the real libraries.
+    // 创建数据库异常类的模拟版本，而不是引用真实的库
 #pragma warning disable CA1032 // Implement standard exception constructors
     namespace System.Data
     {

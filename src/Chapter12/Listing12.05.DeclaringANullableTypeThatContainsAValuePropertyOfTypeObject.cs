@@ -4,13 +4,12 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_05;
 struct Nullable
 {
     /// <summary>
-    /// Provides the value when HasValue returns true.
+    /// 在HasValue返回true时提供值
     /// </summary>
     public object Value { get; private set; }
 
     /// <summary>
-    /// Indicates whether there is a value or whether
-    /// the value is "null"
+    /// 该属性指出是真的有一个值，还是值为"null"
     /// </summary>
     public bool HasValue { get; private set; }
 

@@ -1,4 +1,4 @@
-﻿// Justification: Only snippets of source code shown for elucidation.
+﻿// 说明 : Only snippets of source code shown for elucidation.
 #pragma warning disable CS0168 // Variable is declared but never used
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Table03_03;

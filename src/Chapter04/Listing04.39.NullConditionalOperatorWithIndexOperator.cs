@@ -1,4 +1,4 @@
-// Justification: Intentionally demonstrating legacy syntax.
+// หตร๗ : Intentionally demonstrating legacy syntax.
 #pragma warning disable IDE1005 // Delegate invocation can be simplified.
 using System.ComponentModel;
 

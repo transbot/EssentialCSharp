@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 public class Program
 {
     #region EXCLUDE
-    // Justification: Initialized at the start of Main.
+    // 说明 : Initialized at the start of Main.
 #pragma warning disable CS8618 // 不可为空的字段未初始化。考虑声明为可空。
     #endregion EXCLUDE
     static ManualResetEventSlim _MainSignaledResetEvent;

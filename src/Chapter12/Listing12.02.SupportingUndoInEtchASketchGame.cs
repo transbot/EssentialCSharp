@@ -38,7 +38,7 @@ public class Program
             switch(key.Key)
             {
                 case ConsoleKey.Z:
-                    // 撤消上一个移动
+                    // 撤消上一次移动
                     if(path.Count >= 1)
                     {
                         #region HIGHLIGHT

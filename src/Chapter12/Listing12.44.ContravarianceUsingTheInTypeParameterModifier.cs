@@ -34,15 +34,13 @@ public class Program
         Apple apple2 = new();
         Orange orange = new();
 
-        // A fruit comparer can compare apples and oranges:
+        // 一个水果comparer可以比较苹果与桔子:
         bool b1 = fc.FirstIsBetter(apple1, orange);
-        // or apples and apples:
+        // 或者苹果与苹果:
         bool b2 = fc.FirstIsBetter(apple1, apple2);
-        // This is legal because the interface is 
-        // contravariant.
+        // 这是合法的，因为接口是逆变的
         ICompareThings<Apple> ac = fc;
-        // This is really a fruit comparer, so it can 
-        // still compare two apples 
+        // 这实际是一个水果comparer，所以仍然可以比较两个苹果
         bool b3 = ac.FirstIsBetter(apple1, apple2);
     }
 }

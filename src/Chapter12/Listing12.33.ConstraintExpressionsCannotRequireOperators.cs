@@ -6,8 +6,7 @@ public abstract class MathEx<T>
 {
     public static T Add(T first, T second)
     {
-        // Error: Operator '+' cannot be applied to 
-        // operands of type 'T' and 'T'
+        // 错误: 操作符'+'无法应用于'T'和'T'类型的操作数
         #region HIGHLIGHT
         // return first + second;
         #endregion HIGHLIGHT

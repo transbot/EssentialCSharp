@@ -1,4 +1,4 @@
-﻿// Justification: Invalid code commented out resulting in partial implementation
+﻿// 说明 : Invalid code commented out resulting in partial implementation
 #pragma warning disable IDE0059 // 不需要赋值
 
 
@@ -8,7 +8,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_06;
 public class PdaItem
 {
     #region EXCLUDE
-    // Justification: Disabled pending constructor
+    // 说明 : Disabled pending constructor
     #pragma warning disable CS8618 // 不可为空的字段未初始化。考虑声明为可空。
     #endregion EXCLUDE
     private string _Name;

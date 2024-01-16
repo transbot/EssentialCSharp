@@ -1,4 +1,4 @@
-// Justification: Implementation is incomplete in the catch block.
+// หตร๗ : Implementation is incomplete in the catch block.
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_15;
 
 using System;

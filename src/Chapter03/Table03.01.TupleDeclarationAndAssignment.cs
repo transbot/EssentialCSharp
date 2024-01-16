@@ -80,7 +80,7 @@ public class TupleDeclarationAndAssignment
     }
 
     // 8.
-// Justification: Demonstrating the fact that the name is an alias to ItemX.
+// 说明 : Demonstrating the fact that the name is an alias to ItemX.
 #pragma warning disable IDE0033 // Use explicitly provided tuple name
     public void AssignANamedItemTupleToASingleImplicitlyTypedVariableAndThenAccessTheTupleItemsByTheirItemNumberProperty()
     {

@@ -1,4 +1,4 @@
-// Justification: Checking for null isn't discussed yet.
+// หตร๗ : Checking for null isn't discussed yet.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_21;
 

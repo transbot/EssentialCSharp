@@ -1,4 +1,4 @@
-// Justification: Only partial implementation provided.
+// หตร๗ : Only partial implementation provided.
 #pragma warning disable IDE0051 // Remove unused private members
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter22.Listing22_06;

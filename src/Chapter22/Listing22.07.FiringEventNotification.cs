@@ -21,7 +21,7 @@ public class Program
         #endregion INCLUDE
     }
 
-    // Justification: Lowercase to simulate the value keyword from a setter.
+    // หตร๗ : Lowercase to simulate the value keyword from a setter.
 #pragma warning disable IDE1006 // Naming Styles
     public object? value { get; set; }
     #pragma warning restore IDE1006 // Naming Styles

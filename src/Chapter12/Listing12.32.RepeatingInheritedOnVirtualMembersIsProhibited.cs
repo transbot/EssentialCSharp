@@ -13,8 +13,7 @@ public class EntityBase
 public class Order : EntityBase
 {
     public override void Method<T>(T t)
-    //    Constraints may not be repeated on overriding
-    //    members
+    //    重写成员时，约束不可以重复
     //    where T : IComparable<T>
     {
         // ...

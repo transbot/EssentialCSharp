@@ -7,10 +7,10 @@ public class EntityBase<T> where T : IComparable<T>
     // ...
 }
 
-// ERROR: 
-// The type 'U' must be convertible to 'System.IComparable<U>' 
-// to use it as parameter 'T' in the generic type or 
-// method
+// 错误: 
+// 类型'U'不能用作泛型类型或方法'EntityBase<T>'
+// 中的类型参数'T'。没有从'U'到'System.IComparable<U>'
+// 的装箱转换或类型参数转换。	
 // class Entity<U> : EntityBase<U>
 // {
 //     ...

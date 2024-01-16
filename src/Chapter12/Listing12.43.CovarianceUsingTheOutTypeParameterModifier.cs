@@ -80,7 +80,7 @@ class Program
 {
     static void Main()
     {
-        // Allowed in C# 4.0
+        // 从C# 4.0开始支持
         Pair<Contact> contacts = new(
                 new Contact("Princess Buttercup"),
                 new Contact("Inigo Montoya"));

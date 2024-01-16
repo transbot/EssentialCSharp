@@ -9,23 +9,20 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        #if !PRECSHARP7
+#if !PRECSHARP7
         (string, Contact) keyValuePair;
         keyValuePair =
             ("555-55-5555", new Contact("Inigo Montoya"));
-        #else // Use System.ValueTupe<string,Contact> prior to C# 7.0
-        ValueTuple<string, Contact> keyValuePair;
+#else // C# 7.0以前使用System.Tuple<string, Contact>
+        Tuple<string, Contact> keyValuePair;
         keyValuePair =
-        #region HIGHLIGHT
-            ValueTuple.Create(
-        #endregion HIGHLIGHT
+            Tuple.Create(
                 "555-55-5555", new Contact("Inigo Montoya"));
         keyValuePair =
-        #region HIGHLIGHT
-            new ValueTuple<string, Contact>(
-        #endregion HIGHLIGHT
+            new Tuple<string, Contact>(
                 "555-55-5555", new Contact("Inigo Montoya"));
-        #endif // !PRECSHARP7
+#endif // !PRECSHARP7
+
         #endregion INCLUDE
     }
 }

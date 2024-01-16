@@ -1,4 +1,4 @@
-// Justification: Only showing partial implementation.
+// 说明 : 只显示部分实现
 #pragma warning disable CS8618 // 不可为空的字段未初始化。考虑声明为可空。
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_13;
@@ -11,8 +11,8 @@ public struct Pair<T> : IPair<T>
     {
         First = first;
         #region EXCLUDE
-        // Justification: Ignore warning pending struct/class constraints, later on in the chapter, 
-        //               so that Second can be declared as T?.
+        // 说明 : 忽略警告，本章稍后会添加struct/class约束，
+        // 使Second可以声明为T?.
 #pragma warning disable CS8601 // Possible null reference assignment.
         #endregion EXCLUDE
         #region HIGHLIGHT

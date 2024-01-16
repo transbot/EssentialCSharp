@@ -11,7 +11,7 @@ public class Program
         Console.WriteLine(
             MathEx.Max<int>(7, 490));
         Console.WriteLine(
-            MathEx.Min<string>("R.O.U.S.", "Fireswamp"));
+            MathEx.Min<string>("中国", "中国人"));
         #endregion INCLUDE
     }
 }

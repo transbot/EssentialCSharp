@@ -1,4 +1,4 @@
-// Justification: Inline variable declaration not explained yet.
+// หตร๗ : Inline variable declaration not explained yet.
 #pragma warning disable IDE0018 // Inline variable declaration
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_35;
 

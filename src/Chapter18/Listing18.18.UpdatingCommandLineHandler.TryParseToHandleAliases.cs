@@ -102,7 +102,7 @@ public class CommandLineHandler
     }
     #endregion INCLUDE
 
-// Justification: Not fully implemented.
+// หตร๗ : Not fully implemented.
 #pragma warning disable IDE0060 // Remove unused parameter
     private static bool TryParseEnumSwitch(
         object commandLine, string[] optionParts, PropertyInfo property, ref string? errorMessage)

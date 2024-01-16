@@ -4,8 +4,7 @@ using Listing12_08;
 #region INCLUDE
 public struct Pair<T> : IPair<T>
 {
-    // ERROR:  Field 'Pair<T>.Second' must be fully assigned
-    //         before control leaves the constructor
+    // 错误: 字段'Pair<T>.Second'必须赋值，控制才能返回调用方    
     // public Pair(T first)
     // {  
     //     First = first;

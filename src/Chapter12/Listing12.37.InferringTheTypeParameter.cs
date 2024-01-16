@@ -9,9 +9,9 @@ public class Program
     {
         #region INCLUDE
         Console.WriteLine(
-            MathEx.Max(7, 490)); // No type arguments!
+            MathEx.Max(7, 490)); // 没有提供类型实参
         Console.WriteLine(
-            MathEx.Min("R.O.U.S'", "Fireswamp"));
+            MathEx.Min("中国", "中国人"));
         #endregion INCLUDE
     }
 }

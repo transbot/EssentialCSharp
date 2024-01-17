@@ -47,7 +47,7 @@ public class Program
     private static string NodeToString(Expression expression) =>
         expression.NodeType switch
         {
-            // using static ExpressionType
+            // Ê¹ÓÃ¾²Ì¬ExpressionType
             Multiply => "*",
             Add => "+",
             Divide => "/",

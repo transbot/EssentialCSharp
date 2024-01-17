@@ -10,11 +10,11 @@ public class Program
 
         for (int i = 0; i < items.Length; i++)
         {
-            Console.Write("Enter an integer: ");
+            Console.Write("请输入一个整数: ");
             string? text = Console.ReadLine();
             if (!int.TryParse(text, out items[i]))
             {
-                Console.WriteLine($"'{text}' is not a valid integer.");
+                Console.WriteLine($"'{text}'不是一个有效的整数。");
                 return;
             }
         }

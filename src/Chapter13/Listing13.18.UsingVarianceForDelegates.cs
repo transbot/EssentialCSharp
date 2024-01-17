@@ -9,7 +9,7 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        // Contravariance
+        // 逆变
         Action<object> broadAction =
             (object data) =>
             {
@@ -18,12 +18,12 @@ public class Program
 
         Action<string> narrowAction = broadAction;
 
-        // Covariance
+        // 协变
         Func<string?> narrowFunction =
             () => Console.ReadLine();
         Func<object?> broadFunction = narrowFunction;
 
-        // Contravariance and covariance combined
+        // 同时使用逆变和协变
         Func<object, string?> func1 =
             (object data) => data.ToString();
 

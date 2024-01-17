@@ -10,11 +10,11 @@ public class Program
 
         for (int i = 0; i < items.Length; i++)
         {
-            Console.Write("Enter an integer:");
+            Console.Write("请输入一个整数:");
             string? text = Console.ReadLine();
             if (!int.TryParse(text, out items[i]))
             {
-                Console.WriteLine($"'{text}' is not a valid integer.");
+                Console.WriteLine($"'{text}'不是一个有效的整数。");
                 return;
             }
         }
@@ -27,11 +27,10 @@ public class Program
             static (int first, int second) =>
         #endregion HIGHLIGHT
             {
-                #if COMPILEERROR // EXCLUDE
-                // Error CS8820: A static anonymous function
-                // cannot contain a reference to comparisonCount.
+            #if COMPILEERROR // EXCLUDE
+                // 错误 CS8820：静态匿名函数不能包含对comparisonCount的引用。
                 comparisonCount++;
-                #endif // COMPILEERROR // EXCLUDE
+            #endif // COMPILEERROR // EXCLUDE
                 return first < second;
             }
         );
@@ -42,7 +41,7 @@ public class Program
         }
 
         #region HIGHLIGHT
-        Console.WriteLine("Items were compared {0} times.",
+        Console.WriteLine("items被比较了{0}次。",
             comparisonCount);
         #endregion HIGHLIGHT
     }

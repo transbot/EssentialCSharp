@@ -5,7 +5,7 @@ using System;
 public class Thermostat
 {
     #region EXCLUDE
-    // Define the event publisher
+    // 定义事件发布者
     public Action<float>? OnTemperatureChange { get; set; }
     #endregion EXCLUDE
     public float CurrentTemperature
@@ -21,14 +21,14 @@ public class Thermostat
                 _CurrentTemperature = value;
                 #endregion HIGHLIGHT
 
-                // Call subscribers
-                // Incomplete, check for null needed
+                // 调用订阅者；
+                // 未完成，需要进行null检查
                 #region EXCLUDE
-                #pragma warning disable CS8602 // Dereference of a possibly null reference.
+                #pragma warning disable CS8602 // 提领一个可能为null的引用
                 #endregion EXCLUDE
                 OnTemperatureChange(value);
                 #region EXCLUDE
-                #pragma warning restore CS8602 // Dereference of a possibly null reference.
+                #pragma warning restore CS8602 // 提领一个可能为null的引用
                 #endregion EXCLUDE
             }
         }

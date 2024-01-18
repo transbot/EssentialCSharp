@@ -5,7 +5,7 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter14.Listing14_15;
 
 using System;
-// In an actual implementation we would utilize this event
+// 会在一个实际的实现中利用该事件
 #region INCLUDE
 public class Thermostat
 #region EXCLUDE

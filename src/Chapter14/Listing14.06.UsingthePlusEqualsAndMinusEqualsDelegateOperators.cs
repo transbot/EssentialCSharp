@@ -21,14 +21,14 @@ public class Program
         delegate1 = heater.OnTemperatureChanged;
         delegate2 = cooler.OnTemperatureChanged;
 
-        Console.WriteLine("Invoke both delegates:");
+        Console.WriteLine("同时调用两个委托:");
         delegate3 = delegate1;
         #region HIGHLIGHT
         delegate3 += delegate2;
         #endregion HIGHLIGHT
         delegate3(90);
 
-        Console.WriteLine("Invoke only delegate2");
+        Console.WriteLine("只调用delegate2");
         #region HIGHLIGHT
         delegate3 -= delegate1;
         #endregion HIGHLIGHT

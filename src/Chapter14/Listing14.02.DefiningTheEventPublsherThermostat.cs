@@ -4,7 +4,7 @@ using System;
 #region INCLUDE
 public class Thermostat
 {
-    // Define the event publisher (initially without the sender)
+    // 定义事件发布者(最开始没有sender)
     public Action<float>? OnTemperatureChange { get; set; }
 
     public float CurrentTemperature { get; set; }

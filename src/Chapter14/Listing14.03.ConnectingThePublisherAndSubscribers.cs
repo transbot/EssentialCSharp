@@ -19,11 +19,11 @@ public class Program
             cooler.OnTemperatureChanged;
         #endregion HIGHLIGHT
 
-        Console.Write("Enter temperature: ");
+        Console.Write("输入温度: ");
         string? temperature = Console.ReadLine();
         if (!int.TryParse(temperature, out int currentTemperature))
         {
-            Console.WriteLine($"'{temperature}' is not a valid integer.");
+            Console.WriteLine($"'{temperature}'不是一个有效的整数。");
             return;
         }
         thermostat.CurrentTemperature = currentTemperature;

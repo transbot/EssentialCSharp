@@ -6,7 +6,7 @@ using Listing14_01;
 #region INCLUDE
 public class Thermostat
 {
-    // Define the event publisher
+    // 定义事件发布者
     public Action<float>? OnTemperatureChange;
 
     public float CurrentTemperature
@@ -40,8 +40,8 @@ public class Thermostat
                     if(exceptionCollection.Count > 0)
                     {
                         throw new AggregateException(
-                            "There were exceptions thrown by " +
-                            "OnTemperatureChange Event subscribers.",
+                            "有异常从" +
+                            "OnTemperatureChange事件订阅者抛出。",
                             exceptionCollection);
                     }
                     #endregion HIGHLIGHT
@@ -73,11 +73,11 @@ public class Program
             thermostat.OnTemperatureChange +=
                 cooler.OnTemperatureChanged;
 
-            Console.Write("Enter temperature: ");
+            Console.Write("输入温度: ");
             string? temperature = Console.ReadLine();
             if (!int.TryParse(temperature, out int currentTemperature))
             {
-                Console.WriteLine($"'{temperature}' is not a valid integer.");
+                Console.WriteLine($"'{temperature}' 不是一个有效的整数。");
                 return;
             }
             thermostat.CurrentTemperature = currentTemperature;
@@ -85,11 +85,10 @@ public class Program
         catch(AggregateException exception)
         {
             Console.WriteLine(exception.Message);
-            if (exception.InnerExceptions.Count < 1)
+            if (exception.InnerExceptions.Count > 1)
             {
-                // Enumerate the exceptions only if there is more than
-                // one because with one the message gets merged into the 
-                // Aggregate exception message.
+                // 异常超过1个时才枚举这些异常，因为如果只有一个异常，
+                // 它的消息已经合并到AggregateException的消息中了。                
                 foreach (Exception item in exception.InnerExceptions)
                 {
                     Console.WriteLine("\t{0}: {1}",

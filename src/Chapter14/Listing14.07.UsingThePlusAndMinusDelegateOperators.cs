@@ -20,13 +20,13 @@ public class Program
         delegate1 = heater.OnTemperatureChanged;
         delegate2 = cooler.OnTemperatureChanged;
 
-        Console.WriteLine("Combine delegates using + operator:");
+        Console.WriteLine("使用+操作符合并委托:");
         #region HIGHLIGHT
         delegate3 = delegate1 + delegate2;
         #endregion HIGHLIGHT
         delegate3(60);
 
-        Console.WriteLine("Uncombine delegates using - operator:");
+        Console.WriteLine("使用-操作符取消合并委托:");
         #region HIGHLIGHT
         delegate3 = (delegate3 - delegate2)!;
         #endregion HIGHLIGHT

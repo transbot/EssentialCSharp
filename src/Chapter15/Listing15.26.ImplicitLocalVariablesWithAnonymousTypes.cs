@@ -11,20 +11,20 @@ public class Program
         var patent1 =
             new
             {
-                Title = "Bifocals",
+                Title = "双焦点眼镜",
                 YearOfPublication = "1784"
             };
         var patent2 =
             new
             {
-                Title = "Phonograph",
+                Title = "留声机",
                 YearOfPublication = "1877"
             };
         var patent3 =
             new
             {
                 patent1.Title,
-                // Renamed to show property naming
+                // 重命名以演示属性命名
                 Year = patent1.YearOfPublication
             };
         #endregion HIGHLIGHT

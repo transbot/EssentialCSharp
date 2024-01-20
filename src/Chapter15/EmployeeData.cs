@@ -40,22 +40,48 @@ public static class CorporateData
         new Department[]
     {
         new("Corporate", 0),
-        new("Human Resources", 1),
-        new("Engineering", 2),
-        new("Information Technology", 3),
-        new("Philanthropy", 4),
-        new("Marketing", 5),
+        new("人力资源", 1),
+        new("工程", 2),
+        new("IT", 3),
+        new("慈善", 4),
+        new("市场", 5),
     };
 
     public static readonly Employee[] Employees = new Employee[]
     {
-        new("Mark Michaelis", "Chief 电脑发烧友", 0),
-        new("Michael Stokesbary", "Senior Computer Wizard", 2),
-        new("Brian Jones", "Enterprise Integration Guru", 2),
-        new("Anne Beard", "HR Director", 1),
-        new("Pat Dever", "Enterprise Architect", 3),
-        new("Kevin Bost", "Programmer Extraordinaire", 2),
-        new("Thomas Heavey", "Software Architect", 2),
-        new("Eric Edmonds", "Philanthropy Coordinator", 4)
+        new("Mark Michaelis", "首席电脑发烧友", 0),
+        new("Michael Stokesbary", "高级电脑巫师", 2),
+        new("Brian Jones", "企业集成大师", 2),
+        new("Anne Beard", "人力资源总监", 1),
+        new("Pat Dever", "企业架构师", 3),
+        new("Kevin Bost", "杰出程序员", 2),
+        new("Thomas Heavey", "软件架构师", 2),
+        new("Eric Edmonds", "慈善协调员", 4)
     };
 }
+
+//public static class CorporateData
+//{
+//    public static readonly Department[] Departments =
+//        new Department[]
+//    {
+//        new("Corporate", 0),
+//        new("Human Resources", 1),
+//        new("Engineering", 2),
+//        new("Information Technology", 3),
+//        new("Philanthropy", 4),
+//        new("Marketing", 5),
+//    };
+
+//    public static readonly Employee[] Employees = new Employee[]
+//    {
+//        new("Mark Michaelis", "首席电脑发烧友", 0),
+//        new("Michael Stokesbary", "Senior Computer Wizard", 2),
+//        new("Brian Jones", "Enterprise Integration Guru", 2),
+//        new("Anne Beard", "HR Director", 1),
+//        new("Pat Dever", "Enterprise Architect", 3),
+//        new("Kevin Bost", "Programmer Extraordinaire", 2),
+//        new("Thomas Heavey", "Software Architect", 2),
+//        new("Eric Edmonds", "Philanthropy Coordinator", 4)
+//    };
+//}

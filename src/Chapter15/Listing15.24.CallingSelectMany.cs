@@ -14,7 +14,7 @@ public class Program
             [] worldCup2006Finalists = new[]
         {
             (
-                TeamName: "France",
+                TeamName: "法国",
                 Players: new string[]
                 {
                     "Fabien Barthez", "Gregory Coupet",
@@ -32,7 +32,7 @@ public class Program
                 }
             ),
             (
-                TeamName: "Italy",
+                TeamName: "意大利",
                 Players: new string[]
                 {
                     "Gianluigi Buffon", "Angelo Peruzzi",

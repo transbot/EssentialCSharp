@@ -8,7 +8,7 @@ public class Program
         var patent1 =
             new
             {
-                Title = "Bifocals",
+                Title = "双焦点眼镜",
                 YearOfPublication = "1784"
             };
 
@@ -16,7 +16,7 @@ public class Program
             new
             {
                 YearOfPublication = "1877",
-                Title = "Phonograph"
+                Title = "留声机"
             };
 
         var patent3 =
@@ -26,17 +26,14 @@ public class Program
                 Year = patent1.YearOfPublication
             };
 
-        // ERROR: Cannot implicitly convert type 
-        //        'AnonymousType#1' to 'AnonymousType#2'
-        //patent1 = patent2; //won't compile if uncommented
-        // ERROR: Cannot implicitly convert type 
-        //        'AnonymousType#1' to 'AnonymousType#3'
-        //patent1 = patent3; //won't compile if uncommented
+        // 错误: 无法将类型'AnonymousType#2'隐式转换为'AnonymousType#1'
+        // patent1 = patent2; // 撤消注释将无法编译
 
-        // ERROR: Property or indexer 'AnonymousType#1.Title' 
-        //        cannot be assigned to -- it is read-only'
-        //patent1.Title = "Swiss Cheese"; 
-            //won't compile if uncommented
+        // 错误: 无法将类型'AnonymousType#3'隐式转换为'AnonymousType#1'
+        // patent1 = patent3; // 撤消注释将无法编译
+
+        // 错误: 无法为属性或索引器'AnonymousType#1.Title'赋值 -- 它是只读的
+        // patent1.Title = "瑞士奶酪";  // 撤消注释将无法编译
     }
 }
 #endregion INCLUDE

@@ -15,7 +15,7 @@ public class Program
         try
         {
             int number;
-            while(enumerator.MoveNext())
+            while (enumerator.MoveNext())
             {
                 number = enumerator.Current;
                 Console.WriteLine(number);
@@ -23,12 +23,12 @@ public class Program
         }
         finally
         {
-            // Explicit cast used for IEnumerator<T>
+            // 枚举器需要显式转型为IDisposable
             disposable = (IDisposable)enumerator;
             disposable.Dispose();
 
-            // IEnumerator will use the as operator unless IDisposable
-            // support is known at compile time
+            // 除非编译时已知支持IDisposable，否则应该使用
+            // as操作符将枚举器转型为IDisposable
             // disposable = (enumerator as IDisposable);
             // if (disposable is not null)
             // {

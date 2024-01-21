@@ -6,22 +6,21 @@
 
 ## 中文版主页请访问[周靖的博客](https://bookzhou.com)
 ## 英文版在线手稿请访问[EssentialCSharp.com](https://essentialcsharp.com)
-## 在英文版（print edition）中发现了大量疏漏😮‍💨，详情会在完成本书的中文版翻译后放出。
-## 显然， 中文版会全部予以纠正。
+## 在英文版（print edition）中发现并纠正了不少疏漏😮‍💨，稍后会放出英文版勘误。
 
 ## 要求
 
 - [.NET](https://www.microsoft.com/net/core) - 该项目当前经过.NET 8.0、7.0和6.0的测试。
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) - 已包含.NET Core，可以轻松启动。而且，这是一个很棒的IDE，使入门变得简单。
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - 虽然不是必需的，但是是一个好工具，可以快速下载此代码仓库的简便方式。如果不喜欢使用命令行，[GitKraken](https://www.gitkraken.com/invite/bX2Nqsqr) 是一个很好的使用Git的GUI。
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/) - 已集成.NET Core，这是我们主推的IDE，它使入门变得很简单。
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - 虽然不是必需的，但它是一个可以快速下载此代码仓库的好工具。如果不喜欢使用命令行，建议使用Visual Studio自带的Git功能，或者使用第三方工具，例如[GitKraken](https://www.gitkraken.com/invite/bX2Nqsqr) 。
 
 ## 运行代码
 
 ### Visual Studio
 
-1. **EssentialCSharp.sln** 是项目的主要解决方案，请使用Visual Studio打开此文件。
+1. **EssentialCSharp.sln** 是项目的主解决方案，请使用Visual Studio打开。
 2. 打开解决方案文件后，选择生成->生成解决方案，使用Visual Studio编译代码。
-   - 注意：在执行源代码之前，您需要将和当前章对应的项目设为启动项目来执行的项目。例如，要执行第1章的示例，那么应该右键单击Chapter01项目，然后选择“设为启动项目”。如果选择一个目标章作为启动项目，但输入其他章的代码清单编号，那么会导致异常，显示消息：“不存在和代码清单...对应的章”或者“不存在代码清单...”。
+   - 注意：在执行源代码之前，您需要将和当前章对应的项目设为启动项目来执行的项目。例如，要执行第1章的示例，那么应该右键单击Chapter01项目，然后选择“设为启动项目”。如果选择一个目标章作为启动项目，但输入其他章的代码清单编号，那么会导致异常，并显示消息：“不存在和代码清单...对应的章”或者“不存在代码清单...”。
 3. 要运行代码，请按F5或选择调试->开始调试。
 4. 运行后，程序将提示输入要执行的代码清单编号（例如，18.33）。
    - 注意：如前所述，您只能输入本书的合法代码清单编号。

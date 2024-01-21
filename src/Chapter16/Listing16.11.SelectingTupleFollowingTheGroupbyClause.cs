@@ -37,7 +37,7 @@ public class Program
 
             Console.WriteLine(Environment.NewLine + "{0}:",
                 isContextualKeyword ?
-                    "Contextual Keywords" : "Keywords");
+                    "上下文关键字" : "关键字");
             #region HIGHLIGHT
             foreach (string keyword in items)
             #endregion HIGHLIGHT

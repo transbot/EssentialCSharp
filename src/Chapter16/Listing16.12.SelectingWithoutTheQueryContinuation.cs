@@ -33,8 +33,8 @@ public class Program
         {
             Console.WriteLine(Environment.NewLine + "{0}:",
                 isContextualKeyword ?
-                    "Contextual Keywords" : "Keywords");
-            foreach(var keyword in items)
+                    "上下文关键字" : "关键字");
+            foreach (var keyword in items)
             {
                 Console.Write(" " +
                     keyword.Replace("*", null));

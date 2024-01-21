@@ -31,9 +31,8 @@ public class Program
 
         foreach (FileInfo file in files)
         {
-            //  As simplification, current directory is
-            //  assumed to be a subdirectory of
-            //  rootDirectory
+            //  为了简化，假定当前目录是根目录下的一个子目录 
+            // （译注：其实就是为了避免判断是否要先显示一个点号）
             string relativePath = file.FullName.Substring(
                 Directory.GetCurrentDirectory().Length);
             Console.WriteLine( 

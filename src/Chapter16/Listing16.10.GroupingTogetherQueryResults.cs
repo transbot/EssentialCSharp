@@ -25,7 +25,7 @@ public class Program
         {
             Console.WriteLine(Environment.NewLine + "{0}:",
                 wordGroup.Key ?
-                    "Contextual Keywords" : "Keywords");
+                    "上下文关键字" : "关键字");
             foreach(string keyword in wordGroup)
             {
                 Console.Write(" " +

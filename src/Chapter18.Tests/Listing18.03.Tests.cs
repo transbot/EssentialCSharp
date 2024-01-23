@@ -8,7 +8,7 @@ public class ProgramTests
     public void Main_WithNoParameters_DisplaysHelp()
     {
         string expected = @"
-Compress.exe /Out:< file name > /Help /Priority:RealTime | High | AboveNormal | Normal | BelowNormal | Idle";
+Compress.exe /Out:< 文件名 > /Help /Priority:RealTime | High | AboveNormal | Normal | BelowNormal | Idle";
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>
         {
@@ -31,7 +31,7 @@ Compress.exe /Out:< file name > /Help /Priority:RealTime | High | AboveNormal | 
     public void Main_InvalidCompression_Succes()
     {
         string expected = @"The option 'Invalid' is invalid for 'Priority'
-Compress.exe /Out:< file name > /Help /Priority:RealTime | High | AboveNormal | Normal | BelowNormal | Idle";
+Compress.exe /Out:< 文件名 > /Help /Priority:RealTime | High | AboveNormal | Normal | BelowNormal | Idle";
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>
         {

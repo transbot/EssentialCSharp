@@ -14,20 +14,20 @@ IEnumerable<T>
         Value = value;
     }
 
-    #region IEnumerable<T>
+    #region IEnumerable<T>的成员
     #region HIGHLIGHT
     public IEnumerator<T> GetEnumerator()
     #endregion HIGHLIGHT
     {
         #region EXCLUDE
-        return new List<T>.Enumerator(); // This will be implemented in 16.16
+        return new List<T>.Enumerator(); // 下个代码清单实现，这里只是摆个样子
     }
     IEnumerator IEnumerable.GetEnumerator()
     {
-        return GetEnumerator(); // This will be implemented in 16.16
+        return GetEnumerator(); // 下个代码清单实现，这里只是摆个样子
         #endregion EXCLUDE
     }
-    #endregion IEnumerable<T>
+    #endregion IEnumerable<T>的成员
 
     public T Value { get; }
     public Pair<BinaryTree<T>> SubItems { get; set; }

@@ -15,7 +15,7 @@ public class Program
 
         // ...
 
-        // 如果显式实现IEnumerable<T，那么需要一次强制类型转换
+        // 如果显式实现IEnumerable<T>，那么需要一次强制类型转换
         // ((IEnumerable<int>)stack).GetEnumerator();
         enumerator = stack.GetEnumerator();
         while(enumerator.MoveNext())

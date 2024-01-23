@@ -12,21 +12,20 @@ public class BinaryTree<T> :
         Value = value;
     }
     #endregion EXCLUDE
-    #region IEnumerable<T>
+    #region IEnumerable<T>的成员
     public IEnumerator<T> GetEnumerator()
     {
-        // Return the item at this node
+        // 返回这个节点的item
         yield return Value;
 
-        // Iterate through each of the elements in the pair
+        // 遍历pair的每个元素
         #region HIGHLIGHT
         foreach (BinaryTree<T>? tree in SubItems)
         {
             if(tree is not null)
             {
-                // Since each element in the pair is a tree,
-                // traverse the tree and yield each
-                // element
+                // 由于pair中的每个元素都是树，
+                // 所以遍历树，并yield每个元素。
                 foreach(T item in tree)
                 {
                     yield return item;
@@ -35,9 +34,9 @@ public class BinaryTree<T> :
         }
         #endregion HIGHLIGHT
     }
-    #endregion IEnumerable<T>
+    #endregion IEnumerable<T>的成员
 
-    #region IEnumerable Members
+    #region IEnumerable的成员
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {
@@ -45,7 +44,7 @@ public class BinaryTree<T> :
     }
     #endregion
     #region EXCLUDE
-    public T Value { get; }  // C# 6.0 Getter-only AutoProperty
+    public T Value { get; }  // C# 6.0开始可以写仅getter的自动属性
 
     public Pair<BinaryTree<T>> SubItems { get; set; }
     #endregion EXCLUDE

@@ -30,14 +30,14 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "The enum {0} has not been implemented",
+                        "尚未实现{0}枚举",
                         index.ToString()));
             }
         }
     }
     #endregion Members
 
-    //Listing 16.20 Using yield return in a Method That Returns IEnumerable<T>
+    // 代码清单17.21  在返回IEnumerable<T>的方法中使用yield return
     #endregion EXCLUDE
     #region HIGHLIGHT
     public IEnumerable<T> GetReverseEnumerator()
@@ -55,7 +55,7 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
     }
     #endregion IEnumerable<T>
 
-    #region IEnumerable Members
+    #region IEnumerable的成员
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {

@@ -14,10 +14,9 @@ public class BinaryTree<T>
     }
 
     /// <summary>
-    /// Returns the BinaryTree<typeparamref name="T"/> at a particular location
+    /// 返回位于特定位置的BinaryTree<typeparamref name="T"/>
     /// </summary>
-    /// <param name="branches">An array of PairItems 
-    /// pointing to a particular branch.</param>
+    /// <param name="branches">指向特定分支的一个PairItems数组。</param>
     /// <example>
     /// familyTree.SubItems.Second.SubItems[PairItem.First].Value
     /// </example>
@@ -28,21 +27,20 @@ public class BinaryTree<T>
         {
             BinaryTree<T> currentNode = this;
 
-            // Allow either an empty array or null
-            // to refer to the root node
+            // 允许使用空数组或null来引用根节点
             int totalLevels = branches?.Length ?? 0;
             int currentLevel = 0;
 
             while (currentLevel < totalLevels)
             {
                 System.Diagnostics.Debug.Assert(branches is not null,
-                    $"{ nameof(branches) } is not null");
+                    $"{ nameof(branches) }不为null");
 
                 currentNode = currentNode.SubItems[
                     branches[currentLevel]];
                 if (currentNode is null)
                 {
-                    // The binary tree at this location is null
+                    // 此位置的二叉树为null
                     throw new IndexOutOfRangeException();
                 }
                 currentLevel++;
@@ -63,26 +61,35 @@ public class Program
 {
     public static void Main()
     {
-        // JFK
+        // JFK(肯尼迪)家族族谱
         var jfkFamilyTree = new BinaryTree<string>(
             "John Fitzgerald Kennedy")
         {
             SubItems = new Pair<BinaryTree<string>>(
                 new BinaryTree<string>("Joseph Patrick Kennedy")
                 {
-                    // Grandparents (Father's side)
+                    // 祖父母（父亲那边）
                     SubItems = new Pair<BinaryTree<string>>(
                         new BinaryTree<string>("Patrick Joseph Kennedy"),
                         new BinaryTree<string>("Mary Augusta Hickey"))
                 },
                 new BinaryTree<string>("Rose Elizabeth Fitzgerald")
-                { 
-                    // Grandparents (Mother's side)
+                {
+                    // 外祖父母（母亲那边）
                     SubItems = new Pair<BinaryTree<string>>(
                         new BinaryTree<string>("John Francis Fitzgerald"),
                         new BinaryTree<string>("Mary Josephine Hannon"))
                 })
         };
+
+        // 上述二叉树的结构如下所示：
+        // John Fitzgerald Kennedy（这是大家熟知的美国总统肯尼迪）
+        //     Joseph Patrick Kennedy（肯尼迪的老爸）
+        //         Patrick Joseph Kennedy（肯尼迪的祖父）
+        //         Mary Augusta Hickey（肯尼迪的祖母）
+        //     Rose Elizabeth Fitzgerald（肯尼迪的老妈）
+        //         John Francis Fitzgerald（肯尼迪的外祖父）
+        //         Mary Josephine Hannon（肯尼迪的外祖母）
 
         Console.WriteLine(jfkFamilyTree[PairItem.Second, PairItem.First].Value);
         Console.WriteLine(jfkFamilyTree[PairItem.Second, PairItem.Second].Value);

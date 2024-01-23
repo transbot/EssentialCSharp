@@ -31,9 +31,9 @@ public struct Pair<T> : IPair<T>
         Second = second;
     }
 
-    public T First { get; } // C# 6.0 Getter-Only AutoProperty
+    public T First { get; } // C# 6.0引入的仅getter自动属性
 
-    public T Second { get; } // C# 6.0 Getter-Only AutoProperty
+    public T Second { get; } // C# 6.0引入的仅getter自动属性
     #region INCLUDE
     [System.Runtime.CompilerServices.IndexerName("Entry")]
     public T this[PairItem index]
@@ -46,7 +46,7 @@ public struct Pair<T> : IPair<T>
                 PairItem.First => First,
                 PairItem.Second => Second,
                 _ => throw new NotImplementedException(
-                     $"The enum {index} has not been implemented"),
+                     $"尚未实现{index}枚举"),
             };
         }
         #endregion EXCLUDE

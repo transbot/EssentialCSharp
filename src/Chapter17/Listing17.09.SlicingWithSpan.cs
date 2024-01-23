@@ -12,7 +12,7 @@ public class Program
             "C#", "COBOL", "Java",
             "C++", "TypeScript", "Python",};
 
-        // Create a Span<string> from the arrays first 3 elements.
+        // 用数组的前三个元素创建一个Span<string>，这是一个“切片”
         Span<string> languageSpan = languages.AsSpan(0, 2);
         languages[0] = "R";
         Assert(languages[0] == languageSpan[0]);
@@ -22,7 +22,7 @@ public class Program
         Assert("Lisp" == languages[0]);
 
         int[] numbers = languages.Select(item => item.Length).ToArray();
-        // Create a Span<string> from the arrays first 3 elements.
+        // 用数组的前三个元素创建一个Span<int>
         Span<int> numbersSpan = numbers.AsSpan(0, 2);
         Assert(numbers[1] == numbersSpan[1]);
         numbersSpan[1] = 42;
@@ -30,7 +30,7 @@ public class Program
         Assert(42 == numbers[1]);
         
         const string bigWord = "supercalifragilisticexpialidocious";
-        // Create a Span<char> from a suffix portion of the word.
+        // 用单词的一个后缀部分创建一个Span<char>
         #if NET8_0_OR_GREATER
         ReadOnlySpan<char> expialidocious = bigWord.AsSpan(20..);
         #else // NET8_0_OR_GREATER
@@ -45,7 +45,7 @@ public class Program
     {
         if (!condition)
         {
-            throw new Exception($"Assertion failed: {expression}");
+            throw new Exception($"Assertion(断言)失败: {expression}");
         }
     }
 }

@@ -28,14 +28,14 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "The enum {0} has not been implemented",
+                        "尚未实现{0}枚举",
                         index.ToString()));
             }
         }
     }
     #endregion Members
 
-    //Listing 17.18 Escaping Iteration via yield break
+    // 代码清单17.19  用yield break取消迭代
     #region INCLUDE
     public System.Collections.Generic.IEnumerable<T> GetNotNullEnumerator()
     {
@@ -50,8 +50,7 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
     }
     #endregion INCLUDE
 
-    //Listing 17.18 Escaping Iteration via yield break
-
+    
 
     #region IEnumerable<T>
     public IEnumerator<T> GetEnumerator()
@@ -61,7 +60,7 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
     }
     #endregion IEnumerable<T>
 
-    #region IEnumerable Members
+    #region IEnumerable的成员
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {

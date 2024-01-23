@@ -42,7 +42,7 @@ public partial class Program
     {
         // Display the command-line help.
         Console.WriteLine(
-            "Compress.exe /Out:< file name > /Help "
+            "Compress.exe /Out:< 文件名 > /Help "
             + "/Priority:RealTime | High | "
             + "AboveNormal | Normal | BelowNormal | Idle");
 
@@ -129,26 +129,21 @@ public class CommandLineHandler
                         {
                             success = false;
                             errorMessage =
-                                $@"The option '{
-                                    optionParts[1]
-                                    }' is invalid for '{ 
-                                    option }'";
+                                $@"选项'{optionParts[1] }'对'{ option }'无效。";
                         }
                     }
                     else
                     {
                         success = false;
                         errorMessage = 
-                            $@"Data type '{
-                                property.PropertyType }' on {
-                                commandLine.GetType() } is not supported.";
+                            $@"不支持{ commandLine.GetType() }上的数据类型'{property.PropertyType}'。";
                     }
                 }
                 else
                 {
                     success = false;
                     errorMessage = 
-                       $"Option '{ option }' is not supported.";
+                       $"不支持'{ option }'选项。";
                 }
             }
         }

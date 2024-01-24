@@ -2,17 +2,17 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter18.Listing18_11;
 
 public class Program
 {
-#pragma warning disable CA1822 // Mark members as static
+#pragma warning disable CA1822 // 将成员标记为static
     #region INCLUDE
     [return: Description(
-       "Returns true if the object is in a valid state.")]
+       "如果对象处于有效状态，就返回true。")]
     public bool IsValid()
     {
         // ...
         return true;
     }
     #endregion INCLUDE
-#pragma warning restore CA1822 // Mark members as static
+#pragma warning restore CA1822 // 将成员标记为static
 }
 
 public class DescriptionAttribute : Attribute

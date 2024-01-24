@@ -5,7 +5,7 @@
   <PropertyGroup>
     <!-- CS0612 is an Obsolete warning demonstrating the Obsolete attribute -->
     <ExpectedWarnings>$(ExpectedWarnings),CS0612</ExpectedWarnings>
-    <!--CS0612 ÓÃAttributeUsageAttribute±ê¼ÇÌØÐÔ, isn't shown until 18.19-->
+    <!--CS0612 ï¿½ï¿½AttributeUsageAttributeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, isn't shown until 18.19-->
     <IgnoredWarnings>$(IgnoredWarnings),CA1018</IgnoredWarnings>
   </PropertyGroup>
   <Import Project="..\Chapter.props" />
@@ -15,6 +15,7 @@
     <None Remove="4.0\**" />
     <Compile Remove="Listing18.10.AssemblyAttributesWithinAssemblyInfo.cs" />
     <Compile Remove="Listing18.13.csprojMockFileForResequencingListings.cs" />
+    <Compile Remove="Listing18.23.UsingFlagsAttributeæ›´å¥½çš„ç‰ˆæœ¬.cs" />
     <Compile Remove="Listing18.33.OverridableMembersOnSystem.Dynamic.DynamicObject.cs" />
     <Compile Include="..\Shared\Program.cs">
       <Link>Program.cs</Link>
@@ -29,6 +30,7 @@
       <Link>DoWorkEventArgs.cs</Link>
     </Compile>
     <None Include="Listing18.10.AssemblyAttributesWithinAssemblyInfo.cs" />
+    <None Include="Listing18.23.UsingFlagsAttributeæ›´å¥½çš„ç‰ˆæœ¬.cs" />
     <None Include="Listing18.33.OverridableMembersOnSystem.Dynamic.DynamicObject.cs" />
   </ItemGroup>
 </Project>

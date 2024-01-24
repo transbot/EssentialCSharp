@@ -2,6 +2,16 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_38;
 
 #region INCLUDE
 // FileAttributes在System.IO中定义
+// FileAttributes在System.IO中定义
+/*
+[Flags]
+public enum FileAttributes
+{
+    ReadOnly = 0x0001,
+    Hidden   = 0x0002,
+    // ...
+}
+*/
 
 using System;
 using System.IO;
@@ -29,7 +39,7 @@ public class Program
         file.Attributes = FileAttributes.Hidden |
             FileAttributes.ReadOnly;
 
-        Console.WriteLine("\"{0}\"，输出为\"{1}\"",
+        Console.WriteLine("原本输出\"{1}\"，替换为\"{0}\"。",
             file.Attributes.ToString().Replace(",", " |"),
             file.Attributes);
 

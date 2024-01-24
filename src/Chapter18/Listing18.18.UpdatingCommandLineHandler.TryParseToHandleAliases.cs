@@ -42,8 +42,7 @@ public class CommandLineHandler
                 else
                 {
                     success = false;
-                    errorMessage = 
-                        $"Option '{option}' is not supported.";
+                    errorMessage = $"不支持'{ option }'选项。";
                 }
             }
         }
@@ -58,7 +57,7 @@ public class CommandLineHandler
 
         if(property.PropertyType == typeof(bool))
         {
-            // Last parameters for handling indexers
+            // 最后一个参数用于处理属性是索引器的情形
             property.SetValue(
                 commandLine, true, null);
             success = true;
@@ -69,10 +68,10 @@ public class CommandLineHandler
             if (optionParts.Length < 2
                 || optionParts[1] == "")
             {
-                // No setting was provided for the switch.
+                // 没有为开关提供设置
                 success = false;
                 errorMessage =
-                     $"You must specify the value for the { property.Name } option.";
+                     $"必须为{ property.Name }选项提供值。";
             }
             else if(
                 property.PropertyType == typeof(string))
@@ -82,7 +81,7 @@ public class CommandLineHandler
                 success = true;
             }
             else if(
-                // property.PropertyType.IsEnum also available
+                // property.PropertyType.IsEnum也是支持的
                 property.PropertyType ==
                     typeof(ProcessPriorityClass))
             {
@@ -94,20 +93,20 @@ public class CommandLineHandler
             {
                 success = false;
                 errorMessage = 
-                    $@"Data type '{ property.PropertyType.ToString() }' on {
-                    commandLine.GetType().ToString() } is not supported.";
+                    $@"不支持{ commandLine.GetType().ToString() 
+                    }上的数据类型'{property.PropertyType.ToString()}'。";
             }
         }
         return success;
     }
     #endregion INCLUDE
 
-// 说明 : Not fully implemented.
-#pragma warning disable IDE0060 // Remove unused parameter
+    // 说明 : 未完全实现
+#pragma warning disable IDE0060 // 移除未使用的参数
     private static bool TryParseEnumSwitch(
         object commandLine, string[] optionParts, PropertyInfo property, ref string? errorMessage)
     {
         throw new NotImplementedException();
     }
-#pragma warning restore IDE0060 // Remove unused parameter
+#pragma warning restore IDE0060 // 移除未使用的参数
 }

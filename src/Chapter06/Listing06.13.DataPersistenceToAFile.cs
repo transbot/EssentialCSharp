@@ -15,7 +15,8 @@ public class DataStorage
             employee.FirstName + employee.LastName + ".dat",
             FileMode.Create);
 
-        // 创建一个StreamWriter对象writer，以便将文本写入FileStream对象stream
+        // 创建StreamWriter类型的对象writer，
+        // 以便将文本写入FileStream类型的对象stream。
         StreamWriter writer = new(stream);
 
         // 开始写入与员工实例关联的所有数据

@@ -1,9 +1,9 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter18.Listing18_20;
 
-// Will not compile if uncommented
+// 取消注释将不能编译
 /*
 #region INCLUDE
-// ERROR: The attribute usage is restricted to properties
+// 错误: 已限制该特性只能用于属性
 [CommandLineSwitchAlias("?")] 
 class CommandLineInfo
 {

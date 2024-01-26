@@ -11,12 +11,12 @@ public class SampleTests
     #endregion HIGHLIGHT
     public static void ThrowArgumentNullExceptionTest()
     {
-        var result = 1/"".Length;
+        var result = 1 / "".Length;
     }
 }
 
 [AttributeUsage(AttributeTargets.Method)]
-public class ExpectedException<TException> : 
+public class ExpectedException<TException> :
     Attribute where TException : Exception
 {
     #region HIGHLIGHT
@@ -24,8 +24,8 @@ public class ExpectedException<TException> :
         Action testAction,
         [CallerArgumentExpression(nameof(testAction))]
             string testExpression = null!,
-        [CallerMemberName]string testActionMemberName = null!,
-        [CallerFilePath]string testActionFileName = null!
+        [CallerMemberName] string testActionMemberName = null!,
+        [CallerFilePath] string testActionFileName = null!
         )
     #endregion HIGHLIGHT
     {
@@ -33,20 +33,17 @@ public class ExpectedException<TException> :
         {
             testAction();
             throw new InvalidOperationException(
-                $"The expected exception, {
-                    typeof(TException).FullName }, was not thrown" +
-                    $" by the expression '{
-                        testExpression }' in the method '{
-                        testActionMemberName }' and file '{
-                        testActionFileName }'.");
+                    $"在'{testActionFileName}'文件的'{testActionMemberName
+                    }'方法中，表达式'{testExpression
+                    }'没有抛出预期的异常{typeof(TException).FullName}。");
         }
-        catch (TException exception) 
+        catch (TException exception)
         {
             return exception;
         }
     }
 
-    // Attribute detection
+    // 特性检测
     // ...
 }
 #endregion INCLUDE

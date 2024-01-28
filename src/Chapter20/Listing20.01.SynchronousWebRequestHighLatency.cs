@@ -8,13 +8,13 @@ using System.Net;
 public static class Program
 {
     public static HttpClient HttpClient { get; set; } = new();
-    public const string DefaultUrl = "https://IntelliTect.com";
+    public const string DefaultUrl = "https://bookzhou.com";
 
     public static void Main(string[] args)
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("ERROR: No findText argument specified.");
+            Console.WriteLine("错误：没有输入要查找的文本。");
             return;
         }
         string findText = args[0];
@@ -26,19 +26,19 @@ public static class Program
             // Ignore additional parameters
         }
         Console.WriteLine(
-            $"Searching for '{findText}' at URL '{url}'.");
+            $"从网址'{url}'搜索'{findText}'。");
 
-        Console.WriteLine("Downloading...");
+        Console.WriteLine("正在下载...");
         byte[] downloadData =
             HttpClient.GetByteArrayAsync(url).Result;
 
-        Console.WriteLine("Searching...");
+        Console.WriteLine("正在搜索...");
         int textOccurrenceCount = CountOccurrences(
             downloadData, findText);
 
         Console.WriteLine(
-            @$"'{findText}' appears {
-                textOccurrenceCount} times at URL '{url}'.");
+            @$"'{findText}'在网址'{url}'出现了{
+                textOccurrenceCount}次。");
     }
 
     private static int CountOccurrences(byte[] downloadData, string findText)
@@ -61,7 +61,7 @@ public static class Program
                     findIndex++;
                     if (findIndex == findText.Length)
                     {
-                        // Text was found
+                        // 未找到指定文本
                         textOccurrenceCount++;
                         findIndex = 0;
                     }

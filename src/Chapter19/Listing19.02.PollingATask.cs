@@ -9,8 +9,8 @@ public class Program
 {
     public static void Main()
     {
-        // Use Task.Factory.StartNew<string>() for
-        // TPL prior to .NET 4.5
+        // .NET 4.5之前Task.Run()不可用，要改为使用
+        // Task.Factory.StartNew<string>()
         #region HIGHLIGHT
         Task<string> task =
             Task.Run<string>(
@@ -35,7 +35,7 @@ public class Program
         #endregion HIGHLIGHT
         if (!task.IsCompleted)
         {
-            throw new Exception("Task Should Be Completed");
+            throw new Exception("任务应该已经完成了");
         }
     }
 }

@@ -16,15 +16,14 @@ public class Program
             Clock.Start();
             #region HIGHLIGHT
             // 注册一个回调，以便接收任何
-            // 未处理程序的通知。            
-
+            // 未处理异常的通知。
             AppDomain.CurrentDomain.UnhandledException +=
               (s, e) =>
               {
                   Message("正在启动事件处理程序.");
                   Delay(4000);
               };
-#endregion HIGHLIGHT
+            #endregion HIGHLIGHT
             Thread thread = new(() =>
             {
                 Message("抛出异常。");

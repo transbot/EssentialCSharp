@@ -12,19 +12,19 @@ public class Program
     {
         string stars =
             "*".PadRight(Console.WindowWidth - 1, '*');
-        Console.WriteLine("Push ENTER to exit.");
+        Console.WriteLine("按Enter键退出。");
 
         #region HIGHLIGHT
         CancellationTokenSource cancellationTokenSource = new();
-        // Use Task.Factory.StartNew<string>() for
-        // TPL prior to .NET 4.5
+        // .NET 4.5之前Task.Run()不可用，要改为使用
+        // Task.Factory.StartNew<string>()
         Task task = Task.Run(
             () =>
                 WritePi(cancellationTokenSource.Token),
                     cancellationTokenSource.Token);
         #endregion HIGHLIGHT
 
-        // Wait for the user's input
+        // 等待用户的输入
         Console.ReadLine();
 
         #region HIGHLIGHT

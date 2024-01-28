@@ -8,8 +8,8 @@ public static class Program
 {
     public static void Main()
     {
-        // Use Task.Factory.StartNew<string>() for
-        // TPL prior to .NET 4.5
+        // .NET 4.5之前Task.Run()不可用，要改为使用
+        // Task.Factory.StartNew<string>()
         Task task = Task.Run(() =>
         {
             throw new InvalidOperationException();
@@ -24,7 +24,7 @@ public static class Program
             exception.Handle(eachException =>
             {
                 Console.WriteLine(
-                    $"ERROR: { eachException.Message }");
+                    $"错误: { eachException.Message }");
                 return true;
             });
         }

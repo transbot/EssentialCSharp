@@ -8,20 +8,20 @@ public class Program
 {
     public static void Main()
     {
-        Console.WriteLine("Before");
-        // Use Task.Factory.StartNew<string>() for
-        // TPL prior to .NET 4.5
+        Console.WriteLine("开始之前");
+        // .NET 4.5之前Task.Run()不可用，要改为使用
+        // Task.Factory.StartNew<string>()
         Task taskA =
             Task.Run(() =>
-                 Console.WriteLine("Starting..."))
+                 Console.WriteLine("开始..."))
             .ContinueWith(antecedent =>
-                 Console.WriteLine("Continuing A..."));
+                 Console.WriteLine("继续A..."));
         Task taskB = taskA.ContinueWith(antecedent =>
-            Console.WriteLine("Continuing B..."));
+            Console.WriteLine("继续B..."));
         Task taskC = taskA.ContinueWith(antecedent =>
-            Console.WriteLine("Continuing C..."));
+            Console.WriteLine("继续C..."));
         Task.WaitAll(taskB, taskC);
-        Console.WriteLine("Finished!");
+        Console.WriteLine("结束!");
     }
 }
 #endregion INCLUDE

@@ -11,8 +11,8 @@ public class Program
     public static void Main()
     {
         const int repetitions = 10000;
-        // Use Task.Factory.StartNew<string>() for
-        // TPL prior to .NET 4.5
+        // .NET 4.5之前Task.Run()不可用，要改为使用
+        // Task.Factory.StartNew<string>()
         Task task = Task.Run(() =>
             {
                 for(int count = 0; count < repetitions; count++)
@@ -25,7 +25,7 @@ public class Program
             Console.Write('+');
         }
 
-        // Wait until the Task completes
+        // 等待任务完成
         task.Wait();
     }
 }

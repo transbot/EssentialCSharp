@@ -25,8 +25,7 @@ public class Program
             async (string webRequestUrl) =>
             #endregion HIGHLIGHT
             {
-                // Error handling omitted for 
-                // elucidation
+                // 出于当前主题的目的省略了错误处理
                 WebRequest webRequest =
                    WebRequest.Create(url);
 
@@ -35,9 +34,8 @@ public class Program
                     await webRequest.GetResponseAsync();
                 #endregion HIGHLIGHT
 
-                // Explicitly counting rather than invoking
-                // webRequest.ContentLength to demonstrate
-                //  multiple await operators
+                // 显式计数而不是调用webRequest.ContentLength，
+                // 以演示多个await操作符
                 using (StreamReader reader =
                     new(response.GetResponseStream()))
                 {
@@ -63,14 +61,14 @@ public class Program
     public static string FormatBytes(long bytes)
     {
         string[] magnitudes =
-            new [] { "GB", "MB", "KB", "Bytes" };
+            new [] { "GB", "MB", "KB", "字节" };
         long max =
             (long)Math.Pow(1024, magnitudes.Length);
 
         return string.Format("{1:##.##} {0}",
             magnitudes.FirstOrDefault(
                 magnitude =>
-                    bytes > (max /= 1024)) ?? "0 Bytes",
+                    bytes > (max /= 1024)) ?? "0字节",
                 (decimal)bytes / (decimal)max).Trim();
     }
     #endregion EXCLUDE

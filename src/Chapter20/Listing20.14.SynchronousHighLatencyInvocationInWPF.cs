@@ -10,7 +10,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_14
             UpdateLayout();
             Ping ping = new Ping();
             PingReply pingReply =
-                ping.Send("www.IntelliTect.com");
+                ping.Send("www.bookzhou.com");
             StatusLabel.Text = pingReply.Status.ToString();
         }
         #endregion INCLUDE

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 public static class Program
 {
     public static HttpClient HttpClient { get; set; } = new();
-    public const string DefaultUrl = "https://IntelliTect.com";
+    public const string DefaultUrl = "https://bookzhou.com";
 
     public static async Task Main(string[] args)
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("ERROR: No findText argument specified.");
+            Console.WriteLine("错误：没有输入要搜索的文本。");
             return;
         }
         string findText = args[0];
@@ -23,15 +23,15 @@ public static class Program
         if (args.Length > 1)
         {
             url = args[1];
-            // Ignore additional parameters
+            // 最多取两个命令行参数，忽略更多的命令行参数
         }
         Console.WriteLine(
-            $"Searching for '{findText}' at URL '{url}'.");
+            $"从网址'{url}'搜索'{findText}'。");
 
         Task<byte[]> taskDownload =
             HttpClient.GetByteArrayAsync(url);
 
-        Console.Write("Downloading...");
+        Console.Write("正在下载...");
         while (!taskDownload.Wait(100))
         {
             Console.Write(".");
@@ -40,9 +40,9 @@ public static class Program
         byte[] downloadData = await taskDownload;
 
         Task<int> taskSearch = CountOccurrencesAsync(
-         downloadData, findText);
+            downloadData, findText);
 
-        Console.Write($"{Environment.NewLine}Searching...");
+        Console.Write($"{Environment.NewLine}正在搜索...");
 
         while (!taskSearch.Wait(100))
         {
@@ -52,8 +52,8 @@ public static class Program
         int textOccurrenceCount = await taskSearch;
 
         Console.WriteLine(
-            @$"{Environment.NewLine}'{findText}' appears {
-                textOccurrenceCount} times at URL '{url}'.");
+            @$"{Environment.NewLine}'{findText}'在网址'{
+                url}'出现了{textOccurrenceCount}次。");        
     }
 
 
@@ -77,7 +77,7 @@ public static class Program
                     findIndex++;
                     if (findIndex == findText.Length)
                     {
-                        // Text was found
+                        // 找到了要搜索的文本
                         textOccurrenceCount++;
                         findIndex = 0;
                     }

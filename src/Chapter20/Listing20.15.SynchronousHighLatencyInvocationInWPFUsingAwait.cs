@@ -6,14 +6,14 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_15
         #region HIGHLIGHT
         private async void PingButton_Click(
         #endregion HIGHLIGHT
-    object sender, RoutedEventArgs e)
+            object sender, RoutedEventArgs e)
         {
             StatusLabel.Content = "Pinging...";
             UpdateLayout();
             Ping ping = new Ping();
             PingReply pingReply =
             #region HIGHLIGHT
-                await ping.SendPingAsync("www.IntelliTect.com");
+                await ping.SendPingAsync("www.bookzhou.com");
             #endregion HIGHLIGHT
             StatusLabel.Text = pingReply.Status.ToString();
         }

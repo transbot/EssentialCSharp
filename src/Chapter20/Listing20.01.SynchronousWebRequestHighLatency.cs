@@ -14,7 +14,7 @@ public static class Program
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("错误：没有输入要查找的文本。");
+            Console.WriteLine("错误：没有输入要搜索的文本。");
             return;
         }
         string findText = args[0];
@@ -23,7 +23,7 @@ public static class Program
         if (args.Length > 1)
         {
             url = args[1];
-            // Ignore additional parameters
+            // 最多取两个命令行参数，忽略更多的命令行参数
         }
         Console.WriteLine(
             $"从网址'{url}'搜索'{findText}'。");
@@ -61,7 +61,7 @@ public static class Program
                     findIndex++;
                     if (findIndex == findText.Length)
                     {
-                        // 未找到指定文本
+                        // 找到了要搜索的文本
                         textOccurrenceCount++;
                         findIndex = 0;
                     }

@@ -41,24 +41,25 @@ public static class Program
             data = ParallelEncrypt(data, cts.Token);
         }, cts.Token);
 
-        Console.WriteLine("Press any key to Exit.");
+        Console.WriteLine("按Enter键退出。");
         Task<int> cancelTask = ConsoleReadAsync(cts.Token);
 
         try
         {
             Task.WaitAny(task, cancelTask);
-            // Cancel whichever task has not finished.
+            // 两个任务中的任何一个完成，
+            // 程序就尝试取消另一个尚未完成的任务。            
             cts.Cancel();
             await task;
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\nCompleted successfully");
+            Console.WriteLine("\n成功完成");
         }
         catch (OperationCanceledException taskCanceledException)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(
-                $"\nCancelled: { taskCanceledException.Message }");
+                $"\n已取消: { taskCanceledException.Message }");
         }
         finally
         {
@@ -87,7 +88,7 @@ public static class Program
             }
             cancellationToken.ThrowIfCancellationRequested();
             throw new InvalidOperationException(
-                "Previous line should throw preventing this from ever executing");
+                "上一行代码就应该已经抛出异常了，所以这一行应该永远执行不到");
         }, cancellationToken);
     }
 

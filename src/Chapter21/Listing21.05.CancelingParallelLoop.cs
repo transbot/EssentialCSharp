@@ -33,10 +33,10 @@ public class Program
         ParallelOptions parallelOptions = new()
             { CancellationToken = cts.Token };
         cts.Token.Register(
-            () => Console.WriteLine("Canceling..."));
+            () => Console.WriteLine("正在取消..."));
         #endregion HIGHLIGHT
 
-        Console.WriteLine("Press ENTER to exit.");
+        Console.WriteLine("按Enter键退出");
 
         Task task = Task.Run(() =>
             {
@@ -54,10 +54,10 @@ public class Program
                 catch(OperationCanceledException) { }
             });
 
-        // Wait for the user's input
+        // 等待用户的输入
         Console.ReadLine();
 
-        // Cancel the query
+        // 取消查询
         #region HIGHLIGHT
         cts.Cancel();
         #endregion HIGHLIGHT
@@ -69,12 +69,12 @@ public class Program
     private static void Encrypt(string fileName)
     {
         if (Path.GetExtension(fileName) == ".encrypt") return;
-        Console.WriteLine($">>>>>Encrypting '{ fileName }'.");
+        Console.WriteLine($">>>>>正在加密'{ fileName }'.");
         Cryptographer cryptographer = new();
         File.Delete($"{fileName}.encrypt");
         byte[] encryptedText = cryptographer.Encrypt(File.ReadAllText(fileName));
         File.WriteAllBytes($"{fileName}.encrypt", encryptedText);
-        Console.WriteLine($"<<<<<Finished encrypting '{ fileName}'.");
+        Console.WriteLine($"<<<<<结束加密'{ fileName}'.");
     }
     #endregion EXCLUDE
 }

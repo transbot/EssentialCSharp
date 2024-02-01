@@ -18,8 +18,7 @@ class Program
             data.AsParallel().OrderBy(item => item);
         #endregion HIGHLIGHT
 
-        // Show the total count of items still
-        // matches the original count
+        // 验证数据项的总计数仍与原始计数匹配
         if (data.Count() != parallelGroups.Sum(
                 item => item.Length))
         {
@@ -37,10 +36,10 @@ class Program
 
     private static string Encrypt(string item)
     {
-        Console.WriteLine($">>>>>Encrypting '{ item }'.");
+        Console.WriteLine($">>>>>正在加密'{ item }'.");
         Cryptographer cryptographer = new();
         string itemEncrypted = System.Text.Encoding.UTF8.GetString(cryptographer.Encrypt(item));
-        Console.WriteLine($"<<<<<Finished encrypting '{ itemEncrypted }'.");
+        Console.WriteLine($"<<<<<结束加密'{ itemEncrypted }'.");
         return itemEncrypted;
     }
 

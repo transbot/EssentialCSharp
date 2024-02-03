@@ -16,13 +16,12 @@ public class Program
     public static int Main(string[] args)
     {
         if (args?.Length > 0) { _ = int.TryParse(args[0], out _Total); }
-        Console.WriteLine("Increment and decrementing " +
-            $"{_Total} times...");
+        Console.WriteLine("递增和递减" + $"{_Total}次...");
 
-        // Use Task.Factory.StartNew for .NET 4.0
+        // .NET 4.0要改为使用Task.Factory.StartNew
         Task task = Task.Run(() => Decrement());
 
-        // Increment
+        // 递增
         for(int i = 0; i < _Total; i++)
         {
             #region HIGHLIGHT
@@ -47,6 +46,7 @@ public class Program
         return _Count;
     }
 
+    // 递减
     public static void Decrement()
     {
         for(int i = 0; i < _Total; i++)

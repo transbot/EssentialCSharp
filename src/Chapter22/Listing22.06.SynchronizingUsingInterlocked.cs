@@ -9,10 +9,10 @@ public class SynchronizationUsingInterlocked
 {
     private static object? _Data;
 
-    // Initialize data if not yet assigned
+    // 如果_Data尚未赋值，就初始化它
     public static void Initialize(object newValue)
     {
-        // If _Data is null then set it to newValue
+        // 如果_Data为null，就把它设为newValue
         Interlocked.CompareExchange(
             ref _Data, newValue, null);
     }

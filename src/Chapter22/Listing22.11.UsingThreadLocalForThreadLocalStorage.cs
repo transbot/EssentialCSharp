@@ -20,15 +20,16 @@ public class Program
         Thread thread = new(Decrement);
         thread.Start();
 
-        // Increment
+        // 递增
         for(double i = 0; i < short.MaxValue; i++)
         {
             Count++;
         }
         thread.Join();
-        Console.WriteLine("Main Count = {0}", Count);
+        Console.WriteLine("Main中的Count = {0}", Count);
     }
 
+    // 递减
     public static void Decrement()
     {
         Count = -Count;
@@ -37,7 +38,7 @@ public class Program
             Count--;
         }
         Console.WriteLine(
-            "Decrement Count = {0}", Count);
+            "Decrement中的Count = {0}", Count);
     }
 }
 #endregion INCLUDE

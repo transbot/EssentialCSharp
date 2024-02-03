@@ -9,22 +9,23 @@ public class Program
     public void Main()
     {
         #region INCLUDE
-        // Not thread safe
+        // 非线程安全
         #region HIGHLIGHT
         if (OnTemperatureChanged is not null)
         #endregion HIGHLIGHT
         {
-            // Call subscribers
+            // 调用所有订阅了该事件的订阅者
             OnTemperatureChanged(
                 this, new TemperatureEventArgs(value));
         }
         #endregion INCLUDE
     }
 
-    // 说明 : Lowercase to simulate the value keyword from a setter.
-#pragma warning disable IDE1006 // Naming Styles
+    // 刻意使用小写的value作为属性名，
+    // 以模拟setter中的value关键字。
+    #pragma warning disable IDE1006 // 命名风格
     public object? value { get; set; }
-    #pragma warning restore IDE1006 // Naming Styles
+    #pragma warning restore IDE1006 // 命名风格
 }
 
 class TemperatureEventArgs

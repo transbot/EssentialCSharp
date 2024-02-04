@@ -34,6 +34,7 @@ public class Program
                     Marshal.Copy(
                         codeBytes, 0,
                         codeBytesPtr, codeBytes.Length);
+
                     
                     delegate*<byte*, void> method = (delegate*<byte*, void>)(IntPtr)codeBytesPtr;
                     method(&buffer[0]);

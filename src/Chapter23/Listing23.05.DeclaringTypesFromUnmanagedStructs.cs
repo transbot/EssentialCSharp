@@ -11,7 +11,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_05
         public byte Red;
         public byte Green;
         public byte Blue;
-        // 关闭“声明了Unused但从未访问过”警告
+        // Turn off the warning about not accessing Unused
 #pragma warning disable 414
         private byte Unused;
 #pragma warning restore 414

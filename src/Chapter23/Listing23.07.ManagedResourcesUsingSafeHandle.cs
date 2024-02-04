@@ -29,7 +29,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_07
             return virtualMemoryPointer._AllocatedPointer;
         }
 
-        // SafeHandle abstract member
+        // SafeHandle的抽象成员
         public override bool IsInvalid
         {
             get
@@ -38,7 +38,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_07
             }
         }
 
-        // SafeHandle abstract member
+        // SafeHandle的抽象成员
         protected override bool ReleaseHandle()
         {
             if (!_Disposed)

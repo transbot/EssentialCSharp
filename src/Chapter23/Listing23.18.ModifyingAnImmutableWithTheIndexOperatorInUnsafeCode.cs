@@ -9,7 +9,7 @@ public class Program
         #region INCLUDE
         string text = "S5280ft";
         Console.Write("{0} = ", text);
-        unsafe // Requires /unsafe switch
+        unsafe // 编译时要使用/unsafe开关
         {
             fixed(char* pText = text)
             {

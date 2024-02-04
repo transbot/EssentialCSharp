@@ -4,6 +4,6 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_13;
 struct ServiceStatus
 {
     int State;
-    string Description;  // Description is a reference type
+    string Description;  // string是引用类型
 }
 #endregion INCLUDE

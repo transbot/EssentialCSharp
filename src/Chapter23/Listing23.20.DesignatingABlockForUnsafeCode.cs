@@ -38,7 +38,7 @@ public class Program
                     delegate*<byte*, void> method = (delegate*<byte*, void>)(IntPtr)codeBytesPtr;
                     method(&buffer[0]);
                 }
-                Console.Write("Processor Id: ");
+                Console.Write("处理器ID: ");
                 char[] chars = new char[Buffer.Length];
                 Encoding.ASCII.GetChars(buffer, chars);
                 Console.WriteLine(chars);
@@ -46,7 +46,7 @@ public class Program
         }
         else
         {
-            Console.WriteLine("This sample is only valid for Windows");
+            Console.WriteLine("本例只适用于Windows平台");
         }
         return 0;
     }
@@ -55,7 +55,7 @@ public class Program
 [System.Runtime.CompilerServices.InlineArrayAttribute(Length)]
 public struct Buffer
 {
-    public const int Length = 10;
+    public const int Length = 12;
 
     private byte _element0;
 }
@@ -86,7 +86,7 @@ public class VirtualMemoryPtr : SafeHandle
         return virtualMemoryPointer.AllocatedPointer;
     }
 
-    // SafeHandle abstract member
+    // SafeHandle的抽象成员
     public override bool IsInvalid
     {
         get
@@ -95,7 +95,7 @@ public class VirtualMemoryPtr : SafeHandle
         }
     }
 
-    // SafeHandle abstract member
+    // SafeHandle的抽象成员
     protected override bool ReleaseHandle()
     {
         return Disposed = VirtualMemoryManager.VirtualFreeEx(ProcessHandle, AllocatedPointer, MemorySize);

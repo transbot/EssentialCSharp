@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Company>清华大学出版社</Company>
     <Copyright>Copyright © 清华大学出版社2024</Copyright>
-    <Product>C#本质论12.0</Product>
+    <Product>C# 12.0本质论</Product>
     <Version>12.0</Version>
   </PropertyGroup>
 </Project>

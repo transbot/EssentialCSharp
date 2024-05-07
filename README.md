@@ -4,7 +4,7 @@
 
 ## 中文版主页请访问[周靖的博客](https://bookzhou.com)
 ## 英文版在线手稿请访问[EssentialCSharp.com](https://essentialcsharp.com)
-## 在英文版（print edition）中发现并纠正了不少疏漏😮‍💨，稍后会放出英文版勘误。
+## 在英文版（print edition）中发现并纠正了不少疏漏，稍后会放出英文版勘误。
 
 ## 要求
 

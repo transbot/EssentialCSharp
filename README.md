@@ -1,6 +1,6 @@
 # EssentialCSharp
 
-本项目包含《C# 12.0本质论》的源代码，2024年。
+本项目包含《C# 12.0本质论》的源代码，2024年清华大学出版社出版。
 
 ## 中文版主页请访问[周靖的博客](https://bookzhou.com)
 ## 英文版在线手稿请访问[EssentialCSharp.com](https://essentialcsharp.com)

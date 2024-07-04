@@ -1,4 +1,4 @@
-# EssentialCSharp
+# EssentialCSharp - C#本质论
 
 本项目包含《C# 12.0本质论》的源代码，2024年清华大学出版社出版。
 

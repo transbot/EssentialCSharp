@@ -44,7 +44,7 @@
 
 .NET CLI工具的文档可以在这里找到：
 
-<https://docs.microsoft.com/en-us/dotnet/core/tools/>
+<[https://docs.microsoft.com/en-us/dotnet/core/tools/](https://learn.microsoft.com/zh-cn/dotnet/core/tools/)>
 
 ## 测试
 

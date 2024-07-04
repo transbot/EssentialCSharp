@@ -8,7 +8,7 @@
 
 ## 要求
 
-- [.NET](https://www.microsoft.com/net/core) - 该项目当前经过.NET 8.0、7.0和6.0的测试。
+- [.NET](https://dotnet.microsoft.com/zh-cn/download) - 该项目当前经过.NET 8.0、7.0和6.0的测试。
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) - 已集成.NET Core，这是我们主推的IDE，它使入门变得很简单。
 - [Git](https://git-scm.com/book/zh/v2) - 虽然不是必需的，但它是一个可以快速下载此代码仓库的好工具。如果不喜欢使用命令行，建议使用Visual Studio自带的Git功能，或者使用第三方工具，例如[GitKraken](https://www.gitkraken.com/invite/bX2Nqsqr) 。
 

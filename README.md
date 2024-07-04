@@ -42,9 +42,8 @@
    - 注意：只能输入在当前运行的项目（本例是Chapter01）中存在的代码清单编号。
 5. 还可以使用`dotnet run -p <projectfile>`命令，其中project file是要执行的项目文件的路径（例如，`dotnet run -p .\src\Chapter01\Chapter01.csproj`）。执行时，程序将提示要执行哪个代码清单。
 
-.NET CLI工具的文档可以在这里找到：
+.NET CLI工具的文档可以在这里找到：https://learn.microsoft.com/zh-cn/dotnet/core/tools/
 
-<[https://docs.microsoft.com/en-us/dotnet/core/tools/](https://learn.microsoft.com/zh-cn/dotnet/core/tools/)>
 
 ## 测试
 

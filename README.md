@@ -5,11 +5,22 @@
 ## 中文版主页请访问[周靖的博客](https://bookzhou.com)
 ## 英文版在线手稿请访问[EssentialCSharp.com](https://essentialcsharp.com)
 ## 在英文版（print edition）中发现并纠正了不少疏漏，稍后会放出英文版勘误。
+![C# 12 0本质论（第8版）-平展封](https://github.com/user-attachments/assets/bb84e67a-e659-4ab3-ba76-438ca110458a)
+
+## 中文版购买链接
+
+- [京东官方](https://item.jd.com/14279697.html)
+- [当当网](https://product.dangdang.com/29781408.html)
+
+## 中英文版配套资源（含试读PDF）备用下载地址
+
+- [百度网盘](https://pan.baidu.com/s/1yd43W)
+- 也可以访问[中文版主页](https://bookzhou.com)从本地下载
 
 ## 要求
 
 - [.NET](https://dotnet.microsoft.com/zh-cn/download) - 该项目当前经过.NET 8.0、7.0和6.0的测试。
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) - 已集成.NET Core，这是我们主推的IDE，它使入门变得很简单。
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/) - 已集成.NET Core，这是我们主推的IDE，用它可以方便地入门。
 - [Git](https://git-scm.com/book/zh/v2) - 虽然不是必需的，但它是一个可以快速下载此代码仓库的好工具。如果不喜欢使用命令行，建议使用Visual Studio自带的Git功能，或者使用第三方工具，例如[GitKraken](https://www.gitkraken.com/invite/bX2Nqsqr) 。
 
 ## 运行代码

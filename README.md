@@ -15,7 +15,7 @@
 ## 中英文版配套资源（含试读PDF）备用下载地址
 
 - [百度网盘](https://pan.baidu.com/s/1yd43W)
-- 也可以访问[中文版主页](https://bookzhou.com)从本地下载
+- 也可以访问[中文版主页](https://bookzhou.com)从本地下载（施工中）
 
 ## 要求
 

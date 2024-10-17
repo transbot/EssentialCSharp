@@ -4,7 +4,7 @@ using System;
 #region INCLUDE
 public class Thermostat
 {
-    // Define the event publisher
+    // 定义事件发布者
     public Action<float>? OnTemperatureChange { get; set; }
 
     public float CurrentTemperature
@@ -15,9 +15,9 @@ public class Thermostat
             if(value != CurrentTemperature)
             {
                 _CurrentTemperature = value;
-                // If there are any subscribers,
-                // notify them of changes in 
-                // temperature by invoking said subscribers
+                // 如果存在任何订阅者，就调用
+                // 它们注册的委托，将温度的变化
+                // 通知它们。
                 #region HIGHLIGHT
                 OnTemperatureChange?.Invoke(value);     // C# 6.0
                 #endregion HIGHLIGHT

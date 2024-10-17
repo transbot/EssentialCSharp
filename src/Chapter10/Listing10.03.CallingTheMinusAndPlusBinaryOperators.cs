@@ -3,7 +3,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_03;
 using System;
 using Listing10_02;
 #region INCLUDE
-// Use compound assignment suppressed for demonstration purposes
+// 出于演示的目的，暂时禁止复合赋值的警告
 #pragma warning disable IDE0054
 public class Program
 {

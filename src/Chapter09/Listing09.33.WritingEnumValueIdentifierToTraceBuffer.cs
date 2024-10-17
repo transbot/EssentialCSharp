@@ -8,7 +8,7 @@ public class Program
     {
         #region INCLUDE
         System.Diagnostics.Trace.WriteLine(
-            $"The connection is currently {ConnectionState.Disconnecting}");
+            $"连接目前{ConnectionState.Disconnecting}。");
         #endregion INCLUDE
     }
 }

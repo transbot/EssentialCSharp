@@ -14,11 +14,11 @@ public class Program
 
         for (int i = 0; i < items.Length; i++)
         {
-            Console.Write("Enter an integer:");
+            Console.Write("请输入一个整数: ");
             string? text = Console.ReadLine();
             if (!int.TryParse(text, out items[i]))
             {
-                Console.WriteLine($"'{text}' is not a valid integer.");
+                Console.WriteLine($"'{text}'不是一个有效的整数。");
                 return;
             }
         }
@@ -39,7 +39,7 @@ public class Program
         }
 
         #region HIGHLIGHT
-        Console.WriteLine("Items were compared {0} times.",
+        Console.WriteLine("items被比较了{0}次。",
             comparisonCount);
         #endregion HIGHLIGHT
     }

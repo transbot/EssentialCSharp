@@ -16,7 +16,7 @@ public class Thermostat
         public float NewTemperature { get; set; }
     }
 
-    // Define the event publisher
+    // 定义事件发布者
     public event EventHandler<TemperatureArgs> OnTemperatureChange =
         delegate { };
     #endregion HIGHLIGHT

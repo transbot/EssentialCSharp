@@ -35,8 +35,8 @@ public static class Program
         IEnumerable<string> files = Directory.EnumerateFiles(
             directoryPath, searchPattern);
 
-        // Create a cancellation token source to cancel 
-        // if the operation takes more than a minute.
+        // 创建一个cancellation token source，如果
+        // 操作耗时超过1分钟就取消。
         using CancellationTokenSource cancellationTokenSource =
             new(1000*60);
 
@@ -88,7 +88,7 @@ public static class Program
     }
     #region EXCLUDE
 
-    // Included to simplify testing
+    // 简化测试
     public static Cryptographer? Cryptographer { get; private set; }
 
     private static void DisplayHelp() { /* ... */ }

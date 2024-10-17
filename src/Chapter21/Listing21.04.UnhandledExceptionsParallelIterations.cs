@@ -34,7 +34,7 @@ public static class Program
         #endregion HIGHLIGHT
         {
             Console.WriteLine(
-                "ERROR: {0}:",
+                "´íÎó: {0}:",
                 exception.GetType().Name);
             foreach(Exception item in
             #region HIGHLIGHT

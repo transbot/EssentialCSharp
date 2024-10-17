@@ -12,7 +12,7 @@ public class Program
         {
             new
             {
-                TeamName = "France",
+                TeamName = "法国",
                 Players = new string[]
                 {
                     "Fabien Barthez", "Gregory Coupet",
@@ -22,7 +22,7 @@ public class Program
             },
             new
             {
-                TeamName = "Italy",
+                TeamName = "意大利",
                 Players = new string[]
                 {
                     "Gianluigi Buffon", "Angelo Peruzzi",

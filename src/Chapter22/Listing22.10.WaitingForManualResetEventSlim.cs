@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 public class Program
 {
     #region EXCLUDE
-    // Justification: Initialized at the start of Main.
+    // 说明 : 在Main开始时初始化
 #pragma warning disable CS8618 // 不可为空的字段未初始化。考虑声明为可空。
     #endregion EXCLUDE
     static ManualResetEventSlim _MainSignaledResetEvent;
@@ -19,12 +19,12 @@ public class Program
 
     public static void DoWork()
     {
-        Console.WriteLine("DoWork() started....");
+        Console.WriteLine("DoWork()已启动....");
         #region HIGHLIGHT
         _DoWorkSignaledResetEvent.Set();
         _MainSignaledResetEvent.Wait();
         #endregion HIGHLIGHT
-        Console.WriteLine("DoWork() ending....");
+        Console.WriteLine("DoWork()正在结束....");
     }
 
     public static void Main()
@@ -33,21 +33,21 @@ public class Program
         using(_DoWorkSignaledResetEvent = new ())
         {
             Console.WriteLine(
-                "Application started....");
-            Console.WriteLine("Starting task....");
+                "应用程序已启动...");
+            Console.WriteLine("正在启动任务...");
 
-            // Use Task.Factory.StartNew for .NET 4.0
+            // .NET 4.0要改为使用Task.Factory.StartNew
             Task task = Task.Run(() => DoWork());
 
-            // Block until DoWork() has started
+            // 阻塞，直到DoWork()启动
             _DoWorkSignaledResetEvent.Wait();
             Console.WriteLine(
-                " Waiting while thread executes...");
+                "在线程执行期间等待...");
             _MainSignaledResetEvent.Set();
             task.Wait();
-            Console.WriteLine("Thread completed");
+            Console.WriteLine("线程已结束");
             Console.WriteLine(
-                "Application shutting down....");
+                "应用程序关闭...");
         }
     }
 }

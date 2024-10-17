@@ -13,11 +13,11 @@ public sealed class Program
 
         ILogger logger = loggerFactory.CreateLogger<Program>();
 
-        logger.LogInformation($@"Hospital Emergency Codes: = '{
+        logger.LogInformation($@"医院紧急代码: = '{
             string.Join("', '", args)}'");
         // ...
 
-        logger.LogWarning("This is a test of the emergency...");
+        logger.LogWarning("测试紧急事件...");
         // ...
     }
 }

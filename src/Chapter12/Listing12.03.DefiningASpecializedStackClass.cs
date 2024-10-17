@@ -4,8 +4,8 @@ using Listing12_02;
 #region INCLUDE
 public class CellStack
 {
-    public virtual Cell Pop() { return new Cell(); } // would return
-                                                     // that last cell added and remove it from the list
+    public virtual Cell Pop() { return new Cell(); } // 返回最后一个添加的cell，
+                                                     // 并把它从栈中移除。
     public virtual void Push(Cell cell) { }
     // ...
 }

@@ -18,22 +18,22 @@ public class Program
         IEnumerable<string> selection = from word in CSharp.Keywords
                                         where IsKeyword(word)
                                         select word;
-        Console.WriteLine("Query created.");
+        Console.WriteLine("已创建查询。");
         foreach(string keyword in selection)
         {
-            // No space output here
+            // 这里不输出空格
             Console.Write(keyword);
         }
     }
 
-    // The side effect of console output is included 
-    // in the predicate to demonstrate deferred execution;
-    // predicates with side effects are a poor practice in
-    // production code
+    // 在谓词中包含了控制台输出的副作用；
+    // 目的是演示推迟执行。但是，有副作用
+    // 的谓词在生产代码中是一个不好的实践。
     private static bool IsKeyword(string word)
     {
         if(word.Contains('*'))
         {
+            // 在这里输出空格
             Console.Write(" ");
             return true;
         }

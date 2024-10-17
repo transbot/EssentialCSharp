@@ -9,8 +9,7 @@ public class CommandLineInfo
     //[CommandLineSwitchRequired]
     //[CommandLineSwitchAlias("FileName")]
     #region INCLUDE
-    [CommandLineSwitchRequired,
-    CommandLineSwitchAlias("FileName")]
+    [CommandLineSwitchRequired, CommandLineSwitchAlias("FileName")]
     public string? Out { get; set; }
 
     public System.Diagnostics.ProcessPriorityClass Priority
@@ -19,17 +18,17 @@ public class CommandLineInfo
 }
 #endregion INCLUDE
 
-// Disabling warning since it is not implemented or shown in manuscript
-#pragma warning disable CA1018 // Mark attributes with AttributeUsageAttribute
+// 禁止警告，因其尚未实现，或者未在书稿中讲述
+#pragma warning disable CA1018 // 用AttributeUsageAttribute标记特性
 internal class CommandLineSwitchRequiredAttribute : Attribute
 {
-    //not implemented
+    // 未实现
 }
 
 internal class CommandLineSwitchAliasAttribute : Attribute
 {
     public CommandLineSwitchAliasAttribute(string _)
     {
-        //not implemented
+        // 未实现
     }
 }

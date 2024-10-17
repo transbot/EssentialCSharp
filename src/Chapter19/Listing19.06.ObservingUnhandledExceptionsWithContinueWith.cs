@@ -27,11 +27,11 @@ public class Program
         #endregion HIGHLIGHT
         if (!parentTaskFaulted)
         {
-            throw new Exception("Parent task should be faulted");
+            throw new Exception("父任务出错了(faulted)");
         }
         if (!task.IsFaulted)
         {
-            throw new Exception("Task should be faulted");
+            throw new Exception("任务出错了(faulted)");
         }
 
         #region HIGHLIGHT
@@ -39,7 +39,7 @@ public class Program
         #endregion HIGHLIGHT
         {
             Console.WriteLine(
-                $"ERROR: { eachException.Message }");
+                $"错误: { eachException.Message }");
             return true;
         });
     }

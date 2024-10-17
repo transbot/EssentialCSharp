@@ -21,7 +21,7 @@ public class Program
         Cell currentPosition;
         ConsoleKeyInfo key;
         #region EXCLUDE
-        Console.WriteLine("Use arrow keys to draw. X to exit.");
+        Console.WriteLine("按箭头键画图，按X退出。"); 
         for(int i = 2; i < Console.WindowHeight; i++)
         {
             Console.WriteLine();
@@ -34,18 +34,17 @@ public class Program
 
         do
         {
-            // Etch in the direction indicated by the
-            // arrow keys that the user enters
+            // 根据用户所按箭头键的方向进行绘制
             key = Move();
 
             switch(key.Key)
             {
                 case ConsoleKey.Z:
-                    // Undo the previous Move
+                    // 撤消上一次移动
                     if(path.Count >= 1)
                     {
                         #region HIGHLIGHT
-                        // No cast required
+                        // 不需要转型
                         currentPosition = path.Pop();
                         #endregion HIGHLIGHT
                         Console.SetCursorPosition(
@@ -61,7 +60,7 @@ public class Program
                         currentPosition = new Cell(
                             Console.CursorLeft, Console.CursorTop + 1);
                     }
-                    // Only type Cell allowed in call to Push()
+                    // 调用Push()时只允许传递Cell类型
                     path.Push(currentPosition);
                     FillCell(currentPosition);
                     break;
@@ -73,7 +72,7 @@ public class Program
                         currentPosition = new Cell(
                             Console.CursorLeft, Console.CursorTop - 1);
                     }
-                    // Only type Cell allowed in call to Push()
+                    // 调用Push()时只允许传递Cell类型
                     path.Push(currentPosition);
                     FillCell(currentPosition);
                     break;
@@ -85,7 +84,7 @@ public class Program
                         currentPosition = new Cell(
                             Console.CursorLeft - 1, Console.CursorTop);
                     }
-                    // Only type Cell allowed in call to Push()
+                    // 调用Push()时只允许传递Cell类型
                     path.Push(currentPosition);
                     FillCell(currentPosition);
                     break;
@@ -98,7 +97,7 @@ public class Program
                             Console.CursorLeft + 1, Console.CursorTop);
                     }
                     #region HIGHLIGHT
-                    // Only type Cell allowed in call to Push()
+                    // 调用Push()时只允许传递Cell类型
                     path.Push(currentPosition);
                     #endregion HIGHLIGHT
                     FillCell(currentPosition);
@@ -110,7 +109,7 @@ public class Program
             }
 
         }
-        while(key.Key != ConsoleKey.X);  // Use X to quit
+        while(key.Key != ConsoleKey.X);  // 按X退出
     }
     #region EXCLUDE
     private static ConsoleKeyInfo Move()

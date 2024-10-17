@@ -1,7 +1,7 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_09
 {
     #region INCLUDE
-    // Define the namespace AddisonWesley
+    // 定义命名空间AddisonWesley
     #region HIGHLIGHT
     namespace AddisonWesley.Michaelis.EssentialCSharp
     {
@@ -13,6 +13,6 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_09
     #region HIGHLIGHT
     }
     #endregion HIGHLIGHT
-    // End of AddisonWesley namespace declaration
+    // 结束AddisonWesley命名空间声明
     #endregion INCLUDE
 }

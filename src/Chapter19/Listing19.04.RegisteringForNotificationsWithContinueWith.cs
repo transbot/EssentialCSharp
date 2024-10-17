@@ -9,8 +9,8 @@ public class Program
 {
     public static void Main()
     {
-        // Use Task.Factory.StartNew<string>() for
-        // TPL prior to .NET 4.5
+        // .NET 4.5之前Task.Run()不可用，要改为使用
+        // Task.Factory.StartNew<string>()        
         Task<string> task =
             Task.Run<string>(
                 () => PiCalculator.Calculate(10));
@@ -19,10 +19,10 @@ public class Program
             {
                 if(!antecedentTask.IsFaulted)
                 {
-                    throw new Exception("Antecedent Task Should Be Faulted");
+                    throw new Exception("先行任务出错了(Faulted)");
                 }
                 Console.WriteLine(
-                    "Task State: Faulted");
+                    "任务状态: Faulted");
             },
             TaskContinuationOptions.OnlyOnFaulted);
 
@@ -31,10 +31,10 @@ public class Program
             {
                 if (!antecedentTask.IsCanceled)
                 {
-                    throw new Exception("Antecedent Task Should Be Canceled");
+                    throw new Exception("先行任务取消了(Canceled)");
                 }
                 Console.WriteLine(
-                    "Task State: Canceled");
+                    "任务状态: Canceled");
             },
             TaskContinuationOptions.OnlyOnCanceled);
 
@@ -43,10 +43,10 @@ public class Program
             {
                 if (!antecedentTask.IsCompleted)
                 {
-                    throw new Exception("Antecedent Task Should Be Completed");
+                    throw new Exception("先行任务完成了(Completed)");
                 }
                 Console.WriteLine(
-                    "Task State: Completed");
+                    "任务状态: Completed");
             }, TaskContinuationOptions.
                     OnlyOnRanToCompletion);
 

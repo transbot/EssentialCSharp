@@ -25,11 +25,11 @@ public partial class Program
             if(commandLine.Priority !=
                 ProcessPriorityClass.Normal)
             {
-                // Change thread priority
+                // 更改线程优先级
             }
             #region EXCLUDE
             Console.WriteLine(
-                @$"Running {
+                @$"正在运行{
                     Path.GetFileName(Environment.GetCommandLineArgs()[0])} /Out:{
                         commandLine.Out} /Priority:{
                         commandLine.Priority}");
@@ -40,9 +40,9 @@ public partial class Program
 
     private static void DisplayHelp()
     {
-        // Display the command-line help.
+        // 显示命令行帮助
         Console.WriteLine(
-            "Compress.exe /Out:< file name > /Help "
+            "Compress.exe /Out:< 文件名 > /Help "
             + "/Priority:RealTime | High | "
             + "AboveNormal | Normal | BelowNormal | Idle");
 
@@ -86,7 +86,7 @@ public class CommandLineHandler
                 string[] optionParts = arg.Split(
                     new char[] { ':' }, 2);
 
-                // Remove the slash|dash
+                // 删除斜杠或短划线
                 option = optionParts[0].Remove(0, 1);
                 #region HIGHLIGHT
                 PropertyInfo? property =
@@ -98,7 +98,7 @@ public class CommandLineHandler
                 {
                     if(property.PropertyType == typeof(bool))
                     {
-                        // Last parameters for handling indexers
+                        // 最后一个参数用于处理属性是索引器的情形
                         property.SetValue(
                             commandLine, true, null);
                         success = true;
@@ -111,7 +111,7 @@ public class CommandLineHandler
                         success = true;
                     }
                     else if (
-                        // property.PropertyType.IsEnum also available
+                        // property.PropertyType.IsEnum也是支持的
                         property.PropertyType ==
                             typeof(ProcessPriorityClass))
                     {
@@ -129,26 +129,23 @@ public class CommandLineHandler
                         {
                             success = false;
                             errorMessage =
-                                $@"The option '{
-                                    optionParts[1]
-                                    }' is invalid for '{ 
-                                    option }'";
+                                $@"选项'{optionParts[1] 
+                                }'对'{ option }'无效。";
                         }
                     }
                     else
                     {
                         success = false;
                         errorMessage = 
-                            $@"Data type '{
-                                property.PropertyType }' on {
-                                commandLine.GetType() } is not supported.";
+                            $@"不支持{ commandLine.GetType() 
+                                }上的数据类型'{property.PropertyType}'。";
                     }
                 }
                 else
                 {
                     success = false;
                     errorMessage = 
-                       $"Option '{ option }' is not supported.";
+                       $"不支持'{ option }'选项。";
                 }
             }
         }

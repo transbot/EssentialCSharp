@@ -19,8 +19,7 @@ struct Angle : IAngle
     }
     #endregion EXCLUDE
 
-    // NOTE:  This makes Angle mutable, against the general
-    //        guideline
+    // 注意:  这会使Angle“可变”，有违设计规范
     public void MoveTo(int degrees, int minutes, int seconds)
     {
         _Degrees = degrees;
@@ -54,22 +53,20 @@ public class Program
         // ...
 
         Angle angle = new(25, 58, 23);
-        // Example 1: Simple box operation
-        object objectAngle = angle;  // Box
+        // 例1: 简单装箱操作
+        object objectAngle = angle;  // 装箱
         Console.Write(((Angle)objectAngle).Degrees);
 
-        // Example 2: Unbox, modify unboxed value,
-        //            and discard value
+        // 例2: 拆箱，修改已拆箱的值，然后丢弃值
         ((Angle)objectAngle).MoveTo
             (26, 58, 23);
         Console.Write(", " + ((Angle)objectAngle).Degrees);
 
-        // Example 3: Box, modify boxed value,
-        //            and discard reference to box
+        // 例3: 装箱，修改已装箱的值，然后丢弃对箱子的引用
         ((IAngle)angle).MoveTo(26, 58, 23);
         Console.Write(", " + ((Angle)angle).Degrees);
 
-        // Example 4: Modify boxed value directly
+        // 例4: 直接修改已装箱的值
         ((IAngle)objectAngle).MoveTo(26, 58, 23);
         Console.WriteLine(", " + ((Angle)objectAngle).Degrees);
 

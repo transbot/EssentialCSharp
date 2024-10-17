@@ -11,7 +11,7 @@ public class Program
         int number;
         // ...
 
-        // This code is conceptual, not the actual code
+        // 概念性代码，非实际代码
         #if ConceptualCode
         while(stack.MoveNext())
         {   
@@ -22,8 +22,8 @@ public class Program
 
         #endregion INCLUDE
 
-        // Actual Code
-        while(stack.Pop() != -1) //this is actually not the right logic, but the point is the while, not stack
+        // 实际代码
+        while(stack.Pop() != -1) // 这实际并不是正确的逻辑，但重点在于while，而不在于栈
         {
             number = stack.Peek();
             Console.WriteLine(number);

@@ -19,8 +19,7 @@ public class Thermostat
 
     // ...
     #endregion EXCLUDE
-    // Declaring the delegate field to save the 
-    // list of subscribers
+    // 声明委托字段来保存订阅者列表
     private EventHandler<TemperatureArgs>? _OnTemperatureChange;
 
     public void add_OnTemperatureChange(
@@ -38,12 +37,12 @@ public class Thermostat
     #if ConceptualEquivalentCode
     public event EventHandler<TemperatureArgs> OnTemperatureChange
     {
-        //Would cause a compiler error
+        // 会造成编译错误
         add
         {
             add_OnTemperatureChange(value);
         }
-        //Would cause a compiler error
+        // 会造成编译错误
         remove
         {
             remove_OnTemperatureChange(value);

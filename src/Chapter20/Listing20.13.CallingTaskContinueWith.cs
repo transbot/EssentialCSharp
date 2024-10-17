@@ -9,18 +9,18 @@ public class Program
 {
     public static void Main()
     {
-        DisplayStatus("Before");
+        DisplayStatus("开始之前");
         Task taskA =
             Task.Run(() =>
-                 DisplayStatus("Starting..."))
+                 DisplayStatus("开始..."))
             .ContinueWith(antecedent =>
-                 DisplayStatus("Continuing A..."));
+                 DisplayStatus("继续A..."));
         Task taskB = taskA.ContinueWith(antecedent =>
-      DisplayStatus("Continuing B..."));
+      DisplayStatus("继续B..."));
         Task taskC = taskA.ContinueWith(antecedent =>
-            DisplayStatus("Continuing C..."));
+            DisplayStatus("继续C..."));
         Task.WaitAll(taskB, taskC);
-        DisplayStatus("Finished!");
+        DisplayStatus("结束!");
     }
 
     private static void DisplayStatus(string message)

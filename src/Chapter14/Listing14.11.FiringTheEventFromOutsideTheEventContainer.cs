@@ -17,7 +17,7 @@ public class Program
         thermostat.OnTemperatureChange +=
             cooler.OnTemperatureChanged;
 
-        // Bug: Should not be allowed
+        // Bug: 不应允许这样做
         #region HIGHLIGHT
         thermostat.OnTemperatureChange(42);
         #endregion HIGHLIGHT

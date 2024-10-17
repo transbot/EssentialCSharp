@@ -21,7 +21,7 @@ public readonly record struct Angle(
         return $"{prefix}{Degrees}° {Minutes}' {Seconds}\"";
     }
 
-    // Changing Equals() to ignore Name
+    // 修改Equals()以忽略Name属性
     public bool Equals(Angle other) =>
         (Degrees, Minutes, Seconds).Equals(
             (other.Degrees, other.Minutes, other.Seconds));

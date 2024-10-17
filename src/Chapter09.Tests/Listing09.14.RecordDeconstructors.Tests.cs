@@ -9,7 +9,7 @@ public class DeconstructorTest
     [TestMethod]
     public void DeconstructorValues_MatchAngleValues()
     {
-        // The constructor is generated using positional parameters
+        // 构造函数根据位置参数来生成
         Angle angle = new(90, 10, 10);
 
         angle.Deconstruct(out int degrees, out int minutes, out int seconds);

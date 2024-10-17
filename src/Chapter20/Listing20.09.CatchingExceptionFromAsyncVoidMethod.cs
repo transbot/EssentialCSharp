@@ -32,7 +32,7 @@ public class AsyncSynchronizationContext : SynchronizationContext
     {
         try
         {
-            Console.WriteLine($@"Post notification invoked...(Thread ID: {
+            Console.WriteLine($@"已调用Post通知...(线程ID: {
                 Thread.CurrentThread.ManagedThreadId})");
             callback(state);
         }
@@ -51,7 +51,7 @@ public static class Program
 {
     public static bool EventTriggered { get; set; }
 
-    public const string ExpectedExceptionMessage = "Expected Exception";
+    public const string ExpectedExceptionMessage = "预期的异常";
 
     public static void Main()
     {
@@ -69,15 +69,15 @@ public static class Program
 
             if (synchronizationContext.Exception is not null)
             {
-                Console.WriteLine($@"Throwing expected exception....(Thread ID: {
-                Thread.CurrentThread.ManagedThreadId})");
+                Console.WriteLine($@"正在抛出预期的异常....(线程ID: {
+                    Thread.CurrentThread.ManagedThreadId})");
                 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(
                     synchronizationContext.Exception).Throw();
             }
         }
         catch (Exception exception)
         {
-            Console.WriteLine($@"{exception} thrown as expected.(Thread ID: {
+            Console.WriteLine($@"已抛出预期的异常{exception}。(线程ID: {
                 Thread.CurrentThread.ManagedThreadId})");
         }
         finally
@@ -89,12 +89,12 @@ public static class Program
 
     private static async void OnEvent(object sender, EventArgs eventArgs)
     {
-        Console.WriteLine($@"Invoking Task.Run...(Thread ID: {
+        Console.WriteLine($@"正在调用Task.Run...(线程ID: {
                 Thread.CurrentThread.ManagedThreadId})");
         await Task.Run(() =>
         {
             EventTriggered = true;
-            Console.WriteLine($@"Running task... (Thread ID: {
+            Console.WriteLine($@"正在运行任务... (线程ID: {
                 Thread.CurrentThread.ManagedThreadId})");
             throw new Exception(ExpectedExceptionMessage);
         });

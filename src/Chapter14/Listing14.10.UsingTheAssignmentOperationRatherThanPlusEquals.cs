@@ -16,18 +16,17 @@ public class Program
         thermostat.OnTemperatureChange =
             heater.OnTemperatureChanged;
 
-        // Bug: Assignment operator overrides 
-        // previous assignment
+        // Bug: 赋值操作符覆盖了之前的赋值
         #region HIGHLIGHT
         thermostat.OnTemperatureChange = 
             cooler.OnTemperatureChanged;
         #endregion HIGHLIGHT
 
-        Console.Write("Enter temperature: ");
+        Console.Write("输入温度: ");
         string? temperature = Console.ReadLine();
         if (!int.TryParse(temperature, out int currentTemperature))
         {
-            Console.WriteLine($"'{temperature}' is not a valid integer.");
+            Console.WriteLine($"'{temperature}' 不是一个有效的整数。");
             return;
         }
         thermostat.CurrentTemperature = currentTemperature;

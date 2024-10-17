@@ -34,7 +34,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter17.Listing17_20
                     {
                         throw new NotImplementedException(
                             string.Format(
-                                "The enum {0} has not been implemented", 
+                                "ипн╢й╣ож{0}ц╤╬ы", 
                                 index.ToString()));
                     }
                     result = Second;

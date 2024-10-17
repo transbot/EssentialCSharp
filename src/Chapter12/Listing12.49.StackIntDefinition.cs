@@ -1,4 +1,4 @@
-// Justification: Only showing partial implementation.
+// 说明 : 只显示部分实现
 #pragma warning disable CS0168 // Variable is declared but never used
 
 

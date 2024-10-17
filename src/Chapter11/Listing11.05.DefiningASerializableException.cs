@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_05
 {
     #region INCLUDE
-    // Supporting serialization via an attribute
+    // 通过一个特性来支持序列化
     #region HIGHLIGHT
     [Serializable]
     #endregion HIGHLIGHT
@@ -45,7 +45,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_05
         }
         #endregion EXCLUDE
 
-       // Used for deserialization of exceptions
+       // 用于反序列化异常
        public DatabaseException(
         #region HIGHLIGHT
            SerializationInfo serializationInfo,
@@ -58,8 +58,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_05
     }
     #endregion INCLUDE
 
-    // Create mock versions of the database exception classes rather
-    // than referencing the real libraries.
+    // 创建数据库异常类的模拟版本，而不是引用真实的库
     namespace System.Data
     {
         namespace SqlClient

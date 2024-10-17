@@ -19,3 +19,4 @@ public struct Pair<TFirst, TSecond> : IPair<TFirst, TSecond>
     public TSecond Second { get; set; }
 }
 #endregion INCLUDE
+

@@ -1,4 +1,4 @@
-﻿// Justification: Only showing partial implementation.
+﻿// 说明 : 只显示部分实现
 #pragma warning disable CS8618 // 不可为空的字段未初始化。考虑声明为可空。
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_46;
@@ -8,7 +8,7 @@ using System;
 public class Stack<T> where T : IComparable
 {
     private T[] _Items;
-    // rest of the class here
+    // 类的其余部分在这里
     #region EXCLUDE
     public T[] Items { get => _Items; set => _Items = value; }
     #endregion EXCLUDE

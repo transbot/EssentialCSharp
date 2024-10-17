@@ -6,13 +6,12 @@ using System;
 struct NullableInt
 {
     /// <summary>
-    /// Provides the value when HasValue returns true
+    /// 在HasValue返回true时提供值
     /// </summary>
     public int Value { get; private set; }
 
     /// <summary>
-    /// Indicates whether there is a value or whether
-    /// the value is "null"
+    /// 该属性指出是真的有一个值，还是值为"null"
     /// </summary>
     public bool HasValue { get; private set; }
 
@@ -22,13 +21,12 @@ struct NullableInt
 struct NullableGuid
 {
     /// <summary>
-    /// Provides the value when HasValue returns true
+    /// 在HasValue返回true时提供值
     /// </summary>
     public Guid Value { get; private set; }
 
     /// <summary>
-    /// Indicates whether there is a value or whether
-    /// the value is "null"
+    /// 该属性指出是真的有一个值，还是值为"null"
     /// </summary>
     public bool HasValue { get; private set; }
 

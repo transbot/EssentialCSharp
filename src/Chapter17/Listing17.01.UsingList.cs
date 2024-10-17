@@ -8,14 +8,15 @@ public class Program
 {
     public static void Main()
     {
+        // 七个小矮人
         List<string> list = new() { "Sneezy", "Happy", "Dopey",  "Doc",
                                     "Sleepy", "Bashful",  "Grumpy"};
 
         list.Sort();
 
         Console.WriteLine(
-            $"In alphabetical order { list[0] } is the "
-            + $"first dwarf while { list[^1] } is the last.");
+            $"按字母顺序，{ list[0] }是第一个小矮人，"
+            + $"而{ list[^1] }是最后一个。");
 
         list.Remove("Grumpy");
     }

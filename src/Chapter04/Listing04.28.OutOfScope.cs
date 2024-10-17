@@ -1,8 +1,8 @@
-// Justification: Checking for null isn't discussed yet.
+// 说明 : Checking for null isn't discussed yet.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type
-// Justification: args is declared and referenced in the manuscript but now used because the listing is incomplete.
+// 说明 : args is declared and referenced in the manuscript but now used because the listing is incomplete.
 #pragma warning disable IDE0060 // Remove unused parameter
-// Justification: Attempting to use message outside of it's scope so it goes unused.
+// 说明 : Attempting to use message outside of it's scope so it goes unused.
 #pragma warning disable CS0219  // Variable is assigned but its value is never used
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_28;

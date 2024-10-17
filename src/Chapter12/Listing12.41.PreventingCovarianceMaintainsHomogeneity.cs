@@ -12,10 +12,10 @@ public class Program
 
         #region HIGHLIGHT
         #if COMPILEERROR // EXCLUDE
-        // This gives an error: Cannot convert type ...
-        // But suppose it did not
+        // 会报告错误：不能转换类型 ...
+        // 但假定不报错
         IPair<PdaItem> pdaPair = (IPair<PdaItem>) contacts;
-        // This is perfectly legal, but not type-safe
+        // 这完全合法，但不是类型安全的
         pdaPair.First = new Address("123 Sesame Street");
         #endif // COMPILEERROR // EXCLUDE
         #endregion HIGHLIGHT

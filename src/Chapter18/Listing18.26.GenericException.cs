@@ -25,8 +25,8 @@ public class ExpectedException<TException> :
         {
             testMethod();
             throw new InvalidOperationException(
-                $"The expected exception, {
-                    typeof(TException).FullName }, was not thrown.");
+                $"没有抛出预期的异常{typeof(TException).FullName}。");
+
         }
         catch (TException exception) 
         {
@@ -34,7 +34,7 @@ public class ExpectedException<TException> :
         }
     }
 
-    // Attribute detection
+    // 特性检测
     // ...
 }
 #endregion INCLUDE

@@ -1,20 +1,17 @@
-﻿// IMPORTANT NOTE: This file is not compiled.
+﻿// 重要：这个文件不能编译
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_45
 {
     #region INCLUDE
-    // ERROR:  Invalid variance: the type parameter 'T' is not
-    //         invariantly valid
+    // 错误:  无效可变性，类型参数'T'变型无效
     interface IPairInitializer<in T>
     {
         void Initialize(IPair<T> pair);
     }
-    // Suppose the code above were legal, and see what goes
-    //  wrong:
+    // 假定上述代码合法，那么看看会在什么地方出错:
     public class FruitPairInitializer : IPairInitializer<Fruit>
     {
-        // Let’s initialize  our pair of fruits  with an 
-        // apple and an orange:
+        // 初始化由一个苹果和一个桔子构成的pair
         public void Initialize(IPair<Fruit> pair)
         {
             pair.First = new Orange();
@@ -22,7 +19,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_45
         }
     }
 
-    // ... later ...
+    // ... 然后 ...
     #region EXCLUDE
     public class Program
     {
@@ -30,9 +27,9 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_45
         {
             #endregion EXCLUDE
             var f = new FruitPairInitializer();
-            // This would be legal if contravariance were legal:
+            // 如果逆变性合法，那么以下代码合法:
             IPairInitializer<Apple> a = f;
-            // And now we write an orange into a pair of apples:
+            // 现在，将一个桔子写入一对苹果中:
             a.Initialize(new Pair<Apple>());
             #region EXCLUDE
         }

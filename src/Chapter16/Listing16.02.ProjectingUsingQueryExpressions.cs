@@ -28,7 +28,7 @@ public class Program
         foreach (FileInfo fileInfo in fileInfos)
         {
             Console.WriteLine(
-                $@".{ fileInfo.Name } ({
+                $@"{ fileInfo.Name } ({
                     fileInfo.LastWriteTime })");
         }
     }

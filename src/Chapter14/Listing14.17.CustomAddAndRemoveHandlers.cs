@@ -14,12 +14,12 @@ public class Thermostat
         public float NewTemperature { get; set; }
     }
  
-    // Define the delegate data type
+    // 定义委托数据类型
     public delegate void EventHandler<TemperatureArgs>(
         object sender, TemperatureArgs newTemperature);
     #endregion EXCLUDE
     #region HIGHLIGHT
-    // Define the event publisher
+    // 定义事件发布者
     public event EventHandler<TemperatureArgs> OnTemperatureChange
     {
         add
@@ -46,9 +46,9 @@ public class Thermostat
             if (value != CurrentTemperature)
             {
                 _CurrentTemperature = value;
-                // If there are any subscribers,
-                // notify them of changes in 
-                // temperature by invoking said subscribers
+                // 如果存在任何订阅者，就调用
+                // 它们注册的委托，将温度的变化
+                // 通知它们。
                 _OnTemperatureChange?.Invoke( // C# 6.0
                       this, new TemperatureArgs(value));
             }

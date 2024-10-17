@@ -61,7 +61,7 @@ public static partial class PiCalculator
                 string ds = string.Format("{0:D9}", nextDigit);
                 pi.Append(ds.Substring(0, digitCount));
 
-                // Show current progress
+                // 显示当前进度
 #if BackgroundWorkerThread
                 calculationWorker.ReportProgress(
                     0, ds.Substring(0, digitCount));

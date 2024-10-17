@@ -17,23 +17,22 @@ public sealed class Program
             //TextNumberParser.Parse("negative forty-two");
             #endregion EXCLUDE
             throw new InvalidOperationException(
-                "Arbitrary exception");
+                "任意异常");
             // ...
         }
         catch(Win32Exception exception) 
             when(exception.NativeErrorCode  == 42)
         {
-            // Handle Win32Exception where
-            // ErrorCode is 42
+            // 处理ErrorCode为42的Win32Exception
         }
-        catch(ArgumentException exception)
+        catch (ArgumentException exception)
         {
-            // Handle ArgumentException
+            // 处理ArgumentException
         }
         catch(InvalidOperationException exception)
         {
             bool exceptionHandled = false;
-            // Handle InvalidOperationException
+            // 处理InvalidOperationException
             // ...
             if(!exceptionHandled)
             {
@@ -42,12 +41,14 @@ public sealed class Program
         }
         catch(Exception exception)
         {
-            // Handle Exception
+            // 处理所有异常的基类：Exception
         }
         finally
         {
-            // Handle any cleanup code here as it runs
-            // regardless of whether there is an exception
+            // 在这里写资源清理代码，因为
+            // 不管是否发生异常，这里的代码
+            // 都会执行。
+            // ...
         }
     }
 }

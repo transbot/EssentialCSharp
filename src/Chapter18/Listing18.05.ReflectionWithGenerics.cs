@@ -8,12 +8,16 @@ public class Program
     {
         Type type;
         type = typeof(System.Nullable<>);
-        Console.WriteLine(type.ContainsGenericParameters);
-        Console.WriteLine(type.IsGenericType);
+        Console.WriteLine($"System.Nullable<>是否包含泛型参数：" +
+            $"{type.ContainsGenericParameters}");
+        Console.WriteLine($"System.Nullable<>是否泛型类型：" +
+            $"{type.IsGenericType}");
 
         type = typeof(System.Nullable<DateTime>);
-        Console.WriteLine(type.ContainsGenericParameters);
-        Console.WriteLine(type.IsGenericType);
+        Console.WriteLine($"System.Nullable<DateTime>是否包含泛型参数：" +
+            $"{type.ContainsGenericParameters}");
+        Console.WriteLine($"System.Nullable<DateTime>是否泛型类型：" +
+            $"{type.IsGenericType}");
     }
 }
 #endregion INCLUDE

@@ -26,12 +26,12 @@ public class CSharpBuiltInTypes : IEnumerable<string>
         yield return "string";
     }
 
-    // The IEnumerable.GetEnumerator method is also required 
-    // because IEnumerable<T> derives from IEnumerable
+    // 还需要实现IEnumerable.GetEnumerator方法，因为
+    // IEnumerable<T>是从IEnumerable派生的
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {
-        // Invoke IEnumerator<string> GetEnumerator() above
+        // 直接调用上述IEnumerator<string> GetEnumerator()
         return GetEnumerator();
     }
 }

@@ -6,7 +6,7 @@ public class Program
     {
         #region INCLUDE
         var patent1 =
-            new { Title = "Ë«½¹µãÍ¸¾µ",
+            new { Title = "Ë«½¹µãÑÛ¾µ",
                 YearOfPublication = "1784" };
         var patent2 =
             new { Title = "ÁôÉù»ú",

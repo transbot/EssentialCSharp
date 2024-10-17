@@ -8,20 +8,19 @@ public class Cooler
         Temperature = temperature;
     }
 
-    // Cooler is activated when ambient temperature
-    // is higher than this
+    //  当环境温度高于此值时，冷却器启动    
     public float Temperature { get; set; }
 
-    // Notifies that the temperature changed on this instance
+    // 当这个实例的温度发生变化时通知
     public void OnTemperatureChanged(float newTemperature)
     {
         if(newTemperature > Temperature)
         {
-            System.Console.WriteLine("Cooler: On");
+            System.Console.WriteLine("冷却器: On");
         }
         else
         {
-            System.Console.WriteLine("Cooler: Off");
+            System.Console.WriteLine("冷却器: Off");
         }
     }
 }
@@ -33,20 +32,19 @@ public class Heater
         Temperature = temperature;
     }
 
-    // Heater is activated when ambient temperature
-    // is lower than this
+    // 当环境温度低于此值时，加热器启动        
     public float Temperature { get; set; }
 
-    // Notifies that the temperature changed on this instance
+    // 当这个实例的温度发生变化时通知
     public void OnTemperatureChanged(float newTemperature)
     {
         if(newTemperature < Temperature)
         {
-            System.Console.WriteLine("Heater: On");
+            System.Console.WriteLine("加热器: On");
         }
         else
         {
-            System.Console.WriteLine("Heater: Off");
+            System.Console.WriteLine("加热器: Off");
         }
     }
 }

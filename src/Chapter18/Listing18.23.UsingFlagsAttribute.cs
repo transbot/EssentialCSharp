@@ -18,11 +18,14 @@ public class Program
         // ...
         string fileName = @"enumtest.txt";
         FileInfo file = new(fileName);
+        file.Open(FileMode.OpenOrCreate).Dispose();
 
         file.Attributes = FileAttributes.Hidden |
             FileAttributes.ReadOnly;
 
-        Console.WriteLine("\"{0}\" outputs as \"{1}\"",
+
+
+        Console.WriteLine("原本输出\"{1}\"，替换为\"{0}\"。",
             file.Attributes.ToString().Replace(",", " |"),
             file.Attributes);
 

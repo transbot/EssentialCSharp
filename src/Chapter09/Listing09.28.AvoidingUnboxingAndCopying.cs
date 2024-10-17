@@ -9,10 +9,10 @@ public class Program
         int number;
         object thing;
         number = 42;
-        // Boxing
+        // 装箱
         thing = number;
         #region HIGHLIGHT
-        // No unboxing conversion
+        // 这里不会发生拆箱
         #endregion HIGHLIGHT
         string text = ((IFormattable)thing).ToString(
             "X", null);

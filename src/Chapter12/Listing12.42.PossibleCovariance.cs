@@ -48,15 +48,16 @@ public class Program
 {
     static void Main()
     {
-        // Only possible with out type parameter
+        // 使用out类型参数才可以：
         #region HIGHLIGHT
-        //Pair<Contact> contacts =
-        //    new Pair<Contact>(
-        //        new Contact("Princess Buttercup"),
-        //        new Contact("Inigo Montoya"));
-        //IReadOnlyPair<PdaItem> pair = contacts;
-        //PdaItem pdaItem1 = pair.First;
-        //PdaItem pdaItem2 = pair.Second;
+        // Pair<Contact> contacts =
+        //     new Pair<Contact>(
+        //         new Contact("Princess Buttercup"),
+        //         new Contact("Inigo Montoya"));
+        // IReadOnlyPair<PdaItem> pair = contacts;
+        // PdaItem pdaItem1 = pair.First;
+        // PdaItem pdaItem2 = pair.Second;
+
         #endregion HIGHLIGHT
     }
 }

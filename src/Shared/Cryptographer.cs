@@ -39,15 +39,15 @@ public class Cryptographer : IDisposable
     public static async Task<byte[]> EncryptAsync(string plainText, byte[] key, byte[] iv)
     {
         byte[] encrypted;
-        // Create a new AesManaged.    
+        // 新建一个AesManaged
         using (AesManaged aes = new())
         {
-            // Create encryptor    
+            // 创建encryptor    
             ICryptoTransform encryptor = aes.CreateEncryptor(key, iv);
-            // Create MemoryStream    
+            // 创建MemoryStream    
             encrypted = await EncryptAsync(plainText, encryptor);
         }
-        // Return encrypted data    
+        // 返回加密的数据
         return encrypted;
     }
 

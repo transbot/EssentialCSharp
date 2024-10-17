@@ -1,7 +1,17 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_38;
 
 #region INCLUDE
-//FileAttributes are defined in System.IO
+// FileAttributes在System.IO中定义
+// FileAttributes在System.IO中定义
+/*
+[Flags]
+public enum FileAttributes
+{
+    ReadOnly = 0x0001,
+    Hidden   = 0x0002,
+    // ...
+}
+*/
 
 using System;
 using System.IO;
@@ -12,8 +22,7 @@ public class Program
     {
         string fileName = @"enumtest.txt";
         #region EXCLUDE
-        // Cleanup in case the file is left in read-only state
-        // and can't get created.
+        // 先做一些清理工作，以防因为文件处于只读状态而无法创建
         if (File.Exists(fileName))
         {
             FileAttributes attrs = File.GetAttributes(fileName);
@@ -30,7 +39,7 @@ public class Program
         file.Attributes = FileAttributes.Hidden |
             FileAttributes.ReadOnly;
 
-        Console.WriteLine("\"{0}\" outputs as \"{1}\"",
+        Console.WriteLine("原本输出\"{1}\"，替换为\"{0}\"。",
             file.Attributes.ToString().Replace(",", " |"),
             file.Attributes);
 

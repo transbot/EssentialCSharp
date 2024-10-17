@@ -25,7 +25,7 @@ public class Program
                 Console.WriteLine(employee);
             }
             Console.WriteLine(
-              "\tCount: " + employeeGroup.Count());
+              "\t¼ÆÊý: " + employeeGroup.Count());
         }
         //...
         #endregion INCLUDE

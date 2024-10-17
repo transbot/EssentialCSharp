@@ -15,7 +15,7 @@ public class Thermostat
         public float NewTemperature { get; set; }
     }
 
-    // Define the event publisher
+    // 定义事件发布者
     public event EventHandler<TemperatureArgs> OnTemperatureChange =
         delegate { };
     #endregion EXCLUDE
@@ -28,9 +28,9 @@ public class Thermostat
             if(value != CurrentTemperature)
             {
                 _CurrentTemperature = value;
-                // If there are any subscribers,
-                // notify them of changes in 
-                // temperature by invoking said subscribers
+                // 如果存在任何订阅者，就调用
+                // 它们注册的委托，将温度的变化
+                // 通知它们。
                 #region HIGHLIGHT
                 OnTemperatureChange?.Invoke(
                       this, new TemperatureArgs(value));

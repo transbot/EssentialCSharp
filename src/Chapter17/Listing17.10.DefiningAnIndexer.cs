@@ -44,15 +44,14 @@ public struct Pair<T> : IPair<T>
                     return Second;
                 default:
                     throw new NotImplementedException(
-                        $"The enum { index.ToString() } has not been implemented");
+                        $"尚未实现{index.ToString()}枚举。");
 
             }
         }
         #region EXCLUDE
 
         /*  
-        // In keeping with the principal that structs should
-        // be read-only, the setter is commented out
+        // 为了与“结构应只读”原则一致，这里将setter注释掉了
 
         set
         {
@@ -67,7 +66,7 @@ public struct Pair<T> : IPair<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "The enum {0} has not been implemented",
+                        "{0}枚举尚未实现",
                         index.ToString()));
             }
         }

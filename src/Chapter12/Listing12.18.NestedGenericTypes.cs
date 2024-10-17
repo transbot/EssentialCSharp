@@ -1,13 +1,12 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_18;
 
-#pragma warning disable 0693 // Disabled warning due to nested type parameter
-// with overlapping name
+#pragma warning disable 0693 // 禁止显示关于嵌套类型参数
+                             // 与外部类型中的类型参数同名的警告
 #region INCLUDE
 public class Container<T, U>
 {
-    // Nested classes inherit type parameter
-    // Reusing a type parameter name will cause
-    // a warning
+    // 嵌套类已继承了类型参数。
+    // 重用这些类型参数会显示警告。
     public class Nested<U>
     {
         #region HIGHLIGHT

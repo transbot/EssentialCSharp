@@ -11,30 +11,30 @@ public class Program
     {
         IEnumerable<object> stuff =
             new object[] { new(), 1, 3, 5, 7, 9,
-                "\"thing\"", Guid.NewGuid() };
-        Print("Stuff: {0}", stuff);
+                "\"东西\"", Guid.NewGuid() };
+        Print("杂物: {0}", stuff);
 
         IEnumerable<int> even = new int[] { 0, 2, 4, 6, 8 };
-        Print("Even integers: {0}", even);
+        Print("偶数: {0}", even);
 
         #region HIGHLIGHT
         IEnumerable<int> odd = stuff.OfType<int>();
         #endregion HIGHLIGHT
-        Print("Odd integers: {0}", odd);
+        Print("奇数: {0}", odd);
 
         #region HIGHLIGHT
         IEnumerable<int> numbers = even.Union(odd);
         #endregion HIGHLIGHT
-        Print("Union of odd and even: {0}", numbers);
+        Print("奇数和偶数的并集: {0}", numbers);
 
         #region HIGHLIGHT
-        Print("Union with even: {0}", numbers.Union(even));
-        Print("Concat with odd: {0}", numbers.Concat(odd));
+        Print("与偶数的并集: {0}", numbers.Union(even));
+        Print("与奇数合并成超集: {0}", numbers.Concat(odd));
         #endregion HIGHLIGHT
-        Print("Intersection with even: {0}",
+        Print("与偶数的交集: {0}",
         #region HIGHLIGHT
             numbers.Intersect(even));
-        Print("Distinct: {0}", numbers.Concat(odd).Distinct());
+        Print("去重: {0}", numbers.Concat(odd).Distinct());
         #endregion HIGHLIGHT
 
         #region HIGHLIGHT
@@ -51,11 +51,11 @@ public class Program
                 $" {nameof(numbers)}.Concat(odd).Distinct())");
         }
         #region HIGHLIGHT
-        Print("Reverse: {0}", numbers.Reverse());
-        Print("Average: {0}", numbers.Average());
-        Print("Sum: {0}", numbers.Sum());
-        Print("Max: {0}", numbers.Max());
-        Print("Min: {0}", numbers.Min());
+        Print("反转: {0}", numbers.Reverse());
+        Print("平均: {0}", numbers.Average());
+        Print("总和: {0}", numbers.Sum());
+        Print("最大: {0}", numbers.Max());
+        Print("最小: {0}", numbers.Min());
         #endregion HIGHLIGHT
     }
 

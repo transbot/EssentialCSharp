@@ -1,4 +1,4 @@
-// Justification: Implementation is incomplete in the catch block.
+// 说明 : Implementation is incomplete in the catch block.
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_15;
 
 using System;
@@ -10,7 +10,7 @@ public class TemporaryFileStream
     public TemporaryFileStream(string fileName)
     {
         File = new FileInfo(fileName);
-        // For a preferable solution use FileOptions.DeleteOnClose.
+        // 更好的方案是使用FileOptions.DeleteOnClose
         Stream = new FileStream(
             File.FullName, FileMode.OpenOrCreate,
             FileAccess.ReadWrite);
@@ -21,7 +21,7 @@ public class TemporaryFileStream
     { }
 
     #region HIGHLIGHT
-    // Finalizer
+    // 终结器
     ~TemporaryFileStream()
     {
         try
@@ -30,7 +30,7 @@ public class TemporaryFileStream
         }
         catch (Exception )
         {
-            // Write event to logs or UI
+            // 将事件写入日志或UI
             // ...
         }
     }

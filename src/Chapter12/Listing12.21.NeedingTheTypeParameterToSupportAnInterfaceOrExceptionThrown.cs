@@ -18,10 +18,8 @@ public class BinaryTree<T>
         {
             switch (value)
             {
-                // Null handling removed for elucidation
-
-                // Using C# 8.0 Pattern Matching. Switch to
-                // checking for null prior to C# 8.0
+                // C# 8.0应该使用模式匹配(is null)。
+                // 但在C# 8.0之前，只能这样检查null
                 #region EXCLUDE
                 case { First: null}:
                     // First is null
@@ -40,17 +38,16 @@ public class BinaryTree<T>
                     if (first.CompareTo(second) < 0)
                     #endregion HIGHLIGHT
                     {
-                        // first is less than second
+                        // first小于second
                     }
                     else
                     {
-                        // second is less than or equal to first
+                        // second小于或等于first
                     }
                     break;
                 default:
                     throw new InvalidCastException(
-                        @$"Unable to sort the items as { 
-                            typeof(T) } does not support IComparable<T>.");
+                        @$"不能对items排序，因为{typeof(T)}不支持IComparable<T>接口。");
             };
             _SubItems = value;
         }

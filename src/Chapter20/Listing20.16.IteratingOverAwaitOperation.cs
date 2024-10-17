@@ -10,7 +10,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_16
     {
         #region INCLUDE
         private async void PingButton_Click(
-        object sender, RoutedEventArgs e)
+            object sender, RoutedEventArgs e)
         {
             List<string> urls = new List<string>()
                 {

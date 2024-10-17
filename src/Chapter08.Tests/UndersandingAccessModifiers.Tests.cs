@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.UnderstandingAccessModifiers.Tests;
 
-// Justification: Use for example only.
+// 说明 : Use for example only.
 #pragma warning disable IDE0051 // Remove unused private members
 public interface ISampleInterface
 {

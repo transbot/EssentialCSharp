@@ -1,54 +1,47 @@
-﻿#region INCLUDE
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <doc>
-    <assembly>
-        <name>DataStorage</name>
-    </assembly>
-    <members>
-        <member name="T:DataStorage">
-            <summary>
-                DataStorage is used to persist and retrieve
-                employee data from the files.
-            </summary>
-        </member>
-        <member name="M:DataStorage.Store(Employee)">
-            <summary>
-                Save an employee object to a file
-                named with the Employee name.
-            </summary>
-            <remarks>
-                This method uses
-                <seealso cref="T:System.IO.FileStream"/>
-                in addition to
-                <seealso cref="T:System.IO.StreamWriter"/>
-            </remarks>
-            <param name="employee">
-                The employee to persist to a file
-            </param>
-            <date>January 1, 2000</date>
-        </member>
-        <member name="M:DataStorage.Load(
-                 System.String,System.String)">
-            <summary>
-                Loads up an employee object
-            </summary>
-            <remarks>
-                This method uses
-                <seealso cref="T:System.IO.FileStream"/>
-                in addition to
-                <seealso cref="T:System.IO.StreamReader"/>
-            </remarks>
-            <param name="firstName">
-                The first name of the employee
-            </param>
-            <param name="lastName">
-                The last name of the employee
-            </param>
-            <returns>
-                The employee object corresponding to the names
-            </returns>
-            <date>January 1, 2000</date>*
-        </member>
-    </members>
+  <assembly>
+    <name>CommentSamples</name>
+  </assembly>
+  <members>
+    <member name="T:DataStorage">
+      <summary>
+        DataStorage类用于在文件中存储和检索员工数据
+      </summary>
+    </member>
+    <member name="M:DataStorage.Store(Employee)">
+      <summary>
+        将员工对象保存到以员工姓名命名的文件中
+      </summary>
+      <remarks>
+        该方法使用<seealso cref="T:System.IO.FileStream"/>
+        以及
+        <seealso cref="T:System.IO.StreamWriter"/>
+      </remarks>
+      <param name="employee">
+        要存储到文件中的员工
+      </param>
+      <date>January 1, 2000</date>
+    </member>
+    <member name="M:DataStorage.Load(System.String,System.String)">
+      <summary>
+        加载员工对象。
+      </summary>
+      <remarks>
+        该方法使用<seealso cref="T:System.IO.FileStream"/>
+        以及
+        <seealso cref="T:System.IO.StreamReader"/>
+      </remarks>
+      <param name="firstName">
+        员工的名字（first name）
+      </param>
+      <param name="lastName">
+        员工的姓氏（last name）
+      </param>
+      <returns>
+        和姓名对应的员工对象
+      </returns>
+      <date>January 1, 2000</date> *
+    </member>
+  </members>
 </doc>
-#endregion INCLUDE

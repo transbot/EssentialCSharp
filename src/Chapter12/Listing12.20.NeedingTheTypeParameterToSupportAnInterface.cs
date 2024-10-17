@@ -2,7 +2,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_20;
 
 using System;
 using Listing12_13;
-// In an actual implementation Item would be used to hold some value
+// 在实际的实现中，Item应容纳一些值
 #pragma warning disable CS0168
 #region INCLUDE
 public class BinaryTree<T>
@@ -20,18 +20,18 @@ public class BinaryTree<T>
         {
             #region HIGHLIGHT
             IComparable<T> first;
-            // ERROR: Cannot implicitly convert type...
-            //first = value.First;  // Explicit cast required
+            // 错误: 不支持类型隐式转换...
+            //first = value.First;  // 需要显式转型
 
             //if(first.CompareTo(value.Second) < 0)
             //{
-            //    // first is less than second
+            //    // first小于second
             //    //...
             //}
             //else
             //{
-            //    // first and second are the same or
-            //    // second is less than first
+            //    // first和second相等，或者
+            //    // second小于first
             //    //...
             //}
             _SubItems = value;

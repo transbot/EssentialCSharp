@@ -2,8 +2,7 @@
 
 /*
 #region INCLUDE
-// ERROR: Func<T1, T2, TResult> cannot 
-// inherit from special class 'System.Delegate'
+// 错误: Func<T1, T2, TResult>无法从特殊类'System.Delegate'派生
 public class Func<T1, T2, TResult>: System.Delegate
 {
 //    ...

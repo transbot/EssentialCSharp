@@ -15,8 +15,7 @@ public class Program
 
         // ...
 
-        // If IEnumerable<T> is implemented explicitly, 
-        // then a cast is required
+        // 如果显式实现IEnumerable<T>，那么需要一次强制类型转换
         // ((IEnumerable<int>)stack).GetEnumerator();
         enumerator = stack.GetEnumerator();
         while(enumerator.MoveNext())

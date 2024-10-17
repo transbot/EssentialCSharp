@@ -5,7 +5,7 @@ public class Publisher
     #region INCLUDE
     public static object? InvokeAll<TDelegate>(
         object?[]? args, params TDelegate[] delegates)
-        // Constraint of type Action/Func not allowed
+        // 不允许约束为Action/Func类型
         where TDelegate : System.MulticastDelegate
     {
       switch (Delegate.Combine(delegates))

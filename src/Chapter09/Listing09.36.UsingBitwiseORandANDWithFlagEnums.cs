@@ -30,15 +30,17 @@ public class Program
 
             Console.WriteLine($"{file.Attributes} = {(int)file.Attributes}");
 
+            // Linux上仅支持ReadOnly属性
+            // (Hidden属性在Linux上不起作用)
             if (!file.Attributes.HasFlag(FileAttributes.Hidden))
             {
-                throw new Exception("File is not hidden.");
+                throw new Exception("文件不是隐藏。");
             }
-
+            
             if ((file.Attributes & FileAttributes.ReadOnly) !=
-            FileAttributes.ReadOnly)
+                FileAttributes.ReadOnly)
             {
-                throw new Exception("File is not read-only.");
+                throw new Exception("文件不是只读。");
             }
         #region EXCLUDE
         }

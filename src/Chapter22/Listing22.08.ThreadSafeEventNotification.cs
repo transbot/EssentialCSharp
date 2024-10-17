@@ -19,7 +19,7 @@ class Program
             OnTemperatureChanged;
         if(localOnChange is not null)
         {
-            // Call subscribers
+            // 调用所有订阅了该事件的订阅者
             localOnChange(
               this, new TemperatureEventArgs(value));
         }
@@ -28,10 +28,11 @@ class Program
 #endif
     }
 
-    // Justification: Lowercase to simulate the value keyword form a setter.
-#pragma warning disable IDE1006 // Naming Styles
+    // 刻意使用小写的value作为属性名，
+    // 以模拟setter中的value关键字。
+#pragma warning disable IDE1006 // 命名风格
     public object? value { get; set; }
-#pragma warning restore IDE1006 // Naming Styles
+#pragma warning restore IDE1006 // 命名风格
 }
 
 public class TemperatureEventArgs

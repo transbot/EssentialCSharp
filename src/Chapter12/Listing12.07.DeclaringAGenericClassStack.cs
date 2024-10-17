@@ -18,7 +18,7 @@ public class Stack<T>
     public T Pop()
     {
         #region EXCLUDE
-        return InternalItems[0]; //just for the example
+        return InternalItems[0]; // Ö»ÊÇ¾ÙÀý
         #endregion EXCLUDE
     }
 }

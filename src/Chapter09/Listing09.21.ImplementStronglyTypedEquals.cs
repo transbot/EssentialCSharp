@@ -29,8 +29,8 @@ public class Foo : IEquality<Foo>
     public bool Equals(Foo? other)
     {
         if (other is null) return false;
-        // Step 5
-        // return (this.Number, this.Name) == (other.Number, other.Name);
+        // ≤Ω÷Ë5
+        // ∑µªÿ(this.Number, this.Name) == (other.Number, other.Name);
         return true;
     }
     #endregion INCLUDE

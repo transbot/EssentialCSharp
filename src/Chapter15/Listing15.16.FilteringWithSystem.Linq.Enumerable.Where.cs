@@ -20,35 +20,32 @@ public class Program
                 if(result =
                     patent.YearOfPublication.StartsWith("18"))
                 {
-                    // Side effects like this in a predicate
-                    // are used here to demonstrate a 
-                    // principle and should generally be
-                    // avoided
+                    // 谓词应该只做判断，尽量避免下面这样在谓词中的副作用
                     Console.WriteLine("\t" + patent);
                 }
                 return result;
             });
 
-        Console.WriteLine("1. Patents prior to the 1900s are:");
+        Console.WriteLine("1. 20世纪之前的专利清单之一:");
         foreach(Patent patent in patents)
         {
         }
 
         Console.WriteLine();
         Console.WriteLine(
-            "2. A second listing of patents prior to the 1900s:");
+            "2. 20世纪之前的专利清单之二:");
         Console.WriteLine(
-            $@"   There are { patents.Count()
-                } patents prior to 1900.");
+            $@"   20世纪之前总共有{ patents.Count()
+                }个专利。");
 
 
         Console.WriteLine();
         Console.WriteLine(
-            "3. A third listing of patents prior to the 1900s:");
+            "3. 18世纪之前的专利清单之三:");
         patents = patents.ToArray();
-        Console.Write("   There are ");
+        Console.Write("   20世纪之前总共有");
         Console.WriteLine(
-            $"{ patents.Count() } patents prior to 1900.");
+            $"{ patents.Count() }个专利。");
 
         //...
         #endregion INCLUDE

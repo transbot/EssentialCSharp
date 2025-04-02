@@ -9,19 +9,19 @@ public class BinaryConverter
         ulong value;
         char bit;
 
-        Console.Write("ÊäÈëÒ»¸öÕûÊı: ");
-        // Ê¹ÓÃlong.Parse()À´Ö§³Ö¸ºÊı
-        // ¼ÙÉè¶Ôulong½øĞĞunchecked¸³Öµ
-        // Èç¹ûReadLine·µ»Ønull£¬ÄÇÃ´Ê¹ÓÃ"42"×÷ÎªÄ¬ÈÏÊäÈë
+        Console.Write("è¾“å…¥ä¸€ä¸ªæ•´æ•°: ");
+        // ä½¿ç”¨long.Parse()æ¥æ”¯æŒè´Ÿæ•°
+        // å‡è®¾å¯¹ulongè¿›è¡Œuncheckedèµ‹å€¼
+        // å¦‚æœReadLineè¿”å›nullï¼Œé‚£ä¹ˆä½¿ç”¨"42"ä½œä¸ºé»˜è®¤è¾“å…¥
         value = (ulong)long.Parse(Console.ReadLine() ?? "42");
 
-        // ½«³õÊ¼ÑÚÂë(mask)ÉèÎª100....
+        // å°†åˆå§‹æ©ç (mask)è®¾ä¸º100....
         ulong mask = 1UL << size - 1;
         for(int count = 0; count < size; count++)
         {
             bit = ((mask & value) != 0) ? '1' : '0';
             Console.Write(bit);
-            // ÑÚÂëÓÒÒÆ1Î»
+            // æ©ç å³ç§»1ä½
             mask >>= 1;
         }
         Console.WriteLine();

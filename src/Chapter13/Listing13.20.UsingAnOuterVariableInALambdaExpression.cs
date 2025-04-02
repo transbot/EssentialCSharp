@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_20;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_20;
 
 using System;
 using Listing13_11;

@@ -8,7 +8,7 @@ public class Program
 
         #region INCLUDE
         if ((10 < hourOfTheDay) && (hourOfTheDay < 24))
-            Console.WriteLine("àËÓ´£¬àËÓ´£¬ÎÒÃÇÈ¥¹¤×÷ÁË¡£");
+            Console.WriteLine("å—¨å“Ÿï¼Œå—¨å“Ÿï¼Œæˆ‘ä»¬åŽ»å·¥ä½œäº†ã€‚");
         #endregion INCLUDE
     }
 }

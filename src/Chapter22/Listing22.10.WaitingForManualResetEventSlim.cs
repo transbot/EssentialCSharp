@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 public class Program
 {
     #region EXCLUDE
-    // ËµÃ÷ : ÔÚMain¿ªÊ¼Ê±³õÊ¼»¯
-#pragma warning disable CS8618 // ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+    // è¯´æ˜ : åœ¨Mainå¼€å§‹æ—¶åˆå§‹åŒ–
+#pragma warning disable CS8618 // ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
     #endregion EXCLUDE
     static ManualResetEventSlim _MainSignaledResetEvent;
     static ManualResetEventSlim _DoWorkSignaledResetEvent;
     #region EXCLUDE
-#pragma warning restore CS8618 // ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+#pragma warning restore CS8618 // ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
     #endregion EXCLUDE
 
     public static void DoWork()
     {
-        Console.WriteLine("DoWork()ÒÑÆô¶¯....");
+        Console.WriteLine("DoWork()å·²å¯åŠ¨....");
         #region HIGHLIGHT
         _DoWorkSignaledResetEvent.Set();
         _MainSignaledResetEvent.Wait();
         #endregion HIGHLIGHT
-        Console.WriteLine("DoWork()ÕıÔÚ½áÊø....");
+        Console.WriteLine("DoWork()æ­£åœ¨ç»“æŸ....");
     }
 
     public static void Main()
@@ -33,21 +33,21 @@ public class Program
         using(_DoWorkSignaledResetEvent = new ())
         {
             Console.WriteLine(
-                "Ó¦ÓÃ³ÌĞòÒÑÆô¶¯...");
-            Console.WriteLine("ÕıÔÚÆô¶¯ÈÎÎñ...");
+                "åº”ç”¨ç¨‹åºå·²å¯åŠ¨...");
+            Console.WriteLine("æ­£åœ¨å¯åŠ¨ä»»åŠ¡...");
 
-            // .NET 4.0Òª¸ÄÎªÊ¹ÓÃTask.Factory.StartNew
+            // .NET 4.0è¦æ”¹ä¸ºä½¿ç”¨Task.Factory.StartNew
             Task task = Task.Run(() => DoWork());
 
-            // ×èÈû£¬Ö±µ½DoWork()Æô¶¯
+            // é˜»å¡ï¼Œç›´åˆ°DoWork()å¯åŠ¨
             _DoWorkSignaledResetEvent.Wait();
             Console.WriteLine(
-                "ÔÚÏß³ÌÖ´ĞĞÆÚ¼äµÈ´ı...");
+                "åœ¨çº¿ç¨‹æ‰§è¡ŒæœŸé—´ç­‰å¾…...");
             _MainSignaledResetEvent.Set();
             task.Wait();
-            Console.WriteLine("Ïß³ÌÒÑ½áÊø");
+            Console.WriteLine("çº¿ç¨‹å·²ç»“æŸ");
             Console.WriteLine(
-                "Ó¦ÓÃ³ÌĞò¹Ø±Õ...");
+                "åº”ç”¨ç¨‹åºå…³é—­...");
         }
     }
 }

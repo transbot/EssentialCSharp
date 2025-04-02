@@ -32,7 +32,7 @@ IEnumerable<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "��δʵ��{0}ö��",
+                        "尚未实现{0}枚举",
                         index.ToString()));
             }
         }
@@ -40,21 +40,21 @@ IEnumerable<T>
     }
     #endregion EXCLUDE
     #region HIGHLIGHT
-    #region IEnumerable<T>�ĳ�Ա
+    #region IEnumerable<T>的成员
     public IEnumerator<T> GetEnumerator()
     {
         yield return First;
         yield return Second;
     }
-    #endregion IEnumerable<T>�ĳ�Ա
+    #endregion IEnumerable<T>的成员
 
-    #region IEnumerable�ĳ�Ա
+    #region IEnumerable的成员
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {
         return GetEnumerator();
     }
-    #endregion IEnumerable�ĳ�Ա
+    #endregion IEnumerable的成员
     #endregion HIGHLIGHT
 }
 #endregion INCLUDE

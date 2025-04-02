@@ -6,7 +6,7 @@ public class Program
     {
         #region INCLUDE
         #line 113 "TicTacToe.cs"
-        #warning "ÔÊĞíÔÚÍ¬Ò»¸öÎ»ÖÃ¶à´ÎÂä×Ó¡£"
+        #warning "å…è®¸åœ¨åŒä¸€ä¸ªä½ç½®å¤šæ¬¡è½å­ã€‚"
         #line default
         #endregion INCLUDE
     }

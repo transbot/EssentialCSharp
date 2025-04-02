@@ -8,9 +8,9 @@ public class ConvertToPhoneNumber
         if(args.Length == 0)
         {
             Console.WriteLine(
-                "ÓÃ·¨: ConvertToPhoneNumber.exe <Ò»¸öÓ¢ÎÄ¶ÌÓï>");
+                "ç”¨æ³•: ConvertToPhoneNumber.exe <ä¸€ä¸ªè‹±æ–‡çŸ­è¯­>");
             Console.WriteLine(
-                "'_'±íÊ¾ÎŞ±ê×¼µç»°°´¼ü");
+                "'_'è¡¨ç¤ºæ— æ ‡å‡†ç”µè¯æŒ‰é”®");
             return 1;
         }
         foreach(string word in args)
@@ -123,7 +123,7 @@ public class ConvertToPhoneNumber
                 button = '-';
                 break;
             default:
-                // ÉèÖÃbuttonÀ´Ö¸Ê¾Ò»¸öÎŞĞ§µÄÖµ
+                // è®¾ç½®buttonæ¥æŒ‡ç¤ºä¸€ä¸ªæ— æ•ˆçš„å€¼
                 button = '_';
                 success = false;
                 break;

@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Table08_01
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Table08_01
 {
     // 1.
     namespace StaticMembers

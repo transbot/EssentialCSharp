@@ -8,7 +8,7 @@ public class PeriodsOfTheDay
     public bool IsOutsideOfStandardWorkHours(
         TimeOnly time) =>
             time.Hour is not
-                (> 8 and < 17 and not 12); // Ô²À¨ºÅÄ£Ê½ - C# 10.
+                (> 8 and < 17 and not 12); // åœ†æ‹¬å·æ¨¡å¼ - C# 10.
     #endregion INCLUDE
 
     public static bool TryGetPhoneButton(
@@ -19,7 +19,7 @@ public class PeriodsOfTheDay
         {
             '1' => '1',
             '2' or >= 'a' and <= 'c' => '2',
-            // not²Ù×÷·ûºÍÔ²À¨ºÅÊ¾Àı(C# 10)
+            // notæ“ä½œç¬¦å’Œåœ†æ‹¬å·ç¤ºä¾‹(C# 10)
             '3' or not (< 'd' or > 'f') => '3',
             '4' or >= 'g' and <= 'i' => '4',
             '5' or >= 'j' and <= 'l' => '5',
@@ -28,7 +28,7 @@ public class PeriodsOfTheDay
             '8' or >= 't' and <= 'v' => '8',
             '9' or >= 'w' and <= 'z' => '9',
             '0' or '+' => '0',
-            _ => null,// ÉèÖÃbuttonÀ´±íÊ¾ÖµÊÇÎŞĞ§µÄ
+            _ => null,// è®¾ç½®buttonæ¥è¡¨ç¤ºå€¼æ˜¯æ— æ•ˆçš„
         }) is not null;
     }
 }

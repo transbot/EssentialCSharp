@@ -25,7 +25,7 @@ public class Program
 
 
 
-        Console.WriteLine("Ô­±¾Êä³ö\"{1}\"£¬Ìæ»»Îª\"{0}\"¡£",
+        Console.WriteLine("åŸæœ¬è¾“å‡º\"{1}\"ï¼Œæ›¿æ¢ä¸º\"{0}\"ã€‚",
             file.Attributes.ToString().Replace(",", " |"),
             file.Attributes);
 

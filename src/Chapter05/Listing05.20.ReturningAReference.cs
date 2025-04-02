@@ -5,10 +5,10 @@ using System;
 public class Program
 {
     #region INCLUDE
-    // ·µ»ØÒ»¸öÒıÓÃ
+    // è¿”å›ä¸€ä¸ªå¼•ç”¨
     public static ref byte FindFirstRedEyePixel(byte[] image)
     {
-        // Ö´ĞĞÍ¼Ïñ¼ì²é(Ò²ĞíÍ¨¹ı»úÆ÷Ñ§Ï°)        
+        // æ‰§è¡Œå›¾åƒæ£€æŸ¥(ä¹Ÿè®¸é€šè¿‡æœºå™¨å­¦ä¹ )        
         for (int counter = 0; counter < image.Length; counter++)
         {
             if (image[counter] == (byte)ConsoleColor.Red)
@@ -16,12 +16,12 @@ public class Program
                 return ref image[counter];
             }
         }
-        throw new InvalidOperationException("Ã»ÓĞÏñËØÊÇºìÉ«µÄ¡£");
+        throw new InvalidOperationException("æ²¡æœ‰åƒç´ æ˜¯çº¢è‰²çš„ã€‚");
     }
     public static void Main()
     {
         byte[] image = new byte[254];
-        // ¼ÓÔØÍ¼Ïñ
+        // åŠ è½½å›¾åƒ
         int index = new Random().Next(0, image.Length - 1);
         image[index] =
             (byte)ConsoleColor.Red;
@@ -30,9 +30,9 @@ public class Program
         // ...
 
         #region HIGHLIGHT
-        // »ñÈ¡¶ÔµÚÒ»¸öºìÉ«ÏñËØµÄÒıÓÃ
+        // è·å–å¯¹ç¬¬ä¸€ä¸ªçº¢è‰²åƒç´ çš„å¼•ç”¨
         ref byte redPixel = ref FindFirstRedEyePixel(image);
-        // °ÑËü¸üĞÂÎªºÚÉ«
+        // æŠŠå®ƒæ›´æ–°ä¸ºé»‘è‰²
         redPixel = (byte)ConsoleColor.Black;
         #endregion HIGHLIGHT
         Console.WriteLine(

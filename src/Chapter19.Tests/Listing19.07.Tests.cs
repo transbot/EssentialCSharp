@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter19.Listing19_07.Tests;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter19.Listing19_07.Tests;
 
 [TestClass]
 public class ProgramTests

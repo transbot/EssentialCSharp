@@ -5,10 +5,10 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        // ÏÔÊ¾£º-¡Þ£¨¸ºÎÞÇî´ó£©
+        // æ˜¾ç¤ºï¼š-âˆžï¼ˆè´Ÿæ— ç©·å¤§ï¼‰
         Console.WriteLine(-1f / 0);
 
-        // ÏÔÊ¾£º¡Þ£¨ÕýÎÞÇî´ó£©
+        // æ˜¾ç¤ºï¼šâˆžï¼ˆæ­£æ— ç©·å¤§ï¼‰
         Console.WriteLine(3.402823E+38f * 2f);
         #endregion INCLUDE
     }

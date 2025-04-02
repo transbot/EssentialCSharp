@@ -24,7 +24,7 @@ public class ProgramTests
     public void ValidateAndMove_Input0_InvalidInput()
     {
         const string expected =
-            @"´íÎó:  ÊäÈë1-9µÄÖµ¡£ °´Enter¼üÍË³ö¡£";
+            @"é”™è¯¯:  è¾“å…¥1-9çš„å€¼ã€‚ æŒ‰Enteré”®é€€å‡ºã€‚";
 
         int[] playerPositions = new int[1];
         int currentPlayer = 0;

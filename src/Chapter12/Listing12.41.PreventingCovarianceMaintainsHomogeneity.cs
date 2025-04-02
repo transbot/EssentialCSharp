@@ -12,10 +12,10 @@ public class Program
 
         #region HIGHLIGHT
         #if COMPILEERROR // EXCLUDE
-        // 会报告错误：不能转换类型 ...
-        // 但假定不报错
+        // 浼氭姤鍛婇敊璇細涓嶈兘杞崲绫诲瀷 ...
+        // 浣嗗亣瀹氫笉鎶ラ敊
         IPair<PdaItem> pdaPair = (IPair<PdaItem>) contacts;
-        // 这完全合法，但不是类型安全的
+        // 杩欏畬鍏ㄥ悎娉曪紝浣嗕笉鏄被鍨嬪畨鍏ㄧ殑
         pdaPair.First = new Address("123 Sesame Street");
         #endif // COMPILEERROR // EXCLUDE
         #endregion HIGHLIGHT

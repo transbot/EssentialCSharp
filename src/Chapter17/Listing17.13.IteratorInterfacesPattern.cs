@@ -14,20 +14,20 @@ IEnumerable<T>
         Value = value;
     }
 
-    #region IEnumerable<T>µÄ³ÉÔ±
+    #region IEnumerable<T>çš„æˆå‘˜
     #region HIGHLIGHT
     public IEnumerator<T> GetEnumerator()
     #endregion HIGHLIGHT
     {
         #region EXCLUDE
-        return new List<T>.Enumerator(); // ÏÂ¸ö´úÂëÇåµ¥ÊµÏÖ£¬ÕâÀïÖ»ÊÇ°Ú¸öÑù×Ó
+        return new List<T>.Enumerator(); // ä¸‹ä¸ªä»£ç æ¸…å•å®ç°ï¼Œè¿™é‡Œåªæ˜¯æ‘†ä¸ªæ ·å­
     }
     IEnumerator IEnumerable.GetEnumerator()
     {
-        return GetEnumerator(); // ÏÂ¸ö´úÂëÇåµ¥ÊµÏÖ£¬ÕâÀïÖ»ÊÇ°Ú¸öÑù×Ó
+        return GetEnumerator(); // ä¸‹ä¸ªä»£ç æ¸…å•å®ç°ï¼Œè¿™é‡Œåªæ˜¯æ‘†ä¸ªæ ·å­
         #endregion EXCLUDE
     }
-    #endregion IEnumerable<T>µÄ³ÉÔ±
+    #endregion IEnumerable<T>çš„æˆå‘˜
 
     public T Value { get; }
     public Pair<BinaryTree<T>> SubItems { get; set; }

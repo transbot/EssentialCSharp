@@ -10,25 +10,25 @@ public class Program
         double doubleNumber2 = 0.1D * 42D;
         float floatNumber = 0.1F * 42F;
 
-        // 1. ÏÔÊ¾£º4.2 != 4.2000002861023 - True
+        // 1. æ˜¾ç¤ºï¼š4.2 != 4.2000002861023 - True
         Console.WriteLine($"{decimalNumber} != {(decimal)doubleNumber1} - {decimalNumber != (decimal)doubleNumber1}");
 
-        // 2. ÏÔÊ¾£º4.2 != 4.200000286102295 - True
+        // 2. æ˜¾ç¤ºï¼š4.2 != 4.200000286102295 - True
         Console.WriteLine($"{(double)decimalNumber} != {doubleNumber1} - {(double)decimalNumber != doubleNumber1}");
 
-        // 3. ÏÔÊ¾£º(float)4.2M != 4.2000003F - True
+        // 3. æ˜¾ç¤ºï¼š(float)4.2M != 4.2000003F - True
         Console.WriteLine($"(float){(float)decimalNumber}M != {floatNumber}F - {(float)decimalNumber != floatNumber}");
 
-        // 4. ÏÔÊ¾£º4.200000286102295 != 4.2 - True
+        // 4. æ˜¾ç¤ºï¼š4.200000286102295 != 4.2 - True
         Console.WriteLine($"{doubleNumber1} != {doubleNumber2} - {doubleNumber1 != doubleNumber2}");
 
-        // 5. ÏÔÊ¾£º4.2000003F != 4.2D - True
+        // 5. æ˜¾ç¤ºï¼š4.2000003F != 4.2D - True
         Console.WriteLine($"{floatNumber}F != {doubleNumber2}D - {floatNumber != doubleNumber2}");
 
-        // 6. ÏÔÊ¾£º4.199999809265137 != 4.2 - True
+        // 6. æ˜¾ç¤ºï¼š4.199999809265137 != 4.2 - True
         Console.WriteLine($"{(double)4.2F} != {4.2D} - {(double)4.2F != 4.2D}");
 
-        // 7. ÏÔÊ¾£º4.2F != 4.2D - True
+        // 7. æ˜¾ç¤ºï¼š4.2F != 4.2D - True
         Console.WriteLine($"{4.2F}F != {4.2D}D - {4.2F != 4.2D}");
         #endregion INCLUDE
     }

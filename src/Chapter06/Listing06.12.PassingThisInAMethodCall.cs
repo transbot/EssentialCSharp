@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_12;
@@ -20,14 +20,14 @@ public class Employee
 
 public class DataStorage
 {
-    // ½«Employee¶ÔÏóĞ´ÈëÒ»¸öÒÔÔ±¹¤ĞÕÃûÃüÃûµÄÎÄ¼ş
+    // å°†Employeeå¯¹è±¡å†™å…¥ä¸€ä¸ªä»¥å‘˜å·¥å§“åå‘½åçš„æ–‡ä»¶
     public static void Store(Employee employee)
     {
         #region EXCLUDE
         Console.WriteLine(
-            $@"½«Ô±¹¤({
+            $@"å°†å‘˜å·¥({
                 employee.FirstName} {employee.LastName
-                })µÄĞÅÏ¢Ğ´ÈëÎÄ¼ş¡£");
+                })çš„ä¿¡æ¯å†™å…¥æ–‡ä»¶ã€‚");
         #endregion EXCLUDE
     }
 }

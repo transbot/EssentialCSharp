@@ -10,22 +10,22 @@ public class Program
 {
     public static void Main()
     {
-        Console.WriteLine("¿ªÊ¼...");
+        Console.WriteLine("å¼€å§‹...");
         MethodA();
         MethodB();
-        Console.WriteLine("½áÊø...");
+        Console.WriteLine("ç»“æŸ...");
     }
 
     [Conditional("CONDITION_A")]
     public static void MethodA()
     {
-        Console.WriteLine("MethodA()ÕıÔÚÖ´ĞĞ...");
+        Console.WriteLine("MethodA()æ­£åœ¨æ‰§è¡Œ...");
     }
 
     [Conditional("CONDITION_B")]
     public static void MethodB()
     {
-        Console.WriteLine("MethodB()ÕıÔÚÖ´ĞĞ...");
+        Console.WriteLine("MethodB()æ­£åœ¨æ‰§è¡Œ...");
     }
 }
 #endregion INCLUDE

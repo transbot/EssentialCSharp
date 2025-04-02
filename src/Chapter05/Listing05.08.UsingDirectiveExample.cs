@@ -5,8 +5,8 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_08;
 
 #region INCLUDE
-// usingÖ¸Áî½«ËùÓĞÀàĞÍ´ÓÖ¸¶¨ÃüÃû¿Õ¼ä
-// µ¼Èëµ±Ç°´úÂëÎÄ¼ş¡£
+// usingæŒ‡ä»¤å°†æ‰€æœ‰ç±»å‹ä»æŒ‡å®šå‘½åç©ºé—´
+// å¯¼å…¥å½“å‰ä»£ç æ–‡ä»¶ã€‚
 using System.Text.RegularExpressions;
 
 public class Program
@@ -17,8 +17,8 @@ public class Program
         const string initial = "Initial";
         const string lastName = "LastName";
 
-        // ¶ÔÕıÔò±í´ïÊ½µÄÏêÏ¸½âÊÍ³¬³öÁË±¾Êé·¶Î§
-        // ·ÃÎÊhttps://www.regular-expressions.infoÁË½âÏêÇé
+        // å¯¹æ­£åˆ™è¡¨è¾¾å¼çš„è¯¦ç»†è§£é‡Šè¶…å‡ºäº†æœ¬ä¹¦èŒƒå›´
+        // è®¿é—®https://www.regular-expressions.infoäº†è§£è¯¦æƒ…
         const string pattern = $"""
             (?<{firstName}>\w+)\s+((?<{
             initial}>\w)\.\s+)?(?<{
@@ -26,13 +26,13 @@ public class Program
             """;
 
         Console.WriteLine(
-            "ÊäÈëÄãµÄÈ«Ãû (Àı£ºInigo T. Montoya): ");
+            "è¾“å…¥ä½ çš„å…¨å (ä¾‹ï¼šInigo T. Montoya): ");
         string name = Console.ReadLine()!;
 
         #region HIGHLIGHT
-        // ÒòÎªÖ®Ç°µÄusingÖ¸Áî£¬ËùÒÔ
-        // ²»ĞèÒªÓÃSystem.Text.RegularExpressions
-        // Ç°×ºÀ´ÏŞ¶¨RegExÀàĞÍ¡£        
+        // å› ä¸ºä¹‹å‰çš„usingæŒ‡ä»¤ï¼Œæ‰€ä»¥
+        // ä¸éœ€è¦ç”¨System.Text.RegularExpressions
+        // å‰ç¼€æ¥é™å®šRegExç±»å‹ã€‚        
         Match match = Regex.Match(name, pattern);
         #endregion HIGHLIGHT
 

@@ -1,6 +1,6 @@
 // Add readonly modifier ignored pending introduction of the concept
 #pragma warning disable IDE0044
-#pragma warning disable 649 // _Id´ÓÎ´¸³Öµ
+#pragma warning disable 649 // _Idä»æœªèµ‹å€¼
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_33;
 
@@ -22,7 +22,7 @@ public class Employee
         LastName = lastName;
     }
 
-    // FirstNameºÍLastNameÔÚIdÊôĞÔµÄsetterÖĞÉèÖÃ
+    // FirstNameå’ŒLastNameåœ¨Idå±æ€§çš„setterä¸­è®¾ç½®
     #pragma warning disable CS8618
     public Employee(int id) => Id = id;
     #pragma warning restore CS8618
@@ -33,7 +33,7 @@ public class Employee
         get => _Id;
         private set
         {
-            // ²éÕÒÔ±¹¤ĞÕÃû...
+            // æŸ¥æ‰¾å‘˜å·¥å§“å...
             // ...
         }
     }
@@ -48,7 +48,7 @@ public class Employee
     [System.Diagnostics.CodeAnalysis.NotNull]
     #endregion EXCLUDE
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
 
 
     // ...

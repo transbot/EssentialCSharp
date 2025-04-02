@@ -1,4 +1,4 @@
-﻿using IntelliTect.TestTools.Console;
+using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter16.Listing16_08.Tests;
 

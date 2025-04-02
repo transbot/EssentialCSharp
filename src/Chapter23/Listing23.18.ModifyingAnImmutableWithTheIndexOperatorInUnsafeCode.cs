@@ -9,7 +9,7 @@ public class Program
         #region INCLUDE
         string text = "S5280ft";
         Console.Write("{0} = ", text);
-        unsafe // ±àÒëÊ±ÒªÊ¹ÓÃ/unsafe¿ª¹Ø
+        unsafe // ç¼–è¯‘æ—¶è¦ä½¿ç”¨/unsafeå¼€å…³
         {
             fixed(char* pText = text)
             {

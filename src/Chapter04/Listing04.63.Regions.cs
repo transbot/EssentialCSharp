@@ -17,34 +17,34 @@ public class Program
 
         #region INCLUDE
         // ...
-        #region ÏÔÊ¾¾®×ÖÆåÆåÅÌ
+        #region æ˜¾ç¤ºäº•å­—æ£‹æ£‹ç›˜
 
         #if CSHARP2PLUS
         System.Console.Clear();
         #endif
 
-        // ÏÔÊ¾µ±Ç°ÆåÅÌ
-        border = 0;   //  ÉèÖÃµÚÒ»¸ö½çÏß(border[0] = "|")
+        // æ˜¾ç¤ºå½“å‰æ£‹ç›˜
+        border = 0;   //  è®¾ç½®ç¬¬ä¸€ä¸ªç•Œçº¿(border[0] = "|")
 
-        // ÏÔÊ¾¶¥ĞĞÁ¬Ïß
+        // æ˜¾ç¤ºé¡¶è¡Œè¿çº¿
         // ("\n---+---+---\n")
         Console.Write(borders[2]);
         foreach(char cell in cells)
         {
-            // Êä³öÒ»¸öµ¥Ôª¸ñÖµÒÔ¼°½ô½ÓÔÚËüºóÃæµÄ½çÏß
+            // è¾“å‡ºä¸€ä¸ªå•å…ƒæ ¼å€¼ä»¥åŠç´§æ¥åœ¨å®ƒåé¢çš„ç•Œçº¿
             Console.Write($" { cell } { borders[border] }");
 
-            // µİÔöµ½ÏÂÒ»¸ö½çÏß
+            // é€’å¢åˆ°ä¸‹ä¸€ä¸ªç•Œçº¿
             border++;
 
-            // Èç¹û½çÏßÎª3£¬¾ÍÖØÖÃÎª0
+            // å¦‚æœç•Œçº¿ä¸º3ï¼Œå°±é‡ç½®ä¸º0
             if(border == 3)
             {
                 border = 0;
             }
         }
 
-        #endregion ÏÔÊ¾¾®×ÖÆåÆåÅÌ
+        #endregion æ˜¾ç¤ºäº•å­—æ£‹æ£‹ç›˜
 
         // ...
         #endregion INCLUDE

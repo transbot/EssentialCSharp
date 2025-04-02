@@ -20,32 +20,32 @@ public class Program
                 if(result =
                     patent.YearOfPublication.StartsWith("18"))
                 {
-                    // Î½´ÊÓ¦¸ÃÖ»×öÅĞ¶Ï£¬¾¡Á¿±ÜÃâÏÂÃæÕâÑùÔÚÎ½´ÊÖĞµÄ¸±×÷ÓÃ
+                    // è°“è¯åº”è¯¥åªåšåˆ¤æ–­ï¼Œå°½é‡é¿å…ä¸‹é¢è¿™æ ·åœ¨è°“è¯ä¸­çš„å‰¯ä½œç”¨
                     Console.WriteLine("\t" + patent);
                 }
                 return result;
             });
 
-        Console.WriteLine("1. 20ÊÀ¼ÍÖ®Ç°µÄ×¨ÀûÇåµ¥Ö®Ò»:");
+        Console.WriteLine("1. 20ä¸–çºªä¹‹å‰çš„ä¸“åˆ©æ¸…å•ä¹‹ä¸€:");
         foreach(Patent patent in patents)
         {
         }
 
         Console.WriteLine();
         Console.WriteLine(
-            "2. 20ÊÀ¼ÍÖ®Ç°µÄ×¨ÀûÇåµ¥Ö®¶ş:");
+            "2. 20ä¸–çºªä¹‹å‰çš„ä¸“åˆ©æ¸…å•ä¹‹äºŒ:");
         Console.WriteLine(
-            $@"   20ÊÀ¼ÍÖ®Ç°×Ü¹²ÓĞ{ patents.Count()
-                }¸ö×¨Àû¡£");
+            $@"   20ä¸–çºªä¹‹å‰æ€»å…±æœ‰{ patents.Count()
+                }ä¸ªä¸“åˆ©ã€‚");
 
 
         Console.WriteLine();
         Console.WriteLine(
-            "3. 18ÊÀ¼ÍÖ®Ç°µÄ×¨ÀûÇåµ¥Ö®Èı:");
+            "3. 18ä¸–çºªä¹‹å‰çš„ä¸“åˆ©æ¸…å•ä¹‹ä¸‰:");
         patents = patents.ToArray();
-        Console.Write("   20ÊÀ¼ÍÖ®Ç°×Ü¹²ÓĞ");
+        Console.Write("   20ä¸–çºªä¹‹å‰æ€»å…±æœ‰");
         Console.WriteLine(
-            $"{ patents.Count() }¸ö×¨Àû¡£");
+            $"{ patents.Count() }ä¸ªä¸“åˆ©ã€‚");
 
         //...
         #endregion INCLUDE

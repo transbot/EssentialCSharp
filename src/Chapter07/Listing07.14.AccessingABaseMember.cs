@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618 // Disabled pending constructors
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_14;

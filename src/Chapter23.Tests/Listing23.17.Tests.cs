@@ -1,4 +1,4 @@
-﻿
+
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_17.Tests;
 
 [TestClass]

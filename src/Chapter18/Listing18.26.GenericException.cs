@@ -25,7 +25,7 @@ public class ExpectedException<TException> :
         {
             testMethod();
             throw new InvalidOperationException(
-                $"Ã»ÓÐÅ×³öÔ¤ÆÚµÄÒì³£{typeof(TException).FullName}¡£");
+                $"æ²¡æœ‰æŠ›å‡ºé¢„æœŸçš„å¼‚å¸¸{typeof(TException).FullName}ã€‚");
 
         }
         catch (TException exception) 
@@ -34,7 +34,7 @@ public class ExpectedException<TException> :
         }
     }
 
-    // ÌØÐÔ¼ì²â
+    // ç‰¹æ€§æ£€æµ‹
     // ...
 }
 #endregion INCLUDE

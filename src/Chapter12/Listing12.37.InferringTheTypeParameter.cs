@@ -9,9 +9,9 @@ public class Program
     {
         #region INCLUDE
         Console.WriteLine(
-            MathEx.Max(7, 490)); // Ã»ÓĞÌá¹©ÀàĞÍÊµ²Î
+            MathEx.Max(7, 490)); // æ²¡æœ‰æä¾›ç±»å‹å®å‚
         Console.WriteLine(
-            MathEx.Min("ÖĞ¹ú", "ÖĞ¹úÈË"));
+            MathEx.Min("ä¸­å›½", "ä¸­å›½äºº"));
         #endregion INCLUDE
     }
 }

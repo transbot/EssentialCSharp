@@ -13,7 +13,7 @@ public class Program
     {
         bool valid = false;
 
-        // ¼ì²éµ±Ç°Íæ¼ÒµÄÊäÈë
+        // æ£€æŸ¥å½“å‰ç©å®¶çš„è¾“å…¥
         switch (input)
         {
             case "1":
@@ -25,7 +25,7 @@ public class Program
             case "7":
             case "8":
             case "9":
-                // ¸ù¾İÍæ¼ÒµÄÊäÈë±£´æ/Âä×Ó
+                // æ ¹æ®ç©å®¶çš„è¾“å…¥ä¿å­˜/è½å­
                 // ...
                 valid = true;
                 break;
@@ -34,10 +34,10 @@ public class Program
                 valid = true;
                 break;
             default:
-                // Èç¹ûºÍÆäËûcase¶¼²»Æ¥Åä£¬±íÃ÷ÊäÈëÎŞĞ§
+                // å¦‚æœå’Œå…¶ä»–caseéƒ½ä¸åŒ¹é…ï¼Œè¡¨æ˜è¾“å…¥æ— æ•ˆ
                 Console.WriteLine(
-                "´íÎó:  ÊäÈë1-9µÄÖµ¡£ "
-                + "°´Enter¼üÍË³ö¡£");
+                "é”™è¯¯:  è¾“å…¥1-9çš„å€¼ã€‚ "
+                + "æŒ‰Enteré”®é€€å‡ºã€‚");
                 break;
         }
 

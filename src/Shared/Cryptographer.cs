@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Shared;

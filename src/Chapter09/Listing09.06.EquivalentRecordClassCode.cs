@@ -22,7 +22,7 @@ public class Coordinate : IEquatable<Coordinate>
     public override string ToString()
     {
         StringBuilder stringBuilder = new ();
-        stringBuilder.Append("×ø±ê");
+        stringBuilder.Append("åæ ‡");
         stringBuilder.Append(" { ");
         if (PrintMembers(stringBuilder))
         {
@@ -35,9 +35,9 @@ public class Coordinate : IEquatable<Coordinate>
     protected virtual bool PrintMembers(StringBuilder builder)
     {
         RuntimeHelpers.EnsureSufficientExecutionStack();
-        builder.Append("¾­¶È = ");
+        builder.Append("ç»åº¦ = ");
         builder.Append(Longitude.ToString());
-        builder.Append(", Î³¶È = ");
+        builder.Append(", çº¬åº¦ = ");
         builder.Append(Latitude.ToString());
         return true;
     }
@@ -84,8 +84,8 @@ public class Coordinate : IEquatable<Coordinate>
 
     public Type ExternalEqualityContract => EqualityContract();
 
-    // ILÖĞµÄÊµ¼ÊÃû³ÆÊÇ"<Clone>$"¡£µ«ÊÇ£¬²»ÄÜ
-    // ×ÔĞĞÔÚ¼ÇÂ¼ÖĞÌí¼ÓÒ»¸öÃûÎªCloneµÄ·½·¨¡£
+    // ILä¸­çš„å®é™…åç§°æ˜¯"<Clone>$"ã€‚ä½†æ˜¯ï¼Œä¸èƒ½
+    // è‡ªè¡Œåœ¨è®°å½•ä¸­æ·»åŠ ä¸€ä¸ªåä¸ºCloneçš„æ–¹æ³•ã€‚
     public Coordinate Clone() => new(this);
 
     protected Coordinate(Coordinate original)

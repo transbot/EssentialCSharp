@@ -1,4 +1,4 @@
-﻿// 说明 : 只显示部分实现
+// 说明 : 只显示部分实现
 #pragma warning disable CS8618 // 不可为空的字段未初始化。考虑声明为可空。
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_46;

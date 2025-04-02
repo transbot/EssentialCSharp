@@ -10,10 +10,10 @@ public class Program
     {
         int total = int.MaxValue;
         if (args?.Length > 0) { _ = int.TryParse(args[0], out total); }
-        Console.WriteLine("µÝÔöºÍµÝ¼õ" + $"{total}´Î...");
+        Console.WriteLine("é€’å¢žå’Œé€’å‡" + $"{total}æ¬¡...");
         int x = 0;
 
-        // ²¢ÐÐforÑ­»·
+        // å¹¶è¡Œforå¾ªçŽ¯
         Parallel.For(0, total, i =>
         {
             x++;

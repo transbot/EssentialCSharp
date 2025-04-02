@@ -7,35 +7,35 @@ public class Program
     #region INCLUDE
     public static void Main(string[] args)
     {
-        // ÎªÁË¼ò»¯£¬ËùÓĞÑ¡Ïî¼Ù¶¨È«Ğ¡Ğ´
+        // ä¸ºäº†ç®€åŒ–ï¼Œæ‰€æœ‰é€‰é¡¹å‡å®šå…¨å°å†™
 
-        // µÚÒ»¸ö²ÎÊıÊÇÓÃ'/', '-'»ò'--'µÈÇ°×º±ê×¢µÄÑ¡Ïî
+        // ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯ç”¨'/', '-'æˆ–'--'ç­‰å‰ç¼€æ ‡æ³¨çš„é€‰é¡¹
 
         switch (args)
         {
             case ["--help" or ['/' or '-', 'h' or '?']]:
-                // Àı: --help, /h, -h, /?, -? 
+                // ä¾‹: --help, /h, -h, /?, -? 
                 DisplayHelp();
                 break;
             case [ ['/' or '-', char option], ..]:
-                // Ñ¡ÏîÒÔ'/', '-'¿ªÍ·£¬ÓĞ0¸ö»ò¸ü¶àÊµ²Î
+                // é€‰é¡¹ä»¥'/', '-'å¼€å¤´ï¼Œæœ‰0ä¸ªæˆ–æ›´å¤šå®å‚
                 if(!EvaluateOption($"{option}", args[1..]))
                 {
                     DisplayHelp();
                 }
                 break;
             case [ ['-', '-', ..] option, ..]:
-                // Ñ¡ÏîÒÔ"--"¿ªÍ·£¬ÓĞ0¸ö»ò¸ü¶àÊµ²Î
+                // é€‰é¡¹ä»¥"--"å¼€å¤´ï¼Œæœ‰0ä¸ªæˆ–æ›´å¤šå®å‚
                 if(!EvaluateOption(option[2..], args[1..]))
                 {
                     DisplayHelp();
                 }
                 break;
 
-            // ÓÃÒÔÏÂcaseÀ´Ìá¹©Ä¬ÈÏĞĞ¶¯ÊÇ¶àÓàµÄ£¬ÒòÎªËüºÍdefaultÖØ¸´ÁË£¬
-            // Ö»ÊÇ³öÓÚÑİÊ¾Ä¿µÄ¶øÌá¹©¡£
+            // ç”¨ä»¥ä¸‹caseæ¥æä¾›é»˜è®¤è¡ŒåŠ¨æ˜¯å¤šä½™çš„ï¼Œå› ä¸ºå®ƒå’Œdefaulté‡å¤äº†ï¼Œ
+            // åªæ˜¯å‡ºäºæ¼”ç¤ºç›®çš„è€Œæä¾›ã€‚
             case []:
-                // Î´Ìá¹©ÃüÁîĞĞ²ÎÊı
+                // æœªæä¾›å‘½ä»¤è¡Œå‚æ•°
 
             default:
                 DisplayHelp();
@@ -55,19 +55,19 @@ public class Program
 
     private static bool CopyFile(object sourceFile, string targetFile)
     {
-        Console.WriteLine($"¸´ÖÆ '{sourceFile}' '{targetFile}'...");
+        Console.WriteLine($"å¤åˆ¶ '{sourceFile}' '{targetFile}'...");
         return true;
     }
     #endregion INCLUDE
     
     private static bool CatalogFile(string fileName)
     {
-        Console.WriteLine($"±àÂ¼ '{fileName}'...");
+        Console.WriteLine($"ç¼–å½• '{fileName}'...");
         return true;
     }
 
     private static void DisplayHelp()
     {
-        Console.WriteLine("ÃüÁî°ïÖú...");
+        Console.WriteLine("å‘½ä»¤å¸®åŠ©...");
     }
 }

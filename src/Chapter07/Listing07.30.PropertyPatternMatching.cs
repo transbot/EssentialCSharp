@@ -30,19 +30,19 @@ public class ExpenseItem
     public static bool ValidateExpenseItem(ExpenseItem expenseItem) =>
         expenseItem switch
         {
-            // ×¢Òâ: ÊôÐÔÄ£Ê½ºËÊµÊäÈëÖµ²»Îªnull¡£
-            // ÒÔÏÂÊÇÀ©Õ¹ÊôÐÔÄ£Ê½£º
+            // æ³¨æ„: å±žæ€§æ¨¡å¼æ ¸å®žè¾“å…¥å€¼ä¸ä¸ºnullã€‚
+            // ä»¥ä¸‹æ˜¯æ‰©å±•å±žæ€§æ¨¡å¼ï¼š
             { ItemName.Length: > 0, Employee.Role: "Admin" } => true,
-            #pragma warning disable IDE0170 // ÊôÐÔÄ£Ê½¿ÉÒÔ¼ò»¯
-            // ÒÔÏÂÊÇÆÕÍ¨ÊôÐÔÄ£Ê½£º
+            #pragma warning disable IDE0170 // å±žæ€§æ¨¡å¼å¯ä»¥ç®€åŒ–
+            // ä»¥ä¸‹æ˜¯æ™®é€šå±žæ€§æ¨¡å¼ï¼š
             { ItemName: { Length: > 0 }, Employee: {Role: "Manager" }, 
                 ExpenseDate: DateTime date } 
-            #pragma warning restore IDE0170 // ÊôÐÔÄ£Ê½¿ÉÒÔ¼ò»¯
+            #pragma warning restore IDE0170 // å±žæ€§æ¨¡å¼å¯ä»¥ç®€åŒ–
                 when date >= DateTime.Now.AddDays(-30) => true,
             { ItemName.Length: > 0,  Employee.Name.Length: > 0, 
                 CostAmount: <= 1000, ExpenseDate: DateTime date }
                 when date >= DateTime.Now.AddDays(-30) => true,
-            { } => false, // ¿ÉÒÔÉ¾³ýÕâ¸önot null¼ì²é
+            { } => false, // å¯ä»¥åˆ é™¤è¿™ä¸ªnot nullæ£€æŸ¥
             _ => false
         };
 }

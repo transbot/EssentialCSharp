@@ -10,35 +10,35 @@ public class ExceptionHandling
         int age;
         int result = 0;
 
-        Console.WriteLine("ºÙ£¬Äã£¡");
+        Console.WriteLine("å˜¿ï¼Œä½ ï¼");
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();        
-        Console.Write("ÇëÊäÈëÄãµÄÄêÁä: ");
-        // ¼ÙÉè²»Îª¿Õ
+        Console.Write("è¯·è¾“å…¥ä½ çš„å¹´é¾„: ");
+        // å‡è®¾ä¸ä¸ºç©º
         ageText = Console.ReadLine()!;
 
         try
         {
             age = int.Parse(ageText);
             Console.WriteLine(
-                $"ÄãºÃ£¬{firstName}£¡ÄãÓĞ{age * 12}¸öÔÂ´óÁË¡£");
+                $"ä½ å¥½ï¼Œ{firstName}ï¼ä½ æœ‰{age * 12}ä¸ªæœˆå¤§äº†ã€‚");
         }
         catch(FormatException)
         {
             Console.WriteLine(
-                $"ÄãÊäÈëµÄÄêÁä'{ ageText }'²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£"); 
+                $"ä½ è¾“å…¥çš„å¹´é¾„'{ ageText }'ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚"); 
             result = 1;
         }
         catch(Exception exception)
         {
             Console.WriteLine(
-                $"·ÇÔ¤ÆÚµÄ´íÎó: { exception.Message }");
+                $"éé¢„æœŸçš„é”™è¯¯: { exception.Message }");
             result = 1;
         }
         finally
         {
-            Console.WriteLine($"ÔÙ¼û£¬{ firstName }¡£");
+            Console.WriteLine($"å†è§ï¼Œ{ firstName }ã€‚");
         }
 
         return result;

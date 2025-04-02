@@ -1,4 +1,4 @@
-﻿# Downloaded from https://gallery.technet.microsoft.com/scriptcenter/Format-Table-Colors-in-e0a4beac.
+# Downloaded from https://gallery.technet.microsoft.com/scriptcenter/Format-Table-Colors-in-e0a4beac.
 
 ## Code Type: Function
 ## Decription: Write the output of PSObjects with formatted defined colors with two ways.

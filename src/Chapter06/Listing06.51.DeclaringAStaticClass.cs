@@ -8,14 +8,14 @@ using static SimpleMath;
 public static class SimpleMath
 #endregion HIGHLIGHT
 {
-    // paramsÖ§³Ö¿É±äÊıÁ¿µÄ²ÎÊı
+    // paramsæ”¯æŒå¯å˜æ•°é‡çš„å‚æ•°
     public static int Max(params int[] numbers)
     {
-        // ¼ì²énumbersÊı×éÖĞÊÇ·ñÖÁÉÙÓĞÒ»Ïî
+        // æ£€æŸ¥numbersæ•°ç»„ä¸­æ˜¯å¦è‡³å°‘æœ‰ä¸€é¡¹
         if(numbers.Length == 0)
         {
             throw new ArgumentException(
-                "numbers²»ÄÜ¿Õ°×", nameof(numbers));
+                "numbersä¸èƒ½ç©ºç™½", nameof(numbers));
         }
 
         int result;
@@ -30,14 +30,14 @@ public static class SimpleMath
         return result;
     }
 
-    // paramsÖ§³Ö¿É±äÊıÁ¿µÄ²ÎÊı
+    // paramsæ”¯æŒå¯å˜æ•°é‡çš„å‚æ•°
     public static int Min(params int[] numbers)
     {
-        // ¼ì²énumbersÊı×éÖĞÊÇ·ñÖÁÉÙÓĞÒ»Ïî
+        // æ£€æŸ¥numbersæ•°ç»„ä¸­æ˜¯å¦è‡³å°‘æœ‰ä¸€é¡¹
         if (numbers.Length == 0)
         {
             throw new ArgumentException(
-                "numbers²»ÄÜ¿Õ°×", nameof(numbers));
+                "numbersä¸èƒ½ç©ºç™½", nameof(numbers));
         }
 
         int result;
@@ -64,11 +64,11 @@ public class Program
         }
 
         Console.WriteLine(
-            $@"×î³¤µÄÊµ²Î³¤¶È = {
+            $@"æœ€é•¿çš„å®å‚é•¿åº¦ = {
                 Max(numbers) }");
 
         Console.WriteLine(
-            $@"×î¶ÌµÄÊµ²Î³¤¶È = {
+            $@"æœ€çŸ­çš„å®å‚é•¿åº¦ = {
                 Min(numbers) }");
     }
 }

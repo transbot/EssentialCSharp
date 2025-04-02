@@ -5,8 +5,8 @@ using System.IO;
 
 public static class LineCounter
 {
-    // Ê¹ÓÃµÚÒ»¸öÊµ²Î×÷ÎªÒªËÑË÷µÄÄ¿Â¼£¬
-    // »òÕßÄ¬ÈÏÎªµ±Ç°Ä¿Â¼¡£
+    // ä½¿ç”¨ç¬¬ä¸€ä¸ªå®å‚ä½œä¸ºè¦æœç´¢çš„ç›®å½•ï¼Œ
+    // æˆ–è€…é»˜è®¤ä¸ºå½“å‰ç›®å½•ã€‚
     public static void Main(string[] args)
     {
         int totalLineCount = 0;
@@ -49,7 +49,7 @@ public static class LineCounter
     {
         string? line;
         int lineCount = 0;
-        // ¿ÉÒÔÊ¹ÓÃÒ»¸öusingÓï¾ä¸Ä½ø£¬µ«Ä¿Ç°»¹Ã»ÓĞ½²µ½
+        // å¯ä»¥ä½¿ç”¨ä¸€ä¸ªusingè¯­å¥æ”¹è¿›ï¼Œä½†ç›®å‰è¿˜æ²¡æœ‰è®²åˆ°
         FileStream stream = new(file, FileMode.Open);
         StreamReader reader = new(stream);
         line = reader.ReadLine();
@@ -63,7 +63,7 @@ public static class LineCounter
             line = reader.ReadLine();
         }
 
-        reader.Dispose();  // ×Ô¶¯¹Ø±ÕÁ÷
+        reader.Dispose();  // è‡ªåŠ¨å…³é—­æµ
         return lineCount;
     }
 }

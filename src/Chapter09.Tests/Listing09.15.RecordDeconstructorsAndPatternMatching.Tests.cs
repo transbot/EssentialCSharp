@@ -9,7 +9,7 @@ public class PatternMatchingTest
     [TestMethod]
     public void Deconstructor_CorrespondingParameters_EnablePatternMatching()
     {
-        // 构造函数根据位置参数来生成
+        // 鏋勯�犲嚱鏁版牴鎹綅缃弬鏁版潵鐢熸垚
         Angle angle = new(90, 0, 0, "angleName");
 
         // Angle object should match the pattern (int, int, int, string)

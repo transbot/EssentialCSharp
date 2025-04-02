@@ -12,9 +12,9 @@ public class Program
     {
         IEnumerable<Patent> patents = PatentData.Patents;
         #region HIGHLIGHT
-        Console.WriteLine($"专利数量: { patents.Count() }");
+        Console.WriteLine($"涓撳埄鏁伴噺: { patents.Count() }");
         #endregion HIGHLIGHT
-        Console.WriteLine($@"19世纪专利数量: {
+        Console.WriteLine($@"19涓栫邯涓撳埄鏁伴噺: {
             patents.Count(patent =>
                 patent.YearOfPublication.StartsWith("18"))}");
         #endregion INCLUDE

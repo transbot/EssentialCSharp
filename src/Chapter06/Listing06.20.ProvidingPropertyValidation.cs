@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618
 
 
@@ -11,12 +11,12 @@ public class Employee
     public void Initialize(
         string newFirstName, string newLastName)
     {
-        // Ê¹ÓÃEmployeeÀàµÄÊôĞÔ
+        // ä½¿ç”¨Employeeç±»çš„å±æ€§
         FirstName = newFirstName;
         LastName = newLastName;
     }
 
-    // LastNameÊôĞÔ
+    // LastNameå±æ€§
     public string LastName
     {
         get => _LastName;
@@ -24,18 +24,18 @@ public class Employee
         {
             // #region EXCLUDE
 #if !NET7_0_OR_GREATER
-            // ÑéÖ¤¶ÔLastNameµÄ¸³Öµ
+            // éªŒè¯å¯¹LastNameçš„èµ‹å€¼
             value = value?.Trim() ?? throw new ArgumentNullException(nameof(value));
             if(value.Length == 0)
             {
-                // ±¨¸æ´íÎó
+                // æŠ¥å‘Šé”™è¯¯
                 throw new ArgumentException(
-                    "LastName²»ÄÜÎª¿Õ´®£¬Ò²²»ÄÜÓÉ¿Õ°××Ö·û¹¹³É¡£", nameof(value));
+                    "LastNameä¸èƒ½ä¸ºç©ºä¸²ï¼Œä¹Ÿä¸èƒ½ç”±ç©ºç™½å­—ç¬¦æ„æˆã€‚", nameof(value));
             }
 #else
             // #endregion EXCLUDE
             #region HIGHLIGHT
-            // ÑéÖ¤¶ÔLastNameµÄ¸³Öµ
+            // éªŒè¯å¯¹LastNameçš„èµ‹å€¼
             
             ArgumentException.ThrowIfNullOrEmpty(value = value?.Trim()!);
             #endregion HIGHLIGHT
@@ -47,7 +47,7 @@ public class Employee
     }
     private string _LastName;
 #region EXCLUDE
-    // FirstNameÊôĞÔ
+    // FirstNameå±æ€§
     public string FirstName
     {
         get
@@ -57,16 +57,16 @@ public class Employee
         set
         {
             #if !NET7_0_OR_GREATER
-            // ÑéÖ¤¶ÔFirstNameµÄ¸³Öµ
+            // éªŒè¯å¯¹FirstNameçš„èµ‹å€¼
             value = value?.Trim() ?? throw new ArgumentNullException(nameof(value));
             if (value.Length == 0)
             {
-                // ±¨¸æ´íÎó
+                // æŠ¥å‘Šé”™è¯¯
                 throw new ArgumentException(
-                    "LastName²»ÄÜÎª¿Õ´®»òÕßÖ»ÓÉ¿Õ°××Ö·û¹¹³É¡£", nameof(value));
+                    "LastNameä¸èƒ½ä¸ºç©ºä¸²æˆ–è€…åªç”±ç©ºç™½å­—ç¬¦æ„æˆã€‚", nameof(value));
             }
             #else // NET7_0_OR_GREATER
-            // ÑéÖ¤¶ÔLastNameµÄ¸³Öµ
+            // éªŒè¯å¯¹LastNameçš„èµ‹å€¼
             ArgumentException.ThrowIfNullOrEmpty(value = value?.Trim()!);
             #endif // NET7_0_OR_GREATER
             _FirstName = value;

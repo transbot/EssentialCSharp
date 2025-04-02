@@ -12,12 +12,12 @@ public class PeriodsOfTheDay
     public static string GetPeriodOfDay(int hourOfTheDay) =>
         hourOfTheDay switch
         {
-            < 6 => "юХцВ",
-            < 12 => "ионГ",
-            < 18 => "обнГ",
-            < 24 => "мМио",
+            < 6 => "И╩▌Ф≤▌",
+            < 12 => "Д╦┼Е█┬",
+            < 18 => "Д╦▀Е█┬",
+            < 24 => "Ф≥ Д╦┼",
             int hour => throw new ArgumentOutOfRangeException(nameof(hourOfTheDay),
-                $"ж╦╤╗акр╩лЛжпнчп╖╣дп║й╠йЩ║ё")
+                $"Ф▄┤Е╝ Д╨├Д╦─Е╓╘Д╦╜Ф≈═Ф∙┬Г └Е╟▐Ф≈╤Ф∙╟Ц─┌")
         };
     #endregion INCLUDE
 }

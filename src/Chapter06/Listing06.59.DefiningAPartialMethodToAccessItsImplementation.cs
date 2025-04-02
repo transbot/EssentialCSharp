@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618 // Pending a constructors
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_59;
@@ -6,7 +6,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_59;
 using System;
 
 #region INCLUDE
-// ÎÄ¼ş: Person.Designer.cs
+// æ–‡ä»¶: Person.Designer.cs
 public partial class Person
 {
     #region Extensibility Method Definitions
@@ -59,7 +59,7 @@ public partial class Person
     public partial string GetName();
 }
 
-// ÎÄ¼ş: Person.cs
+// æ–‡ä»¶: Person.cs
 partial class Person
 {
     static partial void OnLastNameChanging(string value)
@@ -70,7 +70,7 @@ partial class Person
         if (value.Trim().Length == 0)
         {
             throw new ArgumentException(
-                $"{nameof(LastName)}²»ÄÜ¿Õ°×¡£",
+                $"{nameof(LastName)}ä¸èƒ½ç©ºç™½ã€‚",
                 nameof(value));
         }
     }
@@ -84,7 +84,7 @@ partial class Person
         if (value.Trim().Length == 0)
         {
             throw new ArgumentException(
-                $"{nameof(FirstName)}²»ÄÜ¿Õ°×¡£",
+                $"{nameof(FirstName)}ä¸èƒ½ç©ºç™½ã€‚",
                 nameof(value));
         }
     }

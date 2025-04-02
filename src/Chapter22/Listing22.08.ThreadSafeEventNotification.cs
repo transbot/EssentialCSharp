@@ -19,7 +19,7 @@ class Program
             OnTemperatureChanged;
         if(localOnChange is not null)
         {
-            // µ÷ÓÃËùÓĞ¶©ÔÄÁË¸ÃÊÂ¼şµÄ¶©ÔÄÕß
+            // è°ƒç”¨æ‰€æœ‰è®¢é˜…äº†è¯¥äº‹ä»¶çš„è®¢é˜…è€…
             localOnChange(
               this, new TemperatureEventArgs(value));
         }
@@ -28,11 +28,11 @@ class Program
 #endif
     }
 
-    // ¿ÌÒâÊ¹ÓÃĞ¡Ğ´µÄvalue×÷ÎªÊôĞÔÃû£¬
-    // ÒÔÄ£ÄâsetterÖĞµÄvalue¹Ø¼ü×Ö¡£
-#pragma warning disable IDE1006 // ÃüÃû·ç¸ñ
+    // åˆ»æ„ä½¿ç”¨å°å†™çš„valueä½œä¸ºå±æ€§åï¼Œ
+    // ä»¥æ¨¡æ‹Ÿsetterä¸­çš„valueå…³é”®å­—ã€‚
+#pragma warning disable IDE1006 // å‘½åé£æ ¼
     public object? value { get; set; }
-#pragma warning restore IDE1006 // ÃüÃû·ç¸ñ
+#pragma warning restore IDE1006 // å‘½åé£æ ¼
 }
 
 public class TemperatureEventArgs

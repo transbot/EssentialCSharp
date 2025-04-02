@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_04;
@@ -6,8 +6,8 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_04;
 #region INCLUDE
 public class Employee
 {
-    public string FirstName; // Ãû×Ö
-    public string LastName;  // ĞÕÊÏ
-    public string? Salary;   // ¹¤×Ê
+    public string FirstName; // åå­—
+    public string LastName;  // å§“æ°
+    public string? Salary;   // å·¥èµ„
 }
 #endregion INCLUDE

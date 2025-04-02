@@ -16,7 +16,7 @@ public class Thermostat
         public float NewTemperature { get; set; }
     }
 
-    // ¶¨ÒåÊÂ¼ş·¢²¼Õß
+    // å®šä¹‰äº‹ä»¶å‘å¸ƒè€…
     public event EventHandler<TemperatureArgs> OnTemperatureChange =
         delegate { };
     #endregion HIGHLIGHT

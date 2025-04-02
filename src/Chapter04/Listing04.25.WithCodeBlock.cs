@@ -1,4 +1,4 @@
-// ËµÃ÷ : Checking for null isn't discussed yet.
+// è¯´æ˜ : Checking for null isn't discussed yet.
 #pragma warning disable CS8604 // Possible null reference argument
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
 
@@ -9,28 +9,28 @@ public class CircleAreaCalculator
     public static void Main()
     {
         #region INCLUDE
-        double radius;  // ÉùÃ÷Ò»¸ö±äÁ¿À´´æ´¢°ë¾¶
-        double area;    // ÉùÃ÷Ò»¸ö±äÁ¿À´´æ´¢Ãæ»ı
+        double radius;  // å£°æ˜ä¸€ä¸ªå˜é‡æ¥å­˜å‚¨åŠå¾„
+        double area;    // å£°æ˜ä¸€ä¸ªå˜é‡æ¥å­˜å‚¨é¢ç§¯
 
-        Console.Write("ÊäÈëÔ²µÄ°ë¾¶: ");
+        Console.Write("è¾“å…¥åœ†çš„åŠå¾„: ");
 
-        // double.Parse½«ReadLine()·µ»ØµÄ½á¹û
-        // ×ª»»³ÉÒ»¸ödouble
+        // double.Parseå°†ReadLine()è¿”å›çš„ç»“æœ
+        // è½¬æ¢æˆä¸€ä¸ªdouble
         string temp = Console.ReadLine();
         radius = double.Parse(temp);
         if(radius >= 0)
         #region HIGHLIGHT
         {
-            // ¼ÆËãÔ²µÄÃæ»ı
+            // è®¡ç®—åœ†çš„é¢ç§¯
             area = Math.PI * radius * radius;
             Console.WriteLine(
-                $"Õâ¸öÔ²µÄÃæ»ıÊÇ: {area:0.00}");
+                $"è¿™ä¸ªåœ†çš„é¢ç§¯æ˜¯: {area:0.00}");
         }
         #endregion HIGHLIGHT
         else
         {
             Console.WriteLine(
-                $"{radius}²»ÊÇÓĞĞ§°ë¾¶Öµ¡£");
+                $"{radius}ä¸æ˜¯æœ‰æ•ˆåŠå¾„å€¼ã€‚");
         }
         #endregion INCLUDE
     }

@@ -13,12 +13,12 @@ public class Program
     {
         if (args?.Length > 0) { _ = int.TryParse(args[0], out _Total); }
 
-        Console.WriteLine("µÝÔöºÍµÝ¼õ" + $"{_Total}´Î...");
+        Console.WriteLine("é€’å¢žå’Œé€’å‡" + $"{_Total}æ¬¡...");
 
-        //  .NET 4.0Òª¸ÄÎªÊ¹ÓÃTask.Factory.StartNew
+        //  .NET 4.0è¦æ”¹ä¸ºä½¿ç”¨Task.Factory.StartNew
         Task task = Task.Run(() => Decrement());
 
-        // µÝÔö
+        // é€’å¢ž
         for(int i = 0; i < _Total; i++)
         {
             _Count++;
@@ -32,7 +32,7 @@ public class Program
 
     public static void Decrement()
     {
-        // µÝ¼õ
+        // é€’å‡
         for(int i = 0; i < _Total; i++)
         {
             _Count--;

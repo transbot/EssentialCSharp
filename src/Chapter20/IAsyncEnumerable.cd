@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Interface Name="System.Collections.Generic.IAsyncEnumerable&lt;T&gt;">
     <Position X="3.25" Y="3.25" Width="3" />

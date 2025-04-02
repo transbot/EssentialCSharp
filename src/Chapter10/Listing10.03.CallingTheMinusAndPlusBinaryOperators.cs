@@ -3,7 +3,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_03;
 using System;
 using Listing10_02;
 #region INCLUDE
-// 出于演示的目的，暂时禁止复合赋值的警告
+// 鍑轰簬婕旂ず鐨勭洰鐨勶紝鏆傛椂绂佹澶嶅悎璧嬪�肩殑璀﹀憡
 #pragma warning disable IDE0054
 public class Program
 {

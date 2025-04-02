@@ -5,10 +5,10 @@ public class Uppercase
     public static void Main()
     {
         #region INCLUDE
-        Console.Write("ÊäÈëÎÄ±¾: ");
+        Console.Write("è¾“å…¥æ–‡æœ¬: ");
         var text = Console.ReadLine();
 
-        // ·µ»ØÈ«´óÐ´µÄÒ»¸öÐÂ×Ö·û´®
+        // è¿”å›žå…¨å¤§å†™çš„ä¸€ä¸ªæ–°å­—ç¬¦ä¸²
         var uppercase = text.ToUpper();
         Console.WriteLine(uppercase);
         #endregion INCLUDE

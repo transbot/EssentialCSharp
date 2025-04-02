@@ -7,7 +7,7 @@ public sealed class CommandLineParser
 }
 
 #if COMPILEERROR // EXCLUDE
-// ´íÎó: ÎŞ·¨´ÓÃÜ·âÀàĞÍÅÉÉú
+// é”™è¯¯: æ— æ³•ä»å¯†å°ç±»å‹æ´¾ç”Ÿ
 public sealed class DerivedCommandLineParser
     : CommandLineParser
 {

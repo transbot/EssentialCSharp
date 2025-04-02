@@ -19,23 +19,23 @@ public class ProgrammingLanguages
         int index = Array.BinarySearch(
             languages, searchString);
         #endregion HIGHLIGHT
-        Console.WriteLine("Î´À´µÄÀË³±£¬" + $"{searchString}£¬Î»ÓÚË÷Òı{index}¡£");
+        Console.WriteLine("æœªæ¥çš„æµªæ½®ï¼Œ" + $"{searchString}ï¼Œä½äºç´¢å¼•{index}ã€‚");
         Console.WriteLine();
-        Console.WriteLine($"{"µÚÒ»¸öÔªËØ",-26}\t{"×îºóÒ»¸öÔªËØ",-26}");
+        Console.WriteLine($"{"ç¬¬ä¸€ä¸ªå…ƒç´ ",-26}\t{"æœ€åä¸€ä¸ªå…ƒç´ ",-26}");
         Console.WriteLine($"{"--------------",-26}\t{"--------------",-26}");
         Console.WriteLine($"{languages[0],-26}\t{languages[^1],-26}");
         #region HIGHLIGHT
         Array.Reverse(languages);
         #endregion HIGHLIGHT
         Console.WriteLine($"{languages[0],-26}\t{languages[^1],-26}");
-        // ×¢Òâ£ºClear·½·¨²»ÊÇ´ÓÊı×éÖĞÉ¾³ıËùÓĞÏî£¬
-        // Ïà·´£¬ËüÊÇ½«Ã¿Ò»ÏîÉèÎªµ±Ç°ÀàĞÍµÄÄ¬ÈÏÖµ
+        // æ³¨æ„ï¼šClearæ–¹æ³•ä¸æ˜¯ä»æ•°ç»„ä¸­åˆ é™¤æ‰€æœ‰é¡¹ï¼Œ
+        // ç›¸åï¼Œå®ƒæ˜¯å°†æ¯ä¸€é¡¹è®¾ä¸ºå½“å‰ç±»å‹çš„é»˜è®¤å€¼
         #region HIGHLIGHT
         Array.Clear(languages, 0, languages.Length);
         #endregion HIGHLIGHT
         Console.WriteLine($"{languages[0],-26}\t{languages[^1],-26}");
         Console.WriteLine(
-        $"Clearºó£¬Êı×é´óĞ¡ÊÇ: {languages.Length}");
+        $"Clearåï¼Œæ•°ç»„å¤§å°æ˜¯: {languages.Length}");
         #endregion INCLUDE
     }
 }

@@ -15,7 +15,7 @@ public class Thermostat
         public float NewTemperature { get; set; }
     }
 
-    // ¶¨ÒåÊÂ¼ş·¢²¼Õß
+    // å®šä¹‰äº‹ä»¶å‘å¸ƒè€…
     public event EventHandler<TemperatureArgs> OnTemperatureChange =
         delegate { };
     #endregion EXCLUDE
@@ -28,9 +28,9 @@ public class Thermostat
             if(value != CurrentTemperature)
             {
                 _CurrentTemperature = value;
-                // Èç¹û´æÔÚÈÎºÎ¶©ÔÄÕß£¬¾Íµ÷ÓÃ
-                // ËüÃÇ×¢²áµÄÎ¯ÍĞ£¬½«ÎÂ¶ÈµÄ±ä»¯
-                // Í¨ÖªËüÃÇ¡£
+                // å¦‚æœå­˜åœ¨ä»»ä½•è®¢é˜…è€…ï¼Œå°±è°ƒç”¨
+                // å®ƒä»¬æ³¨å†Œçš„å§”æ‰˜ï¼Œå°†æ¸©åº¦çš„å˜åŒ–
+                // é€šçŸ¥å®ƒä»¬ã€‚
                 #region HIGHLIGHT
                 OnTemperatureChange?.Invoke(
                       this, new TemperatureArgs(value));

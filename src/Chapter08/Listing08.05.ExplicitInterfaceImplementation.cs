@@ -1,5 +1,5 @@
-// // ËµÃ÷£º³öÓÚ¶Ôµ±Ç°Ö÷Ìâ½øĞĞ½âÊÍµÄÄ¿µÄ£¬Ö»Ìá¹©²¿·ÖÊµÏÖ
-#pragma warning disable IDE0059 // ²»ĞèÒª¸³Öµ
+// // è¯´æ˜ï¼šå‡ºäºå¯¹å½“å‰ä¸»é¢˜è¿›è¡Œè§£é‡Šçš„ç›®çš„ï¼Œåªæä¾›éƒ¨åˆ†å®ç°
+#pragma warning disable IDE0059 // ä¸éœ€è¦èµ‹å€¼
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_05;
 
@@ -15,10 +15,10 @@ public class Program
 
         // ...
 
-        // ´íÎó: ²»ÄÜÔÚcontactÉÏÖ±½Óµ÷ÓÃCellValues
+        // é”™è¯¯: ä¸èƒ½åœ¨contactä¸Šç›´æ¥è°ƒç”¨CellValues
         // values = contact.CellValues;
 
-        // Ó¦Ê×ÏÈ×ªĞÍÎªIListable
+        // åº”é¦–å…ˆè½¬å‹ä¸ºIListable
         values = ((IListable)contact).CellValues;
         // ...
 
@@ -36,15 +36,15 @@ public class Contact : PdaItem, IListable, IComparable
     {
     }
 
-    #region IComparable³ÉÔ±
+    #region IComparableæˆå‘˜
     /// <summary>
     /// 
     /// </summary>
     /// <param name="obj"></param>
     /// <returns>
-    /// Ğ¡ÓÚÁã    ¸ÃÊµÀıĞ¡ÓÚobj
-    /// Áã        ¸ÃÊµÀıµÈÓÚobj 
-    /// ´óÓÚÁã    ¸ÃÊµÀı´óÓÚobj 
+    /// å°äºé›¶    è¯¥å®ä¾‹å°äºobj
+    /// é›¶        è¯¥å®ä¾‹ç­‰äºobj 
+    /// å¤§äºé›¶    è¯¥å®ä¾‹å¤§äºobj 
     /// </returns>
     public int CompareTo(object? obj) => obj switch
     {
@@ -58,7 +58,7 @@ public class Contact : PdaItem, IListable, IComparable
                 FirstName.CompareTo(firstName),
         Contact _ => 0,
         _ => throw new ArgumentException(
-            $"²ÎÊı²»ÊÇ{nameof(Contact)}ÀàĞÍµÄÒ»¸öÖµ",
+            $"å‚æ•°ä¸æ˜¯{nameof(Contact)}ç±»å‹çš„ä¸€ä¸ªå€¼",
             nameof(obj))
     };
     #endregion

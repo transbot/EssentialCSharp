@@ -7,23 +7,23 @@ public class LeveragingTryParse
         string? firstName;
         string ageText;
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
-        Console.Write("ÇëÊäÈëÄãµÄÄêÁä: "); 
+        Console.Write("è¯·è¾“å…¥ä½ çš„å¹´é¾„: "); 
         // Assume not null for clarity
         ageText = Console.ReadLine()!;
         #region INCLUDE
         if (int.TryParse(ageText, out int age))
         {
             Console.WriteLine(
-                $"ÄãºÃ£¬{ firstName }£¡" +
-                $"ÄãÓĞ{age * 12}¸öÔÂ´óÁË¡£");
+                $"ä½ å¥½ï¼Œ{ firstName }ï¼" +
+                $"ä½ æœ‰{age * 12}ä¸ªæœˆå¤§äº†ã€‚");
         }
         else
         {
             Console.WriteLine(
-                $"ÄãÊäÈëµÄÄêÁä'{ageText}'²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£");
+                $"ä½ è¾“å…¥çš„å¹´é¾„'{ageText}'ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
         }
         #endregion INCLUDE
     }

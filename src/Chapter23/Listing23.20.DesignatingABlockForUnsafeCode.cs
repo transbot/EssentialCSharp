@@ -39,7 +39,7 @@ public class Program
                     delegate*<byte*, void> method = (delegate*<byte*, void>)(IntPtr)codeBytesPtr;
                     method(&buffer[0]);
                 }
-                Console.Write("´¦ÀíÆ÷ID: ");
+                Console.Write("å¤„ç†å™¨ID: ");
                 char[] chars = new char[Buffer.Length];
                 Encoding.ASCII.GetChars(buffer, chars);
                 Console.WriteLine(chars);
@@ -47,7 +47,7 @@ public class Program
         }
         else
         {
-            Console.WriteLine("±¾ÀıÖ»ÊÊÓÃÓÚWindowsÆ½Ì¨");
+            Console.WriteLine("æœ¬ä¾‹åªé€‚ç”¨äºWindowså¹³å°");
         }
         return 0;
     }
@@ -87,7 +87,7 @@ public class VirtualMemoryPtr : SafeHandle
         return virtualMemoryPointer.AllocatedPointer;
     }
 
-    // SafeHandleµÄ³éÏó³ÉÔ±
+    // SafeHandleçš„æŠ½è±¡æˆå‘˜
     public override bool IsInvalid
     {
         get
@@ -96,7 +96,7 @@ public class VirtualMemoryPtr : SafeHandle
         }
     }
 
-    // SafeHandleµÄ³éÏó³ÉÔ±
+    // SafeHandleçš„æŠ½è±¡æˆå‘˜
     protected override bool ReleaseHandle()
     {
         return Disposed = VirtualMemoryManager.VirtualFreeEx(ProcessHandle, AllocatedPointer, MemorySize);

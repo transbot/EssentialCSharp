@@ -13,7 +13,7 @@ public class Program
         // ...
 
         #region HIGHLIGHT
-        // ÏòCombine()´«µİ4¸ö²ÎÊı
+        // å‘Combine()ä¼ é€’4ä¸ªå‚æ•°
         fullName = Combine(
             Directory.GetCurrentDirectory(),
             "bin", "config", "index.html");
@@ -23,7 +23,7 @@ public class Program
         // ...
 
         #region HIGHLIGHT
-        // Ö»ÏòCombine()´«µİ3¸ö²ÎÊı
+        // åªå‘Combine()ä¼ é€’3ä¸ªå‚æ•°
         fullName = Combine(
             Environment.SystemDirectory,
             "Temp", "index.html");
@@ -33,7 +33,7 @@ public class Program
         // ...
 
         #region HIGHLIGHT
-        // ÏòCombine()´«µİÒ»¸öÊı×é
+        // å‘Combine()ä¼ é€’ä¸€ä¸ªæ•°ç»„
         fullName = Combine(
             new string[] {
                 $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}", "Documents",

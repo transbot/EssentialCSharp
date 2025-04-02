@@ -4,7 +4,7 @@ using Listing12_08;
 #region INCLUDE
 public struct Pair<T> : IPair<T>
 {
-    // ´íÎó: ×Ö¶Î'Pair<T>.Second'±ØĞë¸³Öµ£¬¿ØÖÆ²ÅÄÜ·µ»Øµ÷ÓÃ·½    
+    // é”™è¯¯: å­—æ®µ'Pair<T>.Second'å¿…é¡»èµ‹å€¼ï¼Œæ§åˆ¶æ‰èƒ½è¿”å›è°ƒç”¨æ–¹    
     // public Pair(T first)
     // {  
     //     First = first;

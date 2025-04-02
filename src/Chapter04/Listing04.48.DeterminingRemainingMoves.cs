@@ -1,11 +1,11 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_48;
 
-public class TicTacToe // ÉùÃ÷TicTacToeÀà
+public class TicTacToe // å£°æ˜TicTacToeç±»
 {
-    public static void Main() // ÉùÃ÷³ÌĞòµÄÈë¿Úµã
+    public static void Main() // å£°æ˜ç¨‹åºçš„å…¥å£ç‚¹
     {
         #region INCLUDE
-        // ÏñÏÂÃæÕâÑùÓ²±àÂë³õÊ¼ÆåÅÌ
+        // åƒä¸‹é¢è¿™æ ·ç¡¬ç¼–ç åˆå§‹æ£‹ç›˜
         // ---+---+---
         //  1 | 2 | 3
         // ---+---+---
@@ -15,10 +15,10 @@ public class TicTacToe // ÉùÃ÷TicTacToeÀà
         // ---+---+---
         char[] cells = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
-        Console.Write("¿ÉÄÜµÄÂä×ÓÈçÏÂËùÊ¾: ");
+        Console.Write("å¯èƒ½çš„è½å­å¦‚ä¸‹æ‰€ç¤º: ");
 
 
-        // Êä³ö³õÊ¼¿ÉÄÜµÄÂä×Ó
+        // è¾“å‡ºåˆå§‹å¯èƒ½çš„è½å­
         foreach (char cell in cells)
         {
             if(cell != 'O' && cell != 'X')

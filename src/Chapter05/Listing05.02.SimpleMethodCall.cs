@@ -5,19 +5,19 @@ public class HeyYou
     #region INCLUDE
     public static void Main()
     {
-        string? firstName;  // ÓÃÓÚ´æ´¢Ãû×ÖµÄ±äÁ¿
-        string? lastName;   // ÓÃÓÚ´æ´¢ĞÕÊÏµÄ±äÁ¿
+        string? firstName;  // ç”¨äºå­˜å‚¨åå­—çš„å˜é‡
+        string? lastName;   // ç”¨äºå­˜å‚¨å§“æ°çš„å˜é‡
 
-        Console.WriteLine("ºÙ£¬Äã£¡");
+        Console.WriteLine("å˜¿ï¼Œä½ ï¼");
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
-        Console.Write("ÇëÊäÈëÄãµÄĞÕÊÏ: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„å§“æ°: ");
         lastName = Console.ReadLine();
 
-        /* Ê¹ÓÃ×Ö·û´®²åÖµÔÚ¿ØÖÆÌ¨ÉÏÏÔÊ¾ÎÊºòÓï*/
-        Console.WriteLine($"ÄãµÄÈ«ÃûÊÇ{firstName} {lastName}¡£");
+        /* ä½¿ç”¨å­—ç¬¦ä¸²æ’å€¼åœ¨æ§åˆ¶å°ä¸Šæ˜¾ç¤ºé—®å€™è¯­*/
+        Console.WriteLine($"ä½ çš„å…¨åæ˜¯{firstName} {lastName}ã€‚");
     }
 
     #endregion INCLUDE

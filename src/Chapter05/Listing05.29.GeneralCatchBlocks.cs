@@ -2,7 +2,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_29;
 #pragma warning disable CS0168 // Variable is declared but never used
 
 #region INCLUDE
-// ÉÏÒ»¸öcatch×Ó¾äÒÑ²¶»ñËùÓĞÒì³£
+// ä¸Šä¸€ä¸ªcatchå­å¥å·²æ•è·æ‰€æœ‰å¼‚å¸¸
 #pragma warning disable CS1058
 #region EXCLUDE
 using System;
@@ -16,11 +16,11 @@ public class ExceptionHandling
         int age;
         int result = 0;
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
-        Console.Write("ÇëÊäÈëÄãµÄÄêÁä: ");
-        // ¼ÙÉè²»Îª¿Õ
+        Console.Write("è¯·è¾“å…¥ä½ çš„å¹´é¾„: ");
+        // å‡è®¾ä¸ä¸ºç©º
         ageText = Console.ReadLine()!;
 
         #endregion EXCLUDE
@@ -28,28 +28,28 @@ public class ExceptionHandling
         {
             age = int.Parse(ageText);
             Console.WriteLine(
-                $"ÄãºÃ£¬{firstName}£¡ÄãÓĞ{age * 12}¸öÔÂ´óÁË¡£");
+                $"ä½ å¥½ï¼Œ{firstName}ï¼ä½ æœ‰{age * 12}ä¸ªæœˆå¤§äº†ã€‚");
         }
         catch(FormatException exception)
         {
             Console.WriteLine(
-                $"ÄãÊäÈëµÄÄêÁä'{ageText}'²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£"); 
+                $"ä½ è¾“å…¥çš„å¹´é¾„'{ageText}'ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚"); 
             result = 1;
         }
         catch(Exception exception)
         {
             Console.WriteLine(
-                $"·ÇÔ¤ÆÚµÄ´íÎó: {exception.Message}");
+                $"éé¢„æœŸçš„é”™è¯¯: {exception.Message}");
             result = 1;
         }
         catch
         {
-            Console.WriteLine("·ÇÔ¤ÆÚµÄ´íÎó!");
+            Console.WriteLine("éé¢„æœŸçš„é”™è¯¯!");
             result = 1;
         }
         finally
         {
-            Console.WriteLine($"ÔÙ¼û£¬{firstName}¡£");
+            Console.WriteLine($"å†è§ï¼Œ{firstName}ã€‚");
         }
         #endregion INCLUDE
         return result;

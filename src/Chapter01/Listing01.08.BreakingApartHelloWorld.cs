@@ -1,13 +1,13 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_08;
 
 #region INCLUDE
-public class Program                // Àà¶¨ÒåµÄ¿ªÊ¼
+public class Program                // ç±»å®šä¹‰çš„å¼€å§‹
 {
-    public static void Main()       // ·½·¨ÉùÃ÷
-    {                               // ·½·¨ÊµÏÖµÄ¿ªÊ¼
-        Console.WriteLine(          // ´ËÓï¾ä¿çÔ½Á½ĞĞ
-            "ÄãºÃ£¬ÎÒ½ĞInigo Montoya¡£");
-    }                               // ·½·¨ÊµÏÖµÄ½áÊø
-}                                   // Àà¶¨ÒåµÄ½áÊø
+    public static void Main()       // æ–¹æ³•å£°æ˜
+    {                               // æ–¹æ³•å®ç°çš„å¼€å§‹
+        Console.WriteLine(          // æ­¤è¯­å¥è·¨è¶Šä¸¤è¡Œ
+            "ä½ å¥½ï¼Œæˆ‘å«Inigo Montoyaã€‚");
+    }                               // æ–¹æ³•å®ç°çš„ç»“æŸ
+}                                   // ç±»å®šä¹‰çš„ç»“æŸ
 
 #endregion INCLUDE

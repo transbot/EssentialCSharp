@@ -9,11 +9,11 @@ public class Program
             "C#", "COBOL", "Java",
             "C++", "TypeScript", "Visual Basic",
             "Python", "Lisp", "JavaScript" };
-        // ½«"C++"´æ´¢µ½language±äÁ¿ÖĞ
+        // å°†"C++"å­˜å‚¨åˆ°languageå˜é‡ä¸­
         string language = languages[3];
-        // ½«"Java"¸³¸øÔ­±¾ÊÇ"C++"µÄÎ»ÖÃ
+        // å°†"Java"èµ‹ç»™åŸæœ¬æ˜¯"C++"çš„ä½ç½®
         languages[3] = languages[2];
-        // ½«languageµÄÖµ¸³¸ø"Java"µÄÎ»ÖÃ
+        // å°†languageçš„å€¼èµ‹ç»™"Java"çš„ä½ç½®
         languages[2] = language;
         #endregion INCLUDE
     }

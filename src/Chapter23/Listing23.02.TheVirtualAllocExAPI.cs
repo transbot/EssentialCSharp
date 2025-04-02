@@ -2,17 +2,17 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_02
 {
     #region INCLUDE
     LPVOID VirtualAllocEx(
-        HANDLE hProcess,        // ���̾���������ڸý���
-                                // �������ַ�ռ��ڷ����ڴ档
-        LPVOID lpAddress,       // ָ����Ҫ��ʼ����ҳ������
-                                // �ĵ�ַ��ָ�롣���lpAddressΪNULL��
-                                // �������ж��������������
-        SIZE_T dwSize,          // Ҫ������ڴ������С��
-                                // ���ֽ�Ϊ��λ�����lpAddress
-                                // ΪNULL�������ὫdwSize
-                                // �ϵ�����һ��ҳ��߽硣
-        DWORD flAllocationType, // �ڴ���������(���磬�Ƿ������̵������ַ�ռ䷶Χ��
-        DWORD flProtect);       // �ڴ�ı������ԣ����磬ҳ���Ƿ���Զ�ȡ��д���ִ�У�
+        HANDLE hProcess,        // 进程句柄。函数在该进程
+                                // 的虚拟地址空间内分配内存。
+        LPVOID lpAddress,       // 指定想要开始分配页面区域
+                                // 的地址的指针。如果lpAddress为NULL，
+                                // 函数会判断在哪里分配区域。
+        SIZE_T dwSize,          // 要分配的内存区域大小，
+                                // 以字节为单位。如果lpAddress
+                                // 为NULL，函数会将dwSize
+                                // 上调到下一个页面边界。
+        DWORD flAllocationType, // 内存分配的类型(例如，是否保留进程的虚拟地址空间范围）
+        DWORD flProtect);       // 内存的保护属性（例如，页面是否可以读取、写入或执行）
     #endregion INCLUDE
 }
 

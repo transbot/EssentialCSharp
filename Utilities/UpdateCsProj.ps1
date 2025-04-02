@@ -1,4 +1,4 @@
-﻿$root = "C:\src\Intellitect\EssentialCSharp\src"
+$root = "C:\src\Intellitect\EssentialCSharp\src"
 
 
 

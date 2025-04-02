@@ -8,13 +8,13 @@ public class EmailDomain
         bool insideDomain = false;
 
 
-        Console.Write("ÊäÈëÒ»¸öµç×ÓÓÊ¼şµØÖ·: ");
+        Console.Write("è¾“å…¥ä¸€ä¸ªç”µå­é‚®ä»¶åœ°å€: ");
         email = Console.ReadLine() ?? string.Empty;
 
-        Console.Write("¸ÃµØÖ·µÄÓòÊÇ: ");
+        Console.Write("è¯¥åœ°å€çš„åŸŸæ˜¯: ");
 
         #region INCLUDE
-        // ±éÀúemailµØÖ·ÖĞµÄÃ¿¸ö×ÖÄ¸
+        // éå†emailåœ°å€ä¸­çš„æ¯ä¸ªå­—æ¯
         foreach (char letter in email)
         {
             if(insideDomain)

@@ -11,7 +11,7 @@ public class Program
         List<Contact> list = new()
         {
 
-            // 随着元素的添加，列表自动扩充
+            // 闅忕潃鍏冪礌鐨勬坊鍔狅紝鍒楄〃鑷姩鎵╁厖
             new Contact("Sneezy", "Dwarf"),
             new Contact("Happy", "Dwarf"),
             new Contact("Dopey", "Dwarf"),

@@ -4,10 +4,10 @@ public class Triangle
     public static void Main()
     {
         #region INCLUDE
-        string name = "Äª±ÈÎÚË¹";
+        string name = "è«æ¯”ä¹Œæ–¯";
         Console.Write(
             $$"""
-               ¿ªÊ¼
+               å¼€å§‹
                            ____
                           /   /\
                          /   /  \
@@ -22,7 +22,7 @@ public class Triangle
                 /________________\   \   \
                 \                 \   \  /
                  \_________________\___\/
-               ½áÊø
+               ç»“æŸ
                """);
         #endregion INCLUDE
     }

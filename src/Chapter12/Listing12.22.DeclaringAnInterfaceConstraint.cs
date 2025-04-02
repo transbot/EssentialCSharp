@@ -22,8 +22,8 @@ public class BinaryTree<T>
         {
             switch (value)
             {                
-                // C# 8.0Ó¦¸ÃÊ¹ÓÃÄ£Ê½Æ¥Åä(is null)¡£
-                // µ«ÔÚC# 8.0Ö®Ç°£¬Ö»ÄÜÕâÑù¼ì²énull
+                // C# 8.0åº”è¯¥ä½¿ç”¨æ¨¡å¼åŒ¹é…(is null)ã€‚
+                // ä½†åœ¨C# 8.0ä¹‹å‰ï¼Œåªèƒ½è¿™æ ·æ£€æŸ¥null
                 #region EXCLUDE
                 case { First: null }:
                     // First is null
@@ -43,16 +43,16 @@ public class BinaryTree<T>
                     if (first.CompareTo(second) < 0)
                     #endregion HIGHLIGHT
                     {
-                        // firstĞ¡ÓÚsecond
+                        // firstå°äºsecond
                     }
                     else
                     {
-                        // secondĞ¡ÓÚ»òµÈÓÚfirst
+                        // secondå°äºæˆ–ç­‰äºfirst
                     }
                     break;
                 default:
                     throw new InvalidCastException(
-                        @$"²»ÄÜ¶ÔitemsÅÅĞò£¬ÒòÎª{typeof(T)}²»Ö§³ÖIComparable<T>½Ó¿Ú¡£"); 
+                        @$"ä¸èƒ½å¯¹itemsæ’åºï¼Œå› ä¸º{typeof(T)}ä¸æ”¯æŒIComparable<T>æ¥å£ã€‚"); 
             };
             _SubItems = value;
         }

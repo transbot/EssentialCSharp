@@ -5,7 +5,7 @@ public class TicTacToe
 {
     public static void Main()
     {
-        // 最开始将currentPlayer设为玩家1
+        // 鏈�寮�濮嬪皢currentPlayer璁句负鐜╁1
         int currentPlayer = 1;
 
         // ...
@@ -14,7 +14,7 @@ public class TicTacToe
         {
             // ...
 
-            // 交换玩家
+            // 浜ゆ崲鐜╁
             currentPlayer = (currentPlayer == 2) ? 1 : 2;
         }
     }

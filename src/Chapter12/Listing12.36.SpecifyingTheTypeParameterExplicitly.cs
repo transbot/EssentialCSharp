@@ -11,7 +11,7 @@ public class Program
         Console.WriteLine(
             MathEx.Max<int>(7, 490));
         Console.WriteLine(
-            MathEx.Min<string>("ÖÐ¹ú", "ÖÐ¹úÈË"));
+            MathEx.Min<string>("ä¸­å›½", "ä¸­å›½äºº"));
         #endregion INCLUDE
     }
 }

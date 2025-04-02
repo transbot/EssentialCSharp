@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_26;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_26;
 
 #if NET8_0_OR_GREATER
 public class Program

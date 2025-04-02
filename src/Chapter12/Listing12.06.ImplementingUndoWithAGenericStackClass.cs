@@ -21,7 +21,7 @@ public class Program
         Cell currentPosition;
         ConsoleKeyInfo key;
         #region EXCLUDE
-        Console.WriteLine("°´¼ıÍ·¼ü»­Í¼£¬°´XÍË³ö¡£"); 
+        Console.WriteLine("æŒ‰ç®­å¤´é”®ç”»å›¾ï¼ŒæŒ‰Xé€€å‡ºã€‚"); 
         for(int i = 2; i < Console.WindowHeight; i++)
         {
             Console.WriteLine();
@@ -34,17 +34,17 @@ public class Program
 
         do
         {
-            // ¸ù¾İÓÃ»§Ëù°´¼ıÍ·¼üµÄ·½Ïò½øĞĞ»æÖÆ
+            // æ ¹æ®ç”¨æˆ·æ‰€æŒ‰ç®­å¤´é”®çš„æ–¹å‘è¿›è¡Œç»˜åˆ¶
             key = Move();
 
             switch(key.Key)
             {
                 case ConsoleKey.Z:
-                    // ³·ÏûÉÏÒ»´ÎÒÆ¶¯
+                    // æ’¤æ¶ˆä¸Šä¸€æ¬¡ç§»åŠ¨
                     if(path.Count >= 1)
                     {
                         #region HIGHLIGHT
-                        // ²»ĞèÒª×ªĞÍ
+                        // ä¸éœ€è¦è½¬å‹
                         currentPosition = path.Pop();
                         #endregion HIGHLIGHT
                         Console.SetCursorPosition(
@@ -60,7 +60,7 @@ public class Program
                         currentPosition = new Cell(
                             Console.CursorLeft, Console.CursorTop + 1);
                     }
-                    // µ÷ÓÃPush()Ê±Ö»ÔÊĞí´«µİCellÀàĞÍ
+                    // è°ƒç”¨Push()æ—¶åªå…è®¸ä¼ é€’Cellç±»å‹
                     path.Push(currentPosition);
                     FillCell(currentPosition);
                     break;
@@ -72,7 +72,7 @@ public class Program
                         currentPosition = new Cell(
                             Console.CursorLeft, Console.CursorTop - 1);
                     }
-                    // µ÷ÓÃPush()Ê±Ö»ÔÊĞí´«µİCellÀàĞÍ
+                    // è°ƒç”¨Push()æ—¶åªå…è®¸ä¼ é€’Cellç±»å‹
                     path.Push(currentPosition);
                     FillCell(currentPosition);
                     break;
@@ -84,7 +84,7 @@ public class Program
                         currentPosition = new Cell(
                             Console.CursorLeft - 1, Console.CursorTop);
                     }
-                    // µ÷ÓÃPush()Ê±Ö»ÔÊĞí´«µİCellÀàĞÍ
+                    // è°ƒç”¨Push()æ—¶åªå…è®¸ä¼ é€’Cellç±»å‹
                     path.Push(currentPosition);
                     FillCell(currentPosition);
                     break;
@@ -97,7 +97,7 @@ public class Program
                             Console.CursorLeft + 1, Console.CursorTop);
                     }
                     #region HIGHLIGHT
-                    // µ÷ÓÃPush()Ê±Ö»ÔÊĞí´«µİCellÀàĞÍ
+                    // è°ƒç”¨Push()æ—¶åªå…è®¸ä¼ é€’Cellç±»å‹
                     path.Push(currentPosition);
                     #endregion HIGHLIGHT
                     FillCell(currentPosition);
@@ -109,7 +109,7 @@ public class Program
             }
 
         }
-        while(key.Key != ConsoleKey.X);  // °´XÍË³ö
+        while(key.Key != ConsoleKey.X);  // æŒ‰Xé€€å‡º
     }
     #region EXCLUDE
     private static ConsoleKeyInfo Move()

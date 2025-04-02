@@ -29,11 +29,11 @@ public class Program
 
         for (int i = 0; i < items.Length; i++)
         {
-            Console.Write("ÇëÊäÈëÒ»¸öÕûÊý: ");
+            Console.Write("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°: ");
             string? text = Console.ReadLine();
             if (!int.TryParse(text, out items[i]))
             {
-                Console.WriteLine($"'{text}'²»ÊÇÒ»¸öÓÐÐ§µÄÕûÊý¡£");
+                Console.WriteLine($"'{text}'ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
                 return;
             }
         }
@@ -48,7 +48,7 @@ public class Program
         }
 
         #region HIGHLIGHT
-        Console.WriteLine("items±»±È½ÏÁË{0}´Î¡£",
+        Console.WriteLine("itemsè¢«æ¯”è¾ƒäº†{0}æ¬¡ã€‚",
             locals.comparisonCount);
         #endregion HIGHLIGHT
     }

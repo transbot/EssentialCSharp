@@ -9,10 +9,10 @@ public class Program
         int number;
         object thing;
         number = 42;
-        // 装箱
+        // 瑁呯
         thing = number;
         #region HIGHLIGHT
-        // 这里不会发生拆箱
+        // 杩欓噷涓嶄細鍙戠敓鎷嗙
         #endregion HIGHLIGHT
         string text = ((IFormattable)thing).ToString(
             "X", null);

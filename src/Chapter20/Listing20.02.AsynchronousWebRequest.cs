@@ -16,7 +16,7 @@ public static class Program
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("´íÎó£ºÃ»ÓĞÊäÈëÒªËÑË÷µÄÎÄ±¾¡£");
+            Console.WriteLine("é”™è¯¯ï¼šæ²¡æœ‰è¾“å…¥è¦æœç´¢çš„æ–‡æœ¬ã€‚");
             return;
         }
         string findText = args[0];
@@ -25,17 +25,17 @@ public static class Program
         if (args.Length > 1)
         {
             url = args[1];
-            // ×î¶àÈ¡Á½¸öÃüÁîĞĞ²ÎÊı£¬ºöÂÔ¸ü¶àµÄÃüÁîĞĞ²ÎÊı
+            // æœ€å¤šå–ä¸¤ä¸ªå‘½ä»¤è¡Œå‚æ•°ï¼Œå¿½ç•¥æ›´å¤šçš„å‘½ä»¤è¡Œå‚æ•°
         }
         Console.WriteLine(
-            $"´ÓÍøÖ·'{url}'ËÑË÷'{findText}'¡£");
+            $"ä»ç½‘å€'{url}'æœç´¢'{findText}'ã€‚");
 
-        Console.WriteLine("ÕıÔÚÏÂÔØ...");
+        Console.WriteLine("æ­£åœ¨ä¸‹è½½...");
         Task task = HttpClient.GetByteArrayAsync(url)
             .ContinueWith(antecedent =>
             {
                 byte[] downloadData = antecedent.Result;
-                Console.Write($"{Environment.NewLine}ÕıÔÚËÑË÷...");
+                Console.Write($"{Environment.NewLine}æ­£åœ¨æœç´¢...");
                 return CountOccurrencesAsync(
                     downloadData, findText);
             })
@@ -44,8 +44,8 @@ public static class Program
             {
                 int textOccurrenceCount = antecedent.Result;
                 Console.WriteLine(
-                     @$"{Environment.NewLine}'{findText}'ÔÚÍøÖ·'{url}'³öÏÖÁË{
-                        textOccurrenceCount}´Î¡£");
+                     @$"{Environment.NewLine}'{findText}'åœ¨ç½‘å€'{url}'å‡ºç°äº†{
+                        textOccurrenceCount}æ¬¡ã€‚");
 
             });
 
@@ -63,7 +63,7 @@ public static class Program
             {
                 exception.Handle(innerException =>
                 {
-                    // ÖØĞÂÅ×³ö£¬¶ø²»ÊÇÊ¹ÓÃifÌõ¼şÀ´ÅĞ¶ÏÀàĞÍ
+                    // é‡æ–°æŠ›å‡ºï¼Œè€Œä¸æ˜¯ä½¿ç”¨ifæ¡ä»¶æ¥åˆ¤æ–­ç±»å‹
                     ExceptionDispatchInfo.Capture(
                         innerException)
                         .Throw();
@@ -108,7 +108,7 @@ public static class Program
                     findIndex++;
                     if (findIndex == findText.Length)
                     {
-                        // ÕÒµ½ÁËÒªËÑË÷µÄÎÄ±¾
+                        // æ‰¾åˆ°äº†è¦æœç´¢çš„æ–‡æœ¬
                         textOccurrenceCount++;
                         findIndex = 0;
                     }

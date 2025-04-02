@@ -2,7 +2,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_20;
 
 using System;
 using Listing12_13;
-// ÔÚÊµ¼ÊµÄÊµÏÖÖĞ£¬ItemÓ¦ÈİÄÉÒ»Ğ©Öµ
+// åœ¨å®é™…çš„å®ç°ä¸­ï¼ŒItemåº”å®¹çº³ä¸€äº›å€¼
 #pragma warning disable CS0168
 #region INCLUDE
 public class BinaryTree<T>
@@ -20,18 +20,18 @@ public class BinaryTree<T>
         {
             #region HIGHLIGHT
             IComparable<T> first;
-            // ´íÎó: ²»Ö§³ÖÀàĞÍÒşÊ½×ª»»...
-            //first = value.First;  // ĞèÒªÏÔÊ½×ªĞÍ
+            // é”™è¯¯: ä¸æ”¯æŒç±»å‹éšå¼è½¬æ¢...
+            //first = value.First;  // éœ€è¦æ˜¾å¼è½¬å‹
 
             //if(first.CompareTo(value.Second) < 0)
             //{
-            //    // firstĞ¡ÓÚsecond
+            //    // firstå°äºsecond
             //    //...
             //}
             //else
             //{
-            //    // firstºÍsecondÏàµÈ£¬»òÕß
-            //    // secondĞ¡ÓÚfirst
+            //    // firstå’Œsecondç›¸ç­‰ï¼Œæˆ–è€…
+            //    // secondå°äºfirst
             //    //...
             //}
             _SubItems = value;

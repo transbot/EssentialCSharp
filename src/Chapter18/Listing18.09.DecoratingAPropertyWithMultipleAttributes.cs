@@ -18,17 +18,17 @@ public class CommandLineInfo
 }
 #endregion INCLUDE
 
-// ½ûÖ¹¾¯¸æ£¬ÒòÆäÉĞÎ´ÊµÏÖ£¬»òÕßÎ´ÔÚÊé¸åÖĞ½²Êö
-#pragma warning disable CA1018 // ÓÃAttributeUsageAttribute±ê¼ÇÌØĞÔ
+// ç¦æ­¢è­¦å‘Šï¼Œå› å…¶å°šæœªå®ç°ï¼Œæˆ–è€…æœªåœ¨ä¹¦ç¨¿ä¸­è®²è¿°
+#pragma warning disable CA1018 // ç”¨AttributeUsageAttributeæ ‡è®°ç‰¹æ€§
 internal class CommandLineSwitchRequiredAttribute : Attribute
 {
-    // Î´ÊµÏÖ
+    // æœªå®ç°
 }
 
 internal class CommandLineSwitchAliasAttribute : Attribute
 {
     public CommandLineSwitchAliasAttribute(string _)
     {
-        // Î´ÊµÏÖ
+        // æœªå®ç°
     }
 }

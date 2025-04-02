@@ -8,15 +8,15 @@ public class Program
     {
         Type type;
         type = typeof(System.Nullable<>);
-        Console.WriteLine($"System.Nullable<>ÊÇ·ñ°üº¬·ºĞÍ²ÎÊı£º" +
+        Console.WriteLine($"System.Nullable<>æ˜¯å¦åŒ…å«æ³›å‹å‚æ•°ï¼š" +
             $"{type.ContainsGenericParameters}");
-        Console.WriteLine($"System.Nullable<>ÊÇ·ñ·ºĞÍÀàĞÍ£º" +
+        Console.WriteLine($"System.Nullable<>æ˜¯å¦æ³›å‹ç±»å‹ï¼š" +
             $"{type.IsGenericType}");
 
         type = typeof(System.Nullable<DateTime>);
-        Console.WriteLine($"System.Nullable<DateTime>ÊÇ·ñ°üº¬·ºĞÍ²ÎÊı£º" +
+        Console.WriteLine($"System.Nullable<DateTime>æ˜¯å¦åŒ…å«æ³›å‹å‚æ•°ï¼š" +
             $"{type.ContainsGenericParameters}");
-        Console.WriteLine($"System.Nullable<DateTime>ÊÇ·ñ·ºĞÍÀàĞÍ£º" +
+        Console.WriteLine($"System.Nullable<DateTime>æ˜¯å¦æ³›å‹ç±»å‹ï¼š" +
             $"{type.IsGenericType}");
     }
 }

@@ -1,30 +1,30 @@
-// ËµÃ÷ : Checking for null isn't discussed yet.
+// è¯´æ˜ : Checking for null isn't discussed yet.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_21;
 
-public class TicTacToe // ÉùÃ÷TicTacToeÀà
+public class TicTacToe // å£°æ˜TicTacToeç±»
 {
-    public static void Main() // ÉùÃ÷³ÌĞòµÄÈë¿Úµã
+    public static void Main() // å£°æ˜ç¨‹åºçš„å…¥å£ç‚¹
     {
         #region INCLUDE
         string input;
 
-        // ÌáÊ¾ÓÃ»§Ñ¡Ôñµ¥ÈË»¹ÊÇË«ÈËÓÎÏ·
+        // æç¤ºç”¨æˆ·é€‰æ‹©å•äººè¿˜æ˜¯åŒäººæ¸¸æˆ
         Console.Write($"""
-                1 - ÈË»ú¶ÔÕ½
-                2 - Ë«ÈË¶ÔÕ½
-                ÇëÑ¡Ôñ£º
+                1 - äººæœºå¯¹æˆ˜
+                2 - åŒäººå¯¹æˆ˜
+                è¯·é€‰æ‹©ï¼š
                 """
         );
         input = Console.ReadLine();
 
         #region HIGHLIGHT
         if (input == "1")
-            // ÓÃ»§Ñ¡ÔñÈË»ú¶ÔÕ½
-            Console.WriteLine("ÈË»ú¶ÔÕ½¡£");
+            // ç”¨æˆ·é€‰æ‹©äººæœºå¯¹æˆ˜
+            Console.WriteLine("äººæœºå¯¹æˆ˜ã€‚");
         else
-            // ÆäËûÇé¿ö¶¼Ä¬ÈÏË«ÈË¶ÔÕ½(¼´Ê¹ÓÃ»§ÊäÈëµÄ²»ÊÇ2)
-            Console.WriteLine("Ë«ÈË¶ÔÕ½¡£");
+            // å…¶ä»–æƒ…å†µéƒ½é»˜è®¤åŒäººå¯¹æˆ˜(å³ä½¿ç”¨æˆ·è¾“å…¥çš„ä¸æ˜¯2)
+            Console.WriteLine("åŒäººå¯¹æˆ˜ã€‚");
         #endregion HIGHLIGHT
         #endregion INCLUDE
     }

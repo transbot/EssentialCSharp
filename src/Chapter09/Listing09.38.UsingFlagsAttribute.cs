@@ -1,8 +1,8 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_38;
 
 #region INCLUDE
-// FileAttributesÔÚSystem.IOÖĞ¶¨Òå
-// FileAttributesÔÚSystem.IOÖĞ¶¨Òå
+// FileAttributesåœ¨System.IOä¸­å®šä¹‰
+// FileAttributesåœ¨System.IOä¸­å®šä¹‰
 /*
 [Flags]
 public enum FileAttributes
@@ -22,7 +22,7 @@ public class Program
     {
         string fileName = @"enumtest.txt";
         #region EXCLUDE
-        // ÏÈ×öÒ»Ğ©ÇåÀí¹¤×÷£¬ÒÔ·ÀÒòÎªÎÄ¼ş´¦ÓÚÖ»¶Á×´Ì¬¶øÎŞ·¨´´½¨
+        // å…ˆåšä¸€äº›æ¸…ç†å·¥ä½œï¼Œä»¥é˜²å› ä¸ºæ–‡ä»¶å¤„äºåªè¯»çŠ¶æ€è€Œæ— æ³•åˆ›å»º
         if (File.Exists(fileName))
         {
             FileAttributes attrs = File.GetAttributes(fileName);
@@ -39,7 +39,7 @@ public class Program
         file.Attributes = FileAttributes.Hidden |
             FileAttributes.ReadOnly;
 
-        Console.WriteLine("Ô­±¾Êä³ö\"{1}\"£¬Ìæ»»Îª\"{0}\"¡£",
+        Console.WriteLine("åŸæœ¬è¾“å‡º\"{1}\"ï¼Œæ›¿æ¢ä¸º\"{0}\"ã€‚",
             file.Attributes.ToString().Replace(",", " |"),
             file.Attributes);
 

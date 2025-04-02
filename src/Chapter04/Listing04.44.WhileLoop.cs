@@ -10,28 +10,28 @@ public class FibonacciCalculator
         decimal temp;
         decimal input;
 
-        Console.Write("ÊäÈëÒ»¸öÕıÕûÊı:");
+        Console.Write("è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°:");
 
-        // decimal.Parse½«ReadLineµÄ·µ»Ø½á¹û×ª»»ÎªÒ»¸öÊ®½øÖÆÊı£¬
-        // Èç¹ûReadLine·µ»Ønull£¬¾ÍÓÃ"42"×÷ÎªÄ¬ÈÏÖµ¡£
+        // decimal.Parseå°†ReadLineçš„è¿”å›ç»“æœè½¬æ¢ä¸ºä¸€ä¸ªåè¿›åˆ¶æ•°ï¼Œ
+        // å¦‚æœReadLineè¿”å›nullï¼Œå°±ç”¨"42"ä½œä¸ºé»˜è®¤å€¼ã€‚
         input = decimal.Parse(Console.ReadLine() ?? "42");
 
-        // ½«currentºÍprevious³õÊ¼»¯Îª1£¬ÕâÊÇ
-        // ì³²¨ÄÇÆõÊıÁĞÇ°Á½¸ö¹Ì¶¨µÄÊı¡£
+        // å°†currentå’Œpreviousåˆå§‹åŒ–ä¸º1ï¼Œè¿™æ˜¯
+        // æ–æ³¢é‚£å¥‘æ•°åˆ—å‰ä¸¤ä¸ªå›ºå®šçš„æ•°ã€‚
         current = previous = 1;
 
-        // ÅĞ¶ÏÊıÁĞÖĞµ±Ç°µÄì³²¨ÄÇÆõÊıÊÇ·ñ
-        // Ğ¡ÓÚÓÃ»§ÊäÈëµÄÊı        
+        // åˆ¤æ–­æ•°åˆ—ä¸­å½“å‰çš„æ–æ³¢é‚£å¥‘æ•°æ˜¯å¦
+        // å°äºç”¨æˆ·è¾“å…¥çš„æ•°        
         while (current <= input)
         {
             temp = current;
             current = previous + current;
-            previous = temp; // ¼´Ê¹ÉÏÒ»¸öÓï¾äÔì³Écurrent´óÓÚinput£¬
-                             // Ò²»áÖ´ĞĞÕâ¸öÓï¾ä¡£
+            previous = temp; // å³ä½¿ä¸Šä¸€ä¸ªè¯­å¥é€ æˆcurrentå¤§äºinputï¼Œ
+                             // ä¹Ÿä¼šæ‰§è¡Œè¿™ä¸ªè¯­å¥ã€‚
         }
 
         Console.WriteLine(
-                  $"ÏÂÒ»¸öì³²¨ÄÇÆõÊıÊÇ{ current }");
+                  $"ä¸‹ä¸€ä¸ªæ–æ³¢é‚£å¥‘æ•°æ˜¯{ current }");
         #endregion INCLUDE
     }
 }

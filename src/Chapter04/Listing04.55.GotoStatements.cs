@@ -33,14 +33,14 @@ public class GoToStatements
                 default:
                     if(isRecursive)
                     {
-                        // ÏòÏÂµİ¹é±éÀú²ã´Î½á¹¹
-                        Console.WriteLine("ÕıÔÚµİ¹é±éÀú...");
+                        // å‘ä¸‹é€’å½’éå†å±‚æ¬¡ç»“æ„
+                        Console.WriteLine("æ­£åœ¨é€’å½’éå†...");
                         // ...
                     }
                     else if(isFiltered)
                     {
-                        // ÎªÉ¸Ñ¡Æ÷Çåµ¥Ìí¼ÓÑ¡Ïî
-                        Console.WriteLine("ÕıÔÚÉ¸Ñ¡...");
+                        // ä¸ºç­›é€‰å™¨æ¸…å•æ·»åŠ é€‰é¡¹
+                        Console.WriteLine("æ­£åœ¨ç­›é€‰...");
                         // ...
                     }
                     break;

@@ -40,23 +40,23 @@ public static class CorporateData
         new Department[]
     {
         new("Corporate", 0),
-        new("ÈËÁ¦×ÊÔ´", 1),
-        new("¹¤³Ì", 2),
+        new("äººåŠ›èµ„æº", 1),
+        new("å·¥ç¨‹", 2),
         new("IT", 3),
-        new("´ÈÉÆ", 4),
-        new("ÊĞ³¡", 5),
+        new("æ…ˆå–„", 4),
+        new("å¸‚åœº", 5),
     };
 
     public static readonly Employee[] Employees = new Employee[]
     {
-        new("Mark Michaelis", "Ê×Ï¯µçÄÔ·¢ÉÕÓÑ", 0),
-        new("Michael Stokesbary", "¸ß¼¶µçÄÔÎ×Ê¦", 2),
-        new("Brian Jones", "ÆóÒµ¼¯³É´óÊ¦", 2),
-        new("Anne Beard", "ÈËÁ¦×ÊÔ´×Ü¼à", 1),
-        new("Pat Dever", "ÆóÒµ¼Ü¹¹Ê¦", 3),
-        new("Kevin Bost", "½Ü³ö³ÌĞòÔ±", 2),
-        new("Thomas Heavey", "Èí¼ş¼Ü¹¹Ê¦", 2),
-        new("Eric Edmonds", "´ÈÉÆĞ­µ÷Ô±", 4)
+        new("Mark Michaelis", "é¦–å¸­ç”µè„‘å‘çƒ§å‹", 0),
+        new("Michael Stokesbary", "é«˜çº§ç”µè„‘å·«å¸ˆ", 2),
+        new("Brian Jones", "ä¼ä¸šé›†æˆå¤§å¸ˆ", 2),
+        new("Anne Beard", "äººåŠ›èµ„æºæ€»ç›‘", 1),
+        new("Pat Dever", "ä¼ä¸šæ¶æ„å¸ˆ", 3),
+        new("Kevin Bost", "æ°å‡ºç¨‹åºå‘˜", 2),
+        new("Thomas Heavey", "è½¯ä»¶æ¶æ„å¸ˆ", 2),
+        new("Eric Edmonds", "æ…ˆå–„åè°ƒå‘˜", 4)
     };
 }
 
@@ -75,7 +75,7 @@ public static class CorporateData
 
 //    public static readonly Employee[] Employees = new Employee[]
 //    {
-//        new("Mark Michaelis", "Ê×Ï¯µçÄÔ·¢ÉÕÓÑ", 0),
+//        new("Mark Michaelis", "é¦–å¸­ç”µè„‘å‘çƒ§å‹", 0),
 //        new("Michael Stokesbary", "Senior Computer Wizard", 2),
 //        new("Brian Jones", "Enterprise Integration Guru", 2),
 //        new("Anne Beard", "HR Director", 1),

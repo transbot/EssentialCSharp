@@ -1,15 +1,15 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_51;
 
-public class TicTacToe // ÉùÃ÷TicTacToeÀà
+public class TicTacToe // å£°æ˜TicTacToeç±»
 {
-    public static void Main() // ÉùÃ÷³ÌĞòµÄÈë¿Úµã
+    public static void Main() // å£°æ˜ç¨‹åºçš„å…¥å£ç‚¹
     {
         #region INCLUDE
         int winner = 0;
-        // ´æ´¢Ã¿¸öÍæ¼ÒµÄÂä×ÓÎ»ÖÃ
+        // å­˜å‚¨æ¯ä¸ªç©å®¶çš„è½å­ä½ç½®
         int[] playerPositions = { 0, 0 };
 
-        // Ó²±àÂëµÄÆåÅÌÎ»ÖÃ
+        // ç¡¬ç¼–ç çš„æ£‹ç›˜ä½ç½®
         //  X | 2 | O 
         // ---+---+---
         //  O | O | 6 
@@ -18,12 +18,12 @@ public class TicTacToe // ÉùÃ÷TicTacToeÀà
         playerPositions[0] = 449;
         playerPositions[1] = 28;
 
-        // ÅĞ¶ÏÊÇ·ñ³öÏÖÁËÒ»¸öÓ®¼Ò
+        // åˆ¤æ–­æ˜¯å¦å‡ºç°äº†ä¸€ä¸ªèµ¢å®¶
         int[] winningMasks = {
             7, 56, 448, 73, 146, 292, 84, 273 };
 
-        // ±éÀúÃ¿¸öÖÂÊ¤ÑÚÂë(winning mask)£¬
-        // ÅĞ¶ÏÊÇ·ñÓĞÒ»Î»Ó®¼Ò
+        // éå†æ¯ä¸ªè‡´èƒœæ©ç (winning mask)ï¼Œ
+        // åˆ¤æ–­æ˜¯å¦æœ‰ä¸€ä½èµ¢å®¶
         #region HIGHLIGHT
         foreach (int mask in winningMasks)
         {
@@ -46,7 +46,7 @@ public class TicTacToe // ÉùÃ÷TicTacToeÀà
         }
         #endregion HIGHLIGHT
 
-        Console.WriteLine($"Íæ¼Ò{ winner }ÊÇÓ®¼Ò¡£");
+        Console.WriteLine($"ç©å®¶{ winner }æ˜¯èµ¢å®¶ã€‚");
         #endregion INCLUDE
     }
 }

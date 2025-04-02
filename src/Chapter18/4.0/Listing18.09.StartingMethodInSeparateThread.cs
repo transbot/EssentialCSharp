@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_09
+namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_09
 {
     using System;
     using System.Threading.Tasks;

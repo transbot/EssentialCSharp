@@ -11,30 +11,30 @@ public class Program
     {
         IEnumerable<object> stuff =
             new object[] { new(), 1, 3, 5, 7, 9,
-                "\"¶«Î÷\"", Guid.NewGuid() };
-        Print("ÔÓÎï: {0}", stuff);
+                "\"ä¸œè¥¿\"", Guid.NewGuid() };
+        Print("æ‚ç‰©: {0}", stuff);
 
         IEnumerable<int> even = new int[] { 0, 2, 4, 6, 8 };
-        Print("Å¼Êı: {0}", even);
+        Print("å¶æ•°: {0}", even);
 
         #region HIGHLIGHT
         IEnumerable<int> odd = stuff.OfType<int>();
         #endregion HIGHLIGHT
-        Print("ÆæÊı: {0}", odd);
+        Print("å¥‡æ•°: {0}", odd);
 
         #region HIGHLIGHT
         IEnumerable<int> numbers = even.Union(odd);
         #endregion HIGHLIGHT
-        Print("ÆæÊıºÍÅ¼ÊıµÄ²¢¼¯: {0}", numbers);
+        Print("å¥‡æ•°å’Œå¶æ•°çš„å¹¶é›†: {0}", numbers);
 
         #region HIGHLIGHT
-        Print("ÓëÅ¼ÊıµÄ²¢¼¯: {0}", numbers.Union(even));
-        Print("ÓëÆæÊıºÏ²¢³É³¬¼¯: {0}", numbers.Concat(odd));
+        Print("ä¸å¶æ•°çš„å¹¶é›†: {0}", numbers.Union(even));
+        Print("ä¸å¥‡æ•°åˆå¹¶æˆè¶…é›†: {0}", numbers.Concat(odd));
         #endregion HIGHLIGHT
-        Print("ÓëÅ¼ÊıµÄ½»¼¯: {0}",
+        Print("ä¸å¶æ•°çš„äº¤é›†: {0}",
         #region HIGHLIGHT
             numbers.Intersect(even));
-        Print("È¥ÖØ: {0}", numbers.Concat(odd).Distinct());
+        Print("å»é‡: {0}", numbers.Concat(odd).Distinct());
         #endregion HIGHLIGHT
 
         #region HIGHLIGHT
@@ -51,11 +51,11 @@ public class Program
                 $" {nameof(numbers)}.Concat(odd).Distinct())");
         }
         #region HIGHLIGHT
-        Print("·´×ª: {0}", numbers.Reverse());
-        Print("Æ½¾ù: {0}", numbers.Average());
-        Print("×ÜºÍ: {0}", numbers.Sum());
-        Print("×î´ó: {0}", numbers.Max());
-        Print("×îĞ¡: {0}", numbers.Min());
+        Print("åè½¬: {0}", numbers.Reverse());
+        Print("å¹³å‡: {0}", numbers.Average());
+        Print("æ€»å’Œ: {0}", numbers.Sum());
+        Print("æœ€å¤§: {0}", numbers.Max());
+        Print("æœ€å°: {0}", numbers.Min());
         #endregion HIGHLIGHT
     }
 

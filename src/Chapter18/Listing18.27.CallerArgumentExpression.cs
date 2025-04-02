@@ -33,9 +33,9 @@ public class ExpectedException<TException> :
         {
             testAction();
             throw new InvalidOperationException(
-                    $"ÔÚ'{testActionFileName}'ÎÄ¼şµÄ'{testActionMemberName
-                    }'·½·¨ÖĞ£¬±í´ïÊ½'{testExpression
-                    }'Ã»ÓĞÅ×³öÔ¤ÆÚµÄÒì³£{typeof(TException).FullName}¡£");
+                    $"åœ¨'{testActionFileName}'æ–‡ä»¶çš„'{testActionMemberName
+                    }'æ–¹æ³•ä¸­ï¼Œè¡¨è¾¾å¼'{testExpression
+                    }'æ²¡æœ‰æŠ›å‡ºé¢„æœŸçš„å¼‚å¸¸{typeof(TException).FullName}ã€‚");
         }
         catch (TException exception)
         {
@@ -43,7 +43,7 @@ public class ExpectedException<TException> :
         }
     }
 
-    // ÌØĞÔ¼ì²â
+    // ç‰¹æ€§æ£€æµ‹
     // ...
 }
 #endregion INCLUDE

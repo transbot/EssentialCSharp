@@ -4,13 +4,13 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_43;
 public class Employee
 {
     #region EXCLUDE
-    // FirstNameºÍLastNameÔÚInitialize()·½·¨ÄÚ²¿ÉèÖÃ¡£
+    // FirstNameå’ŒLastNameåœ¨Initialize()æ–¹æ³•å†…éƒ¨è®¾ç½®ã€‚
     #pragma warning disable CS8618
     public Employee(string firstName, string lastName)
     {
         int id;
-        // Éú³ÉÔ±¹¤ID...
-        id = 0; // Õâ¸öÀı×ÓĞèÒª³õÊ¼»¯id
+        // ç”Ÿæˆå‘˜å·¥ID...
+        id = 0; // è¿™ä¸ªä¾‹å­éœ€è¦åˆå§‹åŒ–id
         // ...
         Initialize(id, firstName, lastName);
     }
@@ -26,7 +26,7 @@ public class Employee
         string lastName;
         Id = id;
 
-        // ²éÕÒÔ±¹¤Êı¾İ
+        // æŸ¥æ‰¾å‘˜å·¥æ•°æ®
         firstName = string.Empty;
         lastName = string.Empty;
         // ...
@@ -54,11 +54,11 @@ public class Employee
     public int Id { get; private set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
     public string? Title { get; set; }
     public Employee? Manager { get; set; }
 
-    // NameÊôĞÔ
+    // Nameå±æ€§
     public string Name
     {
         get
@@ -67,7 +67,7 @@ public class Employee
         }
         set
         {
-            // ½«Ëù¸³µÄÖµ²ğ·ÖÎªÃû×ÖºÍĞÕÊÏ
+            // å°†æ‰€èµ‹çš„å€¼æ‹†åˆ†ä¸ºåå­—å’Œå§“æ°
             string[] names;
             names = value.Split(new char[] { ' ' });
             if(names.Length == 2)
@@ -77,9 +77,9 @@ public class Employee
             }
             else
             {
-                // Èç¹û¸³µÄ²»ÊÇÈ«Ãû£¬¾ÍÅ×³öÒì³£
+                // å¦‚æœèµ‹çš„ä¸æ˜¯å…¨åï¼Œå°±æŠ›å‡ºå¼‚å¸¸
                 throw new System.ArgumentException(
-                    $"Ëù¸³µÄÖµ'{value}'ÎŞĞ§¡£");
+                    $"æ‰€èµ‹çš„å€¼'{value}'æ— æ•ˆã€‚");
             }
         }
     }
@@ -93,8 +93,8 @@ public class Program
         Employee employee;
         employee = new ("Inigo", "Montoya")
         {
-            // ÀûÓÃ¶ÔÏó³õÊ¼»¯Æ÷Óï·¨
-            Salary = "Ì«ÉÙÁË"
+            // åˆ©ç”¨å¯¹è±¡åˆå§‹åŒ–å™¨è¯­æ³•
+            Salary = "å¤ªå°‘äº†"
         };
         #region EXCLUDE
         System.Console.WriteLine(

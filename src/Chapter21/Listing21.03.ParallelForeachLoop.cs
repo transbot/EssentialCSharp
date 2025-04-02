@@ -44,23 +44,23 @@ public class Program
 
     public static void Encrypt(string inputFileName, string outputFileName)
     {
-        Console.WriteLine($">>>>>正在加密'{ inputFileName }'.");
+        Console.WriteLine($">>>>>姝ｅ湪鍔犲瘑'{ inputFileName }'.");
         using (FileStream outputFileStream = new($"{inputFileName}.encrypt", FileMode.Create))
         {
             byte[] encryptedText = Cryptographer.EncryptAsync(File.ReadAllText(inputFileName), outputFileStream).Result;
         }
-        Console.WriteLine($"<<<<<结束加密'{ inputFileName}'.");
+        Console.WriteLine($"<<<<<缁撴潫鍔犲瘑'{ inputFileName}'.");
     }
 
     public static void Decrypt(string inputFileName, string outputFileName)
     {
-        Console.WriteLine($">>>>>正在解密'{ inputFileName }'.");
+        Console.WriteLine($">>>>>姝ｅ湪瑙ｅ瘑'{ inputFileName }'.");
         byte[] bytes = File.ReadAllBytes(inputFileName);
         using (FileStream outputFileStream = new(outputFileName, FileMode.Create))
         {
             Cryptographer.DecryptAsync(bytes, outputFileStream).Wait();
         }
-        Console.WriteLine($"<<<<<结束解密'{ inputFileName}'.");
+        Console.WriteLine($"<<<<<缁撴潫瑙ｅ瘑'{ inputFileName}'.");
     }
     #endregion EXCLUDE
 }

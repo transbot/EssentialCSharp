@@ -5,12 +5,12 @@ public class FortyTwo
 {
     public static void Main()
     {
-        short windSpeed = 67; // ·çËÙ£¬µ¥Î»ÊÇ¹«Àï/Ğ¡Ê±
+        short windSpeed = 67; // é£é€Ÿï¼Œå•ä½æ˜¯å…¬é‡Œ/å°æ—¶
         Console.WriteLine(
-            $"»ªÊ¢¶ÙÖİÔ­À´µÄËş¿ÆÂí´óÇÅ" +
-            $"{Environment.NewLine}±»"
-            + "·çËÙÎª"
-            + windSpeed + "¹«Àï/Ğ¡Ê±µÄ´ó·ç´İ»Ù¡£");
+            $"åç››é¡¿å·åŸæ¥çš„å¡”ç§‘é©¬å¤§æ¡¥" +
+            $"{Environment.NewLine}è¢«"
+            + "é£é€Ÿä¸º"
+            + windSpeed + "å…¬é‡Œ/å°æ—¶çš„å¤§é£æ‘§æ¯ã€‚");
     }
 }
 #endregion INCLUDE

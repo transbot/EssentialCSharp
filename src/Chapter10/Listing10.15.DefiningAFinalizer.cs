@@ -1,4 +1,4 @@
-// ËµÃ÷ : Implementation is incomplete in the catch block.
+// è¯´æ˜Ž : Implementation is incomplete in the catch block.
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_15;
 
 using System;
@@ -10,7 +10,7 @@ public class TemporaryFileStream
     public TemporaryFileStream(string fileName)
     {
         File = new FileInfo(fileName);
-        // ¸üºÃµÄ·½°¸ÊÇÊ¹ÓÃFileOptions.DeleteOnClose
+        // æ›´å¥½çš„æ–¹æ¡ˆæ˜¯ä½¿ç”¨FileOptions.DeleteOnClose
         Stream = new FileStream(
             File.FullName, FileMode.OpenOrCreate,
             FileAccess.ReadWrite);
@@ -21,7 +21,7 @@ public class TemporaryFileStream
     { }
 
     #region HIGHLIGHT
-    // ÖÕ½áÆ÷
+    // ç»ˆç»“å™¨
     ~TemporaryFileStream()
     {
         try
@@ -30,7 +30,7 @@ public class TemporaryFileStream
         }
         catch (Exception )
         {
-            // ½«ÊÂ¼þÐ´ÈëÈÕÖ¾»òUI
+            // å°†äº‹ä»¶å†™å…¥æ—¥å¿—æˆ–UI
             // ...
         }
     }

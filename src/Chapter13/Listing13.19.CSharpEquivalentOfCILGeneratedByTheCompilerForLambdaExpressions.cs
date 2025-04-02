@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_19;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_19;
 
 using System;
 #region INCLUDE

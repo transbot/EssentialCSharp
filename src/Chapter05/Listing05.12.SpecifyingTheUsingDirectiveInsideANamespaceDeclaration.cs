@@ -2,8 +2,8 @@
 // and the attribute is not available in .NET 6.0.
 #pragma warning disable SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
 
-// ¸Ã´úÂëÇåµ¥´æÔÚbug£¬ÒÔÖĞÎÄ°æÊéÖĞµÄÎª×¼¡£
-// »òÕß²Î¿¼ÏÂÃæÕâ¸ö£º
+// è¯¥ä»£ç æ¸…å•å­˜åœ¨bugï¼Œä»¥ä¸­æ–‡ç‰ˆä¹¦ä¸­çš„ä¸ºå‡†ã€‚
+// æˆ–è€…å‚è€ƒä¸‹é¢è¿™ä¸ªï¼š
 //namespace EssentialCSharp
 //{
 //    using System;
@@ -11,9 +11,9 @@
 //    {
 //        static void Main()
 //        {
-//            // ÒòÎªÉÏ·½µÄusingÖ¸Áî£¬ËùÒÔ
-//            // ²»ĞèÒªÓÃSystemÏŞ¶¨ConsoleÀà¡£            
-//            Console.WriteLine("ÄãºÃ£¬ÎÒµÄÃû×ÖÊÇInigo Montoya¡£");
+//            // å› ä¸ºä¸Šæ–¹çš„usingæŒ‡ä»¤ï¼Œæ‰€ä»¥
+//            // ä¸éœ€è¦ç”¨Systemé™å®šConsoleç±»ã€‚            
+//            Console.WriteLine("ä½ å¥½ï¼Œæˆ‘çš„åå­—æ˜¯Inigo Montoyaã€‚");
 //        }
 //    }
 //}
@@ -42,14 +42,14 @@ public class Program
             """;
 
         Console.WriteLine(
-            "ÊäÈëÄãµÄÈ«Ãû£º(ÀıÈçInigo T. Montoya): ");
+            "è¾“å…¥ä½ çš„å…¨åï¼š(ä¾‹å¦‚Inigo T. Montoya): ");
         string name = Console.ReadLine()!;
 
         #endregion EXCLUDE
         #region HIGHLIGHT
-        // ÒòÎªusingÖ¸ÁîµÄ´æÔÚ£¬²»ĞèÒªÓÃ
-        // System.Text.RegularExpressionsÏŞ¶¨
-        // RegExÀàĞÍ
+        // å› ä¸ºusingæŒ‡ä»¤çš„å­˜åœ¨ï¼Œä¸éœ€è¦ç”¨
+        // System.Text.RegularExpressionsé™å®š
+        // RegExç±»å‹
         Match match = Regex.Match(name, pattern);
         #endregion HIGHLIGHT
         #region EXCLUDE

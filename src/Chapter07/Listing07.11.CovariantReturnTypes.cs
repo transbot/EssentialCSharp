@@ -1,4 +1,4 @@
-#pragma warning disable IDE0059 // ²»ĞèÒª¸³Öµ
+#pragma warning disable IDE0059 // ä¸éœ€è¦èµ‹å€¼
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_11;
 
 #region INCLUDE

@@ -1,4 +1,4 @@
-﻿namespace Chapter21;
+namespace Chapter21;
 
 class Program
 {

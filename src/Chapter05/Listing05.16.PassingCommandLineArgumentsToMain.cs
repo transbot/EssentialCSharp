@@ -12,12 +12,12 @@ public class Program
         if(args?.Length != 2 )
         #endregion HIGHLIGHT
         {
-            // ±ØĞëÌá¹©Á½¸ö£¨¶øÇÒÖ»ÄÜÊÇÁ½¸ö£©²ÎÊı£¬ËùÒÔ±¨´í
+            // å¿…é¡»æä¾›ä¸¤ä¸ªï¼ˆè€Œä¸”åªèƒ½æ˜¯ä¸¤ä¸ªï¼‰å‚æ•°ï¼Œæ‰€ä»¥æŠ¥é”™
             Console.WriteLine(
-                "´íÎó: ±ØĞëÖ¸¶¨"
-                + "URLºÍÎÄ¼şÃû");
+                "é”™è¯¯: å¿…é¡»æŒ‡å®š"
+                + "URLå’Œæ–‡ä»¶å");
             Console.WriteLine(
-                "ÓÃ·¨: Downloader.exe <URL> <ÎÄ¼şÃû>");
+                "ç”¨æ³•: Downloader.exe <URL> <æ–‡ä»¶å>");
             result = 1;
         }
         else
@@ -31,7 +31,7 @@ public class Program
                 client.GetByteArrayAsync(urlString).Result;
             client.Dispose();
             File.WriteAllBytes(fileName, response);
-            Console.WriteLine($"ÒÑ´Ó'{urlString}'ÏÂÔØ'{fileName}'¡£");
+            Console.WriteLine($"å·²ä»'{urlString}'ä¸‹è½½'{fileName}'ã€‚");
             result = 0;
         }
         #region HIGHLIGHT

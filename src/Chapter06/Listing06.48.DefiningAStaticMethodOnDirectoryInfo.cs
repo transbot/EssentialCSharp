@@ -31,7 +31,7 @@ public static class DirectoryInfoExtension
             }
         }
 
-        // ������Ŀ¼(�Եݹ鷽ʽ)
+        // 复制子目录(以递归方式)
         if (option == SearchOption.AllDirectories)
         {
             foreach (string element in

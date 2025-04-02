@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618 // Pending a constructors
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_21;
@@ -13,7 +13,7 @@ public class Program
 
         #if COMPILEERROR // EXCLUDE
         #region HIGHLIGHT
-        // ´íÎó£ºÎŞ·¨ÎªÊôĞÔ»òË÷ÒıÆ÷'Employee.Id'¸³Öµ£»ËüÊÇÖ»¶ÁµÄ
+        // é”™è¯¯ï¼šæ— æ³•ä¸ºå±æ€§æˆ–ç´¢å¼•å™¨'Employee.Id'èµ‹å€¼ï¼›å®ƒæ˜¯åªè¯»çš„
         employee1.Id = "490";
         #endregion HIGHLIGHT
         #endif // COMPILEERROR // EXCLUDE
@@ -25,18 +25,18 @@ public class Employee
     public void Initialize(int id)
     {
         #region HIGHLIGHT
-        // Ê¹ÓÃ×Ö¶Î£¬ÒòÎªIdÊôĞÔÃ»ÓĞsetter£»ËüÊÇÖ»¶ÁµÄ
+        // ä½¿ç”¨å­—æ®µï¼Œå› ä¸ºIdå±æ€§æ²¡æœ‰setterï¼›å®ƒæ˜¯åªè¯»çš„
         _Id = id.ToString();
         #endregion HIGHLIGHT
     }
 
     // ...
-    // IdÊôĞÔÉùÃ÷
+    // Idå±æ€§å£°æ˜
     public string Id
     {
         get => _Id;
         #region HIGHLIGHT
-        // Î´Ìá¹©setter
+        // æœªæä¾›setter
         #endregion HIGHLIGHT
     }
     private string _Id;

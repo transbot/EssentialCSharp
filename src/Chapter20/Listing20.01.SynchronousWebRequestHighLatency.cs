@@ -14,7 +14,7 @@ public static class Program
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("´íÎó£ºÃ»ÓĞÊäÈëÒªËÑË÷µÄÎÄ±¾¡£");
+            Console.WriteLine("é”™è¯¯ï¼šæ²¡æœ‰è¾“å…¥è¦æœç´¢çš„æ–‡æœ¬ã€‚");
             return;
         }
         string findText = args[0];
@@ -23,22 +23,22 @@ public static class Program
         if (args.Length > 1)
         {
             url = args[1];
-            // ×î¶àÈ¡Á½¸öÃüÁîĞĞ²ÎÊı£¬ºöÂÔ¸ü¶àµÄÃüÁîĞĞ²ÎÊı
+            // æœ€å¤šå–ä¸¤ä¸ªå‘½ä»¤è¡Œå‚æ•°ï¼Œå¿½ç•¥æ›´å¤šçš„å‘½ä»¤è¡Œå‚æ•°
         }
         Console.WriteLine(
-            $"´ÓÍøÖ·'{url}'ËÑË÷'{findText}'¡£");
+            $"ä»ç½‘å€'{url}'æœç´¢'{findText}'ã€‚");
 
-        Console.WriteLine("ÕıÔÚÏÂÔØ...");
+        Console.WriteLine("æ­£åœ¨ä¸‹è½½...");
         byte[] downloadData =
             HttpClient.GetByteArrayAsync(url).Result;
 
-        Console.WriteLine("ÕıÔÚËÑË÷...");
+        Console.WriteLine("æ­£åœ¨æœç´¢...");
         int textOccurrenceCount = CountOccurrences(
             downloadData, findText);
 
         Console.WriteLine(
-            @$"'{findText}'ÔÚÍøÖ·'{url}'³öÏÖÁË{
-                textOccurrenceCount}´Î¡£");
+            @$"'{findText}'åœ¨ç½‘å€'{url}'å‡ºç°äº†{
+                textOccurrenceCount}æ¬¡ã€‚");
     }
 
     private static int CountOccurrences(byte[] downloadData, string findText)
@@ -61,7 +61,7 @@ public static class Program
                     findIndex++;
                     if (findIndex == findText.Length)
                     {
-                        // ÕÒµ½ÁËÒªËÑË÷µÄÎÄ±¾
+                        // æ‰¾åˆ°äº†è¦æœç´¢çš„æ–‡æœ¬
                         textOccurrenceCount++;
                         findIndex = 0;
                     }

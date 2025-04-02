@@ -8,34 +8,34 @@ public class Palindrome
         string reverse, palindrome;
         char[] temp;
 
-        Console.Write("ÊäÈëÒ»¾ä»ØÎÄ: ");
+        Console.Write("è¾“å…¥ä¸€å¥å›æ–‡: ");
         palindrome = Console.ReadLine();
 
-        // É¾³ı¿Õ¸ñ£¬²¢×ª»»³ÉĞ¡Ğ´
+        // åˆ é™¤ç©ºæ ¼ï¼Œå¹¶è½¬æ¢æˆå°å†™
         reverse = palindrome.Replace(" ", "");
         reverse = reverse.ToLower();
 
         #region HIGHLIGHT
-        // ×ª»»³É×Ö·ûÊı×é
+        // è½¬æ¢æˆå­—ç¬¦æ•°ç»„
         temp = reverse.ToCharArray();
         #endregion HIGHLIGHT
 
         #region HIGHLIGHT
-        // ·´×ªÊı×é
+        // åè½¬æ•°ç»„
         Array.Reverse(temp);
         #endregion HIGHLIGHT
 
-        // ½«Êı×é×ª»»»Ø×Ö·û´®£¬²¢¼ì²é
-        // ·´×ªºóµÄ×Ö·û´®ÊÇ·ñÏàµÈ
+        // å°†æ•°ç»„è½¬æ¢å›å­—ç¬¦ä¸²ï¼Œå¹¶æ£€æŸ¥
+        // åè½¬åçš„å­—ç¬¦ä¸²æ˜¯å¦ç›¸ç­‰
         if (reverse == new string(temp))
         {
             Console.WriteLine(
-                $"\"{palindrome}\"ÊÇ»ØÎÄ¡£");
+                $"\"{palindrome}\"æ˜¯å›æ–‡ã€‚");
         }
         else
         {
             Console.WriteLine(
-                $"\"{palindrome}\"²»ÊÇ»ØÎÄ¡£");
+                $"\"{palindrome}\"ä¸æ˜¯å›æ–‡ã€‚");
         }
         #endregion INCLUDE
     }

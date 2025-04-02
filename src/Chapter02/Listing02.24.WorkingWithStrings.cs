@@ -6,10 +6,10 @@ public class Uppercase
     {
         string text, uppercase;
 
-        Console.Write("ÊäÈëÎÄ±¾: ");
+        Console.Write("è¾“å…¥æ–‡æœ¬: ");
         text = Console.ReadLine();
 
-        // ·µ»ØÈ«´óÐ´µÄÒ»¸öÐÂ×Ö·û´®
+        // è¿”å›žå…¨å¤§å†™çš„ä¸€ä¸ªæ–°å­—ç¬¦ä¸²
         #region HIGHLIGHT
         uppercase = text.ToUpper();
         #endregion HIGHLIGHT

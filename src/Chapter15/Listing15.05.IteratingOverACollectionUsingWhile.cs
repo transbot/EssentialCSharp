@@ -11,7 +11,7 @@ public class Program
         int number;
         // ...
 
-        // ¸ÅÄîĞÔ´úÂë£¬·ÇÊµ¼Ê´úÂë
+        // æ¦‚å¿µæ€§ä»£ç ï¼Œéå®é™…ä»£ç 
         #if ConceptualCode
         while(stack.MoveNext())
         {   
@@ -22,8 +22,8 @@ public class Program
 
         #endregion INCLUDE
 
-        // Êµ¼Ê´úÂë
-        while(stack.Pop() != -1) // ÕâÊµ¼Ê²¢²»ÊÇÕıÈ·µÄÂß¼­£¬µ«ÖØµãÔÚÓÚwhile£¬¶ø²»ÔÚÓÚÕ»
+        // å®é™…ä»£ç 
+        while(stack.Pop() != -1) // è¿™å®é™…å¹¶ä¸æ˜¯æ­£ç¡®çš„é€»è¾‘ï¼Œä½†é‡ç‚¹åœ¨äºwhileï¼Œè€Œä¸åœ¨äºæ ˆ
         {
             number = stack.Peek();
             Console.WriteLine(number);

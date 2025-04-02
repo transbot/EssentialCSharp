@@ -8,7 +8,7 @@ public class Program
     public static void Main()
     {
         Book book = new(42) { 
-            Subtitle = "»ùÓÚÒµÎñ³¡¾°µÄ¹¤³ÌÓ¦ÓÃ"};
+            Subtitle = "åŸºäºä¸šåŠ¡åœºæ™¯çš„å·¥ç¨‹åº”ç”¨"};
     }
 }
 
@@ -20,7 +20,7 @@ public class Book
     {
         Id = id;
 
-        // ²éÕÒÊé¼®Êı¾İ
+        // æŸ¥æ‰¾ä¹¦ç±æ•°æ®
         #region EXCLUDE
         Title = string.Empty;
         Isbn = string.Empty;

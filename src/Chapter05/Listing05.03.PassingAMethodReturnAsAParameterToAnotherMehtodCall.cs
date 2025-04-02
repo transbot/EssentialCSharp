@@ -5,9 +5,9 @@ public class Program
     #region INCLUDE
     public static void Main()
     {
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         #region HIGHLIGHT
-        Console.WriteLine($"ÄãºÃ£¬{ Console.ReadLine() }£¡");
+        Console.WriteLine($"ä½ å¥½ï¼Œ{ Console.ReadLine() }ï¼");
         #endregion HIGHLIGHT
     }
     #endregion INCLUDE

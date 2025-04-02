@@ -5,36 +5,36 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_30;
 
 public class ThrowingExceptions
 {
-    // ÉÏÒ»¸öcatch×Ó¾äÒÑ²¶»ñËùÓĞÒì³£
+    // ä¸Šä¸€ä¸ªcatchå­å¥å·²æ•è·æ‰€æœ‰å¼‚å¸¸
     #region INCLUDE
     public static void Main()
     {
         try
         {
-            Console.WriteLine("¿ªÊ¼Ö´ĞĞ");
-            Console.WriteLine("Å×³öÒì³£");
+            Console.WriteLine("å¼€å§‹æ‰§è¡Œ");
+            Console.WriteLine("æŠ›å‡ºå¼‚å¸¸");
             #region HIGHLIGHT
-            throw new Exception("ÈÎÒâÒì³£");
+            throw new Exception("ä»»æ„å¼‚å¸¸");
             // Catch 1
             #endregion HIGHLIGHT
-            Console.WriteLine("½áÊøÖ´ĞĞ");
+            Console.WriteLine("ç»“æŸæ‰§è¡Œ");
         }
         catch(FormatException exception)
         {
             Console.WriteLine(
-                "ÒÑÅ×³öÒ»¸öFormatExceptionÒì³£");
+                "å·²æŠ›å‡ºä¸€ä¸ªFormatExceptionå¼‚å¸¸");
         }
         // Catch 1
         catch(Exception exception)
         {
             Console.WriteLine(
-                $"·ÇÔ¤ÆÚµÄ´íÎó: { exception.Message }");
-            // Ìø×ªµ½Post Catch
+                $"éé¢„æœŸçš„é”™è¯¯: { exception.Message }");
+            // è·³è½¬åˆ°Post Catch
         }
 
         // Post Catch
         Console.WriteLine(
-            "ÕıÔÚ¹Ø±Õ...");
+            "æ­£åœ¨å…³é—­...");
     }
     #endregion INCLUDE
 }

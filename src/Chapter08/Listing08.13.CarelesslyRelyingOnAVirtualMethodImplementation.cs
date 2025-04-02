@@ -6,17 +6,17 @@ public class WorkflowActivity
 {
     private static void Start()
     {
-        // ¹Ø¼ü´úÂë
+        // å…³é”®ä»£ç 
     }
     public virtual void Run()
     {
         Start();
-        // ×öÄ³ÊÂ...
+        // åšæŸäº‹...
         Stop();
     }
     private static void Stop()
     {
-        // ¹Ø¼ü´úÂë
+        // å…³é”®ä»£ç 
     }
 }
 #endregion INCLUDE

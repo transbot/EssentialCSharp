@@ -6,7 +6,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_58;
 using System;
 
 #region INCLUDE
-// ÎÄ¼ş: Program.cs
+// æ–‡ä»¶: Program.cs
 partial class Program
 {
     static void Main(string[] args)
@@ -23,16 +23,16 @@ partial class Program
     }
 }
 
-// ÎÄ¼ş: Program+CommandLine.cs
+// æ–‡ä»¶: Program+CommandLine.cs
 partial class Program
 {
-    // ¶¨ÒåÒ»¸öÇ¶Ì×ÀàÀ´´¦ÀíÃüÁîĞĞ
+    // å®šä¹‰ä¸€ä¸ªåµŒå¥—ç±»æ¥å¤„ç†å‘½ä»¤è¡Œ
     private class CommandLine
     {
         #region EXCLUDE
         public CommandLine(string[] args)
         {
-            //Î´ÊµÏÖ
+            //æœªå®ç°
         }
 
         // ...

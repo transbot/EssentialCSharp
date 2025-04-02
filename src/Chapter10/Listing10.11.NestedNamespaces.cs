@@ -1,15 +1,15 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_10
 {
     #region INCLUDE
-    // ¶¨ÒåÃüÃû¿Õ¼ä£ºAddisonWesley.Michaelis
+    // å®šä¹‰å‘½åç©ºé—´ï¼šAddisonWesley.Michaelis
     namespace AddisonWesley.Michaelis
     {
         #region HIGHLIGHT
-            // ¶¨ÒåÃüÃû¿Õ¼ä£º
+            // å®šä¹‰å‘½åç©ºé—´ï¼š
             // AddisonWesley.Michaelis.EssentialCSharp
             namespace EssentialCSharp
             {
-                // ¶¨ÒåÀà£º
+                // å®šä¹‰ç±»ï¼š
                 // AddisonWesley.Michaelis.EssentialCSharp.Program
         #endregion HIGHLIGHT
                 class Program
@@ -20,6 +20,6 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_10
         }
         #endregion HIGHLIGHT
     }
-    // ½áÊøAddisonWesleyÃüÃû¿Õ¼äÉùÃ÷
+    // ç»“æŸAddisonWesleyå‘½åç©ºé—´å£°æ˜
     #endregion INCLUDE
 }

@@ -5,7 +5,7 @@ using System;
 #region INCLUDE
 using static System.Environment;
 
-// ¶¨Òå³éÏóÀà
+// å®šä¹‰æŠ½è±¡ç±»
 public abstract class PdaItem
 {
     public PdaItem(string name)
@@ -36,7 +36,7 @@ public class Contact : PdaItem
         set
         {
             string[] names = value.Split(' ');
-            // Î´ÏÔÊ¾´íÎó´¦Àí
+            // æœªæ˜¾ç¤ºé”™è¯¯å¤„ç†
             FirstName = names[0];
             LastName = names[1];
         }
@@ -77,9 +77,9 @@ public class Contact : PdaItem
     #region HIGHLIGHT
     public override string GetSummary()
     {
-        return $"Ãû×Ö: { FirstName + NewLine }"
-        + $"ĞÕÊÏ: { LastName + NewLine }"
-        + $"µØÖ·: { Address + NewLine }";
+        return $"åå­—: { FirstName + NewLine }"
+        + $"å§“æ°: { LastName + NewLine }"
+        + $"åœ°å€: { Address + NewLine }";
     }
     #endregion HIGHLIGHT
 
@@ -104,10 +104,10 @@ public class Appointment : PdaItem
     // ...
     public override string GetSummary()
     {
-        return $"Ö÷Ìâ: { Name + NewLine }"
-            + $"¿ªÊ¼Ê±¼ä: { StartDateTime + NewLine }"
-            + $"½áÊøÊ±¼ä: { EndDateTime + NewLine }"
-            + $"µØµã: { Location }";
+        return $"ä¸»é¢˜: { Name + NewLine }"
+            + $"å¼€å§‹æ—¶é—´: { StartDateTime + NewLine }"
+            + $"ç»“æŸæ—¶é—´: { EndDateTime + NewLine }"
+            + $"åœ°ç‚¹: { Location }";
     }
 }
 #endregion INCLUDE

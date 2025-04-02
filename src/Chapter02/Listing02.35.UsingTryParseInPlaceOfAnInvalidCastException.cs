@@ -1,4 +1,4 @@
-// ËµÃ÷ : Inline variable declaration not explained yet.
+// è¯´æ˜ : Inline variable declaration not explained yet.
 #pragma warning disable IDE0018 // Inline variable declaration
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_35;
 
@@ -7,22 +7,22 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        double number; // ÀÏ°æ±¾C#ÒªÇó±äÁ¿ÏÈÉùÃ÷²ÅÄÜ×÷Îªout²ÎÊıÊ¹ÓÃ
+        double number; // è€ç‰ˆæœ¬C#è¦æ±‚å˜é‡å…ˆå£°æ˜æ‰èƒ½ä½œä¸ºoutå‚æ•°ä½¿ç”¨
         string input;
 
-        Console.Write("ÊäÈëÒ»¸öÊı×Ö: ");
+        Console.Write("è¾“å…¥ä¸€ä¸ªæ•°å­—: ");
         input = Console.ReadLine();
         #region HIGHLIGHT
         if (double.TryParse(input, out number))
         {
-            // ×ª»»ÕıÈ·£¬ÏÖÔÚ¿ªÊ¼Ê¹ÓÃÊı×Ö
+            // è½¬æ¢æ­£ç¡®ï¼Œç°åœ¨å¼€å§‹ä½¿ç”¨æ•°å­—
             // ...
         }
         else
         #endregion HIGHLIGHT
         {
             Console.WriteLine(
-                "ÊäÈëµÄÎÄ±¾²»ÊÇÒ»¸öÓĞĞ§µÄÊı×Ö¡£");
+                "è¾“å…¥çš„æ–‡æœ¬ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•°å­—ã€‚");
         }
         #endregion INCLUDE
     }

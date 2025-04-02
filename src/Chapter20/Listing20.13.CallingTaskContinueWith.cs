@@ -9,18 +9,18 @@ public class Program
 {
     public static void Main()
     {
-        DisplayStatus("¿ªÊ¼Ö®Ç°");
+        DisplayStatus("å¼€å§‹ä¹‹å‰");
         Task taskA =
             Task.Run(() =>
-                 DisplayStatus("¿ªÊ¼..."))
+                 DisplayStatus("å¼€å§‹..."))
             .ContinueWith(antecedent =>
-                 DisplayStatus("¼ÌĞøA..."));
+                 DisplayStatus("ç»§ç»­A..."));
         Task taskB = taskA.ContinueWith(antecedent =>
-      DisplayStatus("¼ÌĞøB..."));
+      DisplayStatus("ç»§ç»­B..."));
         Task taskC = taskA.ContinueWith(antecedent =>
-            DisplayStatus("¼ÌĞøC..."));
+            DisplayStatus("ç»§ç»­C..."));
         Task.WaitAll(taskB, taskC);
-        DisplayStatus("½áÊø!");
+        DisplayStatus("ç»“æŸ!");
     }
 
     private static void DisplayStatus(string message)

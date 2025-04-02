@@ -1,5 +1,5 @@
 #region INCLUDE
-// global usingÖ¸Áî½«Ö¸¶¨È«Ãû¿Õ¼äµÄËùÓĞÀàĞÍ¡°µ¼Èë¡±ÏîÄ¿
+// global usingæŒ‡ä»¤å°†æŒ‡å®šå…¨åç©ºé—´çš„æ‰€æœ‰ç±»å‹â€œå¯¼å…¥â€é¡¹ç›®
 global using System.Text;
 #region EXCLUDE
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_10;
@@ -8,19 +8,19 @@ public class Program
 {
     public static void Main()
     {
-        // new();µÄÓÃ·¨Çë²Î¼ûµÚ6ÕÂ
+        // new();çš„ç”¨æ³•è¯·å‚è§ç¬¬6ç« 
         StringBuilder name = new();
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");         
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");         
         name.Append(Console.ReadLine()!.Trim());
 
-        Console.Write("ÇëÊäÈëÄãµÄÖĞ¼äÃûÊ××ÖÄ¸: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„ä¸­é—´åé¦–å­—æ¯: ");
         name.Append( $" { Console.ReadLine()!.Trim('.').Trim() }." );
 
-        Console.Write("ÇëÊäÈëÄãµÄĞÕÊÏ: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„å§“æ°: ");
         name.Append($" { Console.ReadLine()!.Trim() }");
 
-        Console.WriteLine($"ÄãºÃ£¬{name}£¡");
+        Console.WriteLine($"ä½ å¥½ï¼Œ{name}ï¼");
     }
 }
 #endregion INCLUDE

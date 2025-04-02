@@ -3,11 +3,11 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_56;
 using System;
 
 #region INCLUDE
-// CommandLineÀàÇ¶Ì×ÔÚProgramÀàÖĞ
+// CommandLineç±»åµŒå¥—åœ¨Programç±»ä¸­
 #region HIGHLIGHT
 public class Program
 {
-    // ¶¨ÒåÒ»¸öÇ¶Ì×ÀàÀ´×¨ÃÅ´¦ÀíÃüÁîĞĞ
+    // å®šä¹‰ä¸€ä¸ªåµŒå¥—ç±»æ¥ä¸“é—¨å¤„ç†å‘½ä»¤è¡Œ
     private class CommandLine
     {
 #endregion HIGHLIGHT
@@ -24,7 +24,7 @@ public class Program
                     2 => FirstName = arguments[2],
                     3 => LastName = arguments[3],
                     _ => throw new ArgumentException(
-                        $"·ÇÔ¤ÆÚµÄ²ÎÊı" +
+                        $"éé¢„æœŸçš„å‚æ•°" +
                         $"'{arguments[argumentCounter]}'")
                 };
             }
@@ -41,33 +41,33 @@ public class Program
         CommandLine commandLine = new(args);
         #endregion HIGHLIGHT
 
-        // Îª±ÜÃâ·ÖĞÄ£¬ÕâÀï¹ÊÒâÊ¡ÂÔÁË´íÎó´¦Àí
+        // ä¸ºé¿å…åˆ†å¿ƒï¼Œè¿™é‡Œæ•…æ„çœç•¥äº†é”™è¯¯å¤„ç†
 
         switch (commandLine.Action)
         {
             case "new":
-                // ĞÂ½¨Ò»¸öÔ±¹¤
+                // æ–°å»ºä¸€ä¸ªå‘˜å·¥
                 #region EXCLUDE
-                Console.WriteLine("'ÕıÔÚ´´½¨'ĞÂÔ±¹¤¡£");
+                Console.WriteLine("'æ­£åœ¨åˆ›å»º'æ–°å‘˜å·¥ã€‚");
                 #endregion EXCLUDE
                 break;
             case "update":
-                // ¸üĞÂÏÖÓĞÔ±¹¤µÄÊı¾İ
+                // æ›´æ–°ç°æœ‰å‘˜å·¥çš„æ•°æ®
                 #region EXCLUDE
-                Console.WriteLine("'ÕıÔÚ¸üĞÂ'Ô±¹¤¡£");
+                Console.WriteLine("'æ­£åœ¨æ›´æ–°'å‘˜å·¥ã€‚");
                 #endregion EXCLUDE
                 break;
             case "delete":
-                // É¾³ıÏÖÓĞÔ±¹¤µÄÎÄ¼ş
+                // åˆ é™¤ç°æœ‰å‘˜å·¥çš„æ–‡ä»¶
                 #region EXCLUDE
-                Console.WriteLine("'ÕıÔÚÉ¾³ı'Ô±¹¤¡£");
+                Console.WriteLine("'æ­£åœ¨åˆ é™¤'å‘˜å·¥ã€‚");
                 #endregion EXCLUDE
                 break;
             default:
                 Console.WriteLine(
                     "Employee.exe " +
                     "new|update|delete " +
-                    "<id> [Ãû×Ö] [ĞÕÊÏ]");
+                    "<id> [åå­—] [å§“æ°]");
                 break;
         }
     }

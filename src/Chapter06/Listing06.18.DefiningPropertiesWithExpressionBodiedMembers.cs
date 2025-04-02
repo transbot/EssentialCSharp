@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜Žä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618
 // Disabled pending introduction to object initializers
 #pragma warning disable IDE0017 
@@ -11,10 +11,10 @@ public class Program
     {
         Employee employee = new();
 
-        // µ÷ÓÃFirstNameÊôÐÔµÄÈ¡Öµ·½·¨(setter)
+        // è°ƒç”¨FirstNameå±žæ€§çš„å–å€¼æ–¹æ³•(setter)
         employee.FirstName = "Inigo";
 
-        // µ÷ÓÃFirstNameÊôÐÔµÄ¸³Öµ·½·¨(getter)
+        // è°ƒç”¨FirstNameå±žæ€§çš„èµ‹å€¼æ–¹æ³•(getter)
         System.Console.WriteLine(employee.FirstName);
     }
 }
@@ -22,7 +22,7 @@ public class Program
 #region INCLUDE
 public class Employee
 {
-    // FirstNameÊôÐÔ
+    // FirstNameå±žæ€§
     public string FirstName
     {
         get
@@ -36,7 +36,7 @@ public class Employee
     }
     #region HIGHLIGHT
     private string _FirstName;
-    // LastNameÊôÐÔ
+    // LastNameå±žæ€§
     public string LastName
     {
         get => _LastName;

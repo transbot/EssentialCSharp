@@ -13,7 +13,7 @@ public class Program
         (string, Contact) keyValuePair;
         keyValuePair =
             ("555-55-5555", new Contact("Inigo Montoya"));
-#else // C# 7.0以前使用System.Tuple<string, Contact>
+#else // C# 7.0浠ュ墠浣跨敤System.Tuple<string, Contact>
         Tuple<string, Contact> keyValuePair;
         keyValuePair =
             Tuple.Create(

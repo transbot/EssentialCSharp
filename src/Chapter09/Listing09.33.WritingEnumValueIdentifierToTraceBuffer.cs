@@ -8,7 +8,7 @@ public class Program
     {
         #region INCLUDE
         System.Diagnostics.Trace.WriteLine(
-            $"а╛╫сд©г╟{ConnectionState.Disconnecting}║ё");
+            $"Х©·Ф▌╔Г⌡╝Е┴█{ConnectionState.Disconnecting}Ц─┌");
         #endregion INCLUDE
     }
 }

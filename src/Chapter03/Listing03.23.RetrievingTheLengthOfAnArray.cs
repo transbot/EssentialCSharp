@@ -11,7 +11,7 @@ public class Program
         // ...
         #region INCLUDE
         Console.WriteLine(
-            $"Êı×éÖĞÓĞ{languages.Length}ÖÖÓïÑÔ¡£");
+            $"æ•°ç»„ä¸­æœ‰{languages.Length}ç§è¯­è¨€ã€‚");
         #endregion INCLUDE
     }
 }

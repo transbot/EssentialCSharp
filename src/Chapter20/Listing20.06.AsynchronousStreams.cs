@@ -35,8 +35,8 @@ public static class Program
         IEnumerable<string> files = Directory.EnumerateFiles(
             directoryPath, searchPattern);
 
-        // ´´½¨Ò»¸öcancellation token source£¬Èç¹û
-        // ²Ù×÷ºÄÊ±³¬¹ı1·ÖÖÓ¾ÍÈ¡Ïû¡£
+        // åˆ›å»ºä¸€ä¸ªcancellation token sourceï¼Œå¦‚æœ
+        // æ“ä½œè€—æ—¶è¶…è¿‡1åˆ†é’Ÿå°±å–æ¶ˆã€‚
         using CancellationTokenSource cancellationTokenSource =
             new(1000*60);
 
@@ -88,7 +88,7 @@ public static class Program
     }
     #region EXCLUDE
 
-    // ¼ò»¯²âÊÔ
+    // ç®€åŒ–æµ‹è¯•
     public static Cryptographer? Cryptographer { get; private set; }
 
     private static void DisplayHelp() { /* ... */ }

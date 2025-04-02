@@ -14,10 +14,10 @@ public class Program
         contact = new Contact();
         item = contact;
 
-        // Í¨¹ıPdaItem±äÁ¿À´ÉèÖÃĞÕÃû
+        // é€šè¿‡PdaItemå˜é‡æ¥è®¾ç½®å§“å
         item.Name = "Inigo Montoya";
 
-        // Ö¤Ã÷ÒÑÉèÖÃFirstNameºÍLastName
+        // è¯æ˜å·²è®¾ç½®FirstNameå’ŒLastName
         Console.WriteLine(
             $"{ contact.FirstName } { contact.LastName}");
     }

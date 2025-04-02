@@ -16,17 +16,17 @@ public class Program
         thermostat.OnTemperatureChange =
             heater.OnTemperatureChanged;
 
-        // Bug: ¸³Öµ²Ù×÷·û¸²¸ÇÁËÖ®Ç°µÄ¸³Öµ
+        // Bug: èµ‹å€¼æ“ä½œç¬¦è¦†ç›–äº†ä¹‹å‰çš„èµ‹å€¼
         #region HIGHLIGHT
         thermostat.OnTemperatureChange = 
             cooler.OnTemperatureChanged;
         #endregion HIGHLIGHT
 
-        Console.Write("ÊäÈëÎÂ¶È: ");
+        Console.Write("è¾“å…¥æ¸©åº¦: ");
         string? temperature = Console.ReadLine();
         if (!int.TryParse(temperature, out int currentTemperature))
         {
-            Console.WriteLine($"'{temperature}' ²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£");
+            Console.WriteLine($"'{temperature}' ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
             return;
         }
         thermostat.CurrentTemperature = currentTemperature;

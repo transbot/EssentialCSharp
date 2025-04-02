@@ -14,12 +14,12 @@ public class Program
         #endregion EXCLUDE
         if (number is null)
         {
-            Console.WriteLine("ĞèÒªÎª'number'Ìá¹©Ò»¸öÖµ£¬²»ÔÊĞíÎªnull¡£");
+            Console.WriteLine("éœ€è¦ä¸º'number'æä¾›ä¸€ä¸ªå€¼ï¼Œä¸å…è®¸ä¸ºnullã€‚");
         }
         else
         {
-            Console.WriteLine($"ÄãÔÚÃüÁîĞĞÌá¹©µÄµÚÒ»¸ö²ÎÊı°üÀ¨{number}¸ö×Ö·û/×Ö¡£");
-            Console.WriteLine($"'number'µÄÁ½±¶ÊÇ{number * 2}¡£");
+            Console.WriteLine($"ä½ åœ¨å‘½ä»¤è¡Œæä¾›çš„ç¬¬ä¸€ä¸ªå‚æ•°åŒ…æ‹¬{number}ä¸ªå­—ç¬¦/å­—ã€‚");
+            Console.WriteLine($"'number'çš„ä¸¤å€æ˜¯{number * 2}ã€‚");
         }
     }
     #endregion INCLUDE

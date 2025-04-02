@@ -14,8 +14,8 @@ public class PdaItem
 }
 public class Contact : PdaItem
 {
-    // ½ûÖ¹¾¯¸æ£¬ÒòÎªFirstNameºÍLastName ÊÇÍ¨¹ıNameÊôĞÔÀ´ÉèÖÃµÄ
-    // ²»¿ÉÎªnullµÄ×Ö¶ÎÎ´³õÊ¼»¯
+    // ç¦æ­¢è­¦å‘Šï¼Œå› ä¸ºFirstNameå’ŒLastName æ˜¯é€šè¿‡Nameå±æ€§æ¥è®¾ç½®çš„
+    // ä¸å¯ä¸ºnullçš„å­—æ®µæœªåˆå§‹åŒ–
 #pragma warning disable CS8618
     #region HIGHLIGHT
     public Contact(string name) :
@@ -35,7 +35,7 @@ public class Contact : PdaItem
         set
         {
             string[] names = value.Split(' ');
-            // Î´ÏÔÊ¾´íÎó´¦Àí
+            // æœªæ˜¾ç¤ºé”™è¯¯å¤„ç†
             FirstName = names[0];
             LastName = names[1];
         }

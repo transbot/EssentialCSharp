@@ -7,19 +7,19 @@ public class Program
         int input = int.Parse(args[0]);
         #region INCLUDE
         if (input <= 0)
-            Console.WriteLine("ÍË³ö...");
+            Console.WriteLine("é€€å‡º...");
         else if (input < 9)
             Console.WriteLine(
-                "¾®×ÖÆå×î´óÂÖÊı" +
-                $"´óÓÚ{input}");
+                "äº•å­—æ£‹æœ€å¤§è½®æ•°" +
+                $"å¤§äº{input}");
         else if (input > 9)
             Console.WriteLine(
-                "¾®×ÖÆå×î´óÂÖÊı" +
-                $"Ğ¡ÓÚ{input}");
+                "äº•å­—æ£‹æœ€å¤§è½®æ•°" +
+                $"å°äº{input}");
         else
             Console.WriteLine(
-                "ÕıÈ·£¬¾®×ÖÆå×î¶à" +
-                "Ö»ÄÜ×ß9ÂÖ¡£");
+                "æ­£ç¡®ï¼Œäº•å­—æ£‹æœ€å¤š" +
+                "åªèƒ½èµ°9è½®ã€‚");
         #endregion INCLUDE
     }
 }

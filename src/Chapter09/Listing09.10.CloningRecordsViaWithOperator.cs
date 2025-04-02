@@ -11,13 +11,13 @@ public class Program
         #region INCLUDE
         Angle angle = new(90, 0, 0, null);
 
-         // with²Ù×÷·ûµÈ¼ÛÓÚ£º
+         // withæ“ä½œç¬¦ç­‰ä»·äºï¼š
         // Angle copy = new(degrees, minutes, seconds);
         Angle copy = angle with { };
         Trace.Assert(angle == copy);
 
-        // with²Ù×÷·ûÖ§³ÖÓÃ¶ÔÏó³õÊ¼»¯Æ÷ĞÎÊ½µÄ
-        // Óï·¨À´ÊµÀı»¯Ò»¸öĞŞ¸ÄºóµÄ¿½±´¡£
+        // withæ“ä½œç¬¦æ”¯æŒç”¨å¯¹è±¡åˆå§‹åŒ–å™¨å½¢å¼çš„
+        // è¯­æ³•æ¥å®ä¾‹åŒ–ä¸€ä¸ªä¿®æ”¹åçš„æ‹·è´ã€‚
         Angle modifiedCopy = angle with { Degrees = 180 };
         Trace.Assert(angle != modifiedCopy);
         #endregion INCLUDE

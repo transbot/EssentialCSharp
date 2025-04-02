@@ -17,7 +17,7 @@ public class Program
         thermostat.OnTemperatureChange +=
             cooler.OnTemperatureChanged;
 
-        // Bug: ²»Ó¦ÔÊĞíÕâÑù×ö
+        // Bug: ä¸åº”å…è®¸è¿™æ ·åš
         #region HIGHLIGHT
         thermostat.OnTemperatureChange(42);
         #endregion HIGHLIGHT

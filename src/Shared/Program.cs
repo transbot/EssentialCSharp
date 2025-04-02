@@ -23,7 +23,7 @@ public static class Program
         if (args.Length == 0)
         {
             Console.Write(
-                $"ÇëÊäÈëÒªÖ´ĞĞµÄ´úÂëÇåµ¥µÄ±àºÅ(ÀıÈç£¬Ö´ĞĞ´úÂëÇåµ¥{chapterNumber}.1£¬¾ÍÊäÈë\"{chapterNumber}.1\"): ");
+                $"è¯·è¾“å…¥è¦æ‰§è¡Œçš„ä»£ç æ¸…å•çš„ç¼–å·(ä¾‹å¦‚ï¼Œæ‰§è¡Œä»£ç æ¸…å•{chapterNumber}.1ï¼Œå°±è¾“å…¥\"{chapterNumber}.1\"): ");
             input = Console.ReadLine() ?? string.Empty;
         }
         else
@@ -52,7 +52,7 @@ public static class Program
 
             if (target is null)
             {
-                throw new InvalidOperationException($"²»´æÔÚ´úÂëÇåµ¥'{input}'¡£");
+                throw new InvalidOperationException($"ä¸å­˜åœ¨ä»£ç æ¸…å•'{input}'ã€‚");
             }
 
             MethodInfo method = target.GetMethod("Main") ??
@@ -91,30 +91,30 @@ public static class Program
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----Exception----");
-            Console.WriteLine($"²»´æÔÚºÍ´úÂëÇåµ¥{input}¶ÔÓ¦µÄÕÂ¡£");
+            Console.WriteLine($"ä¸å­˜åœ¨å’Œä»£ç æ¸…å•{input}å¯¹åº”çš„ç« ã€‚");
         }
 #pragma warning restore CA1031 // Do not catch general exception types
         catch (TargetParameterCountException exception)
         {
             throw new InvalidOperationException(
-                $"µ÷ÓÃ´úÂëÇåµ¥'{input}'Ê±³öÏÖÑÏÖØ´íÎó¡£\n",
+                $"è°ƒç”¨ä»£ç æ¸…å•'{input}'æ—¶å‡ºç°ä¸¥é‡é”™è¯¯ã€‚\n",
                 exception);
         }
         catch (InvalidOperationException exception)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("----Òì³£----");
+            Console.WriteLine("----å¼‚å¸¸----");
             Console.WriteLine(exception.Message);
         }
 #pragma warning disable CA1031 // Do not catch general exception types
         catch (Exception exception)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("----Òì³£----");
+            Console.WriteLine("----å¼‚å¸¸----");
             if (exception.InnerException is null)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(string.Format("´úÂëÇåµ¥{0}Å×³öÀàĞÍÎª{1}µÄÒ»¸öÒì³£¡£", input,
+                Console.WriteLine(string.Format("ä»£ç æ¸…å•{0}æŠ›å‡ºç±»å‹ä¸º{1}çš„ä¸€ä¸ªå¼‚å¸¸ã€‚", input,
                     exception.GetType()));
             }
             else
@@ -132,8 +132,8 @@ public static class Program
 
             Console.WriteLine();
             Console.WriteLine("____________________________");
-            Console.WriteLine("½áÊø´úÂëÇåµ¥" + input);
-            Console.Write("°´ÈÎÒâ¼üÍË³ö¡£");
+            Console.WriteLine("ç»“æŸä»£ç æ¸…å•" + input);
+            Console.Write("æŒ‰ä»»æ„é”®é€€å‡ºã€‚");
             Console.ReadKey();
         }
     }
@@ -207,7 +207,7 @@ public static class Program
 
         Console.WriteLine();
         Console.WriteLine(
-            "ÇëÌá¹©ÒªÏò³ÌĞòµÄmain·½·¨Ìá¹©µÄ²ÎÊı£¬²»Í¬²ÎÊıÒÔ¿Õ¸ñ·Ö¸ô¡£¾ßÌåÒªÇóÇë²Î¼ûÏàÓ¦µÄ´úÂëÇåµ¥¡£»òÕßÖ±½Ó°´Enter¼ü´«µİnullÖµ£º");
+            "è¯·æä¾›è¦å‘ç¨‹åºçš„mainæ–¹æ³•æä¾›çš„å‚æ•°ï¼Œä¸åŒå‚æ•°ä»¥ç©ºæ ¼åˆ†éš”ã€‚å…·ä½“è¦æ±‚è¯·å‚è§ç›¸åº”çš„ä»£ç æ¸…å•ã€‚æˆ–è€…ç›´æ¥æŒ‰Enteré”®ä¼ é€’nullå€¼ï¼š");
         string? userArguments = Console.ReadLine();
         Console.WriteLine();
         Console.WriteLine();

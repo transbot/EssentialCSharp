@@ -1,8 +1,8 @@
-// ËµÃ÷ : Checking for null isn't discussed yet.
+// è¯´æ˜ : Checking for null isn't discussed yet.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type
-// ËµÃ÷ : args is declared and referenced in the manuscript but now used because the listing is incomplete.
+// è¯´æ˜ : args is declared and referenced in the manuscript but now used because the listing is incomplete.
 #pragma warning disable IDE0060 // Remove unused parameter
-// ËµÃ÷ : Attempting to use message outside of it's scope so it goes unused.
+// è¯´æ˜ : Attempting to use message outside of it's scope so it goes unused.
 #pragma warning disable CS0219  // Variable is assigned but its value is never used
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_28;
@@ -14,13 +14,13 @@ public class Program
         #region INCLUDE
         string playerCount;
         Console.Write(
-            "ÊäÈëÍæ¼ÒÊıÁ¿(1»ò2):");
+            "è¾“å…¥ç©å®¶æ•°é‡(1æˆ–2):");
         playerCount = Console.ReadLine();
         if (playerCount != "1" && playerCount != "2")
         {
             #region HIGHLIGHT
             string message =
-                "ÄãÊäÈëÁËÎŞĞ§µÄÍæ¼ÒÊıÁ¿¡£";
+                "ä½ è¾“å…¥äº†æ— æ•ˆçš„ç©å®¶æ•°é‡ã€‚";
             #endregion HIGHLIGHT
         }
         else

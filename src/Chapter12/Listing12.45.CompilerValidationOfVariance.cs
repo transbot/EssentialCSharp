@@ -1,4 +1,4 @@
-﻿// 重要：这个文件不能编译
+// 重要：这个文件不能编译
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_45
 {

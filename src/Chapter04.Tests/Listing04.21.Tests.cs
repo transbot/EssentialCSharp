@@ -9,9 +9,9 @@ public class TicTacToeTests
     public void Main_Enter1TryToPlayAgainstComputer_ComputerPathSelected()
     {
         const string expected = """
-                1 - ÈË»ú¶ÔÕ½
-                2 - Ë«ÈË¶ÔÕ½
-                ÇëÑ¡Ôñ£º<<1
+                1 - äººæœºå¯¹æˆ˜
+                2 - åŒäººå¯¹æˆ˜
+                è¯·é€‰æ‹©ï¼š<<1
                 >>Play against computer selected.
                 """;
 
@@ -23,9 +23,9 @@ public class TicTacToeTests
     public void Main_Enter2TryToPlayAgainstOtherPerson_TwoPlayerPathSelected()
     {
         const string expected =
-@"1 - ÈË»ú¶ÔÕ½
-2 - Ë«ÈË¶ÔÕ½
-ÇëÑ¡Ôñ£º<<2
+@"1 - äººæœºå¯¹æˆ˜
+2 - åŒäººå¯¹æˆ˜
+è¯·é€‰æ‹©ï¼š<<2
 >>Play against another player.";
 
         ConsoleAssert.Expect(
@@ -36,9 +36,9 @@ public class TicTacToeTests
     public void Main_EnterOther_TwoPlayerPathSelected()
     {
         const string expected =
-@"1 - ÈË»ú¶ÔÕ½
-2 - Ë«ÈË¶ÔÕ½
-ÇëÑ¡Ôñ£º<<9
+@"1 - äººæœºå¯¹æˆ˜
+2 - åŒäººå¯¹æˆ˜
+è¯·é€‰æ‹©ï¼š<<9
 >>Play against another player.";
 
         ConsoleAssert.Expect(

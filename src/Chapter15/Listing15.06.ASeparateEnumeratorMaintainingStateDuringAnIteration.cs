@@ -15,7 +15,7 @@ public class Program
 
         // ...
 
-        // Èç¹ûÏÔÊ½ÊµÏÖIEnumerable<T>£¬ÄÇÃ´ĞèÒªÒ»´ÎÇ¿ÖÆÀàĞÍ×ª»»
+        // å¦‚æœæ˜¾å¼å®ç°IEnumerable<T>ï¼Œé‚£ä¹ˆéœ€è¦ä¸€æ¬¡å¼ºåˆ¶ç±»å‹è½¬æ¢
         // ((IEnumerable<int>)stack).GetEnumerator();
         enumerator = stack.GetEnumerator();
         while(enumerator.MoveNext())

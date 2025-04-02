@@ -26,12 +26,12 @@ public class CSharpBuiltInTypes : IEnumerable<string>
         yield return "string";
     }
 
-    // »¹ĞèÒªÊµÏÖIEnumerable.GetEnumerator·½·¨£¬ÒòÎª
-    // IEnumerable<T>ÊÇ´ÓIEnumerableÅÉÉúµÄ
+    // è¿˜éœ€è¦å®ç°IEnumerable.GetEnumeratoræ–¹æ³•ï¼Œå› ä¸º
+    // IEnumerable<T>æ˜¯ä»IEnumerableæ´¾ç”Ÿçš„
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {
-        // Ö±½Óµ÷ÓÃÉÏÊöIEnumerator<string> GetEnumerator()
+        // ç›´æ¥è°ƒç”¨ä¸Šè¿°IEnumerator<string> GetEnumerator()
         return GetEnumerator();
     }
 }

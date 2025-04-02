@@ -4,21 +4,21 @@ public class Program
 {
     public static void Main()
     {
-        System.Console.WriteLine("±¾ÀıÎŞÊµ¼ÊÊä³ö");
+        System.Console.WriteLine("æœ¬ä¾‹æ— å®é™…è¾“å‡º");
     }
 }
 
 #region INCLUDE
 public class Employee
 {
-    // FirstNameºÍLastNameÔÚInitialize()·½·¨ÄÚ²¿ÉèÖÃ
+    // FirstNameå’ŒLastNameåœ¨Initialize()æ–¹æ³•å†…éƒ¨è®¾ç½®
     #pragma warning disable CS8618
     public Employee(string firstName, string lastName)
     {
         int id;
-        // Éú³Éemployee ID...
+        // ç”Ÿæˆemployee ID...
         #region EXCLUDE
-        id = 0; // ±¾ÀıĞèÒª³õÊ¼»¯id
+        id = 0; // æœ¬ä¾‹éœ€è¦åˆå§‹åŒ–id
         #endregion EXCLUDE
         #region HIGHLIGHT
         Initialize(id, firstName, lastName);
@@ -38,7 +38,7 @@ public class Employee
         string lastName;
         Id = id;
 
-        // ²éÕÒÔ±¹¤Êı¾İ
+        // æŸ¥æ‰¾å‘˜å·¥æ•°æ®
         #region EXCLUDE
         firstName = string.Empty;
         lastName = string.Empty;
@@ -64,11 +64,11 @@ public class Employee
     public int Id { get; private set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
     public string? Title { get; set; }
     public Employee? Manager { get; set; }
 
-    // NameÊôĞÔ
+    // Nameå±æ€§
     public string Name
     {
         get
@@ -77,7 +77,7 @@ public class Employee
         }
         set
         {
-            // ½«Ëù¸³µÄÖµ²ğ·ÖÎªÃû×ÖºÍĞÕÊÏ            
+            // å°†æ‰€èµ‹çš„å€¼æ‹†åˆ†ä¸ºåå­—å’Œå§“æ°            
             string[] names;
             names = value.Split(new char[] { ' ' });
             if(names.Length == 2)
@@ -87,9 +87,9 @@ public class Employee
             }
             else
             {
-                // Èç¹ûÃ»ÓĞ¸³È«Ãû£¬¾ÍÅ×³öÒì³£
+                // å¦‚æœæ²¡æœ‰èµ‹å…¨åï¼Œå°±æŠ›å‡ºå¼‚å¸¸
                 throw new System.ArgumentException(
-                    $"Ëù¸³µÄÖµ'{value}'ÎŞĞ§¡£");
+                    $"æ‰€èµ‹çš„å€¼'{value}'æ— æ•ˆã€‚");
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_16
+namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_16
 {
     using System;
     using System.Collections.Generic;

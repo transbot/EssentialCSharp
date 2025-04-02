@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_03;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_03;
 
 using System;
 using Listing08_02;

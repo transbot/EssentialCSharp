@@ -44,14 +44,14 @@ public struct Pair<T> : IPair<T>
                     return Second;
                 default:
                     throw new NotImplementedException(
-                        $"ÉĞÎ´ÊµÏÖ{index.ToString()}Ã¶¾Ù¡£");
+                        $"å°šæœªå®ç°{index.ToString()}æšä¸¾ã€‚");
 
             }
         }
         #region EXCLUDE
 
         /*  
-        // ÎªÁËÓë¡°½á¹¹Ó¦Ö»¶Á¡±Ô­ÔòÒ»ÖÂ£¬ÕâÀï½«setter×¢ÊÍµôÁË
+        // ä¸ºäº†ä¸â€œç»“æ„åº”åªè¯»â€åŸåˆ™ä¸€è‡´ï¼Œè¿™é‡Œå°†setteræ³¨é‡Šæ‰äº†
 
         set
         {
@@ -66,7 +66,7 @@ public struct Pair<T> : IPair<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "{0}Ã¶¾ÙÉĞÎ´ÊµÏÖ",
+                        "{0}æšä¸¾å°šæœªå®ç°",
                         index.ToString()));
             }
         }

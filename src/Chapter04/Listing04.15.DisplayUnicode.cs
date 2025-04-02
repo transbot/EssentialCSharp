@@ -8,16 +8,16 @@ public class Program
         char current;
         int unicodeValue;
 
-        // ÉèÖÃcurrentµÄ³õÊ¼Öµ
+        // è®¾ç½®currentçš„åˆå§‹å€¼
         current = 'z';
 
         do
         {
-            // »ñÈ¡currentµÄUnicodeÖµ
+            // èŽ·å–currentçš„Unicodeå€¼
             unicodeValue = current;
             Console.Write($"{current}={unicodeValue}\t");
 
-            // ¼Ì³Ð´¦ÀíÓ¢Óï×ÖÄ¸±íµÄÇ°Ò»¸ö×ÖÄ¸
+            // ç»§æ‰¿å¤„ç†è‹±è¯­å­—æ¯è¡¨çš„å‰ä¸€ä¸ªå­—æ¯
             current--;
         }
         while(current >= 'a');

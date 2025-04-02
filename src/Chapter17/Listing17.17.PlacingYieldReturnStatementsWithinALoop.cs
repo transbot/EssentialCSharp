@@ -12,20 +12,20 @@ public class BinaryTree<T> :
         Value = value;
     }
     #endregion EXCLUDE
-    #region IEnumerable<T>µÄ³ÉÔ±
+    #region IEnumerable<T>çš„æˆå‘˜
     public IEnumerator<T> GetEnumerator()
     {
-        // ·µ»ØÕâ¸ö½ÚµãµÄitem
+        // è¿”å›è¿™ä¸ªèŠ‚ç‚¹çš„item
         yield return Value;
 
-        // ±éÀúpairµÄÃ¿¸öÔªËØ
+        // éå†pairçš„æ¯ä¸ªå…ƒç´ 
         #region HIGHLIGHT
         foreach (BinaryTree<T>? tree in SubItems)
         {
             if(tree is not null)
             {
-                // ÓÉÓÚpairÖĞµÄÃ¿¸öÔªËØ¶¼ÊÇÊ÷£¬
-                // ËùÒÔ±éÀúÊ÷£¬²¢yieldÃ¿¸öÔªËØ¡£
+                // ç”±äºpairä¸­çš„æ¯ä¸ªå…ƒç´ éƒ½æ˜¯æ ‘ï¼Œ
+                // æ‰€ä»¥éå†æ ‘ï¼Œå¹¶yieldæ¯ä¸ªå…ƒç´ ã€‚
                 foreach(T item in tree)
                 {
                     yield return item;
@@ -34,9 +34,9 @@ public class BinaryTree<T> :
         }
         #endregion HIGHLIGHT
     }
-    #endregion IEnumerable<T>µÄ³ÉÔ±
+    #endregion IEnumerable<T>çš„æˆå‘˜
 
-    #region IEnumerableµÄ³ÉÔ±
+    #region IEnumerableçš„æˆå‘˜
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {
@@ -44,7 +44,7 @@ public class BinaryTree<T> :
     }
     #endregion
     #region EXCLUDE
-    public T Value { get; }  // C# 6.0¿ªÊ¼¿ÉÒÔĞ´½ögetterµÄ×Ô¶¯ÊôĞÔ
+    public T Value { get; }  // C# 6.0å¼€å§‹å¯ä»¥å†™ä»…getterçš„è‡ªåŠ¨å±æ€§
 
     public Pair<BinaryTree<T>> SubItems { get; set; }
     #endregion EXCLUDE

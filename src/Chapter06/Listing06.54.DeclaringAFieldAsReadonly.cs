@@ -19,7 +19,7 @@ public class Employee
     }
 
 #if COMPILEERROR // EXCLUDE
-    // ´íÎó£º²»ÄÜÏòÖ»¶Á×Ö¶Î¸³Öµ(³ý·ÇÍ¨¹ý¹¹Ôìº¯Êý»òÕß±äÁ¿³õÊ¼»¯Æ÷)
+    // é”™è¯¯ï¼šä¸èƒ½å‘åªè¯»å­—æ®µèµ‹å€¼(é™¤éžé€šè¿‡æž„é€ å‡½æ•°æˆ–è€…å˜é‡åˆå§‹åŒ–å™¨)
     public void SetId(int id) =>
         _Id = id;
 #endif // COMPILEERROR // EXCLUDE

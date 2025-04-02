@@ -19,24 +19,24 @@ public class Program
         Thread thread = new(Decrement);
         thread.Start();
 
-        // 递增
+        // 閫掑
         for(int i = 0; i < short.MaxValue; i++)
         {
             Count++;
         }
 
         thread.Join();
-        Console.WriteLine("Main中的Count = {0}", Count);
+        Console.WriteLine("Main涓殑Count = {0}", Count);
     }
 
-    // 递减
+    // 閫掑噺
     public static void Decrement()
     {
         for(int i = 0; i < short.MaxValue; i++)
         {
             Count--;
         }
-        Console.WriteLine("Decrement中的Count = {0}", Count);
+        Console.WriteLine("Decrement涓殑Count = {0}", Count);
     }
 }
 #endregion INCLUDE

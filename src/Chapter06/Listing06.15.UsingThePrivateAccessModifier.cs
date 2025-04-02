@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618
 // Our Main doesn't leverage everything in our Employee implementation - in production it would
 #pragma warning disable CS0649
@@ -16,8 +16,8 @@ public class Employee
     public string FirstName;
     public string LastName;
     public string? Salary;
-    // ÏñÕâÑùÖ±½ÓÊ¹ÓÃ½âÃÜµÄÃÜÂë½ö¹©ÑİÊ¾£¬Æ½Ê±²»ÍÆ¼ö¡£ 
-    // Î´³õÊ¼»¯£»ÉÔºó»á½âÊÍ¡°¹¹Ôìº¯Êı¡±
+    // åƒè¿™æ ·ç›´æ¥ä½¿ç”¨è§£å¯†çš„å¯†ç ä»…ä¾›æ¼”ç¤ºï¼Œå¹³æ—¶ä¸æ¨èã€‚ 
+    // æœªåˆå§‹åŒ–ï¼›ç¨åä¼šè§£é‡Šâ€œæ„é€ å‡½æ•°â€
     #region HIGHLIGHT
     private string Password;  
     private bool IsAuthenticated;
@@ -55,7 +55,7 @@ public class Program
 
 #if COMPILEERROR // EXCLUDE
         #region HIGHLIGHT
-        // ´íÎó: PasswordÊÇË½ÓĞµÄ£¬ËùÒÔ²»ÄÜ´ÓÀàµÄÍâ²¿·ÃÎÊ
+        // é”™è¯¯: Passwordæ˜¯ç§æœ‰çš„ï¼Œæ‰€ä»¥ä¸èƒ½ä»ç±»çš„å¤–éƒ¨è®¿é—®
         Console.WriteLine(
            "Password = {0}", employee.Password);
         #endregion HIGHLIGHT

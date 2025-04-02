@@ -4,6 +4,6 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_13;
 struct ServiceStatus
 {
     int State;
-    string Description;  // stringÊÇÒıÓÃÀàĞÍ
+    string Description;  // stringæ˜¯å¼•ç”¨ç±»å‹
 }
 #endregion INCLUDE

@@ -4,12 +4,12 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_05;
 struct Nullable
 {
     /// <summary>
-    /// ÔÚHasValue·µ»ØtrueÊ±Ìá¹©Öµ
+    /// åœ¨HasValueè¿”å›trueæ—¶æä¾›å€¼
     /// </summary>
     public object Value { get; private set; }
 
     /// <summary>
-    /// ¸ÃÊôĞÔÖ¸³öÊÇÕæµÄÓĞÒ»¸öÖµ£¬»¹ÊÇÖµÎª"null"
+    /// è¯¥å±æ€§æŒ‡å‡ºæ˜¯çœŸçš„æœ‰ä¸€ä¸ªå€¼ï¼Œè¿˜æ˜¯å€¼ä¸º"null"
     /// </summary>
     public bool HasValue { get; private set; }
 

@@ -7,41 +7,41 @@ class Program
     {
         string filePath = "enumtest.txt";
 
-        // È·±£ÎÄ¼ş´æÔÚ
+        // ç¡®ä¿æ–‡ä»¶å­˜åœ¨
         if (!File.Exists(filePath))
         {
-            // Èç¹ûÎÄ¼ş²»´æÔÚ£¬´´½¨ÎÄ¼ş
+            // å¦‚æœæ–‡ä»¶ä¸å­˜åœ¨ï¼Œåˆ›å»ºæ–‡ä»¶
             using (var stream = File.Create(filePath)) { }
-            Console.WriteLine($"ÒÑ´´½¨{filePath}¡£");
+            Console.WriteLine($"å·²åˆ›å»º{filePath}ã€‚");
         }
 
         var file = new FileInfo(filePath);
 
         try
         {
-            // »ñÈ¡³õÊ¼ÎÄ¼şÊôĞÔ
+            // è·å–åˆå§‹æ–‡ä»¶å±æ€§
             FileAttributes startingAttributes = file.Attributes;
-            Console.WriteLine($"³õÊ¼ÎÄ¼şÊôĞÔ: {startingAttributes}");
+            Console.WriteLine($"åˆå§‹æ–‡ä»¶å±æ€§: {startingAttributes}");
 
-            // ÉèÖÃÎÄ¼şÊôĞÔÎªÒş²ØºÍÖ»¶Á
+            // è®¾ç½®æ–‡ä»¶å±æ€§ä¸ºéšè—å’Œåªè¯»
             file.Attributes = FileAttributes.Hidden | FileAttributes.ReadOnly;
-            Console.WriteLine($"ÒÑ½«ÎÄ¼şÊôĞÔÉèÎª: {file.Attributes}");
+            Console.WriteLine($"å·²å°†æ–‡ä»¶å±æ€§è®¾ä¸º: {file.Attributes}");
 
-            // ĞŞ¸ÄÏÔÊ¾Ğ§¹û£¬½«¶ººÅ¸ÄÎªÊúÏß
-            Console.WriteLine("Ô­±¾Êä³ö\"{1}\"£¬Ìæ»»Îª\"{0}\"¡£",
+            // ä¿®æ”¹æ˜¾ç¤ºæ•ˆæœï¼Œå°†é€—å·æ”¹ä¸ºç«–çº¿
+            Console.WriteLine("åŸæœ¬è¾“å‡º\"{1}\"ï¼Œæ›¿æ¢ä¸º\"{0}\"ã€‚",
                 file.Attributes.ToString().Replace(",", " |"),
                 file.Attributes);
         }
         catch (IOException e)
         {
-            Console.WriteLine($"·¢ÉúI/O´íÎó: {e.Message}");
+            Console.WriteLine($"å‘ç”ŸI/Oé”™è¯¯: {e.Message}");
         }
 
-        // É¾³ıÎÄ¼şÇ°£¬±ØĞëÏÈÇå³ıÖ»¶ÁÊôĞÔ
+        // åˆ é™¤æ–‡ä»¶å‰ï¼Œå¿…é¡»å…ˆæ¸…é™¤åªè¯»å±æ€§
         file.Attributes &= ~FileAttributes.ReadOnly;
 
-        // É¾³ıÎÄ¼ş
+        // åˆ é™¤æ–‡ä»¶
         file.Delete();
-        Console.WriteLine($"ÎÄ¼ş{filePath}ÒÑÉ¾³ı¡£");
+        Console.WriteLine($"æ–‡ä»¶{filePath}å·²åˆ é™¤ã€‚");
     }
 }

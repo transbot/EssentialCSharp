@@ -1,4 +1,4 @@
-﻿// Unhandled exceptions will be added in version 1.1 of .Net Core
+// Unhandled exceptions will be added in version 1.1 of .Net Core
 
 //namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_20
 //{

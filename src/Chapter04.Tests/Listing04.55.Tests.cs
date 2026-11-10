@@ -1,4 +1,4 @@
-using IntelliTect.TestTools.Console;
+﻿using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_55.Tests;
 
@@ -15,14 +15,14 @@ public class GoToStatementsTests
     [TestMethod]
     public void Main_f_isFiltered()
     {
-        string expected = "Filtering...";
+        string expected = "正在筛选...";
         ConsoleAssert.Expect(expected, () => GoToStatements.Main(["/f"]));
     }
 
     [TestMethod]
     public void Main_f_out_isFiltered()
     {
-        string expected = "Filtering...";
+        string expected = "正在筛选...";
         ConsoleAssert.Expect(expected, () => GoToStatements.Main(["/f", "/out"]));
     }
 }

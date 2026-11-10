@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_14;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_14;
 
 #region INCLUDE
 public class StormingTheCastle
@@ -6,14 +6,14 @@ public class StormingTheCastle
     public static void Main()
     {
         string valerie;
-        string miracleMax = "Óä¿ìµØÏ®»÷¹Å±¤°É£¡";
+        string miracleMax = "æ„‰å¿«åœ°è¢­å‡»å¤å ¡å§ï¼";
 
-        valerie = "Äã¾õµÃ¿ÉÒÔÂğ?";
+        valerie = "ä½ è§‰å¾—å¯ä»¥å—?";
 
         Console.WriteLine(miracleMax);
         Console.WriteLine(valerie);
 
-        miracleMax = "ÕâĞèÒªÆæ¼£¡£";
+        miracleMax = "è¿™éœ€è¦å¥‡è¿¹ã€‚";
         Console.WriteLine(miracleMax);
     }
 }

@@ -3,6 +3,11 @@ root = true
 # All files
 [*]
 indent_style = space
+charset = utf-8
+
+# Keep legacy Windows PowerShell able to recognize Chinese script text.
+[*.ps1]
+charset = utf-8-bom
 
 # Xml files
 [*.xml]

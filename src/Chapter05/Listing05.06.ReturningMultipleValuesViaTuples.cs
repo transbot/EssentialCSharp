@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_06;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_06;
 
 #region INCLUDE
 public class Program
@@ -13,8 +13,8 @@ public class Program
     #endregion HIGHLIGHT
     {
         string firstName, lastName;
-        firstName = GetUserInput("ÇëÊäÈëÄãµÄÃû×Ö: ");
-        lastName = GetUserInput("ÇëÊäÈëÄãµÄĞÕÊÏ: ");         
+        firstName = GetUserInput("è¯·è¾“å…¥ä½ çš„åå­—: ");
+        lastName = GetUserInput("è¯·è¾“å…¥ä½ çš„å§“æ°: ");
         return (firstName, lastName);
     }
     public static void Main()
@@ -22,7 +22,7 @@ public class Program
         #region HIGHLIGHT
         (string First, string Last) name = GetName();
         #endregion HIGHLIGHT
-        Console.WriteLine($"ÄãºÃ£¬{ name.First } { name.Last }£¡");
+        Console.WriteLine($"ä½ å¥½ï¼Œ{ name.First } { name.Last }ï¼");
     }
 }
 #endregion INCLUDE

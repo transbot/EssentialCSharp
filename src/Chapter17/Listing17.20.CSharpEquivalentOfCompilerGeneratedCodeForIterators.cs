@@ -1,4 +1,4 @@
-using AddisonWesley.Michaelis.EssentialCSharp.Chapter17.Listing17_11;
+ï»¿using AddisonWesley.Michaelis.EssentialCSharp.Chapter17.Listing17_11;
 #region INCLUDE
 using System;
 using System.Collections;
@@ -34,7 +34,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter17.Listing17_20
                     {
                         throw new NotImplementedException(
                             string.Format(
-                                "ÉÐÎ´ÊµÏÖ{0}Ã¶¾Ù", 
+                                "å°šæœªå®žçŽ°{0}æžšä¸¾",
                                 index.ToString()));
                     }
                     result = Second;

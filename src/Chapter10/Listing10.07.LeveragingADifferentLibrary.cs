@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_07;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_07;
 
 using Microsoft.Extensions.Logging;
 
@@ -13,11 +13,11 @@ public sealed class Program
 
         ILogger logger = loggerFactory.CreateLogger<Program>();
 
-        logger.LogInformation($@"Ò½Ôº½ô¼±´úÂë: = '{
+        logger.LogInformation($@"åŒ»é™¢ç´§æ€¥ä»£ç : = '{
             string.Join("', '", args)}'");
         // ...
 
-        logger.LogWarning("²âÊÔ½ô¼±ÊÂ¼ş...");
+        logger.LogWarning("æµ‹è¯•ç´§æ€¥äº‹ä»¶...");
         // ...
     }
 }

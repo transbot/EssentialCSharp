@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_05;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_05;
 
 public class Program
 {
@@ -6,10 +6,10 @@ public class Program
     {
         #region INCLUDE
         var patent1 =
-            new { Title = "Ë«½¹µãÑÛ¾µ",
+            new { Title = "åŒç„¦ç‚¹çœ¼é•œ",
                 YearOfPublication = "1784" };
         var patent2 =
-            new { Title = "ÁôÉù»ú",
+            new { Title = "ç•™å£°æœº",
                 YearOfPublication = "1877" };
 
         Console.WriteLine(

@@ -31,9 +31,9 @@ public struct Pair<T> : IPair<T>
         Second = second;
     }
 
-    public T First { get; } // C# 6.0ÒıÈëµÄ½ögetter×Ô¶¯ÊôĞÔ
+    public T First { get; } // C# 6.0å¼•å…¥çš„ä»…getterè‡ªåŠ¨å±æ€§
 
-    public T Second { get; } // C# 6.0ÒıÈëµÄ½ögetter×Ô¶¯ÊôĞÔ
+    public T Second { get; } // C# 6.0å¼•å…¥çš„ä»…getterè‡ªåŠ¨å±æ€§
     #region INCLUDE
     [System.Runtime.CompilerServices.IndexerName("Entry")]
     public T this[PairItem index]
@@ -46,7 +46,7 @@ public struct Pair<T> : IPair<T>
                 PairItem.First => First,
                 PairItem.Second => Second,
                 _ => throw new NotImplementedException(
-                     $"ÉĞÎ´ÊµÏÖ{index}Ã¶¾Ù"),
+                     $"å°šæœªå®ç°{index}æšä¸¾"),
             };
         }
         #endregion EXCLUDE

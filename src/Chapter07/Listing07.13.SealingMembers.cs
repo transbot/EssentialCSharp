@@ -17,7 +17,7 @@ class B : A
 
 class C : B
 {
-    // 错误: 无法重写密封成员
+    // 閿欒: 鏃犳硶閲嶅啓瀵嗗皝鎴愬憳
     //public override void Method()
     //{
     //}

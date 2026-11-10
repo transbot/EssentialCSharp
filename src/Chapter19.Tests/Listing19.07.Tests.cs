@@ -7,12 +7,12 @@ public class ProgramTests
     public void ValueTaskAsyncReturnTest()
     {
         string expected =
-@"Sleeping for 2000 ms
-Throwing exception.
-Event handler starting
-Sleeping for 4000 ms
-Awake
-Finally block running.";
+@"睡眠2000毫秒
+抛出异常。
+正在启动事件处理程序.
+睡眠4000毫秒
+唤醒
+正在运行finally块。";
 
         string output = IntelliTect.TestTools.Console.ConsoleAssert.Execute(string.Empty,
         Program.Main).TrimEnd();

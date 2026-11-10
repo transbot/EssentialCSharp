@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618 // Pending a constructors
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_32;
@@ -35,14 +35,14 @@ public class Program
         #region HIGHLIGHT
         Employee employee = new(42, "Inigo Montoya") 
         { 
-            Salary = "·Ç³£³ä×ã" 
+            Salary = "éå¸¸å……è¶³" 
         };
         #endregion HIGHLIGHT
 
 #if COMPILEERROR // EXCLUDE
         #region HIGHLIGHT
-        // ´íÎó£ºÊôĞÔ»òË÷ÒıÆ÷'Employee.Salary'²»ÄÜÔÚ³õÊ¼»¯½áÊøºó¸³Öµ
-        employee.Salary = "¹»ÁË";
+        // é”™è¯¯ï¼šå±æ€§æˆ–ç´¢å¼•å™¨'Employee.Salary'ä¸èƒ½åœ¨åˆå§‹åŒ–ç»“æŸåèµ‹å€¼
+        employee.Salary = "å¤Ÿäº†";
         #endregion HIGHLIGHT
 #endif // COMPILEERROR // EXCLUDE
     }

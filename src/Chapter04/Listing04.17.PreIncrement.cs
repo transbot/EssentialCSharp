@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_17;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_17;
 
 public class Program
 {
@@ -10,7 +10,7 @@ public class Program
         #region HIGHLIGHT
         result = ++count;
         #endregion HIGHLIGHT
-        Console.WriteLine($"result = {result}£¬count = {count}");
+        Console.WriteLine($"result = {result}ï¼Œcount = {count}");
         #endregion INCLUDE
     }
 }

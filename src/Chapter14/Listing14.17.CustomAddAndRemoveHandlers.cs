@@ -14,12 +14,12 @@ public class Thermostat
         public float NewTemperature { get; set; }
     }
  
-    // ¶¨ÒåÎ¯ÍĞÊı¾İÀàĞÍ
+    // å®šä¹‰å§”æ‰˜æ•°æ®ç±»å‹
     public delegate void EventHandler<TemperatureArgs>(
         object sender, TemperatureArgs newTemperature);
     #endregion EXCLUDE
     #region HIGHLIGHT
-    // ¶¨ÒåÊÂ¼ş·¢²¼Õß
+    // å®šä¹‰äº‹ä»¶å‘å¸ƒè€…
     public event EventHandler<TemperatureArgs> OnTemperatureChange
     {
         add
@@ -46,9 +46,9 @@ public class Thermostat
             if (value != CurrentTemperature)
             {
                 _CurrentTemperature = value;
-                // Èç¹û´æÔÚÈÎºÎ¶©ÔÄÕß£¬¾Íµ÷ÓÃ
-                // ËüÃÇ×¢²áµÄÎ¯ÍĞ£¬½«ÎÂ¶ÈµÄ±ä»¯
-                // Í¨ÖªËüÃÇ¡£
+                // å¦‚æœå­˜åœ¨ä»»ä½•è®¢é˜…è€…ï¼Œå°±è°ƒç”¨
+                // å®ƒä»¬æ³¨å†Œçš„å§”æ‰˜ï¼Œå°†æ¸©åº¦çš„å˜åŒ–
+                // é€šçŸ¥å®ƒä»¬ã€‚
                 _OnTemperatureChange?.Invoke( // C# 6.0
                       this, new TemperatureArgs(value));
             }

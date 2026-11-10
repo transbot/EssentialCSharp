@@ -19,7 +19,7 @@ public class Program
 {
     public static void Main()
     {
-        // ×¢Òâ£ºboard.Cells²»ÐèÒª³õÊ¼»¯
+        // æ³¨æ„ï¼šboard.Cellsä¸éœ€è¦åˆå§‹åŒ–
         TicTacToeBoard board = new();
         Console.WriteLine(board.Cells);
     }
@@ -28,17 +28,17 @@ public class Program
 #region INCLUDE
 class TicTacToeBoard
 {
-    // ½«Á½¸öÍæ¼ÒµÄ³õÊ¼ÆåÅÌÉèÎªÈ«false (¿Õ°×)
+    // å°†ä¸¤ä¸ªçŽ©å®¶çš„åˆå§‹æ£‹ç›˜è®¾ä¸ºå…¨false (ç©ºç™½)
     //    |   |          |   |
     // ---+---+---    ---+---+---
     //    |   |          |   |   
     // ---+---+---    ---+---+---
     //    |   |          |   |   
-    // Íæ¼Ò1 - X      Íæ¼Ò 2 - O
+    // çŽ©å®¶1 - X      çŽ©å®¶ 2 - O
     #region HIGHLIGHT
     public bool[,,] Cells { get; } = new bool[2, 3, 3];
     #endregion HIGHLIGHT
-    // ´íÎó£º²»ÄÜÏòCellsÊôÐÔ¸³Öµ£¬ÒòÎªËüÊÇÖ»¶ÁµÄ
+    // é”™è¯¯ï¼šä¸èƒ½å‘Cellså±žæ€§èµ‹å€¼ï¼Œå› ä¸ºå®ƒæ˜¯åªè¯»çš„
     // public void SetCells(bool[,,] value) =>
     //         _Cells = new bool[2, 3, 3];
 
@@ -50,7 +50,7 @@ class TicTacToeBoardPreCSharp5
 {
     public TicTacToeBoardPreCSharp5()
     {
-        // ½«Á½¸öÍæ¼ÒµÄ³õÊ¼ÆåÅÌÉèÎªÈ«false (¿Õ°×)
+        // å°†ä¸¤ä¸ªçŽ©å®¶çš„åˆå§‹æ£‹ç›˜è®¾ä¸ºå…¨false (ç©ºç™½)
         //    |   |
         // ---+---+---
         //    |   |   
@@ -66,7 +66,7 @@ class TicTacToeBoardPreCSharp5
         get { return _Cells; }
     }
     
-    // ´íÎó£ºÎÞ·¨ÏòÖ»¶Á×Ö¶Î¸³Öµ(³ý·ÇÍ¨¹ý¹¹Ôìº¯Êý»òÕß±äÁ¿³õÊ¼»¯Æ÷)
+    // é”™è¯¯ï¼šæ— æ³•å‘åªè¯»å­—æ®µèµ‹å€¼(é™¤éžé€šè¿‡æž„é€ å‡½æ•°æˆ–è€…å˜é‡åˆå§‹åŒ–å™¨)
     // public void SetCells(bool[,,] value) =>
     // Cells = new bool[2, 3, 3];
 

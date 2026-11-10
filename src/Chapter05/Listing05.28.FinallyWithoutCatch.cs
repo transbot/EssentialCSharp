@@ -12,22 +12,22 @@ public class ExceptionHandling
         int age;
         int result = 0;
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
-        Console.Write("ÇëÊäÈëÄãµÄÄêÁä: ");
-        // ¼ÙÉè²»Îª¿Õ        // 
+        Console.Write("è¯·è¾“å…¥ä½ çš„å¹´é¾„: ");
+        // å‡è®¾ä¸ä¸ºç©º        // 
         ageText = Console.ReadLine()!;
 
         try
         {
             age = int.Parse(ageText);
             Console.WriteLine(
-                $"ÄãºÃ£¬{firstName}£¡ÄãÓĞ{age * 12}¸öÔÂ´óÁË¡£"); 
+                $"ä½ å¥½ï¼Œ{firstName}ï¼ä½ æœ‰{age * 12}ä¸ªæœˆå¤§äº†ã€‚"); 
         }
         finally
         {
-            Console.WriteLine($"ÔÙ¼û£¬{firstName}¡£");
+            Console.WriteLine($"å†è§ï¼Œ{firstName}ã€‚");
         }
 
         return result;

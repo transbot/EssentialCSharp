@@ -11,7 +11,7 @@ public class Program
         if (radius >= 0)
             area = Math.PI * radius * radius;
             Console.WriteLine(
-                $"Ô²µÄÃæ»ıÊÇ: {area:0.00}");
+                $"åœ†çš„é¢ç§¯æ˜¯: {area:0.00}");
         #endregion INCLUDE
     }
 }

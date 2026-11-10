@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter15.Listing15_21;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter15.Listing15_21;
 
 using AddisonWesley.Michaelis.EssentialCSharp.Chapter15.Listing15;
 #region INCLUDE
@@ -25,7 +25,7 @@ public class Program
                 Console.WriteLine(employee);
             }
             Console.WriteLine(
-              "\t¼ÆÊý: " + employeeGroup.Count());
+              "\tè®¡æ•°: " + employeeGroup.Count());
         }
         //...
         #endregion INCLUDE

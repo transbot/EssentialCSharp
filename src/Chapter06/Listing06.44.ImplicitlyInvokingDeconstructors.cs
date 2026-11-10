@@ -10,8 +10,8 @@ public class Program
         Employee employee;
         employee = new ("Inigo", "Montoya")
         {
-            // ÀûÓÃ¶ÔÏó³õÊ¼»¯Æ÷Óï·¨
-            Salary = "Ì«ÉÙÁË"
+            // åˆ©ç”¨å¯¹è±¡åˆå§‹åŒ–å™¨è¯­æ³•
+            Salary = "å¤ªå°‘äº†"
         };
 
         #region EXCLUDE

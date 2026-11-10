@@ -6,7 +6,7 @@ using Listing14_01;
 #region INCLUDE
 public class Thermostat
 {
-    // ¶¨ÒåÊÂ¼ş·¢²¼Õß
+    // å®šä¹‰äº‹ä»¶å‘å¸ƒè€…
     public Action<float>? OnTemperatureChange;
 
     public float CurrentTemperature
@@ -40,8 +40,8 @@ public class Thermostat
                     if(exceptionCollection.Count > 0)
                     {
                         throw new AggregateException(
-                            "ÓĞÒì³£´Ó" +
-                            "OnTemperatureChangeÊÂ¼ş¶©ÔÄÕßÅ×³ö¡£",
+                            "æœ‰å¼‚å¸¸ä»" +
+                            "OnTemperatureChangeäº‹ä»¶è®¢é˜…è€…æŠ›å‡ºã€‚",
                             exceptionCollection);
                     }
                     #endregion HIGHLIGHT
@@ -73,11 +73,11 @@ public class Program
             thermostat.OnTemperatureChange +=
                 cooler.OnTemperatureChanged;
 
-            Console.Write("ÊäÈëÎÂ¶È: ");
+            Console.Write("è¾“å…¥æ¸©åº¦: ");
             string? temperature = Console.ReadLine();
             if (!int.TryParse(temperature, out int currentTemperature))
             {
-                Console.WriteLine($"'{temperature}' ²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£");
+                Console.WriteLine($"'{temperature}' ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
                 return;
             }
             thermostat.CurrentTemperature = currentTemperature;
@@ -87,8 +87,8 @@ public class Program
             Console.WriteLine(exception.Message);
             if (exception.InnerExceptions.Count > 1)
             {
-                // Òì³£³¬¹ı1¸öÊ±²ÅÃ¶¾ÙÕâĞ©Òì³££¬ÒòÎªÈç¹ûÖ»ÓĞÒ»¸öÒì³££¬
-                // ËüµÄÏûÏ¢ÒÑ¾­ºÏ²¢µ½AggregateExceptionµÄÏûÏ¢ÖĞÁË¡£                
+                // å¼‚å¸¸è¶…è¿‡1ä¸ªæ—¶æ‰æšä¸¾è¿™äº›å¼‚å¸¸ï¼Œå› ä¸ºå¦‚æœåªæœ‰ä¸€ä¸ªå¼‚å¸¸ï¼Œ
+                // å®ƒçš„æ¶ˆæ¯å·²ç»åˆå¹¶åˆ°AggregateExceptionçš„æ¶ˆæ¯ä¸­äº†ã€‚                
                 foreach (Exception item in exception.InnerExceptions)
                 {
                     Console.WriteLine("\t{0}: {1}",

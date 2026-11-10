@@ -34,7 +34,7 @@ public class Program
               "333-345-6789")
         };
 
-        // ÀàÒşÊ½×ªĞÍÎªËüÃÇÖ§³ÖµÄ½Ó¿Ú
+        // ç±»éšå¼è½¬å‹ä¸ºå®ƒä»¬æ”¯æŒçš„æ¥å£
         ConsoleListControl.List(Contact.Headers, contacts);
 
         Console.WriteLine();
@@ -57,7 +57,7 @@ public class Program
 #region INCLUDE
 public interface IListable
 {
-    // ·µ»ØÒ»ĞĞÖĞÃ¿¸öµ¥Ôª¸ñµÄÖµ
+    // è¿”å›ä¸€è¡Œä¸­æ¯ä¸ªå•å…ƒæ ¼çš„å€¼
     string?[] CellValues
     {
         get;
@@ -70,8 +70,8 @@ public interface IListable
     #endregion HIGHLIGHT
         {
             var result = new ConsoleColor[CellValues.Length];
-            // Ê¹ÓÃ·ºĞÍArray·½·¨À´Ìî³äÊı×é
-            // (²Î¼ûµÚ12ÕÂ)
+            // ä½¿ç”¨æ³›å‹Arrayæ–¹æ³•æ¥å¡«å……æ•°ç»„
+            // (å‚è§ç¬¬12ç« )
             Array.Fill(result, DefaultColumnColor);
             return result;
         }
@@ -127,7 +127,7 @@ public class Contact : PdaItem, IListable
         }
     }
     #region HIGHLIGHT
-    // *** Î´Ìá¹©CellColorsµÄÊµÏÖ *** //
+    // *** æœªæä¾›CellColorsçš„å®ç° *** //
     #endregion HIGHLIGHT
     #endregion IListable
 
@@ -222,8 +222,8 @@ public class ConsoleListControl
         }
     }
 
-    /// <summary>ÏÔÊ¾ÁĞ±êÌâ</summary>
-    /// <returns>·µ»ØÓÉÁĞ¿í¹¹³ÉµÄÒ»¸öÊı×é</returns>
+    /// <summary>æ˜¾ç¤ºåˆ—æ ‡é¢˜</summary>
+    /// <returns>è¿”å›ç”±åˆ—å®½æ„æˆçš„ä¸€ä¸ªæ•°ç»„</returns>
     private static int[] DisplayHeaders(string[] headers)
     {
         var columnWidths = new int[headers.Length];
@@ -244,7 +244,7 @@ public class ConsoleListControl
         {
             throw new ArgumentOutOfRangeException(
                 $"{ nameof(columnWidths) },{ nameof(item) }.{nameof(item.CellColors) }",
-                "ÁĞ¿íÖµµÄÊıÁ¿±ØĞëÓëÒª´òÓ¡µÄÖµµÄÊıÁ¿Æ¥Åä");
+                "åˆ—å®½å€¼çš„æ•°é‡å¿…é¡»ä¸è¦æ‰“å°çš„å€¼çš„æ•°é‡åŒ¹é…");
         }
 
         // Exception handling excluded for elucidation

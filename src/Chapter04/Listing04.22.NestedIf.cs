@@ -1,4 +1,4 @@
-// ËµÃ÷ : Checking for null isn't discussed yet.
+// è¯´æ˜ : Checking for null isn't discussed yet.
 #pragma warning disable CS8604 // Possible null reference argument
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_22;
 
@@ -7,41 +7,41 @@ public class TicTacToeTrivia
     public static void Main()
     {
         #region INCLUDE
-        int input;    // ÉùÃ÷Ò»¸ö±äÁ¿À´´æ´¢ÓÃ»§ÊäÈë
+        int input;    // å£°æ˜ä¸€ä¸ªå˜é‡æ¥å­˜å‚¨ç”¨æˆ·è¾“å…¥
 
         Console.Write(
-            "¾®×ÖÆå×î¶àÄÜ×ß" +
-            "¶àÉÙ²½?" +
-            " (ÊäÈë0ÍË³ö): ");
+            "äº•å­—æ£‹æœ€å¤šèƒ½èµ°" +
+            "å¤šå°‘æ­¥?" +
+            " (è¾“å…¥0é€€å‡º): ");
 
-        // int.Parse()½«ReadLine()µÄ
-        // ·µ»ØÖµ×ª»»Îªint
+        // int.Parse()å°†ReadLine()çš„
+        // è¿”å›å€¼è½¬æ¢ä¸ºint
         input = int.Parse(Console.ReadLine());
 
-        // Ìõ¼ş1
+        // æ¡ä»¶1
         if (input <= 0)
-            // ÊäÈëĞ¡ÓÚµÈÓÚ0
-            Console.WriteLine("ÍË³ö...");
+            // è¾“å…¥å°äºç­‰äº0
+            Console.WriteLine("é€€å‡º...");
         else
-            // Ìõ¼ş2
+            // æ¡ä»¶2
             if (input < 9)
-            // ÊäÈëĞ¡ÓÚ9
+            // è¾“å…¥å°äº9
             Console.WriteLine(
-                "¾®×ÖÆå×î´ó²½Êı" +
-                $"´óÓÚ{input}");
+                "äº•å­—æ£‹æœ€å¤§æ­¥æ•°" +
+                $"å¤§äº{input}");
         else
-                // Ìõ¼ş3
+                // æ¡ä»¶3
                 if (input > 9)
-            // ÊäÈë´óÓÚ9
+            // è¾“å…¥å¤§äº9
             Console.WriteLine(
-                "¾®×ÖÆå×î´ó²½Êı" +
-                $"Ğ¡ÓÚ{input}");
-        // Ìõ¼ş4
+                "äº•å­—æ£‹æœ€å¤§æ­¥æ•°" +
+                $"å°äº{input}");
+        // æ¡ä»¶4
         else
-            // ÊäÈëµÈÓÚ9
+            // è¾“å…¥ç­‰äº9
             Console.WriteLine(
-                "ÕıÈ·£¬¾®×ÖÆå×î¶à" +
-                "Ö»ÄÜ×ß9²½¡£");
+                "æ­£ç¡®ï¼Œäº•å­—æ£‹æœ€å¤š" +
+                "åªèƒ½èµ°9æ­¥ã€‚");
         #endregion INCLUDE
     } 
 }

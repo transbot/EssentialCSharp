@@ -14,9 +14,9 @@ public class BinaryTree<T>
     }
 
     /// <summary>
-    /// ·µ»ØÎ»ÓÚÌØ¶¨Î»ÖÃµÄBinaryTree<typeparamref name="T"/>
+    /// è¿”å›ä½äºç‰¹å®šä½ç½®çš„BinaryTree<typeparamref name="T"/>
     /// </summary>
-    /// <param name="branches">Ö¸ÏòÌØ¶¨·ÖÖ§µÄÒ»¸öPairItemsÊı×é¡£</param>
+    /// <param name="branches">æŒ‡å‘ç‰¹å®šåˆ†æ”¯çš„ä¸€ä¸ªPairItemsæ•°ç»„ã€‚</param>
     /// <example>
     /// familyTree.SubItems.Second.SubItems[PairItem.First].Value
     /// </example>
@@ -27,20 +27,20 @@ public class BinaryTree<T>
         {
             BinaryTree<T> currentNode = this;
 
-            // ÔÊĞíÊ¹ÓÃ¿ÕÊı×é»ònullÀ´ÒıÓÃ¸ù½Úµã
+            // å…è®¸ä½¿ç”¨ç©ºæ•°ç»„æˆ–nullæ¥å¼•ç”¨æ ¹èŠ‚ç‚¹
             int totalLevels = branches?.Length ?? 0;
             int currentLevel = 0;
 
             while (currentLevel < totalLevels)
             {
                 System.Diagnostics.Debug.Assert(branches is not null,
-                    $"{ nameof(branches) }²»Îªnull");
+                    $"{ nameof(branches) }ä¸ä¸ºnull");
 
                 currentNode = currentNode.SubItems[
                     branches[currentLevel]];
                 if (currentNode is null)
                 {
-                    // ´ËÎ»ÖÃµÄ¶ş²æÊ÷Îªnull
+                    // æ­¤ä½ç½®çš„äºŒå‰æ ‘ä¸ºnull
                     throw new IndexOutOfRangeException();
                 }
                 currentLevel++;
@@ -61,35 +61,35 @@ public class Program
 {
     public static void Main()
     {
-        // JFK(¿ÏÄáµÏ)¼Ò×å×åÆ×
+        // JFK(è‚¯å°¼è¿ª)å®¶æ—æ—è°±
         var jfkFamilyTree = new BinaryTree<string>(
             "John Fitzgerald Kennedy")
         {
             SubItems = new Pair<BinaryTree<string>>(
                 new BinaryTree<string>("Joseph Patrick Kennedy")
                 {
-                    // ×æ¸¸Ä¸£¨¸¸Ç×ÄÇ±ß£©
+                    // ç¥–çˆ¶æ¯ï¼ˆçˆ¶äº²é‚£è¾¹ï¼‰
                     SubItems = new Pair<BinaryTree<string>>(
                         new BinaryTree<string>("Patrick Joseph Kennedy"),
                         new BinaryTree<string>("Mary Augusta Hickey"))
                 },
                 new BinaryTree<string>("Rose Elizabeth Fitzgerald")
                 {
-                    // Íâ×æ¸¸Ä¸£¨Ä¸Ç×ÄÇ±ß£©
+                    // å¤–ç¥–çˆ¶æ¯ï¼ˆæ¯äº²é‚£è¾¹ï¼‰
                     SubItems = new Pair<BinaryTree<string>>(
                         new BinaryTree<string>("John Francis Fitzgerald"),
                         new BinaryTree<string>("Mary Josephine Hannon"))
                 })
         };
 
-        // ÉÏÊö¶ş²æÊ÷µÄ½á¹¹ÈçÏÂËùÊ¾£º
-        // John Fitzgerald Kennedy£¨ÕâÊÇ´ó¼ÒÊìÖªµÄÃÀ¹ú×ÜÍ³¿ÏÄáµÏ£©
-        //     Joseph Patrick Kennedy£¨¿ÏÄáµÏµÄÀÏ°Ö£©
-        //         Patrick Joseph Kennedy£¨¿ÏÄáµÏµÄ×æ¸¸£©
-        //         Mary Augusta Hickey£¨¿ÏÄáµÏµÄ×æÄ¸£©
-        //     Rose Elizabeth Fitzgerald£¨¿ÏÄáµÏµÄÀÏÂè£©
-        //         John Francis Fitzgerald£¨¿ÏÄáµÏµÄÍâ×æ¸¸£©
-        //         Mary Josephine Hannon£¨¿ÏÄáµÏµÄÍâ×æÄ¸£©
+        // ä¸Šè¿°äºŒå‰æ ‘çš„ç»“æ„å¦‚ä¸‹æ‰€ç¤ºï¼š
+        // John Fitzgerald Kennedyï¼ˆè¿™æ˜¯å¤§å®¶ç†ŸçŸ¥çš„ç¾å›½æ€»ç»Ÿè‚¯å°¼è¿ªï¼‰
+        //     Joseph Patrick Kennedyï¼ˆè‚¯å°¼è¿ªçš„è€çˆ¸ï¼‰
+        //         Patrick Joseph Kennedyï¼ˆè‚¯å°¼è¿ªçš„ç¥–çˆ¶ï¼‰
+        //         Mary Augusta Hickeyï¼ˆè‚¯å°¼è¿ªçš„ç¥–æ¯ï¼‰
+        //     Rose Elizabeth Fitzgeraldï¼ˆè‚¯å°¼è¿ªçš„è€å¦ˆï¼‰
+        //         John Francis Fitzgeraldï¼ˆè‚¯å°¼è¿ªçš„å¤–ç¥–çˆ¶ï¼‰
+        //         Mary Josephine Hannonï¼ˆè‚¯å°¼è¿ªçš„å¤–ç¥–æ¯ï¼‰
 
         Console.WriteLine(jfkFamilyTree[PairItem.Second, PairItem.First].Value);
         Console.WriteLine(jfkFamilyTree[PairItem.Second, PairItem.Second].Value);

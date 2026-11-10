@@ -1,7 +1,7 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_02;
 
 #region INCLUDE
-// Ê¹ÓÃrecord struct¹¹ÔìÀ´ÉùÃ÷Ò»¸öÖµÀàĞÍ
+// ä½¿ç”¨record structæ„é€ æ¥å£°æ˜ä¸€ä¸ªå€¼ç±»å‹
 public readonly record struct Angle(
     int Degrees, int Minutes, int Seconds, string? Name = null);
 #endregion INCLUDE

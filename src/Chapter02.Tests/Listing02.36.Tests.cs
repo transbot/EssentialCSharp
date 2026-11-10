@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_36.Tests;
 
 [TestClass]
@@ -7,7 +7,7 @@ public class ProgramTests
     [TestMethod]
     public void Main_UsingTryParseWithInlineOut_Pi()
     {
-        string expected = $"Enter a number: <<{System.Math.PI}>>input was parsed successfully to {System.Math.PI}.>>{Environment.NewLine}'number' currently has the value: { System.Math.PI }";
+        string expected = $"输入一个数字: <<{System.Math.PI}>>输入被成功解析成数字: {System.Math.PI}.>>{Environment.NewLine}'number'目前的值是: { System.Math.PI }";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);
@@ -17,8 +17,8 @@ public class ProgramTests
     [TestMethod]
     public void Main_UsingTryParseWithInlineOut_Pie()
     {
-        string expected = @$"Enter a number: <<pie>>The text entered was not a valid number.
-'number' currently has the value: { default(int) }";
+        string expected = @$"输入一个数字: <<pie>>输入的文本不是一个有效的数字。
+'number'目前的值是: { default(int) }";
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);
 

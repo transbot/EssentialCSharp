@@ -20,13 +20,13 @@ public class Program
         delegate1 = heater.OnTemperatureChanged;
         delegate2 = cooler.OnTemperatureChanged;
 
-        Console.WriteLine("Ê¹ÓÃ+²Ù×÷·ûºÏ²¢Î¯ÍĞ:");
+        Console.WriteLine("ä½¿ç”¨+æ“ä½œç¬¦åˆå¹¶å§”æ‰˜:");
         #region HIGHLIGHT
         delegate3 = delegate1 + delegate2;
         #endregion HIGHLIGHT
         delegate3(60);
 
-        Console.WriteLine("Ê¹ÓÃ-²Ù×÷·ûÈ¡ÏûºÏ²¢Î¯ÍĞ:");
+        Console.WriteLine("ä½¿ç”¨-æ“ä½œç¬¦å–æ¶ˆåˆå¹¶å§”æ‰˜:");
         #region HIGHLIGHT
         delegate3 = (delegate3 - delegate2)!;
         #endregion HIGHLIGHT

@@ -9,14 +9,14 @@ public class Program
         string? uri = null;
 
         #region EXCLUDE
-        // ÊéÖĞÎ´ÏÔÊ¾£¬ÒòÎªargsÔÚÒ»¸öÕı³£µÄMain·½·¨ÊÇ²»¿ÉÄÜÎªnullµÄ¡£
+        // ä¹¦ä¸­æœªæ˜¾ç¤ºï¼Œå› ä¸ºargsåœ¨ä¸€ä¸ªæ­£å¸¸çš„Mainæ–¹æ³•æ˜¯ä¸å¯èƒ½ä¸ºnullçš„ã€‚
         segments = args;        
         #endregion EXCLUDE
         int? length = segments?.Length;
         #region EXCLUDE
 
-        // Ò²ÔÊĞíÄ£Ê½Æ¥Åä¡£
-        // µ«ÒòÎªµ½µÚ7ÕÂ²Å½²µ½Õâ¸öÖ÷Ìâ£¬ËùÒÔÊéÖĞÓÃµÄ²»ÊÇÕâ¸ö¡£
+        // ä¹Ÿå…è®¸æ¨¡å¼åŒ¹é…ã€‚
+        // ä½†å› ä¸ºåˆ°ç¬¬7ç« æ‰è®²åˆ°è¿™ä¸ªä¸»é¢˜ï¼Œæ‰€ä»¥ä¹¦ä¸­ç”¨çš„ä¸æ˜¯è¿™ä¸ªã€‚
         if (length is not null and not 0) { /*...*/ }
         #endregion EXCLUDE
         if (length is not null && length != 0)
@@ -27,7 +27,7 @@ public class Program
         if (uri is null || length is 0)
         {
             Console.WriteLine(
-                "Ã»ÓĞ¸ü¶àÇø¶Î¿ÉÒÔºÏ²¢ÁË¡£");
+                "æ²¡æœ‰æ›´å¤šåŒºæ®µå¯ä»¥åˆå¹¶äº†ã€‚");
         }
         else
         {

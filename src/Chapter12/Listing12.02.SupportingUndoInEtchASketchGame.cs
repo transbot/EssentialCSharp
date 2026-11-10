@@ -19,7 +19,7 @@ public class Program
         Cell currentPosition;
         ConsoleKeyInfo key;
         #region EXCLUDE
-        Console.WriteLine("°´¼ýÍ·¼ü»­Í¼£¬°´XÍË³ö¡£");
+        Console.WriteLine("æŒ‰ç®­å¤´é”®ç”»å›¾ï¼ŒæŒ‰Xé€€å‡ºã€‚");
         for(int i = 2; i < Console.WindowHeight; i++)
         {
             Console.WriteLine();
@@ -32,13 +32,13 @@ public class Program
 
         do
         {
-            // ¸ù¾ÝÓÃ»§Ëù°´¼ýÍ·¼üµÄ·½Ïò½øÐÐ»æÖÆ
+            // æ ¹æ®ç”¨æˆ·æ‰€æŒ‰ç®­å¤´é”®çš„æ–¹å‘è¿›è¡Œç»˜åˆ¶
             key = Move();
 
             switch(key.Key)
             {
                 case ConsoleKey.Z:
-                    // ³·ÏûÉÏÒ»´ÎÒÆ¶¯
+                    // æ’¤æ¶ˆä¸Šä¸€æ¬¡ç§»åŠ¨
                     if(path.Count >= 1)
                     {
                         #region HIGHLIGHT
@@ -105,7 +105,7 @@ public class Program
                     break;
             }
         }
-        while(key.Key != ConsoleKey.X);  // °´XÍË³ö
+        while(key.Key != ConsoleKey.X);  // æŒ‰Xé€€å‡º
     }
     #region EXCLUDE
     private static ConsoleKeyInfo Move()

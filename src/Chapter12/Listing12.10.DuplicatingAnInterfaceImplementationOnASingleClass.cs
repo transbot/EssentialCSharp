@@ -58,6 +58,6 @@ public class Person : IContainer<Address>,
 }
 #endregion INCLUDE
 
-public class Address { } // 只是举例
-public class Phone { } // 只是举例
-public class Email { } // 只是举例
+public class Address { } // 鍙槸涓句緥
+public class Phone { } // 鍙槸涓句緥
+public class Email { } // 鍙槸涓句緥

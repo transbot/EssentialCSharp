@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_01;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_01;
 
 #region INCLUDE
 public static class SimpleSort1

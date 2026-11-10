@@ -45,13 +45,13 @@ public class Employee
         NextId++;
     }
 
-    // ±¾ÕÂÉÔºó»á°Ñ×Ö¶Î°ü×°³ÉÊôĞÔ
-    #pragma warning disable CA2211 // ·Ç³£Á¿×Ö¶Î¾Íµ±²»¿É¼û
+    // æœ¬ç« ç¨åä¼šæŠŠå­—æ®µåŒ…è£…æˆå±æ€§
+    #pragma warning disable CA2211 // éå¸¸é‡å­—æ®µå°±å½“ä¸å¯è§
     public static int NextId = 42;
     #pragma warning disable CA2211
 
     public int Id { get; private set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
 }

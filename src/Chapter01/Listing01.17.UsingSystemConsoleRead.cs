@@ -6,12 +6,12 @@ public class Program
     {
         int readValue;
         char character;
-        Console.Write("随意输入，按Enter键结束：");
+        Console.Write("闅忔剰杈撳叆锛屾寜Enter閿粨鏉燂細");
 
         while (true)
         {
             readValue = Console.Read();
-            if (readValue == 13) break; // 13是Enter键的编码
+            if (readValue == 13) break; // 13鏄疎nter閿殑缂栫爜
             character = (char)readValue;
             Console.Write(character);
         }

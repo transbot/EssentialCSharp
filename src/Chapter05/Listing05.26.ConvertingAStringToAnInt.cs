@@ -9,19 +9,19 @@ public class ExceptionHandling
         string ageText;
         int age;
 
-        Console.WriteLine("ºÙ£¬Äã£¡");
+        Console.WriteLine("å˜¿ï¼Œä½ ï¼");
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
         #region HIGHLIGHT
-        Console.Write("ÇëÊäÈëÄãµÄÄêÁä: ");
-        // ¼ÙÉè²»Îª¿Õ
+        Console.Write("è¯·è¾“å…¥ä½ çš„å¹´é¾„: ");
+        // å‡è®¾ä¸ä¸ºç©º
         ageText = Console.ReadLine()!;
         age = int.Parse(ageText);
 
         Console.WriteLine(
-            $"ÄãºÃ£¬{ firstName }£¡ÄãÓĞ{ age * 12 }¸öÔÂ´óÁË¡£");
+            $"ä½ å¥½ï¼Œ{ firstName }ï¼ä½ æœ‰{ age * 12 }ä¸ªæœˆå¤§äº†ã€‚");
         #endregion HIGHLIGHT
     }
     #endregion INCLUDE

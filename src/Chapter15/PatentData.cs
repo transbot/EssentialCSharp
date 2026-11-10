@@ -2,13 +2,13 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter15.Listing15;
 
 public class Patent
 {
-    // ×¨ÀûÉêÇë±êÌâ
+    // ä¸“åˆ©ç”³è¯·æ ‡é¢˜
     public string Title { get; }
 
-    // ×¨ÀûµÄÕıÊ½·¢²¼ÈÕÆÚ
+    // ä¸“åˆ©çš„æ­£å¼å‘å¸ƒæ—¥æœŸ
     public string YearOfPublication { get; }
 
-    // ·ÖÅä¸ø×¨ÀûµÄÎ¨Ò»±àºÅ
+    // åˆ†é…ç»™ä¸“åˆ©çš„å”¯ä¸€ç¼–å·
     public string? ApplicationNumber { get; set; }
 
     public long[] InventorIds { get; }
@@ -60,38 +60,38 @@ public static class PatentData
     public static readonly Inventor[] Inventors = new Inventor[]
     {
         new(
-    "±¾½ÜÃ÷¡¤¸»À¼¿ËÁÖ", "·Ñ³Ç",
-    "PA", "ÃÀ¹ú", 1),
+    "æœ¬æ°æ˜Â·å¯Œå…°å…‹æ—", "è´¹åŸ",
+    "PA", "ç¾å›½", 1),
         new(
-    "°ÂÎ¬¶û¡¤À³ÌØ", "»ùµÙ»ô¿Ë",
-    "NC", "ÃÀ¹ú", 2),
+    "å¥¥ç»´å°”Â·è±ç‰¹", "åŸºè’‚éœå…‹",
+    "NC", "ç¾å›½", 2),
         new(
-    "Íş¶û²®¡¤À³ÌØ", "»ùµÙ»ô¿Ë",
-    "NC", "ÃÀ¹ú", 3),
+    "å¨å°”ä¼¯Â·è±ç‰¹", "åŸºè’‚éœå…‹",
+    "NC", "ç¾å›½", 3),
         new(
-    "ÈûçÑ¶û¡¤Äª¶ûË¹", "Å¦Ô¼",
-    "NY", "ÃÀ¹ú", 4),
+    "å¡ç¼ªå°”Â·è«å°”æ–¯", "çº½çº¦",
+    "NY", "ç¾å›½", 4),
         new(
-    "ÇÇÖÎ¡¤Ë¹µÙ·ÒÉ­", "»³À­Ä·",
-    "ÅµÉ­²®À¼", "Ó¢¹ú", 5),
+    "ä¹”æ²»Â·æ–¯è’‚èŠ¬æ£®", "æ€€æ‹‰å§†",
+    "è¯ºæ£®ä¼¯å…°", "è‹±å›½", 5),
         new(
-    "Ô¼º²¡¤Âõ¿ËÀûË¹", "Ö¥¼Ó¸ç",
-    "IL", "ÃÀ¹ú", 6),
+    "çº¦ç¿°Â·è¿ˆå…‹åˆ©æ–¯", "èŠåŠ å“¥",
+    "IL", "ç¾å›½", 6),
         new(
-    "ÂêÀö¡¤·Æ¶ûÆÕË¹¡¤ÑÅ¸÷²¼", "Å¦Ô¼",
-    "NY", "ÃÀ¹ú", 7)
+    "ç›ä¸½Â·è²å°”æ™®æ–¯Â·é›…å„å¸ƒ", "çº½çº¦",
+    "NY", "ç¾å›½", 7)
     };
 
     public static readonly Patent[] Patents = new Patent[]
     {
-        new("Ë«½¹µãÑÛ¾µ","1784", inventorIds: new long[] { 1 }),
-        new("ÁôÉù»ú", "1877", inventorIds: new long[] { 1 }),
-        new("»î¶¯µçÓ°»ú", "1888", inventorIds: new long[] { 1 }),
-        new("µç±¨", "1837", inventorIds: new long[] { 4 }),
-        new("·É»ú", "1903", inventorIds: new long[] { 2, 3 }),
-        new("ÕôÆû»ú³µ", "1815", inventorIds: new long[] { 5 }),
-        new("ÒºµÎ³Á»ı×°ÖÃ", "1989", inventorIds: new long[] { 6 }),
-        new("ÎŞ±³Ê½ĞØÕÖ", "1914", inventorIds: new long[] { 7 })
+        new("åŒç„¦ç‚¹çœ¼é•œ","1784", inventorIds: new long[] { 1 }),
+        new("ç•™å£°æœº", "1877", inventorIds: new long[] { 1 }),
+        new("æ´»åŠ¨ç”µå½±æœº", "1888", inventorIds: new long[] { 1 }),
+        new("ç”µæŠ¥", "1837", inventorIds: new long[] { 4 }),
+        new("é£æœº", "1903", inventorIds: new long[] { 2, 3 }),
+        new("è’¸æ±½æœºè½¦", "1815", inventorIds: new long[] { 5 }),
+        new("æ¶²æ»´æ²‰ç§¯è£…ç½®", "1989", inventorIds: new long[] { 6 }),
+        new("æ— èƒŒå¼èƒ¸ç½©", "1914", inventorIds: new long[] { 7 })
     };
 }
 

@@ -1,4 +1,4 @@
-// ËµÃ÷ : Only partial implementation provided.
+// è¯´æ˜ : Only partial implementation provided.
 #pragma warning disable IDE0051 // Remove unused private members
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter22.Listing22_06;
@@ -9,10 +9,10 @@ public class SynchronizationUsingInterlocked
 {
     private static object? _Data;
 
-    // Èç¹û_DataÉĞÎ´¸³Öµ£¬¾Í³õÊ¼»¯Ëü
+    // å¦‚æœ_Dataå°šæœªèµ‹å€¼ï¼Œå°±åˆå§‹åŒ–å®ƒ
     public static void Initialize(object newValue)
     {
-        // Èç¹û_DataÎªnull£¬¾Í°ÑËüÉèÎªnewValue
+        // å¦‚æœ_Dataä¸ºnullï¼Œå°±æŠŠå®ƒè®¾ä¸ºnewValue
         Interlocked.CompareExchange(
             ref _Data, newValue, null);
     }

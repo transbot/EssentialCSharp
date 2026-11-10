@@ -1,4 +1,4 @@
-
+﻿
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_33.Tests;
 
@@ -17,7 +17,7 @@ public class ProgramTests
         {
             command = item;
             IntelliTect.TestTools.Console.ConsoleAssert.Expect(
-                "Command Help...", () => Program.Main(new[] { command }));
+                "命令帮助...", () => Program.Main(new[] { command }));
         }
     }
 
@@ -30,7 +30,7 @@ public class ProgramTests
         {
             command = $"{item}";
             IntelliTect.TestTools.Console.ConsoleAssert.Expect(
-                $"Catalog '{fileName}'...", () => Program.Main(new[] { command, fileName }));
+                $"编录 '{fileName}'...", () => Program.Main(new[] { command, fileName }));
         }
     }
 
@@ -43,7 +43,7 @@ public class ProgramTests
         {
             command = $"{item}";
             IntelliTect.TestTools.Console.ConsoleAssert.Expect(
-                $"Copy '{sourceFile}' '{targetFile}'...", () => Program.Main(new[] { command, sourceFile, targetFile }));
+                $"复制 '{sourceFile}' '{targetFile}'...", () => Program.Main(new[] { command, sourceFile, targetFile }));
         }
     }
 

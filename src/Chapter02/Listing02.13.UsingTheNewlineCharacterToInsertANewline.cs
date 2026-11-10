@@ -5,8 +5,8 @@ public class DuelOfWits
     public static void Main()
     {
         #region INCLUDE
-        Console.Write("\"真的，你有令人混乱的智慧。\"");
-        Console.Write("\n\"等我做选择吧！\"\n");
+        Console.Write("\"鐪熺殑锛屼綘鏈変护浜烘贩涔辩殑鏅烘収銆俓"");
+        Console.Write("\n\"绛夋垜鍋氶�夋嫨鍚э紒\"\n");
         
         #endregion INCLUDE
     }

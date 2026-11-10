@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_10;
@@ -15,8 +15,8 @@ public class Employee
         return $"{ FirstName } { LastName }";
     }
 
-    // ¾¯¸æ£º²ÎÊıÃûÊ¹ÓÃÁËPascalCase´óĞ¡Ğ´·ç¸ñ£¬
-    // Ó¦¸ÄÎªcamelCase´óĞ¡Ğ´·ç¸ñ¡£
+    // è­¦å‘Šï¼šå‚æ•°åä½¿ç”¨äº†PascalCaseå¤§å°å†™é£æ ¼ï¼Œ
+    // åº”æ”¹ä¸ºcamelCaseå¤§å°å†™é£æ ¼ã€‚
     public void SetName(string FirstName, string LastName)
     {
         this.FirstName = FirstName;

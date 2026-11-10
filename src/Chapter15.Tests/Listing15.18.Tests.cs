@@ -8,20 +8,20 @@ public class ProgramTests
     public void MainTest()
     {
         const string expected = @"Corporate
-Human Resources
-Engineering
-Information Technology
-Philanthropy
-Marketing
+人力资源
+工程
+IT
+慈善
+市场
 
-Mark Michaelis (Chief 电脑发烧友)
-Michael Stokesbary (Senior Computer Wizard)
-Brian Jones (Enterprise Integration Guru)
-Anne Beard (HR Director)
-Pat Dever (Enterprise Architect)
-Kevin Bost (Programmer Extraordinaire)
-Thomas Heavey (Software Architect)
-Eric Edmonds (Philanthropy Coordinator)";
+Mark Michaelis (首席电脑发烧友)
+Michael Stokesbary (高级电脑巫师)
+Brian Jones (企业集成大师)
+Anne Beard (人力资源总监)
+Pat Dever (企业架构师)
+Kevin Bost (杰出程序员)
+Thomas Heavey (软件架构师)
+Eric Edmonds (慈善协调员)";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

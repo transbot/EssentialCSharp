@@ -1,4 +1,4 @@
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_29.Tests;
 
@@ -28,7 +28,7 @@ public class ProgramTests
     [DataRow(0, -1, "III")]
     public void GetQuadrant(int x, int y, string quadrant)
     {
-        Assert.AreEqual<string>($"Quadrant { quadrant }", PointHelper.GetQuadrant(new Point(x,y)),
+        Assert.AreEqual<string>(quadrant == "I" ? "象限I" : $"象限 {quadrant}", PointHelper.GetQuadrant(new Point(x,y)),
             $"({ x}, {y}) is not in the expected {quadrant}.");
     }
 }

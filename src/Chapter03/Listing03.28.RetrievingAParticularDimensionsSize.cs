@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_28;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_28;
 
 public class Program
 {
@@ -7,8 +7,8 @@ public class Program
         #region INCLUDE
         bool[, ,] cells;
         cells = new bool[2, 3, 3];
-        Console.WriteLine(cells.GetLength(0)); // ÏÔÊ¾2
-        Console.WriteLine(cells.Rank); // ÏÔÊ¾3
+        Console.WriteLine(cells.GetLength(0)); // æ˜¾ç¤º2
+        Console.WriteLine(cells.Rank); // æ˜¾ç¤º3
         #endregion INCLUDE
     }
 }

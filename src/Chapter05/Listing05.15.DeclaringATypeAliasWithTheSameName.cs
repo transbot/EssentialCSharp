@@ -4,8 +4,8 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_15;
 #region INCLUDE
 
 #region HIGHLIGHT
-// ÉùÃ÷±ğÃûTimerÀ´ÒıÓÃSystem.Timers.Timer£¬
-// ÒÔ±ÜÃâ´úÂëÓëSystem.Threading.Timer²úÉúÆçÒå¡£
+// å£°æ˜åˆ«åTimeræ¥å¼•ç”¨System.Timers.Timerï¼Œ
+// ä»¥é¿å…ä»£ç ä¸System.Threading.Timeräº§ç”Ÿæ­§ä¹‰ã€‚
 using Timer = System.Timers.Timer;
 #endregion HIGHLIGHT
 

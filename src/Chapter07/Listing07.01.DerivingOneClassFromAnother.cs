@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_01;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_01;
 
 using System;
 using System.Diagnostics.CodeAnalysis;

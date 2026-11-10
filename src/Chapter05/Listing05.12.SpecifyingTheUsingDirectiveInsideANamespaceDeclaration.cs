@@ -1,69 +1,25 @@
-// Disabled because not attributes have not been covered
-// and the attribute is not available in .NET 6.0.
-#pragma warning disable SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
-
-// ¸Ã´úÂëÇåµ¥´æÔÚbug£¬ÒÔÖĞÎÄ°æÊéÖĞµÄÎª×¼¡£
-// »òÕß²Î¿¼ÏÂÃæÕâ¸ö£º
-//namespace EssentialCSharp
-//{
-//    using System;
-//    class HelloWorld
-//    {
-//        static void Main()
-//        {
-//            // ÒòÎªÉÏ·½µÄusingÖ¸Áî£¬ËùÒÔ
-//            // ²»ĞèÒªÓÃSystemÏŞ¶¨ConsoleÀà¡£            
-//            Console.WriteLine("ÄãºÃ£¬ÎÒµÄÃû×ÖÊÇInigo Montoya¡£");
-//        }
-//    }
-//}
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_12;
-
-#region INCLUDE
-// The using directive imports all types from the 
-// specified namespace into the entire file
-using System.Text.RegularExpressions;
-
-public class Program
+ï»¿// ä¸­æ–‡ç‰ˆè¯‘ç¨¿ä»£ç æ¸…å•5.12ï¼šåœ¨å‘½åç©ºé—´å£°æ˜ä¸­ä½¿ç”¨ using æŒ‡ä»¤ã€‚
+// HelloWorld çš„ public å¯è§æ€§å’Œä¸‹æ–¹ Program åŒ…è£…å™¨ç”¨äºé…å¥—æ¸…å•è¿è¡Œå™¨ã€‚
+namespace EssentialCSharp
 {
-    public static void Main()
+    #region INCLUDE
+    using System;
+
+    public class HelloWorld
     {
-        #region EXCLUDE
-        const string firstName = "FirstName";
-        const string initial = "Initial";
-        const string lastName = "LastName";
-
-        // Explaining regular expressions is beyond the
-        // scope of this book.
-        // See https://www.regular-expressions.info/ for
-        // more information.
-        const string pattern = $"""
-            (?<{firstName}>\w+)\s+((?<{initial}>\w)\.\s+)?(?<{lastName}>\w+)\s*
-            """;
-
-        Console.WriteLine(
-            "ÊäÈëÄãµÄÈ«Ãû£º(ÀıÈçInigo T. Montoya): ");
-        string name = Console.ReadLine()!;
-
-        #endregion EXCLUDE
-        #region HIGHLIGHT
-        // ÒòÎªusingÖ¸ÁîµÄ´æÔÚ£¬²»ĞèÒªÓÃ
-        // System.Text.RegularExpressionsÏŞ¶¨
-        // RegExÀàĞÍ
-        Match match = Regex.Match(name, pattern);
-        #endregion HIGHLIGHT
-        #region EXCLUDE
-
-        if (match.Success)
+        public static void Main()
         {
-            Console.WriteLine(
-                $"{firstName}: {match.Groups[firstName]}");
-            Console.WriteLine(
-                $"{initial}: {match.Groups[initial]}");
-            Console.WriteLine(
-                $"{lastName}: {match.Groups[lastName]}");
+            // å› ä¸ºä¸Šæ–¹çš„ using æŒ‡ä»¤ï¼Œæ‰€ä»¥ä¸éœ€è¦ç”¨ System é™å®š Console ç±»ã€‚
+            Console.WriteLine("ä½ å¥½ï¼Œæˆ‘çš„åå­—æ˜¯Inigo Montoyaã€‚");
         }
-        #endregion EXCLUDE
+    }
+    #endregion INCLUDE
+}
+
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_12
+{
+    public class Program
+    {
+        public static void Main() => global::EssentialCSharp.HelloWorld.Main();
     }
 }
-#endregion INCLUDE

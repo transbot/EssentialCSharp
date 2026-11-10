@@ -80,7 +80,7 @@ class Program
 {
     static void Main()
     {
-        // ´ÓC# 4.0¿ªÊ¼Ö§³Ö
+        // ä»C# 4.0å¼€å§‹æ”¯æŒ
         Pair<Contact> contacts = new(
                 new Contact("Princess Buttercup"),
                 new Contact("Inigo Montoya"));

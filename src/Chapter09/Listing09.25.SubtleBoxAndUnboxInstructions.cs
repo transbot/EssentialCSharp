@@ -6,22 +6,22 @@ public class DisplayFibonacci
 {
     public static void Main()
     {
-        // ¹ÊÒâÊ¹ÓÃArrayListÀ´ÑİÊ¾×°Ïä
+        // æ•…æ„ä½¿ç”¨ArrayListæ¥æ¼”ç¤ºè£…ç®±
         System.Collections.ArrayList list = new();
 
-        Console.Write("ÊäÈë2¡«1000µÄÕûÊı£¬ÎÒ½«Éú³ÉÕâÃ´¶à¸öì³²¨ÄÇÆõÊı: ");
+        Console.Write("è¾“å…¥2ï½1000çš„æ•´æ•°ï¼Œæˆ‘å°†ç”Ÿæˆè¿™ä¹ˆå¤šä¸ªæ–æ³¢é‚£å¥‘æ•°: ");
         string? inputText = Console.ReadLine();
         if (!int.TryParse(inputText, out int totalCount))
         {
-            Console.WriteLine($"'{inputText}'²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£");
+            Console.WriteLine($"'{inputText}'ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
             return;
         }
 
-        if (totalCount == 7)  // ÓÃÒ»¸öÄ§·¨Êı×ÖÀ´Ö´ĞĞ²âÊÔ
+        if (totalCount == 7)  // ç”¨ä¸€ä¸ªé­”æ³•æ•°å­—æ¥æ‰§è¡Œæµ‹è¯•
         {
-            // Èç¹û»ñÈ¡µÄÖµÊÇdouble£¬ÄÇÃ´»á´¥·¢Òì³£
-            list.Add(0);  // ÒªÇó×ªĞÍÎªdouble£¬»òÕß¸½¼Ó'D'ºó×º¡£
-                          // ÎŞÂÛ×ªĞÍ»¹ÊÇÊ¹ÓÃ'D'ºó×º£¬Éú³ÉµÄCIL¶¼ÊÇÒ»ÑùµÄ¡£
+            // å¦‚æœè·å–çš„å€¼æ˜¯doubleï¼Œé‚£ä¹ˆä¼šè§¦å‘å¼‚å¸¸
+            list.Add(0);  // è¦æ±‚è½¬å‹ä¸ºdoubleï¼Œæˆ–è€…é™„åŠ 'D'åç¼€ã€‚
+                          // æ— è®ºè½¬å‹è¿˜æ˜¯ä½¿ç”¨'D'åç¼€ï¼Œç”Ÿæˆçš„CILéƒ½æ˜¯ä¸€æ ·çš„ã€‚
 
         }
         else
@@ -38,7 +38,7 @@ public class DisplayFibonacci
                 (double)list[count - 2]!);
         }
 
-        // ÓÃforeachÀ´³ÎÇå×°Ïä²Ù×÷£¬¶ø²»ÊÇÊ¹ÓÃ£º
+        // ç”¨foreachæ¥æ¾„æ¸…è£…ç®±æ“ä½œï¼Œè€Œä¸æ˜¯ä½¿ç”¨ï¼š
         // Console.WriteLine(string.Join(", ", list.ToArray()));
         foreach (double? count in list)
         {

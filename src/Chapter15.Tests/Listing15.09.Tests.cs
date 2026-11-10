@@ -7,22 +7,22 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"Bifocals (1784)
-Phonograph (1877)
-Kinetoscope (1888)
-Electrical Telegraph (1837)
-Flying Machine (1903)
-Steam Locomotive (1815)
-Droplet Deposition Apparatus (1989)
-Backless Brassiere (1914)
+        const string expected = @"双焦点眼镜 (1784)
+留声机 (1877)
+活动电影机 (1888)
+电报 (1837)
+飞机 (1903)
+蒸汽机车 (1815)
+液滴沉积装置 (1989)
+无背式胸罩 (1914)
 
-Benjamin Franklin (Philadelphia, PA)
-Orville Wright (Kitty Hawk, NC)
-Wilbur Wright (Kitty Hawk, NC)
-Samuel Morse (New York, NY)
-George Stephenson (Wylam, Northumberland)
-John Michaelis (Chicago, IL)
-Mary Phelps Jacob (New York, NY)";
+本杰明·富兰克林 (费城, PA)
+奥维尔·莱特 (基蒂霍克, NC)
+威尔伯·莱特 (基蒂霍克, NC)
+塞缪尔·莫尔斯 (纽约, NY)
+乔治·斯蒂芬森 (怀拉姆, 诺森伯兰)
+约翰·迈克利斯 (芝加哥, IL)
+玛丽·菲尔普斯·雅各布 (纽约, NY)";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

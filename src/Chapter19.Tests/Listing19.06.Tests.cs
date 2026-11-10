@@ -7,7 +7,7 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"ERROR: Operation is not valid due to the current state of the object.";
+        const string expected = @"错误: Operation is not valid due to the current state of the object.";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

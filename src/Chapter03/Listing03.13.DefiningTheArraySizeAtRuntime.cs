@@ -6,7 +6,7 @@ public class Program
     {
         #region INCLUDE
         string[] groceryList;
-        Console.Write("¹ºÎïÇåµ¥ÖĞÓĞ¶àÉÙÖÖÉÌÆ·? ");
+        Console.Write("è´­ç‰©æ¸…å•ä¸­æœ‰å¤šå°‘ç§å•†å“? ");
         int size = int.Parse(Console.ReadLine());
         groceryList = new string[size];
         // ...

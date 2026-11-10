@@ -1,17 +1,17 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_14;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_14;
 
 public class Triangle
 {
     public static void Main()
     {
         #region INCLUDE
-        Console.Write(@"¿ªÊ¼
+        Console.Write(@"å¼€å§‹
                    /\
                   /  \
                  /    \
                 /      \
                /________\
-½áÊø");
+ç»“æŸ");
         #endregion INCLUDE
     }
 }

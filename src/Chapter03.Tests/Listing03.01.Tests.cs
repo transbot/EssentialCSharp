@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_01.Tests;
 
 [TestClass]
@@ -9,7 +9,7 @@ public class UppercaseTests
     {
         string[] args = { "arg0", "arg1" };
         string expected =
-            $"\'number\' doubled is { args[0].Length * 2 }.";
+            $"你在命令行提供的第一个参数包括{args[0].Length}个字符/字。{Environment.NewLine}\'number\'的两倍是{args[0].Length * 2}。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, ()=>Program.Main(args));
@@ -20,7 +20,7 @@ public class UppercaseTests
     {
         string[] args = System.Array.Empty<string>();
         const string expected =
-            "\'number\' requires a value and cannot be null";
+            "需要为\'number\'提供一个值，不允许为null。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, () => Program.Main(args));

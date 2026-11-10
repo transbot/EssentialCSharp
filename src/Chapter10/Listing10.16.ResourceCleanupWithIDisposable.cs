@@ -12,7 +12,7 @@ public static class Program
         TemporaryFileStream fileStream =
             new();
 
-        // ʹ����ʱ�ļ���
+        // 使用临时文件流
         // ...
 
         #region HIGHLIGHT
@@ -52,7 +52,7 @@ class TemporaryFileStream : IDisposable
     {
         Dispose(true);
 
-        // ȡ�����ս���еĵǼǣ���ʱ�������ս�����
+        // 取消向终结队列的登记（暂时不调用终结器）
         System.GC.SuppressFinalize(this);
     }
     #endregion HIGHLIGHT
@@ -60,14 +60,14 @@ class TemporaryFileStream : IDisposable
     #region HIGHLIGHT
     public void Dispose(bool disposing)
     {
-        // ��ƹ淶������Ϊ�Դ��ս����Ķ������Dispose()���෴�������ս��������ʵ����
-        // ����Ľ����ǣ�����Dispose����ʱ�����disposing����Ϊfalse��
-        // ��ô�����������ս������õģ�������ͨ�����������ʽ���õġ�
-        // ����������£�Ӧ��ֻ�������й���Դ�������ļ�������Ϊ�����ռ���
-        // ���Զ������й���Դ����������жϺ󣬿��Ա������ս�����Dispose
-        // ����֮�䷢����Դ�ظ����������⡣
-        // ��֮������disposingΪtrue��ʱ����ͷ��й���Դ���������κ�ʱ��
-        // ֻ�ͷŷ��й���Դ�������Disposeģʽ����ȷ���ơ�
+        // 设计规范：避免为自带终结器的对象调用Dispose()。相反，依赖终结队列清理实例。
+        // 具体的解释是：调用Dispose方法时，如果disposing参数为false，
+        // 那么表明它是由终结器调用的，而不是通过程序代码显式调用的。
+        // 在这种情况下，应该只清理非托管资源（例如文件），因为垃圾收集器
+        // 会自动处理托管资源。加了这个判断后，可以避免在终结器和Dispose
+        // 方法之间发生资源重复清理的问题。
+        // 总之，仅在disposing为true的时候才释放托管资源，而其他任何时候都
+        // 只释放非托管资源，这才是Dispose模式的正确姿势。
         if (disposing)
         {
             Stream?.Dispose();

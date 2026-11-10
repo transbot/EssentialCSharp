@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_09;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_09;
 
 #region INCLUDE
 interface IReadableSettingsProvider

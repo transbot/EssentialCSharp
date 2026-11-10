@@ -28,14 +28,14 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "ÉĞÎ´ÊµÏÖ{0}Ã¶¾Ù",
+                        "å°šæœªå®ç°{0}æšä¸¾",
                         index.ToString()));
             }
         }
     }
     #endregion Members
 
-    // ´úÂëÇåµ¥17.19  ÓÃyield breakÈ¡Ïûµü´ú
+    // ä»£ç æ¸…å•17.19  ç”¨yield breakå–æ¶ˆè¿­ä»£
     #region INCLUDE
     public System.Collections.Generic.IEnumerable<T> GetNotNullEnumerator()
     {
@@ -60,7 +60,7 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
     }
     #endregion IEnumerable<T>
 
-    #region IEnumerableµÄ³ÉÔ±
+    #region IEnumerableçš„æˆå‘˜
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {

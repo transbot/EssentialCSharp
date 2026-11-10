@@ -17,7 +17,7 @@ public class TimeOnlyHelper
                throw new ArgumentNullException(nameof(input));
             default:
                 throw new ArgumentException(
-                    $"无效类型 - {input.GetType().FullName}");
+                    $"鏃犳晥绫诲瀷 - {input.GetType().FullName}");
         };
     }
     #endregion INCLUDE

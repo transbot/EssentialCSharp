@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_09.Tests;
 
@@ -8,12 +8,12 @@ public class ProgramTests
     [TestMethod]
     public void AsyncVoidReturnTest()
     {
-        string expected = $@"Invoking Task.Run...(Thread ID: *)
-Running task... (Thread ID: *)
-Post notification invoked...(Thread ID: *)*
-Throwing expected exception....(Thread ID: *)
-System.Exception: Expected Exception
-   *(Thread ID: *)";
+        string expected = $@"正在调用Task.Run...(线程ID: *)
+正在运行任务... (线程ID: *)
+已调用Post通知...(线程ID: *)*
+正在抛出预期的异常....(线程ID: *)
+已抛出预期的异常System.Exception: 预期的异常
+   *。(线程ID: *)";
 
         string output = IntelliTect.TestTools.Console.ConsoleAssert.ExpectLike(
             expected,
@@ -27,8 +27,8 @@ System.Exception: Expected Exception
 
         Console.WriteLine(output);
 
-        // Verify that only the 'Running task...' thread id (the second line), is unique
-        MatchCollection matches = Regex.Matches(output, @"\(Thread ID: (\d)+\)");
+        // Verify that only the '正在运行任务...' thread id (the second line), is unique
+        MatchCollection matches = Regex.Matches(output, @"\(线程ID: (\d)+\)");
         int firstThreadId = int.Parse(matches[0].Groups[1].Value);
         int secondThreadId = int.Parse(matches[1].Groups[1].Value);
         int? expectedThreadId;

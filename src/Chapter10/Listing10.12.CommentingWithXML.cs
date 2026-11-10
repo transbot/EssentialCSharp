@@ -6,20 +6,20 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_12;
 
 #region INCLUDE
 /// <summary>
-/// DataStorageÀàÓÃÓÚÔÚÎÄ¼şÖĞ´æ´¢ºÍ¼ìË÷Ô±¹¤Êı¾İ
+/// DataStorageç±»ç”¨äºåœ¨æ–‡ä»¶ä¸­å­˜å‚¨å’Œæ£€ç´¢å‘˜å·¥æ•°æ®
 /// </summary>
 class DataStorage
 {
     /// <summary>
-    /// ½«Ô±¹¤¶ÔÏó±£´æµ½ÒÔÔ±¹¤ĞÕÃûÃüÃûµÄÎÄ¼şÖĞ    
+    /// å°†å‘˜å·¥å¯¹è±¡ä¿å­˜åˆ°ä»¥å‘˜å·¥å§“åå‘½åçš„æ–‡ä»¶ä¸­    
     /// </summary>
     /// <remarks>
-    /// ¸Ã·½·¨Ê¹ÓÃ<seealso cref="System.IO.FileStream"/>
-    /// ÒÔ¼°
+    /// è¯¥æ–¹æ³•ä½¿ç”¨<seealso cref="System.IO.FileStream"/>
+    /// ä»¥åŠ
     /// <seealso cref="System.IO.StreamWriter"/>
     /// </remarks>
     /// <param name="employee">
-    /// Òª´æ´¢µ½ÎÄ¼şÖĞµÄÔ±¹¤</param>
+    /// è¦å­˜å‚¨åˆ°æ–‡ä»¶ä¸­çš„å‘˜å·¥</param>
     /// <date>January 1, 2000</date>
     public static void Store(Employee employee)
     {
@@ -27,19 +27,19 @@ class DataStorage
     }
 
     /** <summary>
-     * ¼ÓÔØÔ±¹¤¶ÔÏó¡£
+     * åŠ è½½å‘˜å·¥å¯¹è±¡ã€‚
      * </summary>
      * <remarks>
-     * ¸Ã·½·¨Ê¹ÓÃ<seealso cref="System.IO.FileStream"/>
-     * ÒÔ¼°
+     * è¯¥æ–¹æ³•ä½¿ç”¨<seealso cref="System.IO.FileStream"/>
+     * ä»¥åŠ
      * <seealso cref="System.IO.StreamReader"/>
      * </remarks>
      * <param name="firstName">
-     * Ô±¹¤µÄÃû×Ö£¨first name£©</param>
+     * å‘˜å·¥çš„åå­—ï¼ˆfirst nameï¼‰</param>
      * <param name="lastName">
-     * Ô±¹¤µÄĞÕÊÏ£¨last name£©</param>
+     * å‘˜å·¥çš„å§“æ°ï¼ˆlast nameï¼‰</param>
      * <returns>
-     * ºÍĞÕÃû¶ÔÓ¦µÄÔ±¹¤¶ÔÏó
+     * å’Œå§“åå¯¹åº”çš„å‘˜å·¥å¯¹è±¡
      * </returns>
      * <date>January 1, 2000</date> **/
     public static Employee Load(string firstName, string lastName)

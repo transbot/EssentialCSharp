@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_04;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_04;
 
 using Listing07_03;
 

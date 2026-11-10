@@ -11,28 +11,28 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_18
     {
         public static void Main(string[] args)
         {
-            WriteLine("¿ªÊ¼...");
+            WriteLine("å¼€å§‹...");
             DoStuff();
             if (args.Any(arg => arg.ToLower() == "-gc"))
             {
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
             }
-            WriteLine("ÍË³ö...");
+            WriteLine("é€€å‡º...");
         }
 
         public static void DoStuff()
         {
             // ...
             
-            WriteLine("¿ªÊ¼...");
+            WriteLine("å¼€å§‹...");
             SampleUnmanagedResource? sampleUnmanagedResource = null;
 
             try
             {
                 sampleUnmanagedResource =
                     new SampleUnmanagedResource();
-                // Ê¹ÓÃ·ÇÍĞ¹Ü×ÊÔ´
+                // ä½¿ç”¨éæ‰˜ç®¡èµ„æº
                 // ...
             }
             finally
@@ -44,7 +44,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_18
                 }
             }
 
-            WriteLine("ÍË³ö...");
+            WriteLine("é€€å‡º...");
 
             // ...
         }
@@ -54,34 +54,34 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_18
     {
         public SampleUnmanagedResource(string fileName)
         {
-            WriteLine("¿ªÊ¼...",
+            WriteLine("å¼€å§‹...",
                 $"{nameof(SampleUnmanagedResource)}.ctor");
 
-            WriteLine("´´½¨ÍĞ¹Ü×ÊÔ´...",
+            WriteLine("åˆ›å»ºæ‰˜ç®¡èµ„æº...",
                 $"{nameof(SampleUnmanagedResource)}.ctor");
-            WriteLine("´´½¨·ÇÍĞ¹Ü×ÊÔ´...",
+            WriteLine("åˆ›å»ºéæ‰˜ç®¡èµ„æº...",
                 $"{nameof(SampleUnmanagedResource)}.ctor");
 
             WeakReference<IDisposable> weakReferenceToSelf =
                  new(this);
             ProcessExitHandler = (_, __) =>
             {
-                WriteLine("¿ªÊ¼...", "ProcessExitHandler");
+                WriteLine("å¼€å§‹...", "ProcessExitHandler");
                 if (weakReferenceToSelf.TryGetTarget(
                     out IDisposable? self))
                 {
                     self.Dispose();
                 }
-                WriteLine("ÍË³ö...", "ProcessExitHandler");
+                WriteLine("é€€å‡º...", "ProcessExitHandler");
             };
             AppDomain.CurrentDomain.ProcessExit
                 += ProcessExitHandler;
-            WriteLine("ÍË³ö...",
+            WriteLine("é€€å‡º...",
                 $"{nameof(SampleUnmanagedResource)}.ctor");
         }
 
-        // ½«½ø³ÌÍË³öÎ¯ÍĞ´æ´¢ÏÂÀ´£¬ÒÔ±ãÔÚÒÑ¾­µ÷ÓÃ
-        // Dispose() or Finalize()µÄÇ°ÌáÏÂÒÆ³ıËü
+        // å°†è¿›ç¨‹é€€å‡ºå§”æ‰˜å­˜å‚¨ä¸‹æ¥ï¼Œä»¥ä¾¿åœ¨å·²ç»è°ƒç”¨
+        // Dispose() or Finalize()çš„å‰æä¸‹ç§»é™¤å®ƒ
         private EventHandler ProcessExitHandler { get; }
 
         public SampleUnmanagedResource()
@@ -89,43 +89,43 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_18
 
         ~SampleUnmanagedResource()
         {
-            WriteLine("¿ªÊ¼...");
+            WriteLine("å¼€å§‹...");
             Dispose(false);
-            WriteLine("ÍË³ö...");
+            WriteLine("é€€å‡º...");
         }
 
         public void Dispose()
         {
             Dispose(true);
             #region EXCLUDE
-            // ÇëÇó²»ÒªÎªÕâ¸ö¶ÔÏóµ÷ÓÃÖÕ½áÆ÷
+            // è¯·æ±‚ä¸è¦ä¸ºè¿™ä¸ªå¯¹è±¡è°ƒç”¨ç»ˆç»“å™¨
             GC.SuppressFinalize(this);
             #endregion EXCLUDE
         }
 
         public void Dispose(bool disposing)
         {
-            WriteLine("¿ªÊ¼...");
+            WriteLine("å¼€å§‹...");
 
-            // Éè¼Æ¹æ·¶£º±ÜÃâÎª×Ô´øÖÕ½áÆ÷µÄ¶ÔÏóµ÷ÓÃDispose()¡£Ïà·´£¬ÒÀÀµÖÕ½á¶ÓÁĞÇåÀíÊµÀı¡£
-            // ¾ßÌåµÄ½âÊÍÊÇ£ºµ÷ÓÃDispose·½·¨Ê±£¬Èç¹ûdisposing²ÎÊıÎªfalse£¬
-            // ÄÇÃ´±íÃ÷ËüÊÇÓÉÖÕ½áÆ÷µ÷ÓÃµÄ£¬¶ø²»ÊÇÍ¨¹ı³ÌĞò´úÂëÏÔÊ½µ÷ÓÃµÄ¡£
-            // ÔÚÕâÖÖÇé¿öÏÂ£¬Ó¦¸ÃÖ»ÇåÀí·ÇÍĞ¹Ü×ÊÔ´£¨ÀıÈçÎÄ¼ş£©£¬ÒòÎªÀ¬»øÊÕ¼¯Æ÷
-            // »á×Ô¶¯´¦ÀíÍĞ¹Ü×ÊÔ´¡£¼ÓÁËÕâ¸öÅĞ¶Ïºó£¬¿ÉÒÔ±ÜÃâÔÚÖÕ½áÆ÷ºÍDispose
-            // ·½·¨Ö®¼ä·¢Éú×ÊÔ´ÖØ¸´ÇåÀíµÄÎÊÌâ¡£
-            // ×ÜÖ®£¬½öÔÚdisposingÎªtrueµÄÊ±ºò²ÅÊÍ·ÅÍĞ¹Ü×ÊÔ´£¬¶øÆäËûÈÎºÎÊ±ºò¶¼
-            // Ö»ÊÍ·Å·ÇÍĞ¹Ü×ÊÔ´£¬Õâ²ÅÊÇDisposeÄ£Ê½µÄÕıÈ·×ËÊÆ¡£
+            // è®¾è®¡è§„èŒƒï¼šé¿å…ä¸ºè‡ªå¸¦ç»ˆç»“å™¨çš„å¯¹è±¡è°ƒç”¨Dispose()ã€‚ç›¸åï¼Œä¾èµ–ç»ˆç»“é˜Ÿåˆ—æ¸…ç†å®ä¾‹ã€‚
+            // å…·ä½“çš„è§£é‡Šæ˜¯ï¼šè°ƒç”¨Disposeæ–¹æ³•æ—¶ï¼Œå¦‚æœdisposingå‚æ•°ä¸ºfalseï¼Œ
+            // é‚£ä¹ˆè¡¨æ˜å®ƒæ˜¯ç”±ç»ˆç»“å™¨è°ƒç”¨çš„ï¼Œè€Œä¸æ˜¯é€šè¿‡ç¨‹åºä»£ç æ˜¾å¼è°ƒç”¨çš„ã€‚
+            // åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œåº”è¯¥åªæ¸…ç†éæ‰˜ç®¡èµ„æºï¼ˆä¾‹å¦‚æ–‡ä»¶ï¼‰ï¼Œå› ä¸ºåƒåœ¾æ”¶é›†å™¨
+            // ä¼šè‡ªåŠ¨å¤„ç†æ‰˜ç®¡èµ„æºã€‚åŠ äº†è¿™ä¸ªåˆ¤æ–­åï¼Œå¯ä»¥é¿å…åœ¨ç»ˆç»“å™¨å’ŒDispose
+            // æ–¹æ³•ä¹‹é—´å‘ç”Ÿèµ„æºé‡å¤æ¸…ç†çš„é—®é¢˜ã€‚
+            // æ€»ä¹‹ï¼Œä»…åœ¨disposingä¸ºtrueçš„æ—¶å€™æ‰é‡Šæ”¾æ‰˜ç®¡èµ„æºï¼Œè€Œå…¶ä»–ä»»ä½•æ—¶å€™éƒ½
+            // åªé‡Šæ”¾éæ‰˜ç®¡èµ„æºï¼Œè¿™æ‰æ˜¯Disposeæ¨¡å¼çš„æ­£ç¡®å§¿åŠ¿ã€‚
             if (disposing)
             {
-                WriteLine("ÕıÔÚdisposeÍĞ¹Ü×ÊÔ´...");
+                WriteLine("æ­£åœ¨disposeæ‰˜ç®¡èµ„æº...");
             }
 
             AppDomain.CurrentDomain.ProcessExit -=
                 ProcessExitHandler;
 
-            WriteLine("ÕıÔÚdispose·ÇÍĞ¹Ü×ÊÔ´...");
+            WriteLine("æ­£åœ¨disposeéæ‰˜ç®¡èµ„æº...");
 
-            WriteLine("ÍË³ö...");
+            WriteLine("é€€å‡º...");
         }
     }
     #endregion INCLUDE
@@ -133,6 +133,6 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_18
     public static class ConsoleLogger
     {
         public static void WriteLine(string? message = null, [CallerMemberName] string? name = null)
-            => Console.WriteLine($"{$"{name}: " }{ message ?? ": ÕıÔÚÖ´ĞĞ" }");
+            => Console.WriteLine($"{$"{name}: " }{ message ?? ": æ­£åœ¨æ‰§è¡Œ" }");
     }
 }

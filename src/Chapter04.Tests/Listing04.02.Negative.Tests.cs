@@ -7,7 +7,7 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        string expected = $@"{-72748555131730M}";
+        string expected = $@"{-33940505930933M}";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

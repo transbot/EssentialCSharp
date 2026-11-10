@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_03;
 
@@ -7,7 +7,7 @@ public class HelloWorld
     public static void Main()
     {
         #region INCLUDE
-        Console.WriteLine("ÉÏ"); Console.WriteLine("ÏÂ");
+        Console.WriteLine("ä¸Š"); Console.WriteLine("ä¸‹");
         #endregion INCLUDE
     }
 }

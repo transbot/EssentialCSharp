@@ -23,12 +23,12 @@ public class Program
         }
         finally
         {
-            // Ã¶¾ÙÆ÷ĞèÒªÏÔÊ½×ªĞÍÎªIDisposable
+            // æšä¸¾å™¨éœ€è¦æ˜¾å¼è½¬å‹ä¸ºIDisposable
             disposable = (IDisposable)enumerator;
             disposable.Dispose();
 
-            // ³ı·Ç±àÒëÊ±ÒÑÖªÖ§³ÖIDisposable£¬·ñÔòÓ¦¸ÃÊ¹ÓÃ
-            // as²Ù×÷·û½«Ã¶¾ÙÆ÷×ªĞÍÎªIDisposable
+            // é™¤éç¼–è¯‘æ—¶å·²çŸ¥æ”¯æŒIDisposableï¼Œå¦åˆ™åº”è¯¥ä½¿ç”¨
+            // asæ“ä½œç¬¦å°†æšä¸¾å™¨è½¬å‹ä¸ºIDisposable
             // disposable = (enumerator as IDisposable);
             // if (disposable is not null)
             // {

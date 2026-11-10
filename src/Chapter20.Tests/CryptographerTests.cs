@@ -1,4 +1,4 @@
-﻿using AddisonWesley.Michaelis.EssentialCSharp.Shared;
+using AddisonWesley.Michaelis.EssentialCSharp.Shared;
 using System.Security.Cryptography;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_06.Tests;

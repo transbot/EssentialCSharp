@@ -7,24 +7,24 @@ public class Program
         #region INCLUDE
         string firstName = "Forest";
 
-        // µ¥ĞĞÔ­Ê¼×Ö·û´®×ÖÃæÖµ
+        // å•è¡ŒåŸå§‹å­—ç¬¦ä¸²å­—é¢å€¼
         string lastName = """Gump""";
 
-        // ´ø²åÖµµÄµ¥ĞĞÔ­Ê¼×Ö·û´®×ÖÃæÖµ
+        // å¸¦æ’å€¼çš„å•è¡ŒåŸå§‹å­—ç¬¦ä¸²å­—é¢å€¼
         string greeting =
-        $"""ÄãºÃ£¬ÎÒÊÇ{firstName}¡£{firstName} {lastName}¡£""";
+        $"""ä½ å¥½ï¼Œæˆ‘æ˜¯{firstName}ã€‚{firstName} {lastName}ã€‚""";
 
-        string proposal = "ÄãÏëÒªÒ»¿éÇÉ¿ËÁ¦Âğ£¿"
-            + "ÎÒÄÜ³ÔµôÉÏ°ÙÍò¿éÇÉ¿ËÁ¦¡£";
+        string proposal = "ä½ æƒ³è¦ä¸€å—å·§å…‹åŠ›å—ï¼Ÿ"
+            + "æˆ‘èƒ½åƒæ‰ä¸Šç™¾ä¸‡å—å·§å…‹åŠ›ã€‚";
 
-        string mamaSaid = // ¶àĞĞÔ­Ê¼×Ö·û´®×ÖÃæÖµ
+        string mamaSaid = // å¤šè¡ŒåŸå§‹å­—ç¬¦ä¸²å­—é¢å€¼
             """
-                ÂèÂèËµ£º"Éú»î¾ÍÏñÒ»ºĞÇÉ¿ËÁ¦..."
+                å¦ˆå¦ˆè¯´ï¼š"ç”Ÿæ´»å°±åƒä¸€ç›’å·§å…‹åŠ›..."
                 """;
 
         string jsonDialogue =
 
-            // ´ø²åÖµµÄ¶àĞĞÔ­Ê¼×Ö·û´®×ÖÃæÖµ
+            // å¸¦æ’å€¼çš„å¤šè¡ŒåŸå§‹å­—ç¬¦ä¸²å­—é¢å€¼
 
             $$"""
                 {
@@ -32,12 +32,12 @@ public class Program
                         "character": "The MAN",
                         "dialogue": "{{greeting}}"
                      },
-                    "description" : "ËıµãµãÍ·£¬ĞËÈ¤²»´ó¡£Ëû...",
+                    "description" : "å¥¹ç‚¹ç‚¹å¤´ï¼Œå…´è¶£ä¸å¤§ã€‚ä»–...",
                     "quote": {
                         "character": "The MAN",
                         "dialogue": "{{proposal}}"
                      },
-                     "description" : "ËıÒ¡Ò¡Í·\"²»\" Ëû´ò¿ªºĞ×Ó...",
+                     "description" : "å¥¹æ‘‡æ‘‡å¤´\"ä¸\" ä»–æ‰“å¼€ç›’å­...",
                      "quote": {
                         "character": "The MAN",
                          "dialogue": "{{mamaSaid.Replace("\"", "\\\"")}}"

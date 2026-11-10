@@ -19,7 +19,7 @@ struct Angle : IAngle
     }
     #endregion EXCLUDE
 
-    // ×¢Òâ:  Õâ»áÊ¹Angle¡°¿É±ä¡±£¬ÓĞÎ¥Éè¼Æ¹æ·¶
+    // æ³¨æ„:  è¿™ä¼šä½¿Angleâ€œå¯å˜â€ï¼Œæœ‰è¿è®¾è®¡è§„èŒƒ
     public void MoveTo(int degrees, int minutes, int seconds)
     {
         _Degrees = degrees;
@@ -53,20 +53,20 @@ public class Program
         // ...
 
         Angle angle = new(25, 58, 23);
-        // Àı1: ¼òµ¥×°Ïä²Ù×÷
-        object objectAngle = angle;  // ×°Ïä
+        // ä¾‹1: ç®€å•è£…ç®±æ“ä½œ
+        object objectAngle = angle;  // è£…ç®±
         Console.Write(((Angle)objectAngle).Degrees);
 
-        // Àı2: ²ğÏä£¬ĞŞ¸ÄÒÑ²ğÏäµÄÖµ£¬È»ºó¶ªÆúÖµ
+        // ä¾‹2: æ‹†ç®±ï¼Œä¿®æ”¹å·²æ‹†ç®±çš„å€¼ï¼Œç„¶åä¸¢å¼ƒå€¼
         ((Angle)objectAngle).MoveTo
             (26, 58, 23);
         Console.Write(", " + ((Angle)objectAngle).Degrees);
 
-        // Àı3: ×°Ïä£¬ĞŞ¸ÄÒÑ×°ÏäµÄÖµ£¬È»ºó¶ªÆú¶ÔÏä×ÓµÄÒıÓÃ
+        // ä¾‹3: è£…ç®±ï¼Œä¿®æ”¹å·²è£…ç®±çš„å€¼ï¼Œç„¶åä¸¢å¼ƒå¯¹ç®±å­çš„å¼•ç”¨
         ((IAngle)angle).MoveTo(26, 58, 23);
         Console.Write(", " + ((Angle)angle).Degrees);
 
-        // Àı4: Ö±½ÓĞŞ¸ÄÒÑ×°ÏäµÄÖµ
+        // ä¾‹4: ç›´æ¥ä¿®æ”¹å·²è£…ç®±çš„å€¼
         ((IAngle)objectAngle).MoveTo(26, 58, 23);
         Console.WriteLine(", " + ((Angle)objectAngle).Degrees);
 

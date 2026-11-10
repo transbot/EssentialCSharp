@@ -7,7 +7,7 @@ public class Program
         Employee employee;
         employee = new("Inigo", "Montoya")
         {
-            Salary = "Ì«ÉÙÁË"
+            Salary = "å¤ªå°‘äº†"
         };
 
         Console.WriteLine(
@@ -22,7 +22,7 @@ public class Program
 public class Employee
 {
     #region HIGHLIGHT
-    // Employee¹¹Ôìº¯Êı
+    // Employeeæ„é€ å‡½æ•°
     public Employee(string firstName, string lastName)
     {
         FirstName = firstName;
@@ -32,13 +32,13 @@ public class Employee
 
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
 
     #region EXCLUDE
     public string? Title { get; set; }
     public Employee? Manager { get; set; }
 
-    // FullNameÊôĞÔ
+    // FullNameå±æ€§
     public string FullName
     {
         get
@@ -47,7 +47,7 @@ public class Employee
         }
         set
         {
-            // ½«Ëù¸³ÖµµÄÖµ²ğ·ÖÎªÃû×ÖºÍĞÕÊÏ
+            // å°†æ‰€èµ‹å€¼çš„å€¼æ‹†åˆ†ä¸ºåå­—å’Œå§“æ°
             string[] names;
             names = value.Split(new char[] { ' ' });
             if(names.Length == 2)
@@ -57,10 +57,10 @@ public class Employee
             }
             else
             {
-                // Î´¸³È«Ãû¾ÍÅ×³öÒì³£
+                // æœªèµ‹å…¨åå°±æŠ›å‡ºå¼‚å¸¸
                 throw new ArgumentException(
                     string.Format(
-                    $"Ëù¸³µÄÖµ'{ value }'ÎŞĞ§¡£", 
+                    $"æ‰€èµ‹çš„å€¼'{ value }'æ— æ•ˆã€‚", 
                     nameof(value)));
             }
         }

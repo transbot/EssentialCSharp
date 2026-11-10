@@ -1,4 +1,4 @@
-// ≤ªø…Œ™ø’µƒ◊÷∂ŒŒ¥≥ı ºªØ°£øº¬«…˘√˜Œ™ø…ø’°£
+// ‰∏çÂèØ‰∏∫Á©∫ÁöÑÂ≠óÊÆµÊú™ÂàùÂßãÂåñ„ÄÇËÄÉËôëÂ£∞Êòé‰∏∫ÂèØÁ©∫„ÄÇ
 #pragma warning disable CS8618
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_19;
@@ -13,24 +13,24 @@ public class Program
         Employee employee2 =
             new();
 
-        // µ˜”√FirstName Ù–‘µƒ»°÷µ∑Ω∑®(setter)
+        // Ë∞ÉÁî®FirstNameÂ±ûÊÄßÁöÑÂèñÂÄºÊñπÊ≥ï(setter)
         employee1.FirstName = "Inigo";
 
-        // µ˜”√FirstName Ù–‘µƒ∏≥÷µ∑Ω∑®(getter)
+        // Ë∞ÉÁî®FirstNameÂ±ûÊÄßÁöÑËµãÂÄºÊñπÊ≥ï(getter)
         System.Console.WriteLine(employee1.FirstName);
 
-        // œÚ◊‘∂Ø µœ÷µƒ Ù–‘∏≥÷µ
-        employee2.Title = "µÁƒ‘∑¢…’”—";
+        // ÂêëËá™Âä®ÂÆûÁé∞ÁöÑÂ±ûÊÄßËµãÂÄº
+        employee2.Title = "ÁîµËÑëÂèëÁÉßÂèã";
         employee1.Manager = employee2;
 
-        // ¥Ú”°employee1µƒæ≠¿ÌµƒTitle
+        // ÊâìÂç∞employee1ÁöÑÁªèÁêÜÁöÑTitle
         System.Console.WriteLine(employee1.Manager.Title);
     }
 }
 
 public class Employee
 {
-    // FirstName Ù–‘
+    // FirstNameÂ±ûÊÄß
     public string FirstName
     {
         get
@@ -44,7 +44,7 @@ public class Employee
     }
     private string _FirstName;
 
-    // LastName Ù–‘
+    // LastNameÂ±ûÊÄß
     public string LastName
     {
         get => _LastName;
@@ -53,17 +53,17 @@ public class Employee
     private string _LastName;
 
     #region HIGHLIGHT
-    // Title Ù–‘
+    // TitleÂ±ûÊÄß
     public string? Title { get; set; }
     #endregion HIGHLIGHT
 
     #region HIGHLIGHT
-    // Manager Ù–‘
+    // ManagerÂ±ûÊÄß
     public Employee? Manager { get; set; }
     #endregion HIGHLIGHT
 
     #region HIGHLIGHT
-    public string? Salary { get; set; } = "≤ªπª";
+    public string? Salary { get; set; } = "‰∏çÂ§ü";
     #endregion HIGHLIGHT
     // ...
 }

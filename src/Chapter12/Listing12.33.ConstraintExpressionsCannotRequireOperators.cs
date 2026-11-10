@@ -6,7 +6,7 @@ public abstract class MathEx<T>
 {
     public static T Add(T first, T second)
     {
-        // ´íÎó: ²Ù×÷·û'+'ÎŞ·¨Ó¦ÓÃÓÚ'T'ºÍ'T'ÀàĞÍµÄ²Ù×÷Êı
+        // é”™è¯¯: æ“ä½œç¬¦'+'æ— æ³•åº”ç”¨äº'T'å’Œ'T'ç±»å‹çš„æ“ä½œæ•°
         #region HIGHLIGHT
         // return first + second;
         #endregion HIGHLIGHT

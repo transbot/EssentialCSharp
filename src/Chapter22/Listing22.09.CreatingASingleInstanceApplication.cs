@@ -9,23 +9,23 @@ public class Program
 {
     public static void Main()
     {
-        // »ùÓÚ³ÌĞò¼¯È«ÃûÀ´»ñµÃ»¥³âÌåÃû³Æ
+        // åŸºäºç¨‹åºé›†å…¨åæ¥è·å¾—äº’æ–¥ä½“åç§°
         string mutexName =
             Assembly.GetEntryAssembly()!.FullName!;
 
-        // firstApplicationInstanceÖ¸³öÕâÊÇ²»ÊÇ
-        // Ó¦ÓÃ³ÌĞòµÄµÚÒ»¸öÊµÀı¡£
+        // firstApplicationInstanceæŒ‡å‡ºè¿™æ˜¯ä¸æ˜¯
+        // åº”ç”¨ç¨‹åºçš„ç¬¬ä¸€ä¸ªå®ä¾‹ã€‚
         using Mutex mutex = new(false, mutexName,
              out bool firstApplicationInstance);
 
         if (!firstApplicationInstance)
         {
             Console.WriteLine(
-                "Ó¦ÓÃ³ÌĞòÒÑ¾­ÔÚÔËĞĞÁË¡£");
+                "åº”ç”¨ç¨‹åºå·²ç»åœ¨è¿è¡Œäº†ã€‚");
         }
         else
         {
-            Console.WriteLine("°´Enter¼ü¹Ø±Õ¡£");
+            Console.WriteLine("æŒ‰Enteré”®å…³é—­ã€‚");
             Console.ReadLine();
         }
     }

@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_23;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_23;
 
 #region INCLUDE
 using System.Diagnostics.CodeAnalysis;
@@ -30,8 +30,8 @@ public static class SolsticeHelper
         {
             if ((solstice = date.Month switch
             {
-                12 => "¶¬ÖÁ",
-                6 => "ÏÄÖÁ",
+                12 => "å†¬è‡³",
+                6 => "å¤è‡³",
                 _ => null
             }) is not null) return true;
         }

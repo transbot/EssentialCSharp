@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_25.Tests;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_25.Tests;
 
 [TestClass]
 public class ProgramTests
@@ -16,7 +16,7 @@ public class ProgramTests
     [TestMethod]
     public void AddToArrayWithCasting()
     {
-        const string OutputFormatString = @"Enter an integer between 2 and 1000: <<{0}>>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, ";
+        const string OutputFormatString = @"输入2～1000的整数，我将生成这么多个斐波那契数: <<{0}>>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, ";
         
         string expected = string.Format(OutputFormatString, 42);
 

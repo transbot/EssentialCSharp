@@ -42,17 +42,32 @@ jobs:
       - name: Run NuGet restore
         run: dotnet restore
 
-      # Run code analysis for the solution at repo root
+      # Use the SDK analyzers directly; the old Guardian wrapper requires .NET 3.1.
       - name: Run .NET Code Analysis
-        uses: dotnet/code-analysis@main
-        id: code-analysis
-        with:
-          build-breaking: false
-          all-categories: latest
+        shell: bash
+        run: |
+          cat > "$RUNNER_TEMP/code-analysis.targets" <<'EOF'
+          <Project>
+            <Import Project="$(MSBuildStartupDirectory)/Directory.Build.targets" />
+            <PropertyGroup>
+              <AnalysisLogDirectory>$(MSBuildProjectDirectory)/obj/analysis/$(TargetFramework)</AnalysisLogDirectory>
+              <ErrorLog>$(AnalysisLogDirectory)/analysis.sarif,version=2.1</ErrorLog>
+            </PropertyGroup>
+            <Target Name="CreateAnalysisLogDirectory" BeforeTargets="CoreCompile">
+              <MakeDir Directories="$(AnalysisLogDirectory)" />
+            </Target>
+          </Project>
+          EOF
+          dotnet build --no-restore \
+            -p:AnalysisLevel=latest \
+            -p:AnalysisMode=Minimum \
+            -p:EnforceCodeStyleInBuild=true \
+            -p:DirectoryBuildTargetsPath="$RUNNER_TEMP/code-analysis.targets"
 
-      # Upload the analysis results file
       - name: Upload analysis results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: analysis_results.sarif
-          path: ${{ steps.code-analysis.outputs.sarifFile }}
+          path: src/**/obj/analysis/**/*.sarif
+          if-no-files-found: error

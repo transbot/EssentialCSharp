@@ -1,4 +1,4 @@
-using AddisonWesley.Michaelis.EssentialCSharp.Chapter16.Listing16.Tests;
+﻿using AddisonWesley.Michaelis.EssentialCSharp.Chapter16.Listing16.Tests;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter16.Listing16_11.Tests;
 
@@ -13,9 +13,9 @@ public class ProgramTests
     public static void SelectingFollowingGroupClause(Action _)
     {
         string expected = $@"
-Keywords:
+关键字:
  { CSharpExpectedData.ExpectedKeywords }
-Contextual Keywords:
+上下文关键字:
  { CSharpExpectedData.ExpectedContextualKeywords }";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,

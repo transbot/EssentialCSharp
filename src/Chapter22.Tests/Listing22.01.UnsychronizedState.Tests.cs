@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter22.Listing22_01.Tests;
 
@@ -38,7 +38,7 @@ public class ProgramTests
     public static void VerifyOutputIncrementAndDecrement(Func<string[], int> main)
     {
         int? result = null;
-        string expected = $"Increment and decrementing \\d+ times...{Environment.NewLine}Count = (?<Count>\\d*)";
+        string expected = $"递增和递减\\d+次...{Environment.NewLine}Count = (?<Count>-?\\d+)";
         string output = IntelliTect.TestTools.Console.ConsoleAssert.Execute("",
         () =>
         {

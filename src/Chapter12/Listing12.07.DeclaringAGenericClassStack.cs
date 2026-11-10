@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_07;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_07;
 
 #region INCLUDE
 public class Stack<T>
@@ -18,7 +18,7 @@ public class Stack<T>
     public T Pop()
     {
         #region EXCLUDE
-        return InternalItems[0]; // Ö»ÊÇ¾ÙÀı
+        return InternalItems[0]; // åªæ˜¯ä¸¾ä¾‹
         #endregion EXCLUDE
     }
 }

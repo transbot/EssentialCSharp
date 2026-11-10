@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_11.Tests;
 
 [TestClass]
@@ -8,11 +8,11 @@ public class DelegateSampleTests
     public void Main()
     {
         string expected =
-        @"Enter an integer: <<1
->>Enter an integer: <<12
->>Enter an integer: <<13
->>Enter an integer: <<5
->>Enter an integer: <<4
+        @"请输入一个整数: <<1
+>>请输入一个整数: <<12
+>>请输入一个整数: <<13
+>>请输入一个整数: <<5
+>>请输入一个整数: <<4
 >>1
 12
 13

@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_05;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_05;
 
 public class Program
 {
@@ -7,7 +7,7 @@ public class Program
         #region INCLUDE
         int n = '3' + '4';
         char c = (char)n;
-        Console.WriteLine(c);  // Êä³ö'g'
+        Console.WriteLine(c);  // è¾“å‡º'g'
         #endregion INCLUDE
     }
 }

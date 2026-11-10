@@ -1,4 +1,4 @@
-// ˵�� : only partial implementation provided for elucidation.
+﻿// 说明 : only partial implementation provided for elucidation.
 #pragma warning disable IDE0060 // Remove unused parameter
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_03;

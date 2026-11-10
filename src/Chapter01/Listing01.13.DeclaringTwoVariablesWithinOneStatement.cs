@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_13;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_13;
 
 public class HelloWorld
 {
@@ -8,8 +8,8 @@ public class HelloWorld
         string message1, message2;
         #endregion INCLUDE
 
-        message1 = "ÄãºÃ£¬ÎÒ½ĞInigo Montoya¡£" ;
-        message2 = "ÄãÉ±ËÀÁËÎÒµÄ¸¸Ç×....";
+        message1 = "ä½ å¥½ï¼Œæˆ‘å«Inigo Montoyaã€‚" ;
+        message2 = "ä½ æ€æ­»äº†æˆ‘çš„çˆ¶äº²....";
 
         Console.WriteLine(message1);
         Console.WriteLine(message2);

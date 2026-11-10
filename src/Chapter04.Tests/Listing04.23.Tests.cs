@@ -1,4 +1,4 @@
-using IntelliTect.TestTools.Console;
+﻿using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_23.Tests;
 
@@ -9,7 +9,7 @@ public class ProgramTests
     public void Main_InputOfNegative1_Exit()
     {
         const string expected =
-            @"Exiting...";
+            @"退出...";
 
         ConsoleAssert.Expect(
             expected, ()=>Program.Main("-1"));
@@ -19,7 +19,7 @@ public class ProgramTests
     public void Main_Input10_AnswerTooHigh()
     {
         const string expected = 
-            @"Tic-tac-toe has less than 10 maximum turns.";
+            @"井字棋最大轮数小于10";
 
         ConsoleAssert.Expect(
             expected, ()=>Program.Main("10"));
@@ -29,7 +29,7 @@ public class ProgramTests
     public void Main_Input5_AnswerTooLow()
     {
         const string expected = 
-            @"Tic-tac-toe has more than 5 maximum turns.";
+            @"井字棋最大轮数大于5";
 
         ConsoleAssert.Expect(
             expected, ()=>Program.Main("5"));
@@ -39,7 +39,7 @@ public class ProgramTests
     public void Main_Input9_CorrectAnswer()
     {
         const string expected = 
-            @"Correct, tic-tac-toe has a maximum of 9 turns.";
+            @"正确，井字棋最多只能走9轮。";
 
         ConsoleAssert.Expect(
             expected, ()=>Program.Main("9"));

@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_03.Tests;
 
 [TestClass]
@@ -8,8 +8,8 @@ public class HelloWorldTests
     public void Main_UpDown()
     {
         const string expected =
-@"Up
-Down";
+@"上
+下";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, HelloWorld.Main);

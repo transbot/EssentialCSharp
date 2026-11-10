@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter17.Listing17_01.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class ProgramTests
     public void UsingListOfT()
     {
         const string expected =
-            "In alphabetical order Bashful is the first dwarf while Sneezy is the last.";
+            "按字母顺序，Bashful是第一个小矮人，而Sneezy是最后一个。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

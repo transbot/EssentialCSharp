@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_34;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_34;
 
 public class Program
 {
@@ -7,7 +7,7 @@ public class Program
         #region INCLUDE
         bool boolean = true;
         string text = boolean.ToString();
-        // ��ʾ"True"
+        // 显示"True"
         Console.WriteLine(text);
         #endregion INCLUDE
     }

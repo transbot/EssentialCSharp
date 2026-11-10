@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_18;
+Ôªønamespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_18;
 
 #region INCLUDE
 public class Program
@@ -6,8 +6,8 @@ public class Program
     public static void Main()
     {
         // ...
-        string first = "ƒ„∫√";
-        string second = "‘Ÿº˚";
+        string first = "‰Ω†Â•Ω";
+        string second = "ÂÜçËßÅ";
         #region HIGHLIGHT
         Swap(ref first, ref second);
         #endregion HIGHLIGHT

@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_31.Tests;
 
 [TestClass]
@@ -8,8 +8,8 @@ public class PalindromeTests
     public void Main_InputValidPalindrome_IdentifiedAsPalindrome()
     {
         const string expected =
-@"Enter a palindrome: <<kayak
->>""kayak"" is a palindrome.";
+@"输入一句回文: <<kayak
+>>""kayak""是回文。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Palindrome.Main);
@@ -19,8 +19,8 @@ public class PalindromeTests
     public void Main_InputInvalidPalindrome_NotIdentifiedAsPalindrome()
     {
         const string expected =
-@"Enter a palindrome: <<test
->>""test"" is NOT a palindrome.";
+@"输入一句回文: <<test
+>>""test""不是回文。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Palindrome.Main);

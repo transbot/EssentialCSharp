@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_45;
+Ôªønamespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_45;
 
 #region INCLUDE
 public class Employee
@@ -21,7 +21,7 @@ public class Employee
     public int Id { get; private set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "≤ªπª";
+    public string? Salary { get; set; } = "‰∏çÂ§ü";
 
     // ...
 }

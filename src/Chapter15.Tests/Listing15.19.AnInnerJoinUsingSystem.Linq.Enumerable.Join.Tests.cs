@@ -8,22 +8,22 @@ public class ProgramTests
     public void EnumerableJoinTest()
     {
         string expected =
-@"Mark Michaelis (Chief 电脑发烧友)
+@"Mark Michaelis (首席电脑发烧友)
 	Corporate
-Michael Stokesbary (Senior Computer Wizard)
-	Engineering
-Brian Jones (Enterprise Integration Guru)
-	Engineering
-Anne Beard (HR Director)
-	Human Resources
-Pat Dever (Enterprise Architect)
-	Information Technology
-Kevin Bost (Programmer Extraordinaire)
-	Engineering
-Thomas Heavey (Software Architect)
-	Engineering
-Eric Edmonds (Philanthropy Coordinator)
-	Philanthropy";
+Michael Stokesbary (高级电脑巫师)
+	工程
+Brian Jones (企业集成大师)
+	工程
+Anne Beard (人力资源总监)
+	人力资源
+Pat Dever (企业架构师)
+	IT
+Kevin Bost (杰出程序员)
+	工程
+Thomas Heavey (软件架构师)
+	工程
+Eric Edmonds (慈善协调员)
+	慈善";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>

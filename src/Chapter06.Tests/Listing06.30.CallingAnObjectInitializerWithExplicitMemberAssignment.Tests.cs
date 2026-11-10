@@ -7,7 +7,7 @@ public class ProgramTests
     public void Main_ObjectInitializerSetTitleSalary_WriteEmployeeWithTitleSalary()
     {
         const string expected =
-            @"Inigo Montoya (电脑发烧友): Not enough";
+            @"Inigo Montoya (电脑发烧友): 不够";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

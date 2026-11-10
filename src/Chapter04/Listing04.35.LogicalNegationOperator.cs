@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_35;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_35;
 
 public class Program
 {
@@ -9,7 +9,7 @@ public class Program
         #region HIGHLIGHT
         bool result = !valid;
         #endregion HIGHLIGHT
-        // ��ʾ"result = True"
+        // 显示"result = True"
         Console.WriteLine($"result = { result }");
         #endregion INCLUDE
     }

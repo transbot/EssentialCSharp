@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_16;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_16;
 
 #region INCLUDE
 public class HeyYou
@@ -8,12 +8,12 @@ public class HeyYou
         string firstName;
         string lastName;
 
-        Console.WriteLine("ºÙ£¬Äã£¡");
+        Console.WriteLine("å˜¿ï¼Œä½ ï¼");
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
-        Console.Write("ÇëÊäÈëÄãµÄĞÕÊÏ: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„å§“æ°: ");
         lastName = Console.ReadLine();
     }
 }

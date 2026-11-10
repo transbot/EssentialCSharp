@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_29.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class ProgramTests
     public void Main_Input5_BooleanConditionHit()
     {
         const string expected =
-            @"Tic-tac-toe has more than 5 maximum turns.";
+            @"井字棋最大步数大于5";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

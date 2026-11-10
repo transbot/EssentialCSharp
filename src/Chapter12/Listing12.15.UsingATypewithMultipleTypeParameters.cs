@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_15;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_15;
 
 using System;
 using Listing12_14;
@@ -10,7 +10,7 @@ public class Program
         #region INCLUDE
         Pair<int, string> historicalEvent =
             new(1914,
-                "É³¿Ë¶û¶Ù³Ë×ø¡°¼áÈÌºÅ¡±Ç°ÍùÄÏ¼«¡£");
+                "æ²™å…‹å°”é¡¿ä¹˜åâ€œåšå¿å·â€å‰å¾€å—æã€‚");
 
         Console.WriteLine("{0}: {1}",
             historicalEvent.First, historicalEvent.Second);

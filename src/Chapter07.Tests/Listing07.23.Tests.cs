@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_23.Tests;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_23.Tests;
 
 [TestClass]
 public class SolsticeHelperTests
@@ -38,14 +38,14 @@ public class SolsticeHelperTests
     public void TryGetSolstice_21DayRightMonth_ReturnsTrueWinterSolstice()
     {
         Assert.IsTrue(SolsticeHelper.TryGetSolstice(new DateTime(2023, 12, 21), out string? solstice));
-        Assert.AreEqual("Winter Solstice", solstice);
+        Assert.AreEqual("冬至", solstice);
     }
 
     [TestMethod]
     public void TryGetSolstice_20DayRightMonth_ReturnsTrueSummerSolstice()
     {
         Assert.IsTrue(SolsticeHelper.TryGetSolstice(new DateTime(2024, 6, 21), out string? solstice));
-        Assert.AreEqual("Summer Solstice", solstice);
+        Assert.AreEqual("夏至", solstice);
     }
 
     [TestMethod]

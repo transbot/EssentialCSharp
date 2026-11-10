@@ -1,6 +1,6 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_11;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_11;
 
 #region INCLUDE
 public class HelloWorld{public static void Main()
-{Console.WriteLine("ÄãºÃ£¬Inigo Montoya¡£");}}
+{Console.WriteLine("ä½ å¥½ï¼ŒInigo Montoyaã€‚");}}
 #endregion INCLUDE

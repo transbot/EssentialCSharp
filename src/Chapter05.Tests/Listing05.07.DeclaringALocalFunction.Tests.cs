@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_07.Tests;
 
 [TestClass]
@@ -8,9 +8,9 @@ public class HeyYouTests
     public void Main_Tests()
     {
         const string expected =
-@"First Name: <<Inigo
->>Last Name: <<Montoya
->>Email Address: <<imontoya@IntelliTect.com
+@"名字: <<Inigo
+>>姓氏: <<Montoya
+>>电子邮件地址: <<imontoya@IntelliTect.com
 >>Inigo Montoya <imontoya@IntelliTect.com>";
         
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(

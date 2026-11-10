@@ -1,4 +1,4 @@
-using IntelliTect.TestTools.Console;
+﻿using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_24.Tests;
 
@@ -6,13 +6,13 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_24.Tests;
 public class ProgramTests
 {
     [TestMethod]
-    public void Main_Input8_ExitProgram()
+    public void Main_Input0_ExitProgram()
     {
         const string expected =
-            "Exiting";
+            "退出";
 
         ConsoleAssert.Expect(
-            expected, ()=>Program.Main("8"));
+            expected, ()=>Program.Main("0"));
     }
 
     [TestMethod]

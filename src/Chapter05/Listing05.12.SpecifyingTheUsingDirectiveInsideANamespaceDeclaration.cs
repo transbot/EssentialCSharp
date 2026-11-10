@@ -1,69 +1,25 @@
-// Disabled because not attributes have not been covered
-// and the attribute is not available in .NET 6.0.
-#pragma warning disable SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
-
-// 该代码清单存在bug，以中文版书中的为准。
-// 或者参考下面这个：
-//namespace EssentialCSharp
-//{
-//    using System;
-//    class HelloWorld
-//    {
-//        static void Main()
-//        {
-//            // 因为上方的using指令，所以
-//            // 不需要用System限定Console类。            
-//            Console.WriteLine("你好，我的名字是Inigo Montoya。");
-//        }
-//    }
-//}
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_12;
-
-#region INCLUDE
-// The using directive imports all types from the 
-// specified namespace into the entire file
-using System.Text.RegularExpressions;
-
-public class Program
+﻿// 中文版译稿代码清单5.12：在命名空间声明中使用 using 指令。
+// HelloWorld 的 public 可见性和下方 Program 包装器用于配套清单运行器。
+namespace EssentialCSharp
 {
-    public static void Main()
+    #region INCLUDE
+    using System;
+
+    public class HelloWorld
     {
-        #region EXCLUDE
-        const string firstName = "FirstName";
-        const string initial = "Initial";
-        const string lastName = "LastName";
-
-        // Explaining regular expressions is beyond the
-        // scope of this book.
-        // See https://www.regular-expressions.info/ for
-        // more information.
-        const string pattern = $"""
-            (?<{firstName}>\w+)\s+((?<{initial}>\w)\.\s+)?(?<{lastName}>\w+)\s*
-            """;
-
-        Console.WriteLine(
-            "输入你的全名：(例如Inigo T. Montoya): ");
-        string name = Console.ReadLine()!;
-
-        #endregion EXCLUDE
-        #region HIGHLIGHT
-        // 因为using指令的存在，不需要用
-        // System.Text.RegularExpressions限定
-        // RegEx类型
-        Match match = Regex.Match(name, pattern);
-        #endregion HIGHLIGHT
-        #region EXCLUDE
-
-        if (match.Success)
+        public static void Main()
         {
-            Console.WriteLine(
-                $"{firstName}: {match.Groups[firstName]}");
-            Console.WriteLine(
-                $"{initial}: {match.Groups[initial]}");
-            Console.WriteLine(
-                $"{lastName}: {match.Groups[lastName]}");
+            // 因为上方的 using 指令，所以不需要用 System 限定 Console 类。
+            Console.WriteLine("你好，我的名字是Inigo Montoya。");
         }
-        #endregion EXCLUDE
+    }
+    #endregion INCLUDE
+}
+
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_12
+{
+    public class Program
+    {
+        public static void Main() => global::EssentialCSharp.HelloWorld.Main();
     }
 }
-#endregion INCLUDE

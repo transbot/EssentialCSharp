@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter21.Listing21_04;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter21.Listing21_04;
 
 #region INCLUDE
 using System;
@@ -34,7 +34,7 @@ public static class Program
         #endregion HIGHLIGHT
         {
             Console.WriteLine(
-                "´íÎó: {0}:",
+                "é”™è¯¯: {0}:",
                 exception.GetType().Name);
             foreach(Exception item in
             #region HIGHLIGHT

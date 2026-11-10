@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_26;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_26;
 public class DisplayFibonacci
 {
     static void Main()
@@ -12,7 +12,7 @@ public class DisplayFibonacci
 
         number = 42;
         thing = number;
-        // ´íÎó: InvalidCastException
+        // é”™è¯¯: InvalidCastException
         // bigNumber = (double)thing;
         bigNumber = (double)(int)thing;
         // ...

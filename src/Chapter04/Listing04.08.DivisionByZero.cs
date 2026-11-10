@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_08;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_08;
 
 public class Program
 {
@@ -6,7 +6,7 @@ public class Program
     {
         #region INCLUDE
         float n = 0f;
-        // ÏÔÊ¾£ºNaN
+        // æ˜¾ç¤ºï¼šNaN
         Console.WriteLine(n / 0);
         #endregion INCLUDE
     }

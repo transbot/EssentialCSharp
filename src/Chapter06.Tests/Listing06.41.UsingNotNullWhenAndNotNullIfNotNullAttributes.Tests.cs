@@ -21,7 +21,7 @@ public class NullabilityAttributesExaminedTests
     [TestMethod]
     public void TryGetAsText_GivenX4X2_ReturnFourTwo()
     {
-        Assert.AreEqual<string>("四-二", 
+        Assert.AreEqual<string>("四-二",
             NullabilityAttributesExamined.TryGetDigitsAsText("X4X2"));
 
         Assert.AreEqual<string?>(null,

@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜Žä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618 // Pending a constructors
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_23;
@@ -12,7 +12,7 @@ public class Program
         employee1.Initialize(42);
 #if COMPILEERROR // EXCLUDE
         #region HIGHLIGHT
-        // ´íÎó£ºÎÞ·¨ÎªÊôÐÔ»òË÷ÒýÆ÷'Employee.Id'¸³Öµ£»ËüÊÇÖ»¶ÁµÄ        
+        // é”™è¯¯ï¼šæ— æ³•ä¸ºå±žæ€§æˆ–ç´¢å¼•å™¨'Employee.Id'èµ‹å€¼ï¼›å®ƒæ˜¯åªè¯»çš„        
         employee1.Id = "490";
         #endregion HIGHLIGHT
 #endif // COMPILEERROR // EXCLUDE
@@ -24,13 +24,13 @@ public class Employee
     public void Initialize(int id)
     {
         #region HIGHLIGHT
-        // ÉèÖÃIdÊôÐÔ
+        // è®¾ç½®Idå±žæ€§
         Id = id.ToString();
         #endregion HIGHLIGHT
     }
 
     // ...
-    // IdÊôÐÔÉùÃ÷
+    // Idå±žæ€§å£°æ˜Ž
     public string Id
     {
         get => _Id;

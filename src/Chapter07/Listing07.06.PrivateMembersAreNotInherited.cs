@@ -1,4 +1,4 @@
-﻿// 说明 : Invalid code commented out resulting in partial implementation
+// 说明 : Invalid code commented out resulting in partial implementation
 #pragma warning disable IDE0059 // 不需要赋值
 
 

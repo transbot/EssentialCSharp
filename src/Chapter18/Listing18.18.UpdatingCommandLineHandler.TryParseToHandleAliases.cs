@@ -42,7 +42,7 @@ public class CommandLineHandler
                 else
                 {
                     success = false;
-                    errorMessage = $"²»Ö§³Ö'{ option }'Ñ¡Ïî¡£";
+                    errorMessage = $"ä¸æ”¯æŒ'{ option }'é€‰é¡¹ã€‚";
                 }
             }
         }
@@ -57,7 +57,7 @@ public class CommandLineHandler
 
         if(property.PropertyType == typeof(bool))
         {
-            // ×îºóÒ»¸ö²ÎÊıÓÃÓÚ´¦ÀíÊôĞÔÊÇË÷ÒıÆ÷µÄÇéĞÎ
+            // æœ€åä¸€ä¸ªå‚æ•°ç”¨äºå¤„ç†å±æ€§æ˜¯ç´¢å¼•å™¨çš„æƒ…å½¢
             property.SetValue(
                 commandLine, true, null);
             success = true;
@@ -68,10 +68,10 @@ public class CommandLineHandler
             if (optionParts.Length < 2
                 || optionParts[1] == "")
             {
-                // Ã»ÓĞÎª¿ª¹ØÌá¹©ÉèÖÃ
+                // æ²¡æœ‰ä¸ºå¼€å…³æä¾›è®¾ç½®
                 success = false;
                 errorMessage =
-                     $"±ØĞëÎª{ property.Name }Ñ¡ÏîÌá¹©Öµ¡£";
+                     $"å¿…é¡»ä¸º{ property.Name }é€‰é¡¹æä¾›å€¼ã€‚";
             }
             else if(
                 property.PropertyType == typeof(string))
@@ -81,7 +81,7 @@ public class CommandLineHandler
                 success = true;
             }
             else if(
-                // property.PropertyType.IsEnumÒ²ÊÇÖ§³ÖµÄ
+                // property.PropertyType.IsEnumä¹Ÿæ˜¯æ”¯æŒçš„
                 property.PropertyType ==
                     typeof(ProcessPriorityClass))
             {
@@ -93,20 +93,20 @@ public class CommandLineHandler
             {
                 success = false;
                 errorMessage = 
-                    $@"²»Ö§³Ö{ commandLine.GetType().ToString() 
-                    }ÉÏµÄÊı¾İÀàĞÍ'{property.PropertyType.ToString()}'¡£";
+                    $@"ä¸æ”¯æŒ{ commandLine.GetType().ToString() 
+                    }ä¸Šçš„æ•°æ®ç±»å‹'{property.PropertyType.ToString()}'ã€‚";
             }
         }
         return success;
     }
     #endregion INCLUDE
 
-    // ËµÃ÷ : Î´ÍêÈ«ÊµÏÖ
-#pragma warning disable IDE0060 // ÒÆ³ıÎ´Ê¹ÓÃµÄ²ÎÊı
+    // è¯´æ˜ : æœªå®Œå…¨å®ç°
+#pragma warning disable IDE0060 // ç§»é™¤æœªä½¿ç”¨çš„å‚æ•°
     private static bool TryParseEnumSwitch(
         object commandLine, string[] optionParts, PropertyInfo property, ref string? errorMessage)
     {
         throw new NotImplementedException();
     }
-#pragma warning restore IDE0060 // ÒÆ³ıÎ´Ê¹ÓÃµÄ²ÎÊı
+#pragma warning restore IDE0060 // ç§»é™¤æœªä½¿ç”¨çš„å‚æ•°
 }

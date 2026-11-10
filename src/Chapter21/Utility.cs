@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Shared;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Shared;
 
 using System;
 using System.Collections.Generic;

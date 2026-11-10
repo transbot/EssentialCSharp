@@ -19,7 +19,7 @@ public class Thermostat
 
     // ...
     #endregion EXCLUDE
-    // ÉùÃ÷Î¯ÍĞ×Ö¶ÎÀ´±£´æ¶©ÔÄÕßÁĞ±í
+    // å£°æ˜å§”æ‰˜å­—æ®µæ¥ä¿å­˜è®¢é˜…è€…åˆ—è¡¨
     private EventHandler<TemperatureArgs>? _OnTemperatureChange;
 
     public void add_OnTemperatureChange(
@@ -37,12 +37,12 @@ public class Thermostat
     #if ConceptualEquivalentCode
     public event EventHandler<TemperatureArgs> OnTemperatureChange
     {
-        // »áÔì³É±àÒë´íÎó
+        // ä¼šé€ æˆç¼–è¯‘é”™è¯¯
         add
         {
             add_OnTemperatureChange(value);
         }
-        // »áÔì³É±àÒë´íÎó
+        // ä¼šé€ æˆç¼–è¯‘é”™è¯¯
         remove
         {
             remove_OnTemperatureChange(value);

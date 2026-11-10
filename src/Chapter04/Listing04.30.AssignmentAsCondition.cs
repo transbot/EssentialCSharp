@@ -6,8 +6,8 @@ public class Program
     {
         /*
         #region INCLUDE
-        if (input = 9) // C++ÔÊĞí£¬µ«C#²»ÔÊĞí
-        System.Console.WriteLine("ÕıÈ·£¬¾®×ÖÆå×î¶àÖ»ÄÜ×ß9²½¡£");
+        if (input = 9) // C++å…è®¸ï¼Œä½†C#ä¸å…è®¸
+        System.Console.WriteLine("æ­£ç¡®ï¼Œäº•å­—æ£‹æœ€å¤šåªèƒ½èµ°9æ­¥ã€‚");
         #endregion INCLUDE
         */
     }

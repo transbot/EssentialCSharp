@@ -25,11 +25,11 @@ public partial class Program
             if(commandLine.Priority !=
                 ProcessPriorityClass.Normal)
             {
-                // ¸ü¸ÄÏß³ÌÓÅÏÈ¼¶
+                // æ›´æ”¹çº¿ç¨‹ä¼˜å…ˆçº§
             }
             #region EXCLUDE
             Console.WriteLine(
-                @$"ÕıÔÚÔËĞĞ{
+                @$"æ­£åœ¨è¿è¡Œ{
                     Path.GetFileName(Environment.GetCommandLineArgs()[0])} /Out:{
                         commandLine.Out} /Priority:{
                         commandLine.Priority}");
@@ -40,9 +40,9 @@ public partial class Program
 
     private static void DisplayHelp()
     {
-        // ÏÔÊ¾ÃüÁîĞĞ°ïÖú
+        // æ˜¾ç¤ºå‘½ä»¤è¡Œå¸®åŠ©
         Console.WriteLine(
-            "Compress.exe /Out:< ÎÄ¼şÃû > /Help "
+            "Compress.exe /Out:< æ–‡ä»¶å > /Help "
             + "/Priority:RealTime | High | "
             + "AboveNormal | Normal | BelowNormal | Idle");
 
@@ -86,7 +86,7 @@ public class CommandLineHandler
                 string[] optionParts = arg.Split(
                     new char[] { ':' }, 2);
 
-                // É¾³ıĞ±¸Ü»ò¶Ì»®Ïß
+                // åˆ é™¤æ–œæ æˆ–çŸ­åˆ’çº¿
                 option = optionParts[0].Remove(0, 1);
                 #region HIGHLIGHT
                 PropertyInfo? property =
@@ -98,7 +98,7 @@ public class CommandLineHandler
                 {
                     if(property.PropertyType == typeof(bool))
                     {
-                        // ×îºóÒ»¸ö²ÎÊıÓÃÓÚ´¦ÀíÊôĞÔÊÇË÷ÒıÆ÷µÄÇéĞÎ
+                        // æœ€åä¸€ä¸ªå‚æ•°ç”¨äºå¤„ç†å±æ€§æ˜¯ç´¢å¼•å™¨çš„æƒ…å½¢
                         property.SetValue(
                             commandLine, true, null);
                         success = true;
@@ -111,7 +111,7 @@ public class CommandLineHandler
                         success = true;
                     }
                     else if (
-                        // property.PropertyType.IsEnumÒ²ÊÇÖ§³ÖµÄ
+                        // property.PropertyType.IsEnumä¹Ÿæ˜¯æ”¯æŒçš„
                         property.PropertyType ==
                             typeof(ProcessPriorityClass))
                     {
@@ -129,23 +129,23 @@ public class CommandLineHandler
                         {
                             success = false;
                             errorMessage =
-                                $@"Ñ¡Ïî'{optionParts[1] 
-                                }'¶Ô'{ option }'ÎŞĞ§¡£";
+                                $@"é€‰é¡¹'{optionParts[1] 
+                                }'å¯¹'{ option }'æ— æ•ˆã€‚";
                         }
                     }
                     else
                     {
                         success = false;
                         errorMessage = 
-                            $@"²»Ö§³Ö{ commandLine.GetType() 
-                                }ÉÏµÄÊı¾İÀàĞÍ'{property.PropertyType}'¡£";
+                            $@"ä¸æ”¯æŒ{ commandLine.GetType() 
+                                }ä¸Šçš„æ•°æ®ç±»å‹'{property.PropertyType}'ã€‚";
                     }
                 }
                 else
                 {
                     success = false;
                     errorMessage = 
-                       $"²»Ö§³Ö'{ option }'Ñ¡Ïî¡£";
+                       $"ä¸æ”¯æŒ'{ option }'é€‰é¡¹ã€‚";
                 }
             }
         }

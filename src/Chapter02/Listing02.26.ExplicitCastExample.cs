@@ -6,7 +6,7 @@ public class Program
     {
         #region INCLUDE
         long longNumber = 50918309109;
-        int intNumber = (int)longNumber; // (int)是强制类型转换操作符
+        int intNumber = (int)longNumber; // (int)鏄己鍒剁被鍨嬭浆鎹㈡搷浣滅
         #endregion INCLUDE
     }
 }

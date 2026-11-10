@@ -16,12 +16,12 @@ public class Program
     public static int Main(string[] args)
     {
         if (args?.Length > 0) { _ = int.TryParse(args[0], out _Total); }
-        Console.WriteLine("µÝÔöºÍµÝ¼õ" + $"{_Total}´Î...");
+        Console.WriteLine("é€’å¢žå’Œé€’å‡" + $"{_Total}æ¬¡...");
 
-        // .NET 4.0Òª¸ÄÎªÊ¹ÓÃTask.Factory.StartNew
+        // .NET 4.0è¦æ”¹ä¸ºä½¿ç”¨Task.Factory.StartNew
         Task task = Task.Run(() => Decrement());
 
-        // µÝÔö
+        // é€’å¢ž
         for(int i = 0; i < _Total; i++)
         {
             #region HIGHLIGHT
@@ -46,7 +46,7 @@ public class Program
         return _Count;
     }
 
-    // µÝ¼õ
+    // é€’å‡
     public static void Decrement()
     {
         for(int i = 0; i < _Total; i++)

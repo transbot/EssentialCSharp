@@ -7,7 +7,7 @@ public class Program
         #region INCLUDE
         string[] languages = new string[9];
         // ...
-        // 运行时错误：索引越界 - 最后一个元素的索引应为8
+        // 杩愯鏃堕敊璇細绱㈠紩瓒婄晫 - 鏈�鍚庝竴涓厓绱犵殑绱㈠紩搴斾负8
         languages[4] = languages[9];
         #endregion INCLUDE
     }

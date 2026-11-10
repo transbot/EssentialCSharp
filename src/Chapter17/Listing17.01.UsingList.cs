@@ -8,15 +8,15 @@ public class Program
 {
     public static void Main()
     {
-        // Æß¸öĞ¡°«ÈË
+        // ä¸ƒä¸ªå°çŸ®äºº
         List<string> list = new() { "Sneezy", "Happy", "Dopey",  "Doc",
                                     "Sleepy", "Bashful",  "Grumpy"};
 
         list.Sort();
 
         Console.WriteLine(
-            $"°´×ÖÄ¸Ë³Ğò£¬{ list[0] }ÊÇµÚÒ»¸öĞ¡°«ÈË£¬"
-            + $"¶ø{ list[^1] }ÊÇ×îºóÒ»¸ö¡£");
+            $"æŒ‰å­—æ¯é¡ºåºï¼Œ{ list[0] }æ˜¯ç¬¬ä¸€ä¸ªå°çŸ®äººï¼Œ"
+            + $"è€Œ{ list[^1] }æ˜¯æœ€åä¸€ä¸ªã€‚");
 
         list.Remove("Grumpy");
     }

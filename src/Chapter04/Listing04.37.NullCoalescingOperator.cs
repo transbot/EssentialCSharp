@@ -8,13 +8,13 @@ public class Program
         string? fullName = GetSaveFilePath();
         // ...
 
-        // 空合并操作符
+        // 绌哄悎骞舵搷浣滅
         string fileName = GetFileName() ?? "config.json";
         string directory = GetConfigurationDirectory() ??
             GetApplicationDirectory() ??
             Environment.CurrentDirectory;
 
-        // 空合并赋值操作符
+        // 绌哄悎骞惰祴鍊兼搷浣滅
         fullName ??= $"{ directory }/{ fileName }";
 
         // ...

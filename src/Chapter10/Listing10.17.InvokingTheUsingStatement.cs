@@ -1,4 +1,4 @@
-// ËµÃ÷ : Use to demonstrate pre-C# 8.0 syntax.
+// è¯´æ˜ : Use to demonstrate pre-C# 8.0 syntax.
 #pragma warning disable IDE0063 // Use simple 'using' statement
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_17;
@@ -12,12 +12,12 @@ public static class Program
     {
 
         #region HIGHLIGHT
-        // C# 8.0Ö®Ç°
+        // C# 8.0ä¹‹å‰
         using (TemporaryFileStream fileStream2 =
             new(), fileStream3 = new())
         #endregion HIGHLIGHT
         {
-            // Ê¹ÓÃÁÙÊ±ÎÄ¼şÁ÷
+            // ä½¿ç”¨ä¸´æ—¶æ–‡ä»¶æµ
         }
 
 

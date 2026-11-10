@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_03.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class UppercaseTests
     public void Main_GivenValidString_MakeUppercase()
     {
         const string expected =
-@"Enter text: <<test
+@"输入文本: <<test
 >>TEST";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(

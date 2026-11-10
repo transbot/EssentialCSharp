@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_08;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_08;
 
 interface IReadableSettingsProvider
 {

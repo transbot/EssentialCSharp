@@ -25,7 +25,7 @@ public class Program
         {
             Console.WriteLine(Environment.NewLine + "{0}:",
                 wordGroup.Key ?
-                    "ÉÏÏÂÎÄ¹Ø¼ü×Ö" : "¹Ø¼ü×Ö");
+                    "ä¸Šä¸‹æ–‡å…³é”®å­—" : "å…³é”®å­—");
             foreach(string keyword in wordGroup)
             {
                 Console.Write(" " +

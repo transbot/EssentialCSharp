@@ -11,14 +11,14 @@ public class Program
     {
         (int degrees, int minutes, int seconds) = (90, 0, 0);
 
-        // ¹¹Ôìº¯Êı¸ù¾İÎ»ÖÃ²ÎÊıÀ´Éú³É
+        // æ„é€ å‡½æ•°æ ¹æ®ä½ç½®å‚æ•°æ¥ç”Ÿæˆ
         Angle angle = new(degrees, minutes, seconds);
 
-        // ¼ÇÂ¼°üº¬Ò»¸öToString()ÊµÏÖ£¬Ëü·µ»Ø£º
+        // è®°å½•åŒ…å«ä¸€ä¸ªToString()å®ç°ï¼Œå®ƒè¿”å›ï¼š
         // "Angle { Degrees = 90, Minutes = 0, Seconds = 0, Name =  }"
         Console.WriteLine(angle.ToString());
 
-        // ¼ÇÂ¼ÓĞÒ»¸öÊ¹ÓÃÁËÎ»ÖÃ²ÎÊıµÄ½â¹¹º¯Êı
+        // è®°å½•æœ‰ä¸€ä¸ªä½¿ç”¨äº†ä½ç½®å‚æ•°çš„è§£æ„å‡½æ•°
         if (angle is (int, int, int, string) angleData)
         {
             Trace.Assert(angle.Degrees == angleData.Degrees);
@@ -27,16 +27,16 @@ public class Program
         }
 
         Angle copy = new(degrees, minutes, seconds);       
-        // ¼ÇÂ¼Ìá¹©ÁËÒ»¸ö×Ô¶¨ÒåµÄÏàµÈĞÔ²Ù×÷·û
+        // è®°å½•æä¾›äº†ä¸€ä¸ªè‡ªå®šä¹‰çš„ç›¸ç­‰æ€§æ“ä½œç¬¦
         Trace.Assert(angle == copy);
 
-        // with²Ù×÷·ûµÈ¼ÛÓÚ£º
+        // withæ“ä½œç¬¦ç­‰ä»·äºï¼š
         // Angle copy = new(degrees, minutes, seconds);
         copy = angle with { };
         Trace.Assert(angle == copy);
 
-        // with²Ù×÷·ûÖ§³Ö¡°¶ÔÏó³õÊ¼»¯Æ÷¡±Óï·¨£¬
-        // ÓÃÓÚÊµÀı»¯Ò»¸öĞŞ¸Ä¹ıµÄ¿½±´¡£        
+        // withæ“ä½œç¬¦æ”¯æŒâ€œå¯¹è±¡åˆå§‹åŒ–å™¨â€è¯­æ³•ï¼Œ
+        // ç”¨äºå®ä¾‹åŒ–ä¸€ä¸ªä¿®æ”¹è¿‡çš„æ‹·è´ã€‚        
         Angle modifiedCopy = angle with { Degrees = 180 };
         Trace.Assert(angle != modifiedCopy);
     }

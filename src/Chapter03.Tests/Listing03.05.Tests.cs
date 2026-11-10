@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_05.Tests;
 
 
@@ -9,8 +9,8 @@ public class ProgramTests
     public void Main_WriteInventions()
     {
         const string expected =
-@"Bifocals (1784)
-Phonograph (1877)";
+@"双焦点眼镜 (1784)
+留声机 (1877)";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

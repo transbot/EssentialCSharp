@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_07.Tests;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter20.Listing20_07.Tests;
 
 [TestClass]
 public class AsyncEncryptionCollectionTests

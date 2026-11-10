@@ -7,23 +7,23 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"Bifocals (1784)
-Steam Locomotive (1815)
-Electrical Telegraph (1837)
-Phonograph (1877)
-Kinetoscope (1888)
-Flying Machine (1903)
-Backless Brassiere (1914)
-Droplet Deposition Apparatus (1989)
+        const string expected = @"双焦点眼镜 (1784)
+蒸汽机车 (1815)
+电报 (1837)
+留声机 (1877)
+活动电影机 (1888)
+飞机 (1903)
+无背式胸罩 (1914)
+液滴沉积装置 (1989)
 
-Droplet Deposition Apparatus (1989)
-Backless Brassiere (1914)
-Flying Machine (1903)
-Kinetoscope (1888)
-Phonograph (1877)
-Electrical Telegraph (1837)
-Steam Locomotive (1815)
-Bifocals (1784)";
+液滴沉积装置 (1989)
+无背式胸罩 (1914)
+飞机 (1903)
+活动电影机 (1888)
+留声机 (1877)
+电报 (1837)
+蒸汽机车 (1815)
+双焦点眼镜 (1784)";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

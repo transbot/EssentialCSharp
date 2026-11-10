@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_05
 {
     #region INCLUDE
-    // Í¨¹ıÒ»¸öÌØĞÔÀ´Ö§³ÖĞòÁĞ»¯
+    // é€šè¿‡ä¸€ä¸ªç‰¹æ€§æ¥æ”¯æŒåºåˆ—åŒ–
     #region HIGHLIGHT
     [Serializable]
     #endregion HIGHLIGHT
@@ -45,7 +45,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_05
         }
         #endregion EXCLUDE
 
-       // ÓÃÓÚ·´ĞòÁĞ»¯Òì³£
+       // ç”¨äºååºåˆ—åŒ–å¼‚å¸¸
        public DatabaseException(
         #region HIGHLIGHT
            SerializationInfo serializationInfo,
@@ -58,7 +58,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_05
     }
     #endregion INCLUDE
 
-    // ´´½¨Êı¾İ¿âÒì³£ÀàµÄÄ£Äâ°æ±¾£¬¶ø²»ÊÇÒıÓÃÕæÊµµÄ¿â
+    // åˆ›å»ºæ•°æ®åº“å¼‚å¸¸ç±»çš„æ¨¡æ‹Ÿç‰ˆæœ¬ï¼Œè€Œä¸æ˜¯å¼•ç”¨çœŸå®çš„åº“
     namespace System.Data
     {
         namespace SqlClient

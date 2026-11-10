@@ -30,17 +30,17 @@ public class Program
 
             Console.WriteLine($"{file.Attributes} = {(int)file.Attributes}");
 
-            // LinuxÉÏ½öÖ§³ÖReadOnlyÊôĞÔ
-            // (HiddenÊôĞÔÔÚLinuxÉÏ²»Æğ×÷ÓÃ)
+            // Linuxä¸Šä»…æ”¯æŒReadOnlyå±æ€§
+            // (Hiddenå±æ€§åœ¨Linuxä¸Šä¸èµ·ä½œç”¨)
             if (!file.Attributes.HasFlag(FileAttributes.Hidden))
             {
-                throw new Exception("ÎÄ¼ş²»ÊÇÒş²Ø¡£");
+                throw new Exception("æ–‡ä»¶ä¸æ˜¯éšè—ã€‚");
             }
             
             if ((file.Attributes & FileAttributes.ReadOnly) !=
                 FileAttributes.ReadOnly)
             {
-                throw new Exception("ÎÄ¼ş²»ÊÇÖ»¶Á¡£");
+                throw new Exception("æ–‡ä»¶ä¸æ˜¯åªè¯»ã€‚");
             }
         #region EXCLUDE
         }

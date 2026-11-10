@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_32.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class ProgramTests
     public void Main_InputIsEmpty_PlayerQuitConditionHit()
     {
         const string expected =
-            @"Player Inigo quit!!";
+            @"玩家Inigo退出!!";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, ()=>Program.Main("","Inigo"));
@@ -18,7 +18,7 @@ public class ProgramTests
     public void Main_InputIsQuit_PlayerQuitConditionHit()
     {
         const string expected =
-            @"Player Inigo quit!!";
+            @"玩家Inigo退出!!";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, () => Program.Main("quit", "Inigo"));

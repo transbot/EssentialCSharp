@@ -4,8 +4,8 @@ using Listing12_02;
 #region INCLUDE
 public class CellStack
 {
-    public virtual Cell Pop() { return new Cell(); } // ·µ»Ø×îºóÒ»¸öÌí¼ÓµÄcell£¬
-                                                     // ²¢°ÑËü´ÓÕ»ÖĞÒÆ³ı¡£
+    public virtual Cell Pop() { return new Cell(); } // è¿”å›æœ€åä¸€ä¸ªæ·»åŠ çš„cellï¼Œ
+                                                     // å¹¶æŠŠå®ƒä»æ ˆä¸­ç§»é™¤ã€‚
     public virtual void Push(Cell cell) { }
     // ...
 }

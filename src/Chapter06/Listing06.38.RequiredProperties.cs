@@ -50,15 +50,15 @@ public class Program
     public static void Main()
     {
         #region EXCLUDE
-        #pragma warning disable IDE0059 // ²»ĞèÒª¸³Öµ
+        #pragma warning disable IDE0059 // ä¸éœ€è¦èµ‹å€¼
         #endregion EXCLUDE
         Book book = new()
         {
             Isbn = "978-0135972267",
-            Title = "°¢ÂŞÓĞÖ§²ÊÉ«±Ê"
+            Title = "é˜¿ç½—æœ‰æ”¯å½©è‰²ç¬”"
         };
         #region EXCLUDE
-        #pragma warning restore IDE0059 // ²»ĞèÒª¸³Öµ
+        #pragma warning restore IDE0059 // ä¸éœ€è¦èµ‹å€¼
         #endregion EXCLUDE
     }
 }

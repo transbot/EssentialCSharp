@@ -13,7 +13,7 @@ public class Program
         foreach(Type type in t.GetGenericArguments())
         {
             System.Console.WriteLine(
-                "类型参数: " + type.FullName);
+                "绫诲瀷鍙傛暟: " + type.FullName);
         }
         //...
     }

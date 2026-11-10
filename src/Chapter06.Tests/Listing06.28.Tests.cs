@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_28.Tests;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_28.Tests;
 
 [TestClass]
 public class ProgramTests
@@ -7,7 +7,7 @@ public class ProgramTests
     public void Main_UsingAConstructor_WriteFirstNameLastNameSalary()
     {
         const string expected =
-            "Inigo Montoya: Ì«ÉÙÁË";
+            "Inigo Montoya: å¤ªå°‘äº†";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

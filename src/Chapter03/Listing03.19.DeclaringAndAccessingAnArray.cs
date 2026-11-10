@@ -9,13 +9,13 @@ public class Program
             "C#", "COBOL", "Java",
             "C++", "TypeScript", "Visual Basic",
             "Python", "Lisp", "JavaScript"};
-            // »ñÈ¡languagesÊı×éµÄµÚÎåÏî(TypeScript)
+            // è·å–languagesæ•°ç»„çš„ç¬¬äº”é¡¹(TypeScript)
             string language = languages[4];
-        // Êä³ö"TypeScript"
+        // è¾“å‡º"TypeScript"
         Console.WriteLine(language);
-            // »ñÈ¡µ¹ÊıµÚÈıÏî(Python)
+            // è·å–å€’æ•°ç¬¬ä¸‰é¡¹(Python)
             language = languages[^3];
-        // Êä³ö"Python"
+        // è¾“å‡º"Python"
         Console.WriteLine(language);
         #endregion INCLUDE
     }

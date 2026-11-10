@@ -1,9 +1,9 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter18.Listing18_20;
 
-// È¡Ïû×¢ÊÍ½«²»ÄÜ±àÒë
+// å–æ¶ˆæ³¨é‡Šå°†ä¸èƒ½ç¼–è¯‘
 /*
 #region INCLUDE
-// ´íÎó: ÒÑÏŞÖÆ¸ÃÌØĞÔÖ»ÄÜÓÃÓÚÊôĞÔ
+// é”™è¯¯: å·²é™åˆ¶è¯¥ç‰¹æ€§åªèƒ½ç”¨äºå±æ€§
 [CommandLineSwitchAlias("?")] 
 class CommandLineInfo
 {

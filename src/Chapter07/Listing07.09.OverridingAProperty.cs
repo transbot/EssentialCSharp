@@ -1,4 +1,4 @@
-// ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 #pragma warning disable CS8618 // Disabled pending constructor
         
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_09;
@@ -26,7 +26,7 @@ public class Contact : PdaItem
         set
         {
             string[] names = value.Split(' ');
-            // Î´ÏÔÊ¾´íÎó´¦Àí
+            // æœªæ˜¾ç¤ºé”™è¯¯å¤„ç†
             FirstName = names[0];
             LastName = names[1];
         }

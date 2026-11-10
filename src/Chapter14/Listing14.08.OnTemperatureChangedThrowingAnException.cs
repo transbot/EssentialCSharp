@@ -24,11 +24,11 @@ public class Program
         thermostat.OnTemperatureChange +=
             cooler.OnTemperatureChanged;
 
-        Console.Write("ÊäÈëÎÂ¶È: ");
+        Console.Write("è¾“å…¥æ¸©åº¦: ");
         string? temperature = Console.ReadLine();
         if (!int.TryParse(temperature, out int currentTemperature))
         {
-            Console.WriteLine($"'{temperature}' ²»ÊÇÒ»¸öÓĞĞ§µÄÕûÊı¡£");
+            Console.WriteLine($"'{temperature}' ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
             return;
         }
         thermostat.CurrentTemperature = currentTemperature;

@@ -39,7 +39,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_04
             // ...
         }
         #region EXCLUDE
-        // ÓÃÓÚ·´ĞòÁĞ»¯Òì³£
+        // ç”¨äºååºåˆ—åŒ–å¼‚å¸¸
         public DatabaseException(
             SerializationInfo serializationInfo,
             StreamingContext context)
@@ -51,7 +51,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter11.Listing11_04
     }
     #endregion INCLUDE
 
-    // ´´½¨Êı¾İ¿âÒì³£ÀàµÄÄ£Äâ°æ±¾£¬¶ø²»ÊÇÒıÓÃÕæÊµµÄ¿â
+    // åˆ›å»ºæ•°æ®åº“å¼‚å¸¸ç±»çš„æ¨¡æ‹Ÿç‰ˆæœ¬ï¼Œè€Œä¸æ˜¯å¼•ç”¨çœŸå®çš„åº“
 #pragma warning disable CA1032 // Implement standard exception constructors
     namespace System.Data
     {

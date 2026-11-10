@@ -49,7 +49,7 @@ public static class DirectoryInfoExtension
 
     private static void Copy(string element, string fileName, string searchPattern)
     {
-        Console.WriteLine("ÕıÔÚ¸´ÖÆ " + fileName);
+        Console.WriteLine("æ­£åœ¨å¤åˆ¶ " + fileName);
         #endregion EXCLUDE
     }
 }
@@ -66,7 +66,7 @@ public class Program
             SearchOption.TopDirectoryOnly, "*");
         #endregion HIGHLIGHT
         #region EXCLUDE
-        //±¾Àı¶¨ÒåµÄÀ©Õ¹·½·¨±íÏÖµÃÏñÊÇDirectoryInfoµÄÊµÀı³ÉÔ±
+        //æœ¬ä¾‹å®šä¹‰çš„æ‰©å±•æ–¹æ³•è¡¨ç°å¾—åƒæ˜¯DirectoryInfoçš„å®ä¾‹æˆå‘˜
         #endregion EXCLUDE
     }
 }

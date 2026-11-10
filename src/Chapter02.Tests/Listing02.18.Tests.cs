@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_18.Tests;
 
 [TestClass]
@@ -7,7 +7,7 @@ public class SingleRawLiteralTests
     [TestMethod]
     public void Main_OutputsQuote()
     {
-        const string expected = """Mama said, "Life was just a box of chocolates..." """;
+        const string expected = """妈妈说过，"生活就像一盒巧克力..." """;
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

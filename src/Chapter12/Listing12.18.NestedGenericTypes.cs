@@ -1,12 +1,12 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_18;
 
-#pragma warning disable 0693 // ½ûÖ¹ÏÔÊ¾¹ØÓÚÇ¶Ì×ÀàĞÍ²ÎÊı
-                             // ÓëÍâ²¿ÀàĞÍÖĞµÄÀàĞÍ²ÎÊıÍ¬ÃûµÄ¾¯¸æ
+#pragma warning disable 0693 // ç¦æ­¢æ˜¾ç¤ºå…³äºåµŒå¥—ç±»å‹å‚æ•°
+                             // ä¸å¤–éƒ¨ç±»å‹ä¸­çš„ç±»å‹å‚æ•°åŒåçš„è­¦å‘Š
 #region INCLUDE
 public class Container<T, U>
 {
-    // Ç¶Ì×ÀàÒÑ¼Ì³ĞÁËÀàĞÍ²ÎÊı¡£
-    // ÖØÓÃÕâĞ©ÀàĞÍ²ÎÊı»áÏÔÊ¾¾¯¸æ¡£
+    // åµŒå¥—ç±»å·²ç»§æ‰¿äº†ç±»å‹å‚æ•°ã€‚
+    // é‡ç”¨è¿™äº›ç±»å‹å‚æ•°ä¼šæ˜¾ç¤ºè­¦å‘Šã€‚
     public class Nested<U>
     {
         #region HIGHLIGHT

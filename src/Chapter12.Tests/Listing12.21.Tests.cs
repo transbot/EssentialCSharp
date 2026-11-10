@@ -1,4 +1,4 @@
-﻿using AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_13;
+using AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_13;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_21.Tests;
 

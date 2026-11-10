@@ -5,7 +5,7 @@ public class Program
 #pragma warning disable CS1030
     public static void Main()
     {
-#warning "ÓÉ#pragma warning disableÆÁ±ÎµÄÊ¾Àı¾¯¸æ¡£"
+#warning "ç”±#pragma warning disableå±è”½çš„ç¤ºä¾‹è­¦å‘Šã€‚"
     }
     #region INCLUDE
     #pragma warning restore CS1030

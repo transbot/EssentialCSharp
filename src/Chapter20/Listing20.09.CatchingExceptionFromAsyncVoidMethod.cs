@@ -32,7 +32,7 @@ public class AsyncSynchronizationContext : SynchronizationContext
     {
         try
         {
-            Console.WriteLine($@"ÒÑµ÷ÓÃPostÍ¨Öª...(Ïß³ÌID: {
+            Console.WriteLine($@"å·²è°ƒç”¨Posté€šçŸ¥...(çº¿ç¨‹ID: {
                 Thread.CurrentThread.ManagedThreadId})");
             callback(state);
         }
@@ -51,7 +51,7 @@ public static class Program
 {
     public static bool EventTriggered { get; set; }
 
-    public const string ExpectedExceptionMessage = "Ô¤ÆÚµÄÒì³£";
+    public const string ExpectedExceptionMessage = "é¢„æœŸçš„å¼‚å¸¸";
 
     public static void Main()
     {
@@ -69,7 +69,7 @@ public static class Program
 
             if (synchronizationContext.Exception is not null)
             {
-                Console.WriteLine($@"ÕıÔÚÅ×³öÔ¤ÆÚµÄÒì³£....(Ïß³ÌID: {
+                Console.WriteLine($@"æ­£åœ¨æŠ›å‡ºé¢„æœŸçš„å¼‚å¸¸....(çº¿ç¨‹ID: {
                     Thread.CurrentThread.ManagedThreadId})");
                 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(
                     synchronizationContext.Exception).Throw();
@@ -77,7 +77,7 @@ public static class Program
         }
         catch (Exception exception)
         {
-            Console.WriteLine($@"ÒÑÅ×³öÔ¤ÆÚµÄÒì³£{exception}¡£(Ïß³ÌID: {
+            Console.WriteLine($@"å·²æŠ›å‡ºé¢„æœŸçš„å¼‚å¸¸{exception}ã€‚(çº¿ç¨‹ID: {
                 Thread.CurrentThread.ManagedThreadId})");
         }
         finally
@@ -89,12 +89,12 @@ public static class Program
 
     private static async void OnEvent(object sender, EventArgs eventArgs)
     {
-        Console.WriteLine($@"ÕıÔÚµ÷ÓÃTask.Run...(Ïß³ÌID: {
+        Console.WriteLine($@"æ­£åœ¨è°ƒç”¨Task.Run...(çº¿ç¨‹ID: {
                 Thread.CurrentThread.ManagedThreadId})");
         await Task.Run(() =>
         {
             EventTriggered = true;
-            Console.WriteLine($@"ÕıÔÚÔËĞĞÈÎÎñ... (Ïß³ÌID: {
+            Console.WriteLine($@"æ­£åœ¨è¿è¡Œä»»åŠ¡... (çº¿ç¨‹ID: {
                 Thread.CurrentThread.ManagedThreadId})");
             throw new Exception(ExpectedExceptionMessage);
         });

@@ -18,7 +18,7 @@ class Program
             data.AsParallel().OrderBy(item => item);
         #endregion HIGHLIGHT
 
-        // ÑéÖ¤Êý¾ÝÏîµÄ×Ü¼ÆÊýÈÔÓëÔ­Ê¼¼ÆÊýÆ¥Åä
+        // éªŒè¯æ•°æ®é¡¹çš„æ€»è®¡æ•°ä»ä¸ŽåŽŸå§‹è®¡æ•°åŒ¹é…
         if (data.Count() != parallelGroups.Sum(
                 item => item.Length))
         {
@@ -36,10 +36,10 @@ class Program
 
     private static string Encrypt(string item)
     {
-        Console.WriteLine($">>>>>ÕýÔÚ¼ÓÃÜ'{ item }'.");
+        Console.WriteLine($">>>>>æ­£åœ¨åŠ å¯†'{ item }'.");
         Cryptographer cryptographer = new();
         string itemEncrypted = System.Text.Encoding.UTF8.GetString(cryptographer.Encrypt(item));
-        Console.WriteLine($"<<<<<½áÊø¼ÓÃÜ'{ itemEncrypted }'.");
+        Console.WriteLine($"<<<<<ç»“æŸåŠ å¯†'{ itemEncrypted }'.");
         return itemEncrypted;
     }
 

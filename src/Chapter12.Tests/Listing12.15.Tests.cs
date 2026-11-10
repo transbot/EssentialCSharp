@@ -7,7 +7,7 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"1914: Shackleton leaves for South Pole on ship Endurance";
+        const string expected = @"1914: 沙克尔顿乘坐“坚忍号”前往南极。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

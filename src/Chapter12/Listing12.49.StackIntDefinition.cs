@@ -1,4 +1,4 @@
-// ËµÃ÷ : Ö»ÏÔÊ¾²¿·ÖÊµÏÖ
+// è¯´æ˜ : åªæ˜¾ç¤ºéƒ¨åˆ†å®ç°
 #pragma warning disable CS0168 // Variable is declared but never used
 
 

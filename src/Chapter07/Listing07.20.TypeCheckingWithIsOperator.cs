@@ -60,10 +60,10 @@ public class Program
             Person person = (Person) entity;
         #endregion HIGHLIGHT
             Console.WriteLine(
-                $"Id¶ÔÓ¦ÓÚÒ»¸ö{
-                    nameof(Person) }¶ÔÏó: {
+                $"Idå¯¹åº”äºä¸€ä¸ª{
+                    nameof(Person) }å¯¹è±¡: {
                     person.FirstName} {
-                    person.LastName}¡£"
+                    person.LastName}ã€‚"
                 );
 
             #region HIGHLIGHT
@@ -71,20 +71,20 @@ public class Program
             #endregion HIGHLIGHT
             {
                 Console.WriteLine(
-                    $"Id({ employee.Id })Ò²ÊÇÒ»¸ö{
-                        nameof(Employee)}¶ÔÏó¡£");
+                    $"Id({ employee.Id })ä¹Ÿæ˜¯ä¸€ä¸ª{
+                        nameof(Employee)}å¯¹è±¡ã€‚");
             }
         }
         else if(entity is null)
         {
             Console.WriteLine(
-                $"IdÎ´Öª£¬ËùÒÔ·µ»Ønull¡£");
+                $"IdæœªçŸ¥ï¼Œæ‰€ä»¥è¿”å›nullã€‚");
         }
         else
         {
             Console.WriteLine(
-                $"Id'{id}'²»ÊÇÒ»¸ö{
-                    nameof(Employee)}»ò{nameof(Person)}¶ÔÏó¡£");
+                $"Id'{id}'ä¸æ˜¯ä¸€ä¸ª{
+                    nameof(Employee)}æˆ–{nameof(Person)}å¯¹è±¡ã€‚");
         }
     }
 }

@@ -1,14 +1,14 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_05;
 
 #region INCLUDE
-// 暂时禁用“非可空字段未初始化”警告，因为代码尚未完成
+// 鏆傛椂绂佺敤鈥滈潪鍙┖瀛楁鏈垵濮嬪寲鈥濊鍛婏紝鍥犱负浠ｇ爜灏氭湭瀹屾垚
 #pragma warning disable CS8618
 public class Employee
 {
     public string FirstName;
     public string LastName;
     #region HIGHLIGHT
-    public string? Salary = "不够";
+    public string? Salary = "涓嶅";
     #endregion HIGHLIGHT
 }
 #endregion INCLUDE

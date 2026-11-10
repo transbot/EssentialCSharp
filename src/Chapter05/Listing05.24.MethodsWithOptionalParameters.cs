@@ -78,7 +78,7 @@ public static class LineCounter
             line = reader.ReadLine();
         }
 
-        reader.Dispose();  // ×Ô¶¯¹Ø±ÕÁ÷
+        reader.Dispose();  // è‡ªåŠ¨å…³é—­æµ
         return lineCount;
         #endregion EXCLUDE
     }

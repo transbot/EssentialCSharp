@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_20.Tests;
 
 [TestClass]
@@ -8,8 +8,8 @@ public class ProgramTests
     public void Main_GivenEmployeeID_PersonAndEmployee()
     {
         const string expected = """
-            Id corresponds to a Person object: Inigo Montoya.
-            Id (46041779-79D5-4268-BCD9-25BF61F8B4F6) is also an Employee object.
+            Id对应于一个Person对象: Inigo Montoya。
+            Id(46041779-79D5-4268-BCD9-25BF61F8B4F6)也是一个Employee对象。
             """;
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
@@ -21,7 +21,7 @@ public class ProgramTests
     [TestMethod]
     public void Main_GivenPerson_Person()
     {
-        const string expected = "Id corresponds to a Person object: Inigo Montoya.";
+        const string expected = "Id对应于一个Person对象: Inigo Montoya。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected,
@@ -40,7 +40,7 @@ public class ProgramTests
     public void Main_GivenUnknownId_NotPersonOrEmployee()
     {
         Guid guid = Guid.NewGuid();
-        string expected = "Id was unknown so null was returned.";
+        string expected = $"Id'{guid}'不是一个Employee或Person对象。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected,

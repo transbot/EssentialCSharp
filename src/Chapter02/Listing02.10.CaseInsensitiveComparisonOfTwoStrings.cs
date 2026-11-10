@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_10;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_10;
 
 public class Program
 {
@@ -10,8 +10,8 @@ public class Program
         // ...
         int comparison = string.Compare(option, "/Help", ignoreCase);
         bool isHelpRequested = (comparison == 0);
-        // ÏÔÊ¾: ÊÇ·ñÇëÇó°ïÖú: True
-        Console.WriteLine($"ÊÇ·ñÇëÇó°ïÖú: {isHelpRequested}");
+        // æ˜¾ç¤º: æ˜¯å¦è¯·æ±‚å¸®åŠ©: True
+        Console.WriteLine($"æ˜¯å¦è¯·æ±‚å¸®åŠ©: {isHelpRequested}");
         #endregion INCLUDE
 
     }

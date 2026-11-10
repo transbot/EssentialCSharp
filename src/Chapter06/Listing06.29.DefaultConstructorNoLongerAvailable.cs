@@ -14,7 +14,7 @@ public class Program
 
 #if COMPILEERROR // EXCLUDE
         #region HIGHLIGHT
-        // ´íÎó£ºÃ»ÓĞ»ñÈ¡0¸ö²ÎÊıµÄEmployee·½·¨ÖØÔØ        
+        // é”™è¯¯ï¼šæ²¡æœ‰è·å–0ä¸ªå‚æ•°çš„Employeeæ–¹æ³•é‡è½½        
         employee = new Employee();
         #endregion HIGHLIGHT
 #endif // COMPILEERROR // EXCLUDE

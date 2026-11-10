@@ -38,9 +38,9 @@ public static class ByteArrayDataSource
 {
     private static byte[] LoadData()
     {
-        // ÏëÏóÒ»¸ö´óµÃ¶àµÄÊı
+        // æƒ³è±¡ä¸€ä¸ªå¤§å¾—å¤šçš„æ•°
         byte[] data = new byte[1000];
-        // ¼ÓÔØÊı¾İ
+        // åŠ è½½æ•°æ®
         // ...
         return data;
     }
@@ -62,8 +62,8 @@ public static class ByteArrayDataSource
         }
         else
         {            
-            // ÏÈÖØĞÂ¼ÓÔØÊı¾İ²¢¸³Öµ£¨ÒÔ´´½¨Ò»¸öÇ¿ÒıÓÃ£©£¬
-            // È»ºó²ÅÄÜÉèÖÃWeakReferenceµÄTarget²¢·µ»ØËü¡£
+            // å…ˆé‡æ–°åŠ è½½æ•°æ®å¹¶èµ‹å€¼ï¼ˆä»¥åˆ›å»ºä¸€ä¸ªå¼ºå¼•ç”¨ï¼‰ï¼Œ
+            // ç„¶åæ‰èƒ½è®¾ç½®WeakReferenceçš„Targetå¹¶è¿”å›å®ƒã€‚
             target = LoadData();
             Data.SetTarget(target);
             return target;
@@ -92,14 +92,14 @@ public class ObjectDataSource
         }
         else
         {
-            // ÏëÏóÒ»¸ö´óµÃ¶àµÄÊı
+            // æƒ³è±¡ä¸€ä¸ªå¤§å¾—å¤šçš„æ•°
             data = new byte[1000];
 
-            // ¼ÓÔØÊı¾İ
+            // åŠ è½½æ•°æ®
             // ...
 
-            // ´´½¨¶ÔdataµÄÒ»¸öÈõÒıÓÃ£¬
-            // ÒÔºóÉÔºóÊ¹ÓÃ¡£
+            // åˆ›å»ºå¯¹dataçš„ä¸€ä¸ªå¼±å¼•ç”¨ï¼Œ
+            // ä»¥åç¨åä½¿ç”¨ã€‚
             Data.Target = data;
         }
         return data;

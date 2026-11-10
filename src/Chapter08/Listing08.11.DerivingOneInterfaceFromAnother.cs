@@ -6,25 +6,25 @@ using Listing08_09;
 interface IDistributedSettingsProvider : ISettingsProvider
 {
     /// <summary>
-    /// »ñÈ¡ÌØ¶¨URIµÄÉèÖÃ
+    /// è·å–ç‰¹å®šURIçš„è®¾ç½®
     /// </summary>
     /// <param name="uri">
-    /// ºÍÉèÖÃ¹ØÁªµÄURIÃû³Æ</param>
-    /// <param name="name">ÉèÖÃÃû³Æ</param>
+    /// å’Œè®¾ç½®å…³è”çš„URIåç§°</param>
+    /// <param name="name">è®¾ç½®åç§°</param>
     /// <param name="defaultValue">
-    /// ÔÚÉèÖÃÎ´ÕÒµ½µÄÇ°ÌáÏÂ·µ»ØµÄÖµ</param>
-    /// <returns>Ö¸¶¨µÄÉèÖÃ</returns>
+    /// åœ¨è®¾ç½®æœªæ‰¾åˆ°çš„å‰æä¸‹è¿”å›çš„å€¼</param>
+    /// <returns>æŒ‡å®šçš„è®¾ç½®</returns>
     string GetSetting(
         string uri, string name, string defaultValue);
 
     /// <summary>
-    /// ÎªÌØ¶¨URI½øĞĞÉèÖÃ
+    /// ä¸ºç‰¹å®šURIè¿›è¡Œè®¾ç½®
     /// </summary>
     /// <param name="uri">
-    /// ºÍÉèÖÃ¹ØÁªµÄURIÃû³Æ</param>
-    /// <param name="name">ÉèÖÃÃû³Æ</param>
-    /// <param name="value">Òª³Ö¾Ã»¯´æ´¢µÄÖµ</param>
-    /// <returns>Ö¸¶¨µÄÉèÖÃ</returns>
+    /// å’Œè®¾ç½®å…³è”çš„URIåç§°</param>
+    /// <param name="name">è®¾ç½®åç§°</param>
+    /// <param name="value">è¦æŒä¹…åŒ–å­˜å‚¨çš„å€¼</param>
+    /// <returns>æŒ‡å®šçš„è®¾ç½®</returns>
     void SetSetting(
         string uri, string name, string value);
 }

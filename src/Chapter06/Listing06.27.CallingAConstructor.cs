@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_27;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_27;
 
 using Listing06_30;
 
@@ -11,7 +11,7 @@ public class Program
         #region HIGHLIGHT
         employee = new("Inigo", "Montoya");
         #endregion HIGHLIGHT
-        employee.Salary = "Ì«ÉÙÁË";
+        employee.Salary = "å¤ªå°‘äº†";
 
         Console.WriteLine(
             "{0} {1}: {2}",

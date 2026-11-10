@@ -4,12 +4,12 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter08.Listing08_14;
 #region INCLUDE
 public interface IWorkflowActivity
 {
-    // Ë½ÓĞ£¬Òò´Ë·ÇĞé
+    // ç§æœ‰ï¼Œå› æ­¤éè™š
     private static void Start() =>
         Console.WriteLine(
             "IWorkflowActivity.Start()...");
 
-    // ÃÜ·âÒÔ·ÀÖ¹ÖØĞ´
+    // å¯†å°ä»¥é˜²æ­¢é‡å†™
     sealed void Run()
     {
         try
@@ -25,7 +25,7 @@ public interface IWorkflowActivity
 
     protected void InternalRun();
 
-    // Ë½ÓĞ£¬Òò´Ë·ÇĞé
+    // ç§æœ‰ï¼Œå› æ­¤éè™š
     private static void Stop() =>
         Console.WriteLine(
             "IWorkflowActivity.Stop()...");
@@ -37,7 +37,7 @@ public interface IExecuteProcessActivity : IWorkflowActivity
         Console.WriteLine(
             "IExecuteProcessActivity.RedirectStandardInOut()...");
 
-    // ÃÜ·âµÄ²»ÔÊĞíÖØĞ´
+    // å¯†å°çš„ä¸å…è®¸é‡å†™
     void IWorkflowActivity.InternalRun()
     {
         RedirectStandardInOut();
@@ -69,13 +69,13 @@ public class ExecuteProcessActivity : IExecuteProcessActivity
     public static void Run()
     {
         ExecuteProcessActivity activity = new("dotnet");
-        // ÊÜ±£»¤³ÉÔ±²»¿ÉÓÉÊµÏÖÀàµ÷ÓÃ£¬
-        // ¼´Ê¹¸Ã³ÉÔ±ÊÇÔÚÀàÖĞÊµÏÖµÄ¡£
+        // å—ä¿æŠ¤æˆå‘˜ä¸å¯ç”±å®ç°ç±»è°ƒç”¨ï¼Œ
+        // å³ä½¿è¯¥æˆå‘˜æ˜¯åœ¨ç±»ä¸­å®ç°çš„ã€‚
         // ((IWorkflowActivity)this).InternalRun();
         //  activity.RedirectStandardInOut();
         //  activity.ExecuteProcess();
         Console.WriteLine(
-            @$"ÕıÔÚÓÃ½ø³Ì'{activity.ExecutableName}'Ö´ĞĞ·Ç¶àÌ¬ĞÔµÄRun()¡£");
+            @$"æ­£åœ¨ç”¨è¿›ç¨‹'{activity.ExecutableName}'æ‰§è¡Œéå¤šæ€æ€§çš„Run()ã€‚");
     }
 }
 
@@ -86,9 +86,9 @@ public class Program
         ExecuteProcessActivity activity = new("dotnet");
 
         Console.WriteLine(
-            "ÕıÔÚµ÷ÓÃ((IExecuteProcessActivity)activity).Run()...");
-        // Êä³ö:
-        // ÕıÔÚµ÷ÓÃ((IExecuteProcessActivity)activity).Run()...
+            "æ­£åœ¨è°ƒç”¨((IExecuteProcessActivity)activity).Run()...");
+        // è¾“å‡º:
+        // æ­£åœ¨è°ƒç”¨((IExecuteProcessActivity)activity).Run()...
         // IWorkflowActivity.Start()...
         // ExecuteProcessActivity.RedirectStandardInOut()...
         // ExecuteProcessActivity.IExecuteProcessActivity.
@@ -97,12 +97,12 @@ public class Program
         // IWorkflowActivity.Stop()..
         ((IExecuteProcessActivity)activity).Run();
 
-        // Êä³ö:
-        // ÕıÔÚµ÷ÓÃactivity.Run()...
-        // ÕıÔÚÓÃ½ø³Ì'dotnet'Ö´ĞĞ·Ç¶àÌ¬ĞÔµÄRun()¡£
+        // è¾“å‡º:
+        // æ­£åœ¨è°ƒç”¨activity.Run()...
+        // æ­£åœ¨ç”¨è¿›ç¨‹'dotnet'æ‰§è¡Œéå¤šæ€æ€§çš„Run()ã€‚
         Console.WriteLine();
         Console.WriteLine(
-            "ÕıÔÚµ÷ÓÃactivity.Run()...");
+            "æ­£åœ¨è°ƒç”¨activity.Run()...");
         ExecuteProcessActivity.Run();
     }
 }

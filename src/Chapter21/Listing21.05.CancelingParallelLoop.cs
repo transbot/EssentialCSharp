@@ -33,10 +33,10 @@ public class Program
         ParallelOptions parallelOptions = new()
             { CancellationToken = cts.Token };
         cts.Token.Register(
-            () => Console.WriteLine("ÕýÔÚÈ¡Ïû..."));
+            () => Console.WriteLine("æ­£åœ¨å–æ¶ˆ..."));
         #endregion HIGHLIGHT
 
-        Console.WriteLine("°´Enter¼üÍË³ö");
+        Console.WriteLine("æŒ‰Enteré”®é€€å‡º");
 
         Task task = Task.Run(() =>
             {
@@ -54,10 +54,10 @@ public class Program
                 catch(OperationCanceledException) { }
             });
 
-        // µÈ´ýÓÃ»§µÄÊäÈë
+        // ç­‰å¾…ç”¨æˆ·çš„è¾“å…¥
         Console.ReadLine();
 
-        // È¡Ïû²éÑ¯
+        // å–æ¶ˆæŸ¥è¯¢
         #region HIGHLIGHT
         cts.Cancel();
         #endregion HIGHLIGHT
@@ -69,12 +69,12 @@ public class Program
     private static void Encrypt(string fileName)
     {
         if (Path.GetExtension(fileName) == ".encrypt") return;
-        Console.WriteLine($">>>>>ÕýÔÚ¼ÓÃÜ'{ fileName }'.");
+        Console.WriteLine($">>>>>æ­£åœ¨åŠ å¯†'{ fileName }'.");
         Cryptographer cryptographer = new();
         File.Delete($"{fileName}.encrypt");
         byte[] encryptedText = cryptographer.Encrypt(File.ReadAllText(fileName));
         File.WriteAllBytes($"{fileName}.encrypt", encryptedText);
-        Console.WriteLine($"<<<<<½áÊø¼ÓÃÜ'{ fileName}'.");
+        Console.WriteLine($"<<<<<ç»“æŸåŠ å¯†'{ fileName}'.");
     }
     #endregion EXCLUDE
 }

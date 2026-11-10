@@ -29,14 +29,14 @@ public class Program
             (inigo, buttercup);
 
         if (couple is 
-              ( // Ôª×é: ´ÓPersonµÄ½â¹¹º¯Êı»ñÈ¡
-                ( // Î»ÖÃ: Ñ¡Ôñ×ó²à»òÔª×é
-                    { // firstNameµÄÊôĞÔ
+              ( // å…ƒç»„: ä»Personçš„è§£æ„å‡½æ•°è·å–
+                ( // ä½ç½®: é€‰æ‹©å·¦ä¾§æˆ–å…ƒç»„
+                    { // firstNameçš„å±æ€§
                         Length: int inigoFirstNameLength
                     }, 
-                 _ // ¶ªÆúÔª×éµÄĞÕÊÏ²¿·Ö
+                 _ // ä¸¢å¼ƒå…ƒç»„çš„å§“æ°éƒ¨åˆ†
                 ),
-                { // Princess ButtercupÔª×éµÄÊôĞÔ
+                { // Princess Buttercupå…ƒç»„çš„å±æ€§
                     FirstName: string buttercupFirstName
                 }
               )

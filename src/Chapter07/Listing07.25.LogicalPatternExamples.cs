@@ -9,7 +9,7 @@ public class PeriodsOfTheDay
         TimeOnly time) =>
             time.Hour is > 8
                 and < 17
-                and not 12; // Îç²ÍÊ±¼ä²»ÊÇ±ê×¼¹¤×÷Ê±¼ä
+                and not 12; // åˆé¤æ—¶é—´ä¸æ˜¯æ ‡å‡†å·¥ä½œæ—¶é—´
 
     public static bool TryGetPhoneButton(
         char character,
@@ -19,7 +19,7 @@ public class PeriodsOfTheDay
         {
             '1' => '1',
             '2' or >= 'a' and <= 'c' => '2',
-            // not²Ù×÷·ûºÍÔ²À¨ºÅÊ¾Àı(C# 10)
+            // notæ“ä½œç¬¦å’Œåœ†æ‹¬å·ç¤ºä¾‹(C# 10)
             '3' or not (< 'd' or > 'f') => '3',
             '4' or >= 'g' and <= 'i' => '4',
             '5' or >= 'j' and <= 'l' => '5',
@@ -28,7 +28,7 @@ public class PeriodsOfTheDay
             '8' or >= 't' and <= 'v' => '8',
             '9' or >= 'w' and <= 'z' => '9',
             '0' or '+' => '0',
-            _ => null,// ÉèÖÃbuttonÀ´Ö¸Ê¾ÖµÊÇÎŞĞ§µÄ
+            _ => null,// è®¾ç½®buttonæ¥æŒ‡ç¤ºå€¼æ˜¯æ— æ•ˆçš„
         }) is not null;
     }
     #endregion INCLUDE

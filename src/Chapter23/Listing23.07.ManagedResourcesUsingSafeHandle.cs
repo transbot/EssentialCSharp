@@ -29,7 +29,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_07
             return virtualMemoryPointer._AllocatedPointer;
         }
 
-        // SafeHandleµÄ³éÏó³ÉÔ±
+        // SafeHandleçš„æŠ½è±¡æˆå‘˜
         public override bool IsInvalid
         {
             get
@@ -38,7 +38,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_07
             }
         }
 
-        // SafeHandleµÄ³éÏó³ÉÔ±
+        // SafeHandleçš„æŠ½è±¡æˆå‘˜
         protected override bool ReleaseHandle()
         {
             if (!_Disposed)

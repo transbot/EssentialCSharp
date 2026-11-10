@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_18.Tests;
 
 [TestClass]
@@ -12,19 +12,19 @@ public class ProgramTests
 
         string expected =
 $@"________
-FirstName: Sherlock
-LastName: Holmes
-Address: 221B Baker Street, London, England
+名字: Sherlock
+姓氏: Holmes
+地址: 221B Baker Street, London, England
 
 ________
-Subject: Soccer tournament
-Start: {startDateTime}
-End: {endDateTime}
-Location: Estádio da Machava
+主题: Soccer tournament
+开始时间: {startDateTime}
+结束时间: {endDateTime}
+地点: Estádio da Machava
 ________
-FirstName: Anne
-LastName: Frank
-Address: Apt 56B, Whitehaven Mansions, Sandhurst Sq, London" + Environment.NewLine + Environment.NewLine;
+名字: Anne
+姓氏: Frank
+地址: Apt 56B, Whitehaven Mansions, Sandhurst Sq, London" + Environment.NewLine + Environment.NewLine;
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_05;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_05;
 
 public class HelloWorld
 {
@@ -6,7 +6,7 @@ public class HelloWorld
     {
         #region INCLUDE
         Console.WriteLine(
-            "ÄãºÃ£¬ÎÒ½ĞInigo Montoya¡£");
+            "ä½ å¥½ï¼Œæˆ‘å«Inigo Montoyaã€‚");
         #endregion INCLUDE
     }
 }

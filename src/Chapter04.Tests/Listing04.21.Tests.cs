@@ -1,4 +1,4 @@
-using IntelliTect.TestTools.Console;
+﻿using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_21.Tests;
 
@@ -12,7 +12,7 @@ public class TicTacToeTests
                 1 - 人机对战
                 2 - 双人对战
                 请选择：<<1
-                >>Play against computer selected.
+                >>人机对战。
                 """;
 
         ConsoleAssert.Expect(
@@ -26,7 +26,7 @@ public class TicTacToeTests
 @"1 - 人机对战
 2 - 双人对战
 请选择：<<2
->>Play against another player.";
+>>双人对战。";
 
         ConsoleAssert.Expect(
             expected, TicTacToe.Main);
@@ -39,7 +39,7 @@ public class TicTacToeTests
 @"1 - 人机对战
 2 - 双人对战
 请选择：<<9
->>Play against another player.";
+>>双人对战。";
 
         ConsoleAssert.Expect(
             expected, TicTacToe.Main);

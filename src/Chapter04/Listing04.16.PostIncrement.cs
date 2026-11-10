@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_16;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_16;
 
 public class Program
 {
@@ -8,7 +8,7 @@ public class Program
         int count = 123;
         int result;
         result = count++;
-        Console.WriteLine($"result = {result}£¬count = {count}");
+        Console.WriteLine($"result = {result}ï¼Œcount = {count}");
         #endregion INCLUDE
     }
 }

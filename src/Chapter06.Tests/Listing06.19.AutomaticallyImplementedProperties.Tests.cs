@@ -1,4 +1,4 @@
-
+ï»¿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_19.Tests;
 
 [TestClass]
@@ -9,7 +9,7 @@ public class ProgramTests
     {
         const string expected =
 @"Inigo
-µçÄÔ·¢ÉÕÓÑ";
+ç”µè„‘å‘çƒ§å‹";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

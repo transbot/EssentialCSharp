@@ -1,4 +1,4 @@
-using System.Data;
+﻿using System.Data;
 using System.Diagnostics;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_33.Tests;
@@ -19,7 +19,7 @@ public class TraceBufferTest
         Program.Main();
 
         string traceOutput = stringWriter.ToString();
-        string expected = $"The connection is currently Disconnecting";
+        string expected = $"连接目前Disconnecting。";
 
         Assert.IsTrue(traceOutput.Contains(expected));
     }

@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
@@ -32,13 +32,9 @@ public abstract class BaseProgramTests
     {
         string url = DefaultUrl;
         string expected =
-            @$"Searching for '{Regex.Escape(findText)
-                }' at URL '{
-                Regex.Escape(url)
-                }'\.\s+Downloading\.{{3,}}\s+Searching\.{{3,}}\s+'{
-                Regex.Escape(findText)}' appears {countPattern} times at URL '{
-                Regex.Escape(url)
-                }'\.\s+";
+            $@"从网址'{Regex.Escape(url)}'搜索'{Regex.Escape(findText)}'。\s+"
+            + $@"正在下载\.{{3,}}\s+正在搜索\.{{3,}}\s+"
+            + $@"'{Regex.Escape(findText)}'在网址'{Regex.Escape(url)}'出现了{countPattern}次。\s+";
         string actual = IntelliTect.TestTools.Console.ConsoleAssert.Execute("",
         () => ProgramWrapper.Main(new string[] { findText }).Wait());
         
@@ -50,7 +46,7 @@ public abstract class BaseProgramTests
     [TestMethod]
     public void Main_PassEmptyArray_ThrowException()
     {
-        string expected = "ERROR: No findText argument specified.";
+        string expected = "错误：没有输入要搜索的文本。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected, () =>
         {

@@ -4,14 +4,14 @@ on:
   push:
     branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
   pull_request:
-    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
+    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese', 'codex/restore-chinese-branch-ci' ]
   schedule:
     - cron: 0 6 * * 1
 
 jobs:
   automerge:
     # Keep the Chinese edition's dependency updates subject to manual review.
-    if: github.event_name == 'pull_request' && github.base_ref != 'v12.0Chinese'
+    if: github.event_name == 'pull_request' && github.base_ref != 'v12.0Chinese' && github.base_ref != 'codex/restore-chinese-branch-ci'
     runs-on: ubuntu-latest
 
     permissions:

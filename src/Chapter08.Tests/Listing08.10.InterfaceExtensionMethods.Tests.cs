@@ -23,6 +23,7 @@ The Hitchhiker's Guide to the Galaxy                     Douglas Adams      1979
     }
 }
 
+[TestClass]
 public class ConsoleListControlTests
 {
     [TestMethod]

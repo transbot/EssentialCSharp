@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_51.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class TicTacToeTests
     public void Main_BreakOnPlayerWinning_Player1Winner()
     {
         const string expected =
-            @"Player 1 was the winner";
+            @"玩家1是赢家。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, TicTacToe.Main);

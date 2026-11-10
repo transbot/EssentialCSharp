@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_34.Tests;
 
 [TestClass]
@@ -9,8 +9,8 @@ public class ProgramTests
     {
         string[] args = Array.Empty<string>();
         string expected = """
-            ERROR:  You must specify the URL and the file name
-            Usage: Downloader.exe <URL> <TargetFileName>
+            错误: 必须指定URL和文件名
+            用法: Downloader.exe <URL> <文件名>
             """;
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
@@ -65,7 +65,7 @@ public class ProgramTests
     public void Main_InvalidSecondArg_ExpectWhitespaceError()
     {
         string[] args = { "Inigo", "  " };
-        string expected = "fileName cannot be empty or only whitespace";
+        string expected = "fileName不能为空或者空串";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>
@@ -146,7 +146,7 @@ public class ProgramTests
     public void Main_InvalidSecondArg_ExpectHTTPError()
     {
         string[] args = { "Inigo", "Montoya" };
-        string expected = "URL must start with \'HTTPS\'.";
+        string expected = "URL必须以\'HTTPS\'开头。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>
@@ -169,7 +169,7 @@ public class ProgramTests
         {
             string fileName = "about";
             string[] args = { "https://IntelliTect.com", fileName };
-            string expected = $"Downloaded '{args[1]}' from '{args[0]}'.";
+            string expected = $"已从'{args[0]}'下载'{args[1]}'。";
 
             int? result = null;
             IntelliTect.TestTools.Console.ConsoleAssert.Expect(

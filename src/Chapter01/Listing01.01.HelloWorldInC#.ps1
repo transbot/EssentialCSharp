@@ -22,6 +22,7 @@ try {
     New-Item -ItemType Directory ./HelloWorld
     Set-Location ./HelloWorld/
     dotnet new console
+    if ($LASTEXITCODE -ne 0) { throw "dotnet new failed with exit code $LASTEXITCODE" }
     Get-Content Program.cs
     $codeListing =
     @"
@@ -29,7 +30,7 @@ class HelloWorld
 {
     static void Main()
     {
-        Console.WriteLine(""你好，我叫Inigo Montoya。"");
+        Console.WriteLine("你好，我叫Inigo Montoya。");
     }
 }
 "@
@@ -37,6 +38,7 @@ class HelloWorld
     $codeListing > Program.cs
     Get-Content Program.cs
     dotnet run
+    if ($LASTEXITCODE -ne 0) { throw "dotnet run failed with exit code $LASTEXITCODE" }
 }
 finally {
     Set-PSDebug -Off

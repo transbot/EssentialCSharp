@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_10.Tests;
 
 [TestClass]
@@ -8,13 +8,13 @@ public class ProgramTests
     public void Main_InputInigoMontoya_WriteFullName()
     {
         string view = """
-            Enter your first name: <<Inigo
+            请输入你的名字: <<Inigo
             >>
-            Enter your middle initial: <<T.
+            请输入你的中间名首字母: <<T.
             >>
-            Enter your last name: <<Montoya
+            请输入你的姓氏: <<Montoya
             >>
-            Hello Inigo T. Montoya!
+            你好，Inigo T. Montoya！
             """;
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(view,

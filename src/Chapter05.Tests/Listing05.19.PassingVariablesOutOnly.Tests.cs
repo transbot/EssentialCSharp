@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_19.Tests;
 
 [TestClass]
@@ -9,8 +9,8 @@ public class ConvertToPhoneNumberTests
     {
         string[] args = System.Array.Empty<string>();
         string view =
-@"ConvertToPhoneNumber.exe <phrase>
-'_' indicates no standard phone button";
+@"用法: ConvertToPhoneNumber.exe <一个英文短语>
+'_'表示无标准电话按键";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(view,
         () =>

@@ -1,4 +1,4 @@
-using AddisonWesley.Michaelis.EssentialCSharp.Shared.Tests;
+﻿using AddisonWesley.Michaelis.EssentialCSharp.Shared.Tests;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_01.Tests;
 
@@ -27,7 +27,7 @@ public class HelloWorldTests
         // produced the expected output.
         Assert.IsTrue(
             psOutput.Contains(
-                $"{Environment.NewLine}Hello. My name is Inigo Montoya.{Environment.NewLine}"),
+                $"{Environment.NewLine}你好，我叫Inigo Montoya。{Environment.NewLine}"),
             "The expected HelloWorld output was not found.");
 
         // If the output is in English

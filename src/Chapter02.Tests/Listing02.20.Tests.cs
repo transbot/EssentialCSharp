@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_20.Tests;
 
 [TestClass]
@@ -7,7 +7,7 @@ public class TriangleTests
     [TestMethod]
     public void Main_WriteTriangle()
     {
-        const string expected = @"Begin
+        const string expected = @"开始
            ____
           /   /\
          /   /  \
@@ -18,11 +18,11 @@ public class TriangleTests
     /   /   /\   \   \
    /   /   /  \   \   \
   /___/___/____\   \   \
- /     {mobius} \   \   \
+ /     莫比乌斯 \   \   \
 /________________\   \   \
 \                 \   \  /
  \_________________\___\/
-End";
+结束";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Triangle.Main);

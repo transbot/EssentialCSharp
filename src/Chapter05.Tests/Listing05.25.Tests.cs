@@ -1,4 +1,4 @@
-
+﻿
 using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_25.Tests;
@@ -9,7 +9,7 @@ public class SpecifyingParametersByNameTests
     [TestMethod]
     public void SpecifyingParametersByName_WithNamedParameters_WritesToConsole()
     {
-        const string expected = "First Name: Inigo Middle Name:  Last Name: Montoya";
+        const string expected = "名字: Inigo 中间名:  姓氏: Montoya";
 
         ConsoleAssert.Expect(expected, () => SpecifyingParametersByName.Main());
     }
@@ -17,7 +17,7 @@ public class SpecifyingParametersByNameTests
     [TestMethod]
     public void SpecifyingParametersByName_WithNamedParametersInReverseOrder_WritesToConsole()
     {
-        const string expected = "First Name: Inigo Middle Name: MiddleName Last Name: Montoya";
+        const string expected = "名字: Inigo 中间名: MiddleName 姓氏: Montoya";
 
         ConsoleAssert.Expect(expected, () => SpecifyingParametersByName.DisplayGreeting(firstName: "Inigo", middleName: "MiddleName", lastName: "Montoya"));
     }

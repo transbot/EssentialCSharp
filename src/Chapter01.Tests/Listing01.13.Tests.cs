@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_13.Tests;
 
 [TestClass]
@@ -8,8 +8,8 @@ public class HelloWorldTests
     public void Main_InigoMantra_ProperOutput()
     {
         const string expected =
-@"My name is Inigo Montoya.
-You killed my father....";
+@"你好，我叫Inigo Montoya。
+你杀害了我的父亲....";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected, HelloWorld.Main);
     }

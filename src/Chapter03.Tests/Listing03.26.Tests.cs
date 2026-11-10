@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter03.Listing03_26.Tests;
 
 [TestClass]
@@ -14,7 +14,7 @@ public class ProgramTests
   ..^6: C#, COBOL, Java
    6..: Python, Lisp, JavaScript
     ..: C#, COBOL, Java, C++, TypeScript, Swift, Python, Lisp, JavaScript
-    ..: C#, COBOL, Java, C++, TypeScript, Swift, Python, Lisp, JavaScript";
+ 0..^0: C#, COBOL, Java, C++, TypeScript, Swift, Python, Lisp, JavaScript";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_56.Tests;
 
 [TestClass]
@@ -15,7 +15,7 @@ public class ProgramTests
         };
 
         const string expected =
-            @"'Creating' a new Employee.";
+            @"'正在创建'新员工。";
         
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, (Action<string[]>)Program.Main, arguments);
@@ -32,7 +32,7 @@ public class ProgramTests
         };
 
         const string expected =
-            @"'Updating' a new Employee.";
+            @"'正在更新'员工。";
         
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, (Action<string[]>)Program.Main, arguments);
@@ -49,7 +49,7 @@ public class ProgramTests
         };
 
         const string expected =
-            @"'Updating' a new Employee.";
+            @"'正在更新'员工。";
         
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, (Action<string[]>)Program.Main, arguments);

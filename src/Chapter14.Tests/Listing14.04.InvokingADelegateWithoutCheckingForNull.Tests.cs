@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter14.Listing14_04.Tests;
 
 using Listing14_04;
@@ -9,8 +9,8 @@ public class ProgramTests
     [TestMethod]
     public void InvokingDelegateWithoutCheckingForNull()
     {
-        string expected = @"Enter temperature: <<1>>Heater: On
-Cooler: Off";
+        string expected = @"输入温度: <<1>>加热器: On
+冷却器: Off";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>

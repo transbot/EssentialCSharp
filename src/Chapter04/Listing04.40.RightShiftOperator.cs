@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_40;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_40;
 
 public class Program
 {
@@ -6,10 +6,10 @@ public class Program
     {
         #region INCLUDE
         int x;
-        x = (-7 >> 2); // 11111111111111111111111111111001±ä³É
+        x = (-7 >> 2); // 11111111111111111111111111111001å˜æˆ
                        // 11111111111111111111111111111110
-                       // Êä³ö"x = -2¡£"
-        Console.WriteLine($"x = {x}¡£");
+                       // è¾“å‡º"x = -2ã€‚"
+        Console.WriteLine($"x = {x}ã€‚");
         #endregion INCLUDE
     }
 }

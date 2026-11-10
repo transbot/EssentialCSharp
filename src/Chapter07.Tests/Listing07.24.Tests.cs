@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_24.Tests;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_24.Tests;
 
 [TestClass]
 public class PeriodsOfTheDayTests
@@ -18,25 +18,25 @@ public class PeriodsOfTheDayTests
     [TestMethod]
     public void GetPeriodOfDay_Dawn_ReturnsDawn()
     {
-        Assert.AreEqual("Dawn", PeriodsOfTheDay.GetPeriodOfDay(5));
+        Assert.AreEqual("黎明", PeriodsOfTheDay.GetPeriodOfDay(5));
     }
 
     [TestMethod]
     public void GetPeriodOfDay_Morning_ReturnsMorning()
     {
-        Assert.AreEqual("Morning", PeriodsOfTheDay.GetPeriodOfDay(6));
+        Assert.AreEqual("上午", PeriodsOfTheDay.GetPeriodOfDay(6));
     }
 
     [TestMethod]
     public void GetPeriodOfDay_Afternoon_ReturnsAfternoon()
     {
-        Assert.AreEqual("Afternoon", PeriodsOfTheDay.GetPeriodOfDay(13));
+        Assert.AreEqual("下午", PeriodsOfTheDay.GetPeriodOfDay(13));
     }
 
     [TestMethod]
     public void GetPeriodOfDay_Evening_ReturnsEvening()
     {
-        Assert.AreEqual("Evening", PeriodsOfTheDay.GetPeriodOfDay(18));
+        Assert.AreEqual("晚上", PeriodsOfTheDay.GetPeriodOfDay(18));
     }
 
     [TestMethod]

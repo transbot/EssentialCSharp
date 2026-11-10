@@ -32,6 +32,9 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - uses: actions/checkout@v4
+      - name: Verify repository text encoding
+        shell: pwsh
+        run: python -X utf8 .github/scripts/check_utf8.py
       - name: Setup dotnet SDK
         uses: actions/setup-dotnet@v4
         with:

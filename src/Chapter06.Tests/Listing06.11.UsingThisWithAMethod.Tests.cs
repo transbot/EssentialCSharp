@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_11.Tests;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_11.Tests;
 
 [TestClass]
 public class ProgramTests
@@ -7,7 +7,7 @@ public class ProgramTests
     public void Main_AccessMethodWithThis_WriteMethodResult()
     {
         const string expected =
-            @"Name changed to 'Inigo Montoya'";
+            @"姓名更改为'Inigo Montoya'";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

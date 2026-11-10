@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_20;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_20;
 
 public class Program
 {
@@ -7,16 +7,16 @@ public class Program
         string firstName;
         string lastName;
 
-        Console.WriteLine("ºÙ£¬Äã£¡");
+        Console.WriteLine("å˜¿ï¼Œä½ ï¼");
 
-        Console.Write("ÇëÊäÈëÄãµÄÃû×Ö: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„åå­—: ");
         firstName = Console.ReadLine();
 
-        Console.Write("ÇëÊäÈëÄãµÄĞÕÊÏ: ");
+        Console.Write("è¯·è¾“å…¥ä½ çš„å§“æ°: ");
         lastName = Console.ReadLine();
 
         #region INCLUDE
-        Console.WriteLine("ÄãµÄÈ«ÃûÊÇ{1}, {0}¡£", firstName, lastName);
+        Console.WriteLine("ä½ çš„å…¨åæ˜¯{1}, {0}ã€‚", firstName, lastName);
         #endregion INCLUDE
     }
 }

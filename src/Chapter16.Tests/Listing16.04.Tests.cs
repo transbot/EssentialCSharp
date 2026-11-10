@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter16.Listing16_04.Tests;
 
 [TestClass]
@@ -7,7 +7,7 @@ public class ProgramTests
     [TestMethod]
     public void InvokingDelegateWithoutCheckingForNull()
     {
-        string expected = @"Query created.
+        string expected = @"已创建查询。
  add* alias* ascending* async* await* by* descending* dynamic* equals* from* get* global* group* into* join* let* nameof* nonnull* on* orderby* partial* remove* select* set* value* var* when* where* yield*";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,

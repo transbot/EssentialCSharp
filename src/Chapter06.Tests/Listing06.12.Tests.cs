@@ -1,4 +1,4 @@
-using IntelliTect.TestTools.Console;
+﻿using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_12.Tests;
 
@@ -9,7 +9,7 @@ public class EmployeeTests
     public void DataStorage_ReadTrace()
     {
         const string expected =
-            "Writing employee (Inigo Montoya) information to file.";
+            "将员工(Inigo Montoya)的信息写入文件。";
 
         Employee employee = new()
         {

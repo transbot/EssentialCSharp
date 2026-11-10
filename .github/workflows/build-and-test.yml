@@ -2,14 +2,16 @@ name: Build and Test
 
 on:
   push:
-    branches: [ 'v[1-9][0-9].0' ]
+    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
   pull_request:
-    branches: [ 'v[1-9][0-9].0' ]
+    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese', 'codex/restore-chinese-branch-ci' ]
   schedule:
     - cron: 0 6 * * 1
 
 jobs:
   automerge:
+    # Keep the Chinese edition's dependency updates subject to manual review.
+    if: github.event_name == 'pull_request' && github.base_ref != 'v12.0Chinese' && github.base_ref != 'codex/restore-chinese-branch-ci'
     runs-on: ubuntu-latest
 
     permissions:
@@ -30,15 +32,25 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - uses: actions/checkout@v4
+      - name: Verify repository text encoding
+        shell: pwsh
+        run: python -X utf8 .github/scripts/check_utf8.py
       - name: Setup dotnet SDK
         uses: actions/setup-dotnet@v4
         with:
             global-json-file: global.json
+            dotnet-version: |
+              6.0.x
+              7.0.x
       - name: Get Build Information
         run: |
           pwd
           dotnet --info
           dotnet --version
+          dotnet --list-sdks
+          dotnet --list-runtimes
+      - name: Verify actual target runtimes
+        uses: ./.github/actions/report-dotnet-runtime
       - name: Set up dependency caching for faster builds
         uses: actions/cache@v5
         id: nuget-cache

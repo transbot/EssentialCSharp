@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_04;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_04;
 
 #region INCLUDE
 public class IntroducingMethods
@@ -10,10 +10,10 @@ public class IntroducingMethods
         string fullName;
         string initials;
 
-        Console.WriteLine("ºÙ£¬Äã£¡");
+        Console.WriteLine("å˜¿ï¼Œä½ ï¼");
 
-        firstName = GetUserInput("ÇëÊäÈëÄãµÄÃû×Ö: ");
-        lastName = GetUserInput("ÇëÊäÈëÄãµÄĞÕÊÏ: ");
+        firstName = GetUserInput("è¯·è¾“å…¥ä½ çš„åå­—: ");
+        lastName = GetUserInput("è¯·è¾“å…¥ä½ çš„å§“æ°: ");
 
         fullName = GetFullName(firstName, lastName);
         initials = GetInitials(firstName, lastName);
@@ -26,7 +26,7 @@ public class IntroducingMethods
         return Console.ReadLine() ?? string.Empty;
     }
 
-    static string GetFullName(  
+    static string GetFullName(
           string firstName, string lastName) =>
               $"{ firstName } { lastName }";
 
@@ -34,7 +34,7 @@ public class IntroducingMethods
     static void DisplayGreeting(string fullName, string initials)
     {
         Console.WriteLine(
-            $"ÄãºÃ£¬{ fullName }£¡ÄãµÄĞÕÃûËõĞ´ÊÇ{ initials }");
+            $"ä½ å¥½ï¼Œ{ fullName }ï¼ä½ çš„å§“åç¼©å†™æ˜¯{ initials }");
         return;
     }
 

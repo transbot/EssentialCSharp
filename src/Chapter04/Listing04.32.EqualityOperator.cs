@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_32;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_32;
 
 public class Program
 {
@@ -9,7 +9,7 @@ public class Program
         #region INCLUDE
         if (input.Length == 0 || input == "quit")
         {
-            Console.WriteLine($"Íæ¼Ò{currentPlayer}ÍË³ö!!");
+            Console.WriteLine($"çŽ©å®¶{currentPlayer}é€€å‡º!!");
         }
         #endregion INCLUDE
     }

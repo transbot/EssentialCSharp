@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Text;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Tests;
 
@@ -57,16 +58,42 @@ public class PowerShellTestUtilities
             using var powerShell = new Process();
             powerShell.StartInfo.RedirectStandardOutput = true;
             powerShell.StartInfo.RedirectStandardError = true;
+            powerShell.StartInfo.RedirectStandardInput = true;
+            powerShell.StartInfo.StandardOutputEncoding = Encoding.UTF8;
+            powerShell.StartInfo.StandardErrorEncoding = Encoding.UTF8;
+            powerShell.StartInfo.UseShellExecute = false;
             powerShell.StartInfo.FileName = PowerShellCommand;
-            powerShell.StartInfo.Arguments = $"-noprofile -command \"{scriptPath} {arguments}\"";
+            powerShell.StartInfo.ArgumentList.Add("-NoProfile");
+            powerShell.StartInfo.ArgumentList.Add("-NonInteractive");
+            powerShell.StartInfo.ArgumentList.Add("-Command");
+            string escapedScriptPath = scriptPath.Replace("'", "''");
+            powerShell.StartInfo.ArgumentList.Add(
+                "[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false); "
+                + "$OutputEncoding = [Console]::OutputEncoding; "
+                + $"& '{escapedScriptPath}' {arguments}");
             powerShell.Start();
-            psOutput = powerShell.StandardOutput.ReadToEnd();
-            string errorOutput = powerShell.StandardError.ReadToEnd();
+            powerShell.StandardInput.Close();
+            // Drain both pipes while the child is running. Waiting on stdout first
+            // can deadlock when a compiler or cleanup command fills stderr.
+            Task<string> outputTask = powerShell.StandardOutput.ReadToEndAsync();
+            Task<string> errorTask = powerShell.StandardError.ReadToEndAsync();
+            bool exited = powerShell.WaitForExit((int)TimeSpan.FromMinutes(3).TotalMilliseconds);
+            if (!exited)
+            {
+                powerShell.Kill(entireProcessTree: true);
+                powerShell.WaitForExit();
+            }
+            psOutput = outputTask.GetAwaiter().GetResult();
+            string errorOutput = errorTask.GetAwaiter().GetResult();
             if (errorOutput.Length > 0)
             {
                 psOutput += $"{Environment.NewLine}ERROR: {Environment.NewLine}{errorOutput}";
             }
-            powerShell.WaitForExit();
+            if (!exited)
+            {
+                throw new TimeoutException($"PowerShell script '{scriptPath}' did not finish within three minutes."
+                    + Environment.NewLine + psOutput);
+            }
 
             return powerShell.ExitCode;
         }

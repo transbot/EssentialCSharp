@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_22.Tests;
 
 [TestClass]
@@ -8,8 +8,8 @@ public class PalindromeLengthTests
     public void Main_InputRacecar_OutputPalindromeSevenChars()
     {
         const string expected =
-@"Enter a palindrome: <<racecar
->>The palindrome ""racecar"" is 7 characters.";
+@"输入一句回文: <<racecar
+>>回文""racecar""共有 7个字。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, PalindromeLength.Main);

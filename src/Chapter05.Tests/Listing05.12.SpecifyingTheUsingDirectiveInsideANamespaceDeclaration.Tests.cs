@@ -1,17 +1,12 @@
-﻿
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_12.Tests;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter05.Listing05_12.Tests;
 
 [TestClass]
 public class ProgramTests
 {
-
     [TestMethod]
-    public void Main_UsingToAvoidFullyQualifying_MethodCalledAsExpected()
+    public void Main_UsingInsideNamespace_WritesChineseGreeting()
     {
-        const string expected = @"输入你的全名：(例如Inigo T. Montoya): <<Inigo T. Montoya
->>FirstName: Inigo
-Initial: T
-LastName: Montoya";
+        const string expected = "你好，我的名字是Inigo Montoya。";
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected, Program.Main);
     }
 }

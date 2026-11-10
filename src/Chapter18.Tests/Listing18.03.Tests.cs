@@ -19,7 +19,7 @@ Compress.exe /Out:< 文件名 > /Help /Priority:RealTime | High | AboveNormal | 
     [TestMethod]
     public void Main_NormalCompression_Succes()
     {
-        string expected = @"Running testhost.dll /Out:output.dat /Priority:High";
+        string expected = @"正在运行testhost.dll /Out:output.dat /Priority:High";
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,
         () =>
         {

@@ -7,25 +7,25 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"1. Patents prior to the 1900s are:
+        const string expected = @"1. 20世纪之前的专利清单之一:
 	留声机 (1877)
 	活动电影机 (1888)
 	电报 (1837)
 	蒸汽机车 (1815)
 
-2. A second listing of patents prior to the 1900s:
+2. 20世纪之前的专利清单之二:
 	留声机 (1877)
 	活动电影机 (1888)
 	电报 (1837)
 	蒸汽机车 (1815)
-   There are 4 patents prior to 1900.
+   20世纪之前总共有4个专利。
 
-3. A third listing of patents prior to the 1900s:
+3. 18世纪之前的专利清单之三:
 	留声机 (1877)
 	活动电影机 (1888)
 	电报 (1837)
 	蒸汽机车 (1815)
-   There are 4 patents prior to 1900.";
+   20世纪之前总共有4个专利。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

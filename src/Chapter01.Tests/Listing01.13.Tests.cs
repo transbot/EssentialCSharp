@@ -9,7 +9,7 @@ public class HelloWorldTests
     {
         const string expected =
 @"你好，我叫Inigo Montoya。
-你杀害了我的父亲....";
+你杀死了我的父亲....";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected, HelloWorld.Main);
     }

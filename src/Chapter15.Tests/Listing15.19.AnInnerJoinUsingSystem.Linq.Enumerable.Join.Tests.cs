@@ -1,4 +1,4 @@
-
+ï»¿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter15.Listing15_19.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class ProgramTests
     public void EnumerableJoinTest()
     {
         string expected =
-@"Mark Michaelis (Chief µçÄÔ·¢ÉÕÓÑ)
+@"Mark Michaelis (Chief ç”µè„‘å‘çƒ§å‹)
 	Corporate
 Michael Stokesbary (Senior Computer Wizard)
 	Engineering

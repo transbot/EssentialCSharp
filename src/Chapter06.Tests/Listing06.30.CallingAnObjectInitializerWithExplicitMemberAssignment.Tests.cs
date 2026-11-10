@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_30.Tests;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_30.Tests;
 
 [TestClass]
 public class ProgramTests
@@ -7,7 +7,7 @@ public class ProgramTests
     public void Main_ObjectInitializerSetTitleSalary_WriteEmployeeWithTitleSalary()
     {
         const string expected =
-            @"Inigo Montoya (µçÄÔ·¢ÉÕÓÑ): Not enough";
+            @"Inigo Montoya (ç”µè„‘å‘çƒ§å‹): Not enough";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

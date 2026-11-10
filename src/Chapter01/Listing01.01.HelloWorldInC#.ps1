@@ -1,4 +1,4 @@
-[CmdletBinding()]
+Ôªø[CmdletBinding()]
 param(
     [int]$traceLevel
 )
@@ -10,12 +10,12 @@ if('traceLevel' -notin $PSBoundParameters.Keys) {
     - 1: Trace script lines as they run.
     - 2: Trace script lines, variable assignments, function calls, and scripts.
 
-"@ 
+"@
 }
 
 try {
     Get-Item .\HelloWorld -ErrorAction Ignore | ForEach-Object { Start-Sleep 10;Remove-Item -Recurse $_ }
-    $startLocation = Get-Location 
+    $startLocation = Get-Location
     Set-PSDebug -Trace $traceLevel
 
 
@@ -23,13 +23,13 @@ try {
     Set-Location ./HelloWorld/
     dotnet new console
     Get-Content Program.cs
-    $codeListing = 
+    $codeListing =
     @"
 class HelloWorld
 {
     static void Main()
     {
-        Console.WriteLine(""ƒ„∫√£¨Œ“Ω–Inigo Montoya°£"");
+        Console.WriteLine(""‰Ω†Â•ΩÔºåÊàëÂè´Inigo Montoya„ÄÇ"");
     }
 }
 "@

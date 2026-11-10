@@ -1,4 +1,4 @@
-
+ï»¿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter15.Listing15_22.Tests;
 
 [TestClass]
@@ -9,7 +9,7 @@ public class ProgramTests
     {
         string expected =
 @"Corporate
-	Mark Michaelis (Chief µçÄÔ·¢ÉÕÓÑ)
+	Mark Michaelis (Chief ç”µè„‘å‘çƒ§å‹)
 Human Resources
 	Anne Beard (HR Director)
 Engineering

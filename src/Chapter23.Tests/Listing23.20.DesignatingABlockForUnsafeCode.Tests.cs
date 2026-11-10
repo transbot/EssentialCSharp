@@ -8,7 +8,7 @@ public class Listing21_20_Tests
     [TestMethod]
     public void GetProcessorIdReturnsCorrectValue()
     {
-        string expected = @"Processor Id: *";
+        string expected = @"处理器ID: *";
         if (!System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
             expected = "本例只适用于Windows平台";

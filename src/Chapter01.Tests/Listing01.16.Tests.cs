@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_16.Tests;
 
 [TestClass]
@@ -8,9 +8,9 @@ public class HeyYouTests
     public void Main_InputInigoMontoya_WriteNothing()
     {
         const string expected =
-@"Hey you!
-Enter your first name: <<Inigo
->>Enter your last name: <<Montoya
+@"嘿，你！
+请输入你的名字: <<Inigo
+>>请输入你的姓氏: <<Montoya
 >>";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(

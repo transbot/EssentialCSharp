@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_34.Tests;
 
 [TestClass]
@@ -31,7 +31,7 @@ public class ProgramTests
     public void Main_Enter22ForHourOfDay_AndConditionSatisfied()
     {
         const string expected =
-            @"Hi-Ho, Hi-Ho, it's off to work we go.";
+            @"嗨哟，嗨哟，我们去工作了。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, () => Program.Main("22"));

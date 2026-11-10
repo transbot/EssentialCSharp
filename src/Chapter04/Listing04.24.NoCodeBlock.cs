@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_24;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_24;
 
 public class Program
 {
@@ -9,7 +9,7 @@ public class Program
         #region INCLUDE
         if (input <=0)
             #region HIGHLIGHT
-            Console.WriteLine("�˳�");
+            Console.WriteLine("退出");
         #endregion HIGHLIGHT
         #endregion INCLUDE
     }

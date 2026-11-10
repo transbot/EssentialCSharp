@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_14.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class ProgramTests
     public void Main_WriteToFileThenRetrieveDataFromFile_WriteStoredDataToScreen()
     {
         const string expected =
-@"Name changed to 'Inigo Montoya'
+@"姓名更改为'Inigo Montoya'
 Inigo Montoya: ";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(

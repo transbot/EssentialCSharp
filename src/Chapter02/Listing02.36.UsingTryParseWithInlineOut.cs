@@ -5,24 +5,24 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        // ÏÖÔÚ£¬×÷Îªout²ÎÊıÊ¹ÓÃµÄ±äÁ¿²»ĞèÒªÊÂÏÈÉùÃ÷
+        // ç°åœ¨ï¼Œä½œä¸ºoutå‚æ•°ä½¿ç”¨çš„å˜é‡ä¸éœ€è¦äº‹å…ˆå£°æ˜
         // double number;  
         string input;
-        Console.Write("ÊäÈëÒ»¸öÊı×Ö: ");
+        Console.Write("è¾“å…¥ä¸€ä¸ªæ•°å­—: ");
         input = Console.ReadLine();
         if (double.TryParse(input, out double number))
         {
             Console.WriteLine(
-            $"ÊäÈë±»³É¹¦½âÎö³ÉÊı×Ö: {number}.");
+            $"è¾“å…¥è¢«æˆåŠŸè§£ææˆæ•°å­—: {number}.");
         }
         else
         {
-            // ×¢Òâ£ºnumberµÄ×÷ÓÃÓòÒ²ÑÓÉìµ½ÕâÀï(ËäÈ»Î´¸³Öµ)
+            // æ³¨æ„ï¼šnumberçš„ä½œç”¨åŸŸä¹Ÿå»¶ä¼¸åˆ°è¿™é‡Œ(è™½ç„¶æœªèµ‹å€¼)
             Console.WriteLine(
-                "ÊäÈëµÄÎÄ±¾²»ÊÇÒ»¸öÓĞĞ§µÄÊı×Ö¡£");
+                "è¾“å…¥çš„æ–‡æœ¬ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•°å­—ã€‚");
         }
         Console.WriteLine(
-            $"'number'Ä¿Ç°µÄÖµÊÇ: {number}");
+            $"'number'ç›®å‰çš„å€¼æ˜¯: {number}");
         #endregion INCLUDE
     }
 }

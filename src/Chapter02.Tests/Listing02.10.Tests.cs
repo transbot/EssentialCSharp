@@ -7,7 +7,7 @@ public class Comparison
     [TestMethod]
     public void Main_WriteBooleanStatements()
     {
-        const string expected = "Help Requested: True";
+        const string expected = "是否请求帮助: True";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

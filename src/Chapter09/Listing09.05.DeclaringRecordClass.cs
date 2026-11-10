@@ -2,7 +2,7 @@ using AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_02;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_05;
 #region INCLUDE
-// Ê¹ÓÃrecord class¹¹ÔìÀ´ÉùÃ÷Ò»¸öÒıÓÃÀàĞÍ
+// ä½¿ç”¨record classæ„é€ æ¥å£°æ˜ä¸€ä¸ªå¼•ç”¨ç±»å‹
 public record class Coordinate(
     Angle Longitude, Angle Latitude)
 #endregion INCLUDE

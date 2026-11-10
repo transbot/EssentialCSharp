@@ -1,11 +1,11 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter06.Listing06_53;
 
 #region INCLUDE
-// µ¥Î»»»ËãÀà
+// å•ä½æ¢ç®—ç±»
 public class ConvertUnits
 {
-    public const float CentimetersPerInch = 2.54F; // 1Ó¢´ç¶àÉÙÀåÃ×
-    public const int CupsPerGallon = 16;  // Ò»¼ÓÂØ¶àÉÙ±­
+    public const float CentimetersPerInch = 2.54F; // 1è‹±å¯¸å¤šå°‘å˜ç±³
+    public const int CupsPerGallon = 16;  // ä¸€åŠ ä»‘å¤šå°‘æ¯
     // ...
 }
 #endregion INCLUDE

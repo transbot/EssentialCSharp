@@ -1,4 +1,4 @@
-using IntelliTect.TestTools.Console;
+﻿using IntelliTect.TestTools.Console;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_21.Tests;
 
@@ -9,10 +9,10 @@ public class TicTacToeTests
     public void Main_Enter1TryToPlayAgainstComputer_ComputerPathSelected()
     {
         const string expected = """
-                1 - �˻���ս
-                2 - ˫�˶�ս
-                ��ѡ��<<1
-                >>Play against computer selected.
+                1 - 人机对战
+                2 - 双人对战
+                请选择：<<1
+                >>人机对战。
                 """;
 
         ConsoleAssert.Expect(
@@ -23,10 +23,10 @@ public class TicTacToeTests
     public void Main_Enter2TryToPlayAgainstOtherPerson_TwoPlayerPathSelected()
     {
         const string expected =
-@"1 - �˻���ս
-2 - ˫�˶�ս
-��ѡ��<<2
->>Play against another player.";
+@"1 - 人机对战
+2 - 双人对战
+请选择：<<2
+>>双人对战。";
 
         ConsoleAssert.Expect(
             expected, TicTacToe.Main);
@@ -36,10 +36,10 @@ public class TicTacToeTests
     public void Main_EnterOther_TwoPlayerPathSelected()
     {
         const string expected =
-@"1 - �˻���ս
-2 - ˫�˶�ս
-��ѡ��<<9
->>Play against another player.";
+@"1 - 人机对战
+2 - 双人对战
+请选择：<<9
+>>双人对战。";
 
         ConsoleAssert.Expect(
             expected, TicTacToe.Main);

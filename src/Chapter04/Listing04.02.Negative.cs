@@ -5,8 +5,8 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        // ÃÀ¹ú¹úÕ®½ğ¶î - 2023.12.24
-        // ×îĞÂÊı¾İÇë²éÑ¯https://www.usdebtclock.org/ 
+        // ç¾å›½å›½å€ºé‡‘é¢ - 2023.12.24
+        // æœ€æ–°æ•°æ®è¯·æŸ¥è¯¢https://www.usdebtclock.org/ 
         decimal debt = -33940505930933M;        
         #endregion INCLUDE
 

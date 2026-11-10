@@ -1,7 +1,7 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter18.Listing18_21;
 
 #region INCLUDE
-// 限制该特性只能用于属性和字段
+// 闄愬埗璇ョ壒鎬у彧鑳界敤浜庡睘鎬у拰瀛楁
 #region HIGHLIGHT
 [AttributeUsage(
   AttributeTargets.Field | AttributeTargets.Property)]

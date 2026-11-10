@@ -7,8 +7,8 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"{ TeamName = France, Players = System.String[] }
-{ TeamName = Italy, Players = System.String[] }";
+        const string expected = @"{ TeamName = 法国, Players = System.String[] }
+{ TeamName = 意大利, Players = System.String[] }";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Program.Main);

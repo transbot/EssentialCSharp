@@ -5,9 +5,9 @@ public class MiracleMax
 {
     public static void Main()
     {
-        string max;     // ¡°string¡±±êÊ¶Êı¾İÀàĞÍ£¬
-                        // ¡°max¡±ÊÇ±äÁ¿Ãû³Æ¡£
-        max = "Óä¿ìµØÏ®»÷¹Å±¤°É£¡";
+        string max;     // â€œstringâ€æ ‡è¯†æ•°æ®ç±»å‹ï¼Œ
+                        // â€œmaxâ€æ˜¯å˜é‡åç§°ã€‚
+        max = "æ„‰å¿«åœ°è¢­å‡»å¤å ¡å§ï¼";
         Console.WriteLine(max);
     }
 }

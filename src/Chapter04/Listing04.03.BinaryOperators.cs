@@ -1,4 +1,4 @@
-// ËµÃ÷ : Checking for null isn't discussed yet.
+// è¯´æ˜ : Checking for null isn't discussed yet.
 #pragma warning disable CS8604 // Possible null reference argument
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_03;
 
@@ -12,19 +12,19 @@ public class Division
         int quotient;
         int remainder;
 
-        Console.Write("ÊäÈë·Ö×Ó: ");
+        Console.Write("è¾“å…¥åˆ†å­: ");
         numerator = int.Parse(Console.ReadLine());
 
-        Console.Write("ÊäÈë·ÖÄ¸: ");
+        Console.Write("è¾“å…¥åˆ†æ¯: ");
         denominator = int.Parse(Console.ReadLine());
 
         #region HIGHLIGHT
-        quotient = numerator / denominator;  // ³ı·¨
-        remainder = numerator % denominator; // È¡Óà
+        quotient = numerator / denominator;  // é™¤æ³•
+        remainder = numerator % denominator; // å–ä½™
         #endregion HIGHLIGHT
 
         Console.WriteLine(
-            $"{numerator} / {denominator} = ÉÌ{quotient}Óà{remainder}¡£");
+            $"{numerator} / {denominator} = å•†{quotient}ä½™{remainder}ã€‚");
         #endregion INCLUDE
     }
 }

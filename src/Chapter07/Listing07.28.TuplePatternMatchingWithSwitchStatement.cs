@@ -25,7 +25,7 @@ public class Program
                 }
                 break;
             default:
-                Console.WriteLine("²ÎÊıÎŞĞ§¡£");
+                Console.WriteLine("å‚æ•°æ— æ•ˆã€‚");
                 break;
         }
     }
@@ -33,7 +33,7 @@ public class Program
 
     public static string Encrypt(string data)
     {
-        // ²Î¼ûµÚ19ÕÂ£¬ÁË½â¼ÓÃÜ¾ßÌåÊÇÈçºÎÊµÏÖµÄ
+        // å‚è§ç¬¬19ç« ï¼Œäº†è§£åŠ å¯†å…·ä½“æ˜¯å¦‚ä½•å®ç°çš„
         return $"ENCRYPTED <{data}> ENCRYPTED";
     }
 }

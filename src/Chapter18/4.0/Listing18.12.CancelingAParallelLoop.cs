@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_12
+namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_12
 {
     using System;
     using System.Diagnostics;

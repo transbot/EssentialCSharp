@@ -1,4 +1,4 @@
-// ˵�� : Demonstrating the equivalent operators
+﻿// 说明 : Demonstrating the equivalent operators
 #pragma warning disable IDE0054 // Use compound assignment
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_13;
 

@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_15
 {

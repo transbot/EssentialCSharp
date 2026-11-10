@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter09.Listing09_21;
@@ -29,8 +29,8 @@ public class Foo : IEquality<Foo>
     public bool Equals(Foo? other)
     {
         if (other is null) return false;
-        // ²½Öè5
-        // ·µ»Ø(this.Number, this.Name) == (other.Number, other.Name);
+        // æ­¥éª¤5
+        // è¿”å›ž(this.Number, this.Name) == (other.Number, other.Name);
         return true;
     }
     #endregion INCLUDE

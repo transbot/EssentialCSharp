@@ -6,7 +6,7 @@ public class Program
     public static void Main()
     {
         Employee employee = new("Inigo", "Montoya") 
-            { Title = "µçÄÔ·¢ÉÕÓÑ", Salary = "²»¹»" };
+            { Title = "ç”µè„‘å‘çƒ§å‹", Salary = "ä¸å¤Ÿ" };
         #region EXCLUDE
         System.Console.WriteLine(
             "{0} {1} ({2}): {3}",
@@ -30,11 +30,11 @@ public class Employee
 
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
     public string? Title { get; set; }
     public Employee? Manager { get; set; }
 
-    // NameÊôĞÔ
+    // Nameå±æ€§
     public string Name
     {
         get
@@ -43,7 +43,7 @@ public class Employee
         }
         set
         {
-            // ½«Ëù¸³µÄÖµ²ğ·ÖÎªÃû×ÖºÍĞÕÊÏ
+            // å°†æ‰€èµ‹çš„å€¼æ‹†åˆ†ä¸ºåå­—å’Œå§“æ°
             string[] names;
             names = value.Split(new char[] { ' ' });
             if(names.Length == 2)
@@ -53,9 +53,9 @@ public class Employee
             }
             else
             {
-                // Èç¹ûËù¸³µÄÖµ²»ÊÇÃüÃû£¬¾ÍÅ×³öÒì³£
+                // å¦‚æœæ‰€èµ‹çš„å€¼ä¸æ˜¯å‘½åï¼Œå°±æŠ›å‡ºå¼‚å¸¸
                 throw new System.ArgumentException(
-                    $"Ëù¸³µÄÖµ'{value}'ÎŞĞ§¡£");
+                    $"æ‰€èµ‹çš„å€¼'{value}'æ— æ•ˆã€‚");
             }
         }
     }

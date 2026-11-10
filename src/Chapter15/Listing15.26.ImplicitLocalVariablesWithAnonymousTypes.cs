@@ -11,20 +11,20 @@ public class Program
         var patent1 =
             new
             {
-                Title = "Ë«½¹µãÑÛ¾µ",
+                Title = "åŒç„¦ç‚¹çœ¼é•œ",
                 YearOfPublication = "1784"
             };
         var patent2 =
             new
             {
-                Title = "ÁôÉù»ú",
+                Title = "ç•™å£°æœº",
                 YearOfPublication = "1877"
             };
         var patent3 =
             new
             {
                 patent1.Title,
-                // ÖØÃüÃûÒÔÑİÊ¾ÊôĞÔÃüÃû
+                // é‡å‘½åä»¥æ¼”ç¤ºå±æ€§å‘½å
                 Year = patent1.YearOfPublication
             };
         #endregion HIGHLIGHT

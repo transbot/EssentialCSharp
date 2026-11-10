@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_14;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_14;
 
 #region INCLUDE
 using System.Collections.Generic;

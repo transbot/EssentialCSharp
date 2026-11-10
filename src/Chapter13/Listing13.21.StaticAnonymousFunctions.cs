@@ -10,11 +10,11 @@ public class Program
 
         for (int i = 0; i < items.Length; i++)
         {
-            Console.Write("ÇëÊäÈëÒ»¸öÕûÊý:");
+            Console.Write("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°:");
             string? text = Console.ReadLine();
             if (!int.TryParse(text, out items[i]))
             {
-                Console.WriteLine($"'{text}'²»ÊÇÒ»¸öÓÐÐ§µÄÕûÊý¡£");
+                Console.WriteLine($"'{text}'ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•´æ•°ã€‚");
                 return;
             }
         }
@@ -28,7 +28,7 @@ public class Program
         #endregion HIGHLIGHT
             {
             #if COMPILEERROR // EXCLUDE
-                // ´íÎó CS8820£º¾²Ì¬ÄäÃûº¯Êý²»ÄÜ°üº¬¶ÔcomparisonCountµÄÒýÓÃ¡£
+                // é”™è¯¯ CS8820ï¼šé™æ€åŒ¿åå‡½æ•°ä¸èƒ½åŒ…å«å¯¹comparisonCountçš„å¼•ç”¨ã€‚
                 comparisonCount++;
             #endif // COMPILEERROR // EXCLUDE
                 return first < second;
@@ -41,7 +41,7 @@ public class Program
         }
 
         #region HIGHLIGHT
-        Console.WriteLine("items±»±È½ÏÁË{0}´Î¡£",
+        Console.WriteLine("itemsè¢«æ¯”è¾ƒäº†{0}æ¬¡ã€‚",
             comparisonCount);
         #endregion HIGHLIGHT
     }

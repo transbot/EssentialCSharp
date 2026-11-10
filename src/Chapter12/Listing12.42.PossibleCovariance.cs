@@ -48,7 +48,7 @@ public class Program
 {
     static void Main()
     {
-        // 使用out类型参数才可以：
+        // 浣跨敤out绫诲瀷鍙傛暟鎵嶅彲浠ワ細
         #region HIGHLIGHT
         // Pair<Contact> contacts =
         //     new Pair<Contact>(

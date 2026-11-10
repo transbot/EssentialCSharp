@@ -9,9 +9,9 @@ public class ProgramTests
     public void InvokingDelegateWithoutCheckingForNull()
     {
         string expected = $@"
-Keywords:
+关键字:
  { CSharpExpectedData.ExpectedKeywords }
-Contextual Keywords:
+上下文关键字:
  { CSharpExpectedData.ExpectedContextualKeywords }";
 
 

@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter16.Listing16

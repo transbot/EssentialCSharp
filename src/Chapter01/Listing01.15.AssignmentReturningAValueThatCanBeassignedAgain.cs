@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_15;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter01.Listing01_15;
 
 #region INCLUDE
 public class StormingTheCastle
@@ -7,7 +7,7 @@ public class StormingTheCastle
     {
         // ...
         string requirements, miracleMax;
-        requirements = miracleMax = "ÕâĞèÒªÆæ¼£¡£";
+        requirements = miracleMax = "è¿™éœ€è¦å¥‡è¿¹ã€‚";
         #region EXCLUDE
         Console.WriteLine(miracleMax);
         #endregion EXCLUDE

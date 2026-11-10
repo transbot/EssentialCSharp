@@ -9,23 +9,23 @@ public class Program
     public void Main()
     {
         #region INCLUDE
-        // ·ÇÏß³Ì°²È«
+        // éçº¿ç¨‹å®‰å…¨
         #region HIGHLIGHT
         if (OnTemperatureChanged is not null)
         #endregion HIGHLIGHT
         {
-            // µ÷ÓÃËùÓĞ¶©ÔÄÁË¸ÃÊÂ¼şµÄ¶©ÔÄÕß
+            // è°ƒç”¨æ‰€æœ‰è®¢é˜…äº†è¯¥äº‹ä»¶çš„è®¢é˜…è€…
             OnTemperatureChanged(
                 this, new TemperatureEventArgs(value));
         }
         #endregion INCLUDE
     }
 
-    // ¿ÌÒâÊ¹ÓÃĞ¡Ğ´µÄvalue×÷ÎªÊôĞÔÃû£¬
-    // ÒÔÄ£ÄâsetterÖĞµÄvalue¹Ø¼ü×Ö¡£
-    #pragma warning disable IDE1006 // ÃüÃû·ç¸ñ
+    // åˆ»æ„ä½¿ç”¨å°å†™çš„valueä½œä¸ºå±æ€§åï¼Œ
+    // ä»¥æ¨¡æ‹Ÿsetterä¸­çš„valueå…³é”®å­—ã€‚
+    #pragma warning disable IDE1006 // å‘½åé£æ ¼
     public object? value { get; set; }
-    #pragma warning restore IDE1006 // ÃüÃû·ç¸ñ
+    #pragma warning restore IDE1006 // å‘½åé£æ ¼
 }
 
 class TemperatureEventArgs

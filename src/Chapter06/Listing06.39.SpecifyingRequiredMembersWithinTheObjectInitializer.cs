@@ -10,8 +10,8 @@ public class Program
     {
         #region INCLUDE
         // Error CS9035:
-        // �����ڶ����ʼ��ֵ�趨������Թ��캯����
-        // ��������ĳ�Ա'Book.Isbn'��                
+        // 必须在对象初始化值设定项或属性构造函数中
+        // 设置所需的成员'Book.Isbn'。                
 #if COMPILEERROR // EXCLUDE
         Book book = new() { Title= "Essential C#" };
 #endif // COMPILEERROR // EXCLUDE

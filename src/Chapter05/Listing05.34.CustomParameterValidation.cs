@@ -12,12 +12,12 @@ public class Program
         #endregion HIGHLIGHT
         if(args.Length != 2 ) 
         { 
-            // ±ØĞëÖ¸¶¨Á½¸ö£¨¶øÇÒÖ»ÄÜÊÇÁ½¸ö£©²ÎÊı£»±¨´í
+            // å¿…é¡»æŒ‡å®šä¸¤ä¸ªï¼ˆè€Œä¸”åªèƒ½æ˜¯ä¸¤ä¸ªï¼‰å‚æ•°ï¼›æŠ¥é”™
             Console.WriteLine(
-                "´íÎó: ±ØĞëÖ¸¶¨"
-                + "URLºÍÎÄ¼şÃû");
+                "é”™è¯¯: å¿…é¡»æŒ‡å®š"
+                + "URLå’Œæ–‡ä»¶å");
             Console.WriteLine(
-                "ÓÃ·¨: Downloader.exe <URL> <ÎÄ¼şÃû>");
+                "ç”¨æ³•: Downloader.exe <URL> <æ–‡ä»¶å>");
             result = 1;
         }
         else
@@ -37,7 +37,7 @@ private static void DownloadSSL(string httpsUrl, string fileName)
     if (fileName.Trim().Length == 0)
     {
         throw new ArgumentException(
-            $"{nameof(fileName)}²»ÄÜÎª¿Õ»òÕß¿Õ´®");
+            $"{nameof(fileName)}ä¸èƒ½ä¸ºç©ºæˆ–è€…ç©ºä¸²");
     }
 #else
     ArgumentException.ThrowIfNullOrEmpty(httpsUrl = httpsUrl?.Trim()!);
@@ -46,7 +46,7 @@ private static void DownloadSSL(string httpsUrl, string fileName)
 
     if (!httpsUrl.ToUpper().StartsWith("HTTPS"))
     {
-        throw new ArgumentException("URL±ØĞëÒÔ'HTTPS'¿ªÍ·¡£");
+        throw new ArgumentException("URLå¿…é¡»ä»¥'HTTPS'å¼€å¤´ã€‚");
     }
 
     HttpClient client = new();
@@ -54,7 +54,7 @@ private static void DownloadSSL(string httpsUrl, string fileName)
         client.GetByteArrayAsync(httpsUrl).Result;
     client.Dispose();
     File.WriteAllBytes(fileName!, response);
-    Console.WriteLine($"ÒÑ´Ó'{httpsUrl}'ÏÂÔØ'{fileName}'¡£");
+    Console.WriteLine($"å·²ä»'{httpsUrl}'ä¸‹è½½'{fileName}'ã€‚");
 }
 }
 #endregion INCLUDE

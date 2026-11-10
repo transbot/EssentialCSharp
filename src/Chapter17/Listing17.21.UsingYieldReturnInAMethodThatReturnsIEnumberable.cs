@@ -30,14 +30,14 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
                 default:
                     throw new NotImplementedException(
                         string.Format(
-                        "ÉĞÎ´ÊµÏÖ{0}Ã¶¾Ù",
+                        "å°šæœªå®ç°{0}æšä¸¾",
                         index.ToString()));
             }
         }
     }
     #endregion Members
 
-    // ´úÂëÇåµ¥17.21  ÔÚ·µ»ØIEnumerable<T>µÄ·½·¨ÖĞÊ¹ÓÃyield return
+    // ä»£ç æ¸…å•17.21  åœ¨è¿”å›IEnumerable<T>çš„æ–¹æ³•ä¸­ä½¿ç”¨yield return
     #endregion EXCLUDE
     #region HIGHLIGHT
     public IEnumerable<T> GetReverseEnumerator()
@@ -55,7 +55,7 @@ public struct Pair<T> : IPair<T>, IEnumerable<T>
     }
     #endregion IEnumerable<T>
 
-    #region IEnumerableµÄ³ÉÔ±
+    #region IEnumerableçš„æˆå‘˜
     System.Collections.IEnumerator
         System.Collections.IEnumerable.GetEnumerator()
     {

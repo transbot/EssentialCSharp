@@ -7,7 +7,7 @@ public class ProgramTests
     [TestMethod]
     public void MainTest()
     {
-        const string expected = @"ERROR: AggregateException:
+        const string expected = @"错误: AggregateException:
   UnauthorizedAccessException - Attempted to perform an unauthorized operation.*";
 
         IntelliTect.TestTools.Console.ConsoleAssert.ExpectLike(

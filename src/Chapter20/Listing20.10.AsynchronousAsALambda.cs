@@ -25,7 +25,7 @@ public class Program
             async (string webRequestUrl) =>
             #endregion HIGHLIGHT
             {
-                // ³öÓÚµ±Ç°Ö÷ÌâµÄÄ¿µÄÊ¡ÂÔÁË´íÎó´¦Àí
+                // å‡ºäºŽå½“å‰ä¸»é¢˜çš„ç›®çš„çœç•¥äº†é”™è¯¯å¤„ç†
                 WebRequest webRequest =
                    WebRequest.Create(url);
 
@@ -34,8 +34,8 @@ public class Program
                     await webRequest.GetResponseAsync();
                 #endregion HIGHLIGHT
 
-                // ÏÔÊ½¼ÆÊý¶ø²»ÊÇµ÷ÓÃwebRequest.ContentLength£¬
-                // ÒÔÑÝÊ¾¶à¸öawait²Ù×÷·û
+                // æ˜¾å¼è®¡æ•°è€Œä¸æ˜¯è°ƒç”¨webRequest.ContentLengthï¼Œ
+                // ä»¥æ¼”ç¤ºå¤šä¸ªawaitæ“ä½œç¬¦
                 using (StreamReader reader =
                     new(response.GetResponseStream()))
                 {
@@ -61,14 +61,14 @@ public class Program
     public static string FormatBytes(long bytes)
     {
         string[] magnitudes =
-            new [] { "GB", "MB", "KB", "×Ö½Ú" };
+            new [] { "GB", "MB", "KB", "å­—èŠ‚" };
         long max =
             (long)Math.Pow(1024, magnitudes.Length);
 
         return string.Format("{1:##.##} {0}",
             magnitudes.FirstOrDefault(
                 magnitude =>
-                    bytes > (max /= 1024)) ?? "0×Ö½Ú",
+                    bytes > (max /= 1024)) ?? "0å­—èŠ‚",
                 (decimal)bytes / (decimal)max).Trim();
     }
     #endregion EXCLUDE

@@ -15,8 +15,8 @@ public class Program
 
     public class DerivedClass : BaseClass
     {
-        // ±àÒëÆ÷¾¯¸æ£ºDisplayName()Òş²Ø¼Ì³ĞµÄ³ÉÔ±¡£
-        // Èç¹ûÊÇÓĞÒâÒş²Ø£¬ÇëÊ¹ÓÃ¹Ø¼ü×Önew¡£
+        // ç¼–è¯‘å™¨è­¦å‘Šï¼šDisplayName()éšè—ç»§æ‰¿çš„æˆå‘˜ã€‚
+        // å¦‚æœæ˜¯æœ‰æ„éšè—ï¼Œè¯·ä½¿ç”¨å…³é”®å­—newã€‚
         public virtual void DisplayName()
         {
             Console.WriteLine("DerivedClass");

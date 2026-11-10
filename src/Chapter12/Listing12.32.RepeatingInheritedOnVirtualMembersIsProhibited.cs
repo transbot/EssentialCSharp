@@ -13,7 +13,7 @@ public class EntityBase
 public class Order : EntityBase
 {
     public override void Method<T>(T t)
-    //    ÖØĞ´³ÉÔ±Ê±£¬Ô¼Êø²»¿ÉÒÔÖØ¸´
+    //    é‡å†™æˆå‘˜æ—¶ï¼Œçº¦æŸä¸å¯ä»¥é‡å¤
     //    where T : IComparable<T>
     {
         // ...

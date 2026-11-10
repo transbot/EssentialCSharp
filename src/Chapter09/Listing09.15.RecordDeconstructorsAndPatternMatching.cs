@@ -6,10 +6,10 @@ public class Program
 {
     public static void Main()
     {
-        // ¹¹Ôìº¯Êı¸ù¾İÎ»ÖÃ²ÎÊıÀ´Éú³É
+        // æ„é€ å‡½æ•°æ ¹æ®ä½ç½®å‚æ•°æ¥ç”Ÿæˆ
         Angle angle = new(90, 0, 0, null);
 
-        // ¼ÇÂ¼ÓĞÒ»¸öÊ¹ÓÃÁËÎ»ÖÃ²ÎÊıµÄ½â¹¹º¯Êı
+        // è®°å½•æœ‰ä¸€ä¸ªä½¿ç”¨äº†ä½ç½®å‚æ•°çš„è§£æ„å‡½æ•°
         #region INCLUDE
         if (angle is (int, int, int, string) angleData)
         {

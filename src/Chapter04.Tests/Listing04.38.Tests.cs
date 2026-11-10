@@ -1,4 +1,4 @@
-
+﻿
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Listing04_38.Tests;
 
 [TestClass]
@@ -8,7 +8,7 @@ public class ProgramTests
     public void GivenSegmentsIsNull()
     {
         const string expected =
-            @"There were no segments to combine.";
+            @"没有更多区段可以合并了。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, ()=>Program.Main(null!));
@@ -18,7 +18,7 @@ public class ProgramTests
     public void GivenSegmentsEmpty()
     {
         const string expected =
-            @"There were no segments to combine.";
+            @"没有更多区段可以合并了。";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, () => Program.Main(Array.Empty<string>()));

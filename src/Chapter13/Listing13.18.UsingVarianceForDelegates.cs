@@ -1,4 +1,4 @@
-// ËµÃ÷ : Left as lambda to elucidate generic types.
+// è¯´æ˜ : Left as lambda to elucidate generic types.
 #pragma warning disable IDE0039 // Use local function
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_18;
 
@@ -9,7 +9,7 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        // Äæ±ä
+        // é€†å˜
         Action<object> broadAction =
             (object data) =>
             {
@@ -18,12 +18,12 @@ public class Program
 
         Action<string> narrowAction = broadAction;
 
-        // Ğ­±ä
+        // åå˜
         Func<string?> narrowFunction =
             () => Console.ReadLine();
         Func<object?> broadFunction = narrowFunction;
 
-        // Í¬Ê±Ê¹ÓÃÄæ±äºÍĞ­±ä
+        // åŒæ—¶ä½¿ç”¨é€†å˜å’Œåå˜
         Func<object, string?> func1 =
             (object data) => data.ToString();
 

@@ -8,7 +8,7 @@ public class Program
         var patent1 =
             new
             {
-                Title = "Ë«½¹µãÑÛ¾µ",
+                Title = "åŒç„¦ç‚¹çœ¼é•œ",
                 YearOfPublication = "1784"
             };
 
@@ -16,7 +16,7 @@ public class Program
             new
             {
                 YearOfPublication = "1877",
-                Title = "ÁôÉù»ú"
+                Title = "ç•™å£°æœº"
             };
 
         var patent3 =
@@ -26,14 +26,14 @@ public class Program
                 Year = patent1.YearOfPublication
             };
 
-        // ´íÎó: ÎŞ·¨½«ÀàĞÍ'AnonymousType#2'ÒşÊ½×ª»»Îª'AnonymousType#1'
-        // patent1 = patent2; // ³·Ïû×¢ÊÍ½«ÎŞ·¨±àÒë
+        // é”™è¯¯: æ— æ³•å°†ç±»å‹'AnonymousType#2'éšå¼è½¬æ¢ä¸º'AnonymousType#1'
+        // patent1 = patent2; // æ’¤æ¶ˆæ³¨é‡Šå°†æ— æ³•ç¼–è¯‘
 
-        // ´íÎó: ÎŞ·¨½«ÀàĞÍ'AnonymousType#3'ÒşÊ½×ª»»Îª'AnonymousType#1'
-        // patent1 = patent3; // ³·Ïû×¢ÊÍ½«ÎŞ·¨±àÒë
+        // é”™è¯¯: æ— æ³•å°†ç±»å‹'AnonymousType#3'éšå¼è½¬æ¢ä¸º'AnonymousType#1'
+        // patent1 = patent3; // æ’¤æ¶ˆæ³¨é‡Šå°†æ— æ³•ç¼–è¯‘
 
-        // ´íÎó: ÎŞ·¨ÎªÊôĞÔ»òË÷ÒıÆ÷'AnonymousType#1.Title'¸³Öµ -- ËüÊÇÖ»¶ÁµÄ
-        // patent1.Title = "ÈğÊ¿ÄÌÀÒ";  // ³·Ïû×¢ÊÍ½«ÎŞ·¨±àÒë
+        // é”™è¯¯: æ— æ³•ä¸ºå±æ€§æˆ–ç´¢å¼•å™¨'AnonymousType#1.Title'èµ‹å€¼ -- å®ƒæ˜¯åªè¯»çš„
+        // patent1.Title = "ç‘å£«å¥¶é…ª";  // æ’¤æ¶ˆæ³¨é‡Šå°†æ— æ³•ç¼–è¯‘
     }
 }
 #endregion INCLUDE

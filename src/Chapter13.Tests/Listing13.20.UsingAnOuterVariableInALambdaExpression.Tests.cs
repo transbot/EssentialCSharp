@@ -8,17 +8,17 @@ public class ProgramTests
     public void Main()
     {
         string expected =
-        @"Enter an integer:<<5
->>Enter an integer:<<1
->>Enter an integer:<<4
->>Enter an integer:<<2
->>Enter an integer:<<3
+        @"请输入一个整数: <<5
+>>请输入一个整数: <<1
+>>请输入一个整数: <<4
+>>请输入一个整数: <<2
+>>请输入一个整数: <<3
 >>5
 4
 3
 2
 1
-Items were compared 10 times.
+items被比较了10次。
 ";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected,

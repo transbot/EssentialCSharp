@@ -6,19 +6,19 @@ public class DoWhileLoop
     {
         int currentPlayer = 1;
         #region INCLUDE        
-        // ·´¸´ÌáÊ¾Íæ¼ÒÂä×Ó£¬Ö±µ½
-        // ÊäÈëÆåÅÌÉÏµÄÒ»¸öÓĞĞ§Î»ÖÃ¡£
+        // åå¤æç¤ºç©å®¶è½å­ï¼Œç›´åˆ°
+        // è¾“å…¥æ£‹ç›˜ä¸Šçš„ä¸€ä¸ªæœ‰æ•ˆä½ç½®ã€‚
         bool valid;
         do
         {
             valid = false;
 
-            // ÇëÇóµ±Ç°Íæ¼ÒÂä×Ó
+            // è¯·æ±‚å½“å‰ç©å®¶è½å­
             Console.Write(
-                $"Íæ¼Ò{currentPlayer}: ÊäÈëÂä×Ó:");
+                $"ç©å®¶{currentPlayer}: è¾“å…¥è½å­:");
             string? input = Console.ReadLine();
 
-            // ¼ì²éµ±Ç°Íæ¼ÒµÄÊäÈë
+            // æ£€æŸ¥å½“å‰ç©å®¶çš„è¾“å…¥
             // ...
 
         } while(!valid);

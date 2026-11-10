@@ -2,17 +2,17 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter18.Listing18_11;
 
 public class Program
 {
-#pragma warning disable CA1822 // ½«³ÉÔ±±ê¼ÇÎªstatic
+#pragma warning disable CA1822 // å°†æˆå‘˜æ ‡è®°ä¸ºstatic
     #region INCLUDE
     [return: Description(
-       "Èç¹û¶ÔÏó´¦ÓÚÓĞĞ§×´Ì¬£¬¾Í·µ»Øtrue¡£")]
+       "å¦‚æœå¯¹è±¡å¤„äºæœ‰æ•ˆçŠ¶æ€ï¼Œå°±è¿”å›trueã€‚")]
     public bool IsValid()
     {
         // ...
         return true;
     }
     #endregion INCLUDE
-#pragma warning restore CA1822 // ½«³ÉÔ±±ê¼ÇÎªstatic
+#pragma warning restore CA1822 // å°†æˆå‘˜æ ‡è®°ä¸ºstatic
 }
 
 public class DescriptionAttribute : Attribute

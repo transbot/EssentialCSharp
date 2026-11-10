@@ -5,11 +5,11 @@ public class PalindromeLength
     public static void Main()
     {
         string palindrome;
-        Console.Write("ÊäÈëÒ»¾ä»ØÎÄ: ");
+        Console.Write("è¾“å…¥ä¸€å¥å›æ–‡: ");
         palindrome = Console.ReadLine();
         Console.WriteLine(
-        $"»ØÎÄ\"{palindrome}\"¹²ÓĞ"
-        + $" {palindrome.Length}¸ö×Ö¡£");
+        $"å›æ–‡\"{palindrome}\"å…±æœ‰"
+        + $" {palindrome.Length}ä¸ªå­—ã€‚");
     }
 }
 

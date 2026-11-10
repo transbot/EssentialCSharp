@@ -11,8 +11,8 @@ public class Program
         if (input < 9)
         #endregion HIGHLIGHT
         {
-            // ÊäÈëÐ¡ÓÚ9
-            Console.WriteLine("¾®×ÖÆå×î´ó²½Êý" + $"´óÓÚ{input}");
+            // è¾“å…¥å°äºŽ9
+            Console.WriteLine("äº•å­—æ£‹æœ€å¤§æ­¥æ•°" + $"å¤§äºŽ{input}");
         }
         // ...
         #endregion INCLUDE

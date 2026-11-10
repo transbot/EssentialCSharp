@@ -30,29 +30,29 @@ public class Program
         Console.WriteLine(
             $"1. delegateInvocations={delegateInvocations}");
 
-        // Ö´ĞĞCount()£¬»áÎªÃ¿¸öÑ¡¶¨µÄÏîµ÷ÓÃÒ»´Îfunc
+        // æ‰§è¡ŒCount()ï¼Œä¼šä¸ºæ¯ä¸ªé€‰å®šçš„é¡¹è°ƒç”¨ä¸€æ¬¡func
         Console.WriteLine(
-            $"2. ÉÏÏÂÎÄ¹Ø¼ü×ÖÊıÁ¿={selection.Count()}");
+            $"2. ä¸Šä¸‹æ–‡å…³é”®å­—æ•°é‡={selection.Count()}");
 
         Console.WriteLine(
             $"3. delegateInvocations={delegateInvocations}");
 
-        // Ö´ĞĞCount()£¬»áÎªÃ¿¸öÑ¡¶¨µÄÏîµ÷ÓÃÒ»´Îfunc
+        // æ‰§è¡ŒCount()ï¼Œä¼šä¸ºæ¯ä¸ªé€‰å®šçš„é¡¹è°ƒç”¨ä¸€æ¬¡func
         Console.WriteLine(
-            $"4. ÉÏÏÂÎÄ¹Ø¼ü×ÖÊıÁ¿={selection.Count()}");
+            $"4. ä¸Šä¸‹æ–‡å…³é”®å­—æ•°é‡={selection.Count()}");
 
         Console.WriteLine(
             $"5. delegateInvocations={delegateInvocations}");
 
-        // »º´æÕâ¸öÖµ£¬Ê¹Î´À´µÄ¼ÆÊı²»»á´¥·¢²éÑ¯µÄÁíÒ»´Îµ÷ÓÃ
+        // ç¼“å­˜è¿™ä¸ªå€¼ï¼Œä½¿æœªæ¥çš„è®¡æ•°ä¸ä¼šè§¦å‘æŸ¥è¯¢çš„å¦ä¸€æ¬¡è°ƒç”¨
         List<string> selectionCache = selection.ToList();
 
         Console.WriteLine(
             $"6. delegateInvocations={delegateInvocations}");
 
-        // ´Ó»º´æµÄ¼¯ºÏÖĞ»ñÈ¡¼ÆÊı
+        // ä»ç¼“å­˜çš„é›†åˆä¸­è·å–è®¡æ•°
         Console.WriteLine(
-            $"7. selectionCacheÊıÁ¿={selectionCache.Count}");
+            $"7. selectionCacheæ•°é‡={selectionCache.Count}");
 
         Console.WriteLine(
             $"8. delegateInvocations={delegateInvocations}");
@@ -105,7 +105,7 @@ public class Program
 //        // Executing count should invoke func once for 
 //        // each item selected
 //        Console.WriteLine(
-//            $"4. ÉÏÏÂÎÄ¹Ø¼ü×Ö¼ÆÊı={ selection.Count() }");
+//            $"4. ä¸Šä¸‹æ–‡å…³é”®å­—è®¡æ•°={ selection.Count() }");
 
 //        Console.WriteLine(
 //            $"5. delegateInvocations={ delegateInvocations }");

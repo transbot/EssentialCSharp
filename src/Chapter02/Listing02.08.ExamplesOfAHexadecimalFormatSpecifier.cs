@@ -1,11 +1,11 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_08;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_08;
 
 public class Program
 {
     public static void Main()
     {
         #region INCLUDE
-        //��ʾ"0x2A"
+        //显示"0x2A"
         Console.WriteLine($"0x{42:X}");
         #endregion INCLUDE
     }

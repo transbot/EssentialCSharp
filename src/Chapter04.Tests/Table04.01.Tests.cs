@@ -1,4 +1,4 @@
-﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Table04_01.Tests;
+namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter04.Table04_01.Tests;
 
 [TestClass]
 public class ControlFlowStatementsTests

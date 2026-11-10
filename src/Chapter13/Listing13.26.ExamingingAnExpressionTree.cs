@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_26;
+﻿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter13.Listing13_26;
 
 #region INCLUDE
 using System;
@@ -47,7 +47,7 @@ public class Program
     private static string NodeToString(Expression expression) =>
         expression.NodeType switch
         {
-            // ʹ�þ�̬ExpressionType
+            // 使用静态ExpressionType
             Multiply => "*",
             Add => "+",
             Divide => "/",

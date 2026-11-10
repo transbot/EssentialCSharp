@@ -20,10 +20,10 @@ public class Program
     #region EXCLUDE
     private static string Encrypt(string item)
     {
-        Console.WriteLine($">>>>>正在加密'{ item }'.");
+        Console.WriteLine($">>>>>姝ｅ湪鍔犲瘑'{ item }'.");
         Cryptographer cryptographer = new();
         string itemEncrypted = System.Text.Encoding.UTF8.GetString(cryptographer.Encrypt(item));
-        Console.WriteLine($"<<<<<结束加密'{ itemEncrypted }'.");
+        Console.WriteLine($"<<<<<缁撴潫鍔犲瘑'{ itemEncrypted }'.");
         return itemEncrypted;
     }
     #endregion EXCLUDE

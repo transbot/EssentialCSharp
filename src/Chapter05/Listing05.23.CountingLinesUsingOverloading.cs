@@ -69,7 +69,7 @@ public static class LineCounter
     {
         int lineCount = 0;
         string? line;
-        // ¿ÉÒÔÊ¹ÓÃÒ»¸öusingÓï¾ä¸Ä½ø£¬µ«Ä¿Ç°»¹Ã»ÓĞ½²µ½
+        // å¯ä»¥ä½¿ç”¨ä¸€ä¸ªusingè¯­å¥æ”¹è¿›ï¼Œä½†ç›®å‰è¿˜æ²¡æœ‰è®²åˆ°
         FileStream stream = new(file, FileMode.Open);
         StreamReader reader = new(stream);
         line = reader.ReadLine();
@@ -82,7 +82,7 @@ public static class LineCounter
             line = reader.ReadLine();
         }
 
-        reader.Dispose();  // ×Ô¶¯¹Ø±ÕÁ÷
+        reader.Dispose();  // è‡ªåŠ¨å…³é—­æµ
         return lineCount;
     }
 }

@@ -5,7 +5,7 @@ public class Program
     public static void Main()
     {
         #region INCLUDE
-        // Ê¹ÓÃÊ®Áù½øÖÆ×ÖÃæÖµÏÔÊ¾Öµ42
+        // ä½¿ç”¨åå…­è¿›åˆ¶å­—é¢å€¼æ˜¾ç¤ºå€¼42
         System.Console.WriteLine(0x002A);        
         #endregion INCLUDE
     }

@@ -20,8 +20,8 @@ public sealed class ProductSerialNumber
     public override int GetHashCode()
     {
         int hashCode = ProductSeries.GetHashCode();
-        hashCode ^= Model;  // XOR (Òì»ò)
-        hashCode ^= Id.GetHashCode();  // XOR (Òì»ò)
+        hashCode ^= Model;  // XOR (å¼‚æˆ–)
+        hashCode ^= Id.GetHashCode();  // XOR (å¼‚æˆ–)
         return hashCode;
     }
 
@@ -72,12 +72,12 @@ public sealed class ProductSerialNumber
         ProductSerialNumber rightHandSide)
     {
 
-        // ¼ì²éleftHandSideÊÇ·ñÎªnull£¬
-        // (·ñÔòoperator == »áµİ¹éµ÷ÓÃ)
+        // æ£€æŸ¥leftHandSideæ˜¯å¦ä¸ºnullï¼Œ
+        // (å¦åˆ™operator == ä¼šé€’å½’è°ƒç”¨)
         if(leftHandSide is null)
         {
-            // Èç¹ûrightHandSideÒ²Îªnull£¬¾Í·µ»Øtrue£»
-            // ·ñÔò·µ»Øfalse
+            // å¦‚æœrightHandSideä¹Ÿä¸ºnullï¼Œå°±è¿”å›trueï¼›
+            // å¦åˆ™è¿”å›false
             return rightHandSide is null;
         }
 

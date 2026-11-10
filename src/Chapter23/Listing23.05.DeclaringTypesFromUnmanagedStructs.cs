@@ -11,7 +11,7 @@ namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter23.Listing23_05
         public byte Red;
         public byte Green;
         public byte Blue;
-        // ¹Ø±Õ¡°ÉùÃ÷ÁËUnusedµ«´ÓÎ´·ÃÎÊ¹ı¡±¾¯¸æ
+        // å…³é—­â€œå£°æ˜äº†Unusedä½†ä»æœªè®¿é—®è¿‡â€è­¦å‘Š
 #pragma warning disable 414
         private byte Unused;
 #pragma warning restore 414

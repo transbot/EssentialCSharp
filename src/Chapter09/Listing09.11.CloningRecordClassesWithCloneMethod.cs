@@ -81,8 +81,8 @@ public class Coordinate : IEquatable<Coordinate>
     public Type ExternalEqualityContract => EqualityContract();
 
     #region INCLUDE
-    // ILÖĞµÄÊµ¼ÊÃû³ÆÊÇ"<Clone>$"¡£µ«ÊÇ£¬²»ÄÜ
-    // ×ÔĞĞÔÚ¼ÇÂ¼ÖĞÌí¼ÓÒ»¸öÃûÎªCloneµÄ·½·¨¡£
+    // ILä¸­çš„å®é™…åç§°æ˜¯"<Clone>$"ã€‚ä½†æ˜¯ï¼Œä¸èƒ½
+    // è‡ªè¡Œåœ¨è®°å½•ä¸­æ·»åŠ ä¸€ä¸ªåä¸ºCloneçš„æ–¹æ³•ã€‚
     public Coordinate Clone() => new(this);
 
     protected Coordinate(Coordinate original)

@@ -7,8 +7,8 @@ public class FortyTwo
         #region INCLUDE
         const string windSpeed = "67";
         const string announcement = $"""
-            »ªÊ¢¶ÙÖİÔ­À´µÄËş¿ÆÂí´óÇÅ
-            ±»·çËÙÎª{windSpeed}¹«Àï/Ğ¡Ê±µÄ´ó·ç´İ»Ù¡£
+            åç››é¡¿å·åŸæ¥çš„å¡”ç§‘é©¬å¤§æ¡¥
+            è¢«é£é€Ÿä¸º{windSpeed}å…¬é‡Œ/å°æ—¶çš„å¤§é£æ‘§æ¯ã€‚
             """;
         Console.WriteLine(announcement);
         #endregion INCLUDE

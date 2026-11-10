@@ -41,25 +41,25 @@ public static class Program
             data = ParallelEncrypt(data, cts.Token);
         }, cts.Token);
 
-        Console.WriteLine("°´Enter¼üÍË³ö¡£");
+        Console.WriteLine("æŒ‰Enteré”®é€€å‡ºã€‚");
         Task<int> cancelTask = ConsoleReadAsync(cts.Token);
 
         try
         {
             Task.WaitAny(task, cancelTask);
-            // Á½¸öÈÎÎñÖĞµÄÈÎºÎÒ»¸öÍê³É£¬
-            // ³ÌĞò¾Í³¢ÊÔÈ¡ÏûÁíÒ»¸öÉĞÎ´Íê³ÉµÄÈÎÎñ¡£            
+            // ä¸¤ä¸ªä»»åŠ¡ä¸­çš„ä»»ä½•ä¸€ä¸ªå®Œæˆï¼Œ
+            // ç¨‹åºå°±å°è¯•å–æ¶ˆå¦ä¸€ä¸ªå°šæœªå®Œæˆçš„ä»»åŠ¡ã€‚            
             cts.Cancel();
             await task;
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n³É¹¦Íê³É");
+            Console.WriteLine("\næˆåŠŸå®Œæˆ");
         }
         catch (OperationCanceledException taskCanceledException)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(
-                $"\nÒÑÈ¡Ïû: { taskCanceledException.Message }");
+                $"\nå·²å–æ¶ˆ: { taskCanceledException.Message }");
         }
         finally
         {
@@ -88,7 +88,7 @@ public static class Program
             }
             cancellationToken.ThrowIfCancellationRequested();
             throw new InvalidOperationException(
-                "ÉÏÒ»ĞĞ´úÂë¾ÍÓ¦¸ÃÒÑ¾­Å×³öÒì³£ÁË£¬ËùÒÔÕâÒ»ĞĞÓ¦¸ÃÓÀÔ¶Ö´ĞĞ²»µ½");
+                "ä¸Šä¸€è¡Œä»£ç å°±åº”è¯¥å·²ç»æŠ›å‡ºå¼‚å¸¸äº†ï¼Œæ‰€ä»¥è¿™ä¸€è¡Œåº”è¯¥æ°¸è¿œæ‰§è¡Œä¸åˆ°");
         }, cancellationToken);
     }
 

@@ -1,5 +1,5 @@
-// ËµÃ÷ : Ö»ÏÔÊ¾²¿·ÖÊµÏÖ
-#pragma warning disable CS8618 // ²»¿ÉÎª¿ÕµÄ×Ö¶ÎÎ´³õÊ¼»¯¡£¿¼ÂÇÉùÃ÷Îª¿É¿Õ¡£
+// è¯´æ˜ : åªæ˜¾ç¤ºéƒ¨åˆ†å®ç°
+#pragma warning disable CS8618 // ä¸å¯ä¸ºç©ºçš„å­—æ®µæœªåˆå§‹åŒ–ã€‚è€ƒè™‘å£°æ˜ä¸ºå¯ç©ºã€‚
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter12.Listing12_13;
 
@@ -11,8 +11,8 @@ public struct Pair<T> : IPair<T>
     {
         First = first;
         #region EXCLUDE
-        // ËµÃ÷ : ºöÂÔ¾¯¸æ£¬±¾ÕÂÉÔºó»áÌí¼Óstruct/classÔ¼Êø£¬
-        // Ê¹Second¿ÉÒÔÉùÃ÷ÎªT?.
+        // è¯´æ˜ : å¿½ç•¥è­¦å‘Šï¼Œæœ¬ç« ç¨åä¼šæ·»åŠ struct/classçº¦æŸï¼Œ
+        // ä½¿Secondå¯ä»¥å£°æ˜ä¸ºT?.
 #pragma warning disable CS8601 // Possible null reference assignment.
         #endregion EXCLUDE
         #region HIGHLIGHT

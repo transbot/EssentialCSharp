@@ -7,10 +7,10 @@ public class EntityBase<T> where T : IComparable<T>
     // ...
 }
 
-// ´íÎó: 
-// ÀàĞÍ'U'²»ÄÜÓÃ×÷·ºĞÍÀàĞÍ»ò·½·¨'EntityBase<T>'
-// ÖĞµÄÀàĞÍ²ÎÊı'T'¡£Ã»ÓĞ´Ó'U'µ½'System.IComparable<U>'
-// µÄ×°Ïä×ª»»»òÀàĞÍ²ÎÊı×ª»»¡£	
+// é”™è¯¯: 
+// ç±»å‹'U'ä¸èƒ½ç”¨ä½œæ³›å‹ç±»å‹æˆ–æ–¹æ³•'EntityBase<T>'
+// ä¸­çš„ç±»å‹å‚æ•°'T'ã€‚æ²¡æœ‰ä»'U'åˆ°'System.IComparable<U>'
+// çš„è£…ç®±è½¬æ¢æˆ–ç±»å‹å‚æ•°è½¬æ¢ã€‚	
 // class Entity<U> : EntityBase<U>
 // {
 //     ...

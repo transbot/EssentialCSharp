@@ -1,4 +1,4 @@
-namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_28;
+ï»¿namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter02.Listing02_28;
 
 public class Program
 {
@@ -9,7 +9,7 @@ public class Program
         checked
         {
             #endregion HIGHLIGHT
-            // int.MaxValueµÈÓÚ2147483647
+            // int.MaxValueç­‰äºŽ2147483647
             int n = int.MaxValue;
             n = n + 1;
             Console.WriteLine(n);

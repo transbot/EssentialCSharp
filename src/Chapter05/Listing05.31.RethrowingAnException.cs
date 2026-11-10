@@ -9,22 +9,22 @@ public class ThrowingExceptions
     {
         try
         {
-            Console.WriteLine("¿ªÊ¼Ö´ĞĞ");
-            Console.WriteLine("Å×³öÒì³£");
-            throw new Exception("ÈÎÒâÒì³£");
-            Console.WriteLine("½áÊøÖ´ĞĞ");
+            Console.WriteLine("å¼€å§‹æ‰§è¡Œ");
+            Console.WriteLine("æŠ›å‡ºå¼‚å¸¸");
+            throw new Exception("ä»»æ„å¼‚å¸¸");
+            Console.WriteLine("ç»“æŸæ‰§è¡Œ");
         }
         catch (FormatException exception)
         {
             Console.WriteLine(
-                "Å×³öÁËÒ»¸öFormatExceptionÒì³£");
+                "æŠ›å‡ºäº†ä¸€ä¸ªFormatExceptionå¼‚å¸¸");
         }
         #region INCLUDE
         // ...
         catch (Exception exception)
         {
             Console.WriteLine(
-                "ÖØĞÂÅ×³ö·ÇÔ¤ÆÚµÄÒì³£:  "
+                "é‡æ–°æŠ›å‡ºéé¢„æœŸçš„å¼‚å¸¸:  "
                 + $"{ exception.Message }");
 
             throw;
@@ -33,10 +33,10 @@ public class ThrowingExceptions
         #endregion INCLUDE
         catch
         {
-            Console.WriteLine("·ÇÔ¤ÆÚµÄ´íÎó!");
+            Console.WriteLine("éé¢„æœŸçš„é”™è¯¯!");
         }
 
         Console.WriteLine(
-            "ÕıÔÚ¹Ø±Õ...");
+            "æ­£åœ¨å…³é—­...");
     }
 }

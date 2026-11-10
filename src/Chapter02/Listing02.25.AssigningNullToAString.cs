@@ -8,11 +8,11 @@ public class Program
         int? age;
         //...
 
-        // Çå³ýageµÄÖµ
+        // æ¸…é™¤ageçš„å€¼
         age = null;
 
         #region EXCLUDE
-        Console.WriteLine($"ÄêÁäÊÇ: {age}");
+        Console.WriteLine($"å¹´é¾„æ˜¯: {age}");
         #endregion EXCLUDE
     }
     #endregion INCLUDE

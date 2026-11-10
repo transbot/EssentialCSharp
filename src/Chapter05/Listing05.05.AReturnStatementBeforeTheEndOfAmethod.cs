@@ -17,7 +17,7 @@ public class Program
         {
             case "quit":
                 return false;
-            // ... 省略了其他case
+            // ... 鐪佺暐浜嗗叾浠朿ase
             default:
                 return true;
         }

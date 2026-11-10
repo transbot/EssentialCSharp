@@ -1,9 +1,9 @@
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter07.Listing07_16;
 
-// ÈôÓĞÒ»¸ö¾ßÌåµÄÊµÏÖ£¬¾Í¿ÉÒÔÊ¹ÓÃPdaItem¶ÔÏóÁË
+// è‹¥æœ‰ä¸€ä¸ªå…·ä½“çš„å®ç°ï¼Œå°±å¯ä»¥ä½¿ç”¨PdaItemå¯¹è±¡äº†
 #pragma warning disable CS0168
 #region INCLUDE
-// ¶¨Òå³éÏóÀà
+// å®šä¹‰æŠ½è±¡ç±»
 #region HIGHLIGHT
 public abstract class PdaItem
 #endregion HIGHLIGHT
@@ -22,7 +22,7 @@ public class Program
     {
 
 #if COMPILEERROR // EXCLUDE
-        // ´íÎó: ÎŞ·¨´´½¨³éÏóÀàĞÍ»ò½Ó¿ÚµÄÊµÀı
+        // é”™è¯¯: æ— æ³•åˆ›å»ºæŠ½è±¡ç±»å‹æˆ–æ¥å£çš„å®ä¾‹
         PdaItem item = new("Inigo Montoya");
 #endif // COMPILEERROR // EXCLUDE
     }

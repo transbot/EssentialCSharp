@@ -6,12 +6,12 @@ public class IncrementExample
     public static void Main()
     {
         int x = 123;
-        // ÏÔÊ¾£º123, 124, 125
+        // æ˜¾ç¤ºï¼š123, 124, 125
         Console.WriteLine($"{x++}, {x++}, {x}");
-        // xÏÖÔÚµÄÖµÊÇ125
-        // ÏÔÊ¾£º126, 127, 127
+        // xç°åœ¨çš„å€¼æ˜¯125
+        // æ˜¾ç¤ºï¼š126, 127, 127
         Console.WriteLine($"{++x}, {++x}, {x}");
-        // xÏÖÔÚµÄÖµÊÇ127
+        // xç°åœ¨çš„å€¼æ˜¯127
     }
 }
 #endregion INCLUDE

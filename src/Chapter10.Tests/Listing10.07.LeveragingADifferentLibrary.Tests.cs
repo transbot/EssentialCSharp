@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Chapter10.Listing10_07.Tests;
 
@@ -11,9 +11,9 @@ public class TextNumberParserTests
         string expected =
             $"""
             info: { typeof(Program).FullName }[0]
-                  Hospital Emergency Codes: = 'black', 'blue', 'brown', 'CBR', 'orange', 'purple', 'red', 'yellow'
+                  医院紧急代码: = 'black', 'blue', 'brown', 'CBR', 'orange', 'purple', 'red', 'yellow'
             warn: { typeof(Program).FullName }[0]
-                  This is a test of the emergency...
+                  测试紧急事件...
 
             """;
 

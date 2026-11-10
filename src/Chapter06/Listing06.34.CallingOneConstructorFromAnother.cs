@@ -18,17 +18,17 @@ public class Employee
         Id = id;
     }
 
-    // FirstNameºÍLastNameÔÚIdÊôĞÔµÄsetterÖĞÉèÖÃ
+    // FirstNameå’ŒLastNameåœ¨Idå±æ€§çš„setterä¸­è®¾ç½®
     #pragma warning disable CS8618
     public Employee(int id)
     {
         Id = id;
 
-        // ²éÕÒÔ±¹¤ĞÕÃû...
+        // æŸ¥æ‰¾å‘˜å·¥å§“å...
         // ...
 
         #region HIGHLIGHT
-        // ×¢Òâ: ³ÉÔ±¹¹Ôìº¯Êı²»ÄÜÒÔÄÚÁª·½Ê½ÏÔÊ½µ÷ÓÃ
+        // æ³¨æ„: æˆå‘˜æ„é€ å‡½æ•°ä¸èƒ½ä»¥å†…è”æ–¹å¼æ˜¾å¼è°ƒç”¨
         // this(id, firstName, lastName);
         #endregion HIGHLIGHT
     }
@@ -37,7 +37,7 @@ public class Employee
     public int Id { get; private set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string? Salary { get; set; } = "²»¹»";
+    public string? Salary { get; set; } = "ä¸å¤Ÿ";
 
     // ...
 }

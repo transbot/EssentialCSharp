@@ -7,13 +7,13 @@ public class TriangleTests
     [TestMethod]
     public void Main_WriteTriangle()
     {
-        const string expected = @"Begin
+        const string expected = @"开始
                    /\
                   /  \
                  /    \
                 /      \
                /________\
-End";
+结束";
 
         IntelliTect.TestTools.Console.ConsoleAssert.Expect(
             expected, Triangle.Main);

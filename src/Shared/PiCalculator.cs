@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Shared;
 

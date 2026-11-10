@@ -11,10 +11,10 @@ public class DataStorageTests
         Employee employee = new();
         employee.FirstName = "Inigo";
         employee.LastName = "Montoya";
-        employee.Salary = "Ì«ÉÙÁË";
+        employee.Salary = "å¤ªå°‘äº†";
 
         string expected = "Inigo" + Environment.NewLine + "Montoya" + Environment.NewLine +
-                          "Ì«ÉÙÁË" + Environment.NewLine;
+                          "å¤ªå°‘äº†" + Environment.NewLine;
 
         DataStorage.Store(employee);
 

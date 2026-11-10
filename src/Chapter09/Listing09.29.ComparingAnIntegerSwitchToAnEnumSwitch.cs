@@ -8,7 +8,7 @@ public class Program
         #region INCLUDE
         int connectionState;
         #region EXCLUDE
-        // ³õÊ¼»¯ÎªconnectionStateÀ´¾ÙÀı
+        // åˆå§‹åŒ–ä¸ºconnectionStateæ¥ä¸¾ä¾‹
         connectionState = 2;
         #endregion EXCLUDE
         switch (connectionState)
@@ -34,7 +34,7 @@ public class Program
         #endregion EXCLUDE
         ConnectionState connectionState;
         #region EXCLUDE
-        // ³õÊ¼»¯connectionStateÀ´¾ÙÀı
+        // åˆå§‹åŒ–connectionStateæ¥ä¸¾ä¾‹
         connectionState = ConnectionState.Connecting;
         #endregion EXCLUDE
         switch (connectionState)

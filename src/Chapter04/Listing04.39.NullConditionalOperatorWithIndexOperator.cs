@@ -1,4 +1,4 @@
-// ˵�� : Intentionally demonstrating legacy syntax.
+﻿// 说明 : Intentionally demonstrating legacy syntax.
 #pragma warning disable IDE1005 // Delegate invocation can be simplified.
 using System.ComponentModel;
 
@@ -12,7 +12,7 @@ public class Person
     public int BirthYear
     {
         get { return _BirthYear; }
-        set 
+        set
         {
             #region INCLUDE
             EventHandler propertyChanged =
@@ -24,7 +24,7 @@ public class Person
             }
             #endregion INCLUDE
 
-            _BirthYear = value; 
+            _BirthYear = value;
         }
     }
 

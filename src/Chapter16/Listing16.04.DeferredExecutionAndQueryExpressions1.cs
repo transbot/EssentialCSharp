@@ -18,22 +18,22 @@ public class Program
         IEnumerable<string> selection = from word in CSharp.Keywords
                                         where IsKeyword(word)
                                         select word;
-        Console.WriteLine("ÒÑ´´½¨²éÑ¯¡£");
+        Console.WriteLine("å·²åˆ›å»ºæŸ¥è¯¢ã€‚");
         foreach(string keyword in selection)
         {
-            // ÕâÀï²»Êä³ö¿Õ¸ñ
+            // è¿™é‡Œä¸è¾“å‡ºç©ºæ ¼
             Console.Write(keyword);
         }
     }
 
-    // ÔÚÎ½´ÊÖĞ°üº¬ÁË¿ØÖÆÌ¨Êä³öµÄ¸±×÷ÓÃ£»
-    // Ä¿µÄÊÇÑİÊ¾ÍÆ³ÙÖ´ĞĞ¡£µ«ÊÇ£¬ÓĞ¸±×÷ÓÃ
-    // µÄÎ½´ÊÔÚÉú²ú´úÂëÖĞÊÇÒ»¸ö²»ºÃµÄÊµ¼ù¡£
+    // åœ¨è°“è¯ä¸­åŒ…å«äº†æ§åˆ¶å°è¾“å‡ºçš„å‰¯ä½œç”¨ï¼›
+    // ç›®çš„æ˜¯æ¼”ç¤ºæ¨è¿Ÿæ‰§è¡Œã€‚ä½†æ˜¯ï¼Œæœ‰å‰¯ä½œç”¨
+    // çš„è°“è¯åœ¨ç”Ÿäº§ä»£ç ä¸­æ˜¯ä¸€ä¸ªä¸å¥½çš„å®è·µã€‚
     private static bool IsKeyword(string word)
     {
         if(word.Contains('*'))
         {
-            // ÔÚÕâÀïÊä³ö¿Õ¸ñ
+            // åœ¨è¿™é‡Œè¾“å‡ºç©ºæ ¼
             Console.Write(" ");
             return true;
         }

@@ -1,4 +1,4 @@
-﻿
+
 
 namespace AddisonWesley.Michaelis.EssentialCSharp.Shared.Listing18_03
 {

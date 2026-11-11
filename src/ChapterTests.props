@@ -13,6 +13,7 @@
       <PackageReference Include="NuGet.Common" PrivateAssets="all" />
       <PackageReference Include="NuGet.Packaging" PrivateAssets="all" />
       <PackageReference Include="NuGet.Protocol" PrivateAssets="all" />
+      <PackageReference Include="System.Formats.Asn1" PrivateAssets="all" />
       <PackageReference Include="coverlet.collector" >
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

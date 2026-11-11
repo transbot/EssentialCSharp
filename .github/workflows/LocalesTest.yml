@@ -4,7 +4,7 @@ on:
   push:
     branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
   pull_request:
-    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese', 'codex/restore-chinese-branch-ci' ]
+    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
 
 jobs:
   set-build-and-test-locale-languages:

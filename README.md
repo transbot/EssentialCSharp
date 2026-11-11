@@ -22,8 +22,32 @@
 ## 开发环境
 
 - [.NET SDK](https://dotnet.microsoft.com/zh-cn/download)：使用 .NET 8 SDK 构建项目，SDK 选择规则见 `global.json`。项目保留 `net8.0`、`net7.0` 和 `net6.0` 三个目标框架；运行或测试某个目标框架时，需要安装对应的运行时。
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/)：可使用支持 .NET 8 的 Visual Studio 2022 进行开发，也可使用下文的 .NET CLI 命令。
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/)：可使用支持 .NET 8 的 Visual Studio 2022；Visual Studio 2026 的本机构建与测试验证结果见下文。也可使用 .NET CLI 命令。
 - [Git](https://git-scm.com/book/zh/v2)：可用于克隆仓库和获取更新；也可使用 Visual Studio 的 Git 功能。
+
+### Visual Studio 2026 验证记录
+
+2026 年 11 月 11 日，基于提交 [`49ff1c93`](https://github.com/transbot/EssentialCSharp/commit/49ff1c93eacc8982247af59619f61debea150740)，在 Windows x64、Debug、简体中文（zh-CN）环境中，使用 Visual Studio Professional 2026 18.12.0 自带的 MSBuild 18.12.2 和 VSTest 18.12.0 完成了完整重新构建与测试。SDK 按 `global.json` 实际选择为 .NET SDK 8.0.319。
+
+46 个项目的三个目标框架全部构建成功，0 个错误。全部 69 个测试程序集共执行 1,936 次测试，全部通过，无失败或跳过，未缩减测试范围。
+
+| 目标框架 | 测试程序集 | 通过测试次数 | 运行时探针结果 |
+| --- | ---: | ---: | --- |
+| `net8.0` | 23 | 650 | .NET 8.0.34 |
+| `net7.0` | 23 | 646 | .NET 7.0.20 |
+| `net6.0` | 23 | 640 | .NET 6.0.36 |
+
+此次验证未发现构建或测试兼容性问题，结论限于上述环境和提交。构建仍有 139 条警告，涉及 .NET 6/7 生命周期、旧 API 及教材演示代码；未通过更改目标框架、跳过测试或隐藏警告来取得通过结果。
+
+### 打开解决方案时项目显示“已卸载”
+
+先右键单击一个项目，选择“重新加载项目”。若出现错误，请根据完整错误信息检查 SDK、运行时或工作负载。若项目可以正常加载，但重新打开解决方案后又恢复为卸载状态，可尝试重建本地解决方案状态：
+
+1. 保存工作，并在所有 Visual Studio 实例中关闭该解决方案。
+2. 备份并重命名对应的 `.suo` 文件：VS2022 为 `.vs/EssentialCSharp/v17/.suo`，VS2026 为 `.vs/EssentialCSharp/v18/.suo`。
+3. 重新打开 `EssentialCSharp.sln`，检查项目加载状态。
+
+`.suo` 保存个人解决方案设置，重建后可能需要重新选择启动项目等设置；保留备份以便恢复。本机已通过此方式恢复全部 46 个项目，并验证重新打开后仍保持加载。这类本地状态文件无需提交到 GitHub。
 
 ## 运行代码
 
@@ -85,6 +109,12 @@ dotnet test src/Chapter01.Tests/Chapter01.Tests.csproj
 - `#region INCLUDE` 与 `#endregion INCLUDE` 之间是书中展示的代码。
 - `#region EXCLUDE` 与 `#endregion EXCLUDE` 之间的内容在书中省略，通常以 `// ...` 表示。
 - 行尾带有 `// EXCLUDE` 的代码在书中省略。
+
+## 仓库维护
+
+配套代码保持与已出版中文版一致。仓库整理和 CI 维护不改动教材代码、测试、依赖版本或目标框架；刻意演示错误的示例及对应测试继续保留。
+
+依赖更新采用人工审查和合并策略，不自动合并。检查通过仅作为审查依据；涉及教材配套代码或行为的变更，需要另行确认。本仓库不启用英文版版本分支之间的自动同步。
 
 ## 问题反馈与修正
 

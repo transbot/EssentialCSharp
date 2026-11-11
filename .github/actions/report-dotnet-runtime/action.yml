@@ -1,10 +1,17 @@
 name: Report selected .NET runtimes
 description: Execute a small probe for every target framework declared by Common.props
+inputs:
+  expected-culture:
+    description: Optional culture to require for both CurrentCulture and CurrentUICulture
+    required: false
+    default: ''
 runs:
   using: composite
   steps:
     - name: Execute runtime probes
       shell: pwsh
+      env:
+        EXPECTED_CULTURE: ${{ inputs.expected-culture }}
       run: |
         $ErrorActionPreference = 'Stop'
         $probeDirectory = Join-Path $env:RUNNER_TEMP ("dotnet-runtime-probe-" + [Guid]::NewGuid().ToString('N'))
@@ -16,6 +23,14 @@ runs:
         Set-Content (Join-Path $probeDirectory 'RuntimeProbe.csproj') $project -Encoding utf8
         $source = @'
         System.Console.WriteLine($"Actual runtime: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}; version={System.Environment.Version}; architecture={System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture}");
+        string culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+        string uiCulture = System.Globalization.CultureInfo.CurrentUICulture.Name;
+        System.Console.WriteLine($"Actual culture: {culture}; UI culture: {uiCulture}");
+        if (args.Length > 0 && !string.IsNullOrEmpty(args[0])
+            && (culture != args[0] || uiCulture != args[0]))
+        {
+            throw new System.InvalidOperationException($"Expected culture {args[0]}, got {culture}/{uiCulture}.");
+        }
         '@
         Set-Content (Join-Path $probeDirectory 'Program.cs') $source -Encoding utf8
         Push-Location $probeDirectory
@@ -26,7 +41,7 @@ runs:
           $frameworks = ([xml](Get-Content $commonPath -Raw)).Project.PropertyGroup.TargetFrameworks.Split(';')
           foreach ($framework in $frameworks) {
             Write-Host "Target framework: $framework"
-            dotnet (Join-Path $probeDirectory "bin/Debug/$framework/RuntimeProbe.dll")
+            dotnet (Join-Path $probeDirectory "bin/Debug/$framework/RuntimeProbe.dll") $env:EXPECTED_CULTURE
             if ($LASTEXITCODE -ne 0) { throw "Runtime probe failed for ${framework}: $LASTEXITCODE" }
           }
         } finally {

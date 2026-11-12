@@ -22,7 +22,7 @@ jobs:
         shell: pwsh
         run: python -X utf8 .github/scripts/check_utf8.py
       - name: Setup dotnet SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6.1.0
         with:
             global-json-file: global.json
             dotnet-version: |

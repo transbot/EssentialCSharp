@@ -21,7 +21,7 @@ jobs:
             culture: fr-FR
             label: 法语跨区域检查
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - name: Verify repository text encoding
         shell: pwsh
         run: python -X utf8 .github/scripts/check_utf8.py

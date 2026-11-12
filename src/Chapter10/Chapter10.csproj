@@ -22,5 +22,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Console" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+    <PackageReference Include="System.Text.Json" />
   </ItemGroup>
 </Project>

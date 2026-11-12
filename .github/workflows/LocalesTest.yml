@@ -1,19 +1,25 @@
-name: Test Different Locales
+name: Chinese and Cross-Locale Validation
 
 on:
   push:
     branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
   pull_request:
-    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese', 'codex/restore-chinese-branch-ci' ]
+    branches: [ 'v[1-9][0-9].0', 'v12.0Chinese' ]
 
 jobs:
   set-build-and-test-locale-languages:
-    name: Build and Test ${{ matrix.locale-lang }} Locale On Ubuntu
+    name: ${{ matrix.label }} on Ubuntu
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        locale-lang: ["pt_BR.UTF-8", "fr_FR.UTF-8"]
+        include:
+          - locale: zh_CN.UTF-8
+            culture: zh-CN
+            label: 简体中文主验证
+          - locale: fr_FR.UTF-8
+            culture: fr-FR
+            label: 法语跨区域检查
     steps:
       - uses: actions/checkout@v4
       - name: Verify repository text encoding
@@ -26,6 +32,15 @@ jobs:
             dotnet-version: |
               6.0.x
               7.0.x
+      - name: Configure test locale
+        shell: bash
+        env:
+          TEST_LOCALE: ${{ matrix.locale }}
+        run: |
+          sudo locale-gen "$TEST_LOCALE"
+          sudo localectl set-locale LANG="$TEST_LOCALE"
+          sudo update-locale LANG="$TEST_LOCALE"
+          printf 'LANG=%s\nLC_ALL=%s\n' "$TEST_LOCALE" "$TEST_LOCALE" >> "$GITHUB_ENV"
       - name: Get Build Information
         run: |
           dotnet --info
@@ -34,8 +49,10 @@ jobs:
           dotnet --list-runtimes
       - name: Verify actual target runtimes
         uses: ./.github/actions/report-dotnet-runtime
+        with:
+          expected-culture: ${{ matrix.culture }}
       - name: Set up dependency caching for faster builds
-        uses: actions/cache@v5
+        uses: actions/cache@v6.1.0
         id: nuget-cache
         with:
             path: |
@@ -45,22 +62,10 @@ jobs:
             restore-keys: |
               ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
               ${{ runner.os }}-nuget-
-      - name: SetLocale To ${{ matrix.locale-lang }}, and Build and Test
+      - name: Build and test all frameworks in the selected locale
         run: |
-          sudo locale-gen ${{ matrix.locale-lang }}
-          sudo localectl set-locale LANG=${{ matrix.locale-lang }}
-          LANG=${{ matrix.locale-lang }}
-          export LANG=${{ matrix.locale-lang }}
-          sudo update-locale LANG=${{ matrix.locale-lang }}
           echo Current Locale Settings:
-          echo Run locale to get the information about the current locale and language settings:
           locale
-          echo Run locale -a to list all enabled locales:
-          locale -a
-          echo Run localectl status to find system locale status.
-          localectl status
-          echo Visual Test
-          echo "Printing date"
           date
           echo Restore dependencies
           dotnet restore

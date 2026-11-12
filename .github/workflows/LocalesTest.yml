@@ -52,7 +52,7 @@ jobs:
         with:
           expected-culture: ${{ matrix.culture }}
       - name: Set up dependency caching for faster builds
-        uses: actions/cache@v4
+        uses: actions/cache@v6.1.0
         id: nuget-cache
         with:
             path: |

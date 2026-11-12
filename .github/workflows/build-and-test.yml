@@ -38,7 +38,7 @@ jobs:
       - name: Verify actual target runtimes
         uses: ./.github/actions/report-dotnet-runtime
       - name: Set up dependency caching for faster builds
-        uses: actions/cache@v4
+        uses: actions/cache@v6.1.0
         id: nuget-cache
         with:
             path: |
